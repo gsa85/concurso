@@ -1,0 +1,73 @@
+Para se preparar para a prova de Métodos e Técnicas de Pesquisa do concurso da Fundação FAFIPA, é importante alinhar o estudo não apenas ao conteúdo, mas também ao estilo da banca. A FAFIPA é conhecida por provas de perfil tradicional, objetivo e de dificuldade média, que priorizam a literalidade dos conceitos e a aplicação direta do conhecimento, sem grandes inovações interpretativas. Isso significa que o candidato deve focar na memorização precisa das definições e características de cada método e técnica.
+
+A seguir, um resumo estruturado com os tópicos mais prováveis para a sua prova.
+
+🧠 1. Conceitos Fundamentais: Ciência e Conhecimento
+É a base de tudo. A banca costuma cobrar a diferença entre os tipos de conhecimento e as características do conhecimento científico.
+
+Conhecimento Científico: É racional, objetivo, sistemático, verificável e falível. Diferencia-se do senso comum (conhecimento empírico, assistemático e subjetivo) e do conhecimento filosófico ou teológico.
+
+Pesquisa Científica: É a realização concreta de uma investigação planejada, que utiliza métodos e técnicas para resolver problemas e produzir novo conhecimento.
+
+Ética na Pesquisa: Tópico recorrente. Envolve o respeito aos participantes, a integridade dos dados e a citação correta das fontes para evitar o plágio.
+
+📚 2. Métodos Científicos (O "Caminho" da Pesquisa)
+Aqui, o foco é entender a lógica por trás de cada abordagem. A questão de concurso da FAFIPA (Q524394) é um excelente exemplo do nível de detalhe cobrado.
+
+Método Indutivo: Parte de dados particulares (observações específicas) para chegar a uma verdade geral ou universal (conclusão ampla). O raciocínio vai do específico para o geral.
+
+Método Dedutivo: Parte de premissas gerais (leis, teorias) para chegar a uma conclusão particular. O raciocínio vai do geral para o específico.
+
+Método Hipotético-Dedutivo: Baseia-se na formulação de hipóteses que serão testadas para sua falseabilidade (negação). É o método clássico das ciências naturais.
+
+Método Dialético: Analisa a realidade a partir de contradições e da transformação (tese, antítese, síntese). Muito associado à visão marxista.
+
+Método Fenomenológico: Foca na descrição da experiência vivida e na essência dos fenômenos, buscando a compreensão do sujeito.
+
+Outros Métodos Citados pela Banca: É importante conhecer as definições de Método Estatístico (emprega dados quantitativos para generalizações), Método Etnográfico (estudo de um grupo cultural por meio da observação participante) e Método Estruturalista (desenvolvido por Lévi-Strauss, busca modelos abstratos que estruturam a realidade concreta).
+
+🛠️ 3. Técnicas de Pesquisa (Os "Instrumentos" de Coleta)
+Enquanto o método é o caminho, a técnica é a ferramenta. A FAFIPA costuma cobrar as características e aplicabilidades de cada uma.
+
+Entrevista: Pode ser estruturada (roteiro fixo), semiestruturada (roteiro flexível) ou não estruturada (aberta). A entrevista em profundidade e o grupo focal (focus group) são técnicas que aprofundam a relação com o pesquisado.
+
+Questionário: Instrumento com perguntas fechadas (para análise quantitativa) ou abertas. É aplicado sem a presença do pesquisador.
+
+Observação: Pode ser sistemática (com planejamento e registro em protocolo) ou assistemática (mais livre). A Observação Participante é um marco, onde o pesquisador se integra ao grupo estudado.
+
+Análise Documental: Investigação baseada em documentos já existentes (leis, relatórios, arquivos).
+
+Estudo de Caso: Estudo aprofundado e detalhado de um objeto específico (um indivíduo, grupo ou organização), permitindo um conhecimento amplo sobre ele.
+
+Pesquisa Bibliográfica: Revisão da literatura já publicada sobre o tema (livros, artigos científicos).
+
+🎯 4. Tipos e Abordagens de Pesquisa
+É comum a banca pedir para classificar uma pesquisa de acordo com sua natureza ou abordagem.
+
+Abordagem:
+
+Qualitativa: Foca na compreensão de significados, motivos e crenças. Não se preocupa com representatividade numérica.
+
+Quantitativa: Traduz em números opiniões e informações para classificá-las e analisá-las. Requer o uso de recursos estatísticos.
+
+Objetivo:
+
+Exploratória: Proporciona maior familiaridade com o problema, tornando-o mais explícito.
+
+Descritiva: Descreve as características de uma população ou fenômeno.
+
+Explicativa: Identifica os fatores que determinam ou contribuem para a ocorrência dos fenômenos. É a que mais aprofunda o conhecimento da realidade.
+
+📝 5. Etapas da Pesquisa e Normas (ABNT)
+A banca pode cobrar a sequência lógica de um projeto de pesquisa ou regras de formatação.
+
+Estrutura do Projeto de Pesquisa: Tema → Problema de Pesquisa → Hipóteses → Objetivos (Geral e Específicos) → Justificativa → Referencial Teórico → Metodologia → Cronograma → Referências.
+
+Normas da ABNT: É crucial conhecer as regras para citações (diretas e indiretas), referências (livros, artigos, sites) e formatação geral de trabalhos acadêmicos.
+
+💎 Dicas Finais para a Prova da FAFIPA
+Foco na "Lei Seca" do Conteúdo: A banca valoriza o candidato que domina a definição literal dos conceitos. Evite interpretações muito subjetivas; o que está no edital e nos livros clássicos (como Gil, Lakatos, Marconi) é o que vale.
+
+Resolva Questões Anteriores: O estilo da FAFIPA é repetitivo. Estudar por provas anteriores da própria banca é a estratégia mais eficaz para prever o padrão de cobrança e garantir a aprovação.
+
+Atenção aos Detalhes: Em questões de múltipla escolha, as alternativas costumam trazer definições trocadas (ex: descrever o método indutivo como se fosse o dedutivo). Leia com muita calma.
