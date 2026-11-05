@@ -1,0 +1,48 @@
+1. Conceitos Fundamentais em Arquivologia
+A Arquivologia (ou Arquivística) é a disciplina que estuda os arquivos, suas funções e a aplicação de princípios e técnicas para a produção, organização, guarda, preservação e uso dos documentos.
+
+O que são Arquivos?
+De acordo com a Lei nº 8.159/1991 (Art. 2º), arquivos são os conjuntos de documentos produzidos e recebidos por órgãos públicos, instituições de caráter público e entidades privadas, em decorrência do exercício de suas atividades, bem como por pessoas físicas, independentemente do suporte da informação ou da natureza dos documentos.
+
+O Ciclo Vital dos Documentos (Teoria das Três Idades)
+A base da gestão documental moderna é a Teoria das Três Idades, que classifica os documentos de acordo com a frequência de uso e o seu valor ao longo do tempo. A Lei nº 8.159/1991 adota expressamente essa classificação em seu Artigo 8º:
+
+Fase	Característica Principal	Valor Predominante
+Arquivo Corrente (1ª Idade)	Documentos em curso ou que, mesmo sem movimentação, são objeto de consultas frequentes.	Primário (Administrativo)
+Arquivo Intermediário (2ª Idade)	Documentos que não são de uso corrente, mas que ainda podem ser solicitados por razões administrativas ou legais. Aguardam a eliminação ou o recolhimento para guarda permanente.	Primário (Aguardando destinação)
+Arquivo Permanente (3ª Idade)	Documentos de valor histórico, probatório e informativo, que devem ser definitivamente preservados.	Secundário (Histórico/Científico)
+🧭 2. Princípios Arquivísticos
+Os princípios são os alicerces teóricos que diferenciam a Arquivologia de outras ciências documentais e orientam a organização e o tratamento dos arquivos. A doutrina (especialmente Bellotto) destaca cinco princípios fundamentais:
+
+Princípio da Proveniência (ou Respeito aos Fundos): Determina que os arquivos de uma entidade (pessoa, família ou instituição) não devem ser misturados com os de outra. Fixa a identidade do fundo documental e sua relação com o produtor.
+
+Princípio da Organicidade: Os documentos de um arquivo não são um amontoado aleatório. Eles guardam uma relação natural e necessária entre si, refletindo as funções e atividades da entidade que os produziu.
+
+Princípio da Unicidade: Cada documento de arquivo é único em seu contexto de produção, independentemente de sua forma, gênero, tipo ou suporte. Ele desempenha um papel exclusivo dentro do fundo.
+
+Princípio da Indivisibilidade (ou Integridade Arquivística): Impõe que os fundos de arquivo sejam preservados sem dispersão, mutilação ou alienação. A integridade do conjunto deve ser mantida para que ele preserve seu significado probatório e informativo.
+
+Princípio da Cumulatividade: Os arquivos são formados por um processo natural e cumulativo de acúmulo de documentos ao longo do tempo, e não por coleções artificiais.
+
+⚖️ 3. Lei Federal nº 8.159/1991: A Política Nacional de Arquivos
+Esta lei é o marco legal que institucionalizou a gestão documental no Brasil e dispõe sobre a política nacional de arquivos públicos e privados. Para a FAFIPA, os artigos mais cobrados são:
+
+Dever do Poder Público (Art. 1º)
+É dever do Poder Público a gestão documental e a proteção especial aos documentos de arquivo, encarados como instrumentos de apoio à administração, à cultura, ao desenvolvimento científico e como elementos de prova e informação.
+
+Definição de Gestão de Documentos (Art. 3º)
+A lei define gestão de documentos como o “conjunto de procedimentos e operações técnicas referentes à sua produção, tramitação, uso, avaliação e arquivamento em fase corrente e intermediária, visando a sua eliminação ou recolhimento para guarda permanente”.
+
+Dica de prova: A definição legal exclui a fase permanente do escopo da "gestão", pois a gestão atua para decidir o que será eliminado ou o que será recolhido ao arquivo permanente.
+
+Direito à Informação (Art. 4º)
+Todos têm direito a receber dos órgãos públicos informações de seu interesse, contidas em documentos de arquivo, ressalvadas aquelas cujo sigilo seja imprescindível à segurança da sociedade e do Estado, bem como à inviolabilidade da intimidade, da vida privada, da honra e da imagem das pessoas.
+
+Competência Federativa
+A gestão documental não é competência exclusiva da União. É dever do poder público em sentido amplo, abrangendo também os estados, o Distrito Federal e os municípios, conforme o regime federativo.
+
+Estrutura e Órgãos Criados
+A lei criou o Conselho Nacional de Arquivos (CONARQ), órgão vinculado ao Arquivo Nacional, como órgão central de um Sistema Nacional de Arquivos (SINAR), responsável por definir a política nacional de arquivos.
+
+Eliminação de Documentos Públicos
+A eliminação de documentos produzidos por instituições públicas só pode ocorrer após avaliação e autorização pela autoridade competente na sua esfera de atuação, e deve observar a tabela de temporalidade e os procedimentos definidos pelo CONARQ.

@@ -1,0 +1,68 @@
+🎯 1. Conceito e Finalidade
+A redação oficial é a maneira pela qual o Poder Público redige comunicações oficiais e atos normativos. Sua finalidade básica é garantir uma comunicação eficaz, clara e impessoal, permitindo o entendimento imediato entre os órgãos públicos e entre estes e os cidadãos.
+
+✨ 2. Atributos da Redação Oficial (Foco FAFIPA)
+A FAFIPA cobra os atributos que todo texto oficial deve ter. Eles são indissociáveis e garantem a uniformidade e a eficácia da comunicação. Os principais são:
+
+Atributo	O que significa na prática
+Clareza e Precisão	É a qualidade básica. O texto deve possibilitar compreensão imediata, sem ambiguidades. Usa-se palavras simples e ordem direta das orações.
+Objetividade	Ir diretamente ao assunto, sem "voltas" ou redundâncias. A mensagem deve ser transmitida de forma direta.
+Concisão	Transmitir o máximo de informações com o mínimo de palavras. Não se trata de eliminar ideias, mas de excluir palavras desnecessárias.
+Impessoalidade	O texto é escrito em nome do serviço público, não do servidor. Isso implica ausência de marcas pessoais (como "eu acho") e uso da 3ª pessoa ou voz passiva.
+Formalidade e Padronização	Obediência a certas regras de forma, tanto para documentos impressos quanto eletrônicos, e uso do padrão culto da língua.
+Coesão e Coerência	Garantem a conexão e harmonia entre as partes do texto, evitando contradições.
+⚠️ Dica de Prova: A FAFIPA costuma apresentar questões com a expressão "EXCETO", pedindo para identificar o que não é um atributo. Fique atento: informalidade, prolixidade e uso da 1ª pessoa não fazem parte da redação oficial.
+
+📄 3. Principais Tipos de Documentos Oficiais
+A banca diferencia os documentos pela finalidade e pelo âmbito de circulação. Os mais recorrentes são:
+
+Documento	Definição Essencial
+Ofício	Correspondência externa, expedida por e para autoridades públicas, para tratar de assuntos de serviço. Também pode ser usado com particulares.
+Memorando	Comunicação interna entre unidades administrativas de um mesmo órgão. Caracteriza-se pela simplicidade e concisão.
+Aviso	Comunicação externa, de caráter mais solene, dirigida a autoridades de hierarquia superior (ex.: Ministros, Presidente).
+Circular	Correspondência multidirecional, enviada simultaneamente a diversos destinatários, com texto idêntico.
+Ata	Documento que registra por escrito o que ocorreu em uma reunião ou assembleia.
+Atenção (Pegadinha FAFIPA): A banca já trocou as definições. Lembre-se: Circular é para muitos destinatários; Memorando é para comunicação interna; Ofício é para comunicação externa entre autoridades.
+
+📐 4. O Padrão Ofício
+O Padrão Ofício foi criado para uniformizar a estrutura do ofício, do aviso e do memorando. A FAFIPA cobra a ordem das partes que compõem esse padrão.
+
+A estrutura básica, de cima para baixo, é:
+
+Cabeçalho: Brasão de Armas, nome do órgão e sigla.
+
+Identificação do Expediente: Tipo e número do documento (ex.: Ofício nº 123/2026).
+
+Local e Data: Cidade e data por extenso, alinhados à direita.
+
+Endereçamento: Destinatário (nome, cargo, órgão).
+
+Assunto: Resumo do tema do documento.
+
+Texto: Corpo da mensagem (introdução, desenvolvimento e conclusão).
+
+Fecho: Fórmula de cortesia (ex.: "Atenciosamente," ou "Respeitosamente,").
+
+Identificação do Signatário: Nome e cargo de quem assina.
+
+Numeração das Páginas: (A partir da segunda página).
+
+Dica de Prova: A FAFIPA já perguntou qual é o segundo elemento de cima para baixo no Padrão Ofício. A resposta é Identificação do Expediente (vem logo após o Cabeçalho).
+
+👔 5. Pronomes de Tratamento
+O uso do pronome adequado é uma cobrança clássica. A regra geral é usar "Vossa Excelência" (V. Exa.) para as altas autoridades dos Poderes (Presidente, Ministros, Governadores, Prefeitos, Deputados, Juízes, etc.).
+
+A FAFIPA costuma cobrar situações hipotéticas, como: "Você precisa redigir um documento a um Prefeito. Qual pronome usar?". A resposta será Vossa Excelência.
+
+💡 Resumo para a Prova FAFIPA
+Conceito: É a forma de escrita da Administração Pública, visando a comunicação eficaz.
+
+Atributos: Clareza, objetividade, concisão, impessoalidade, formalidade e uso do padrão culto. São indissociáveis.
+
+Documentos: Ofício (externo), Memorando (interno) e Circular (muitos destinatários). A banca troca as definições.
+
+Padrão Ofício: Decore a ordem das partes (Cabeçalho → Identificação → Data → Endereçamento...).
+
+Pronomes: Vossa Excelência para altas autoridades (Presidente, Prefeito, Juiz, etc.).
+
+Se precisar de mais algum detalhamento ou tiver outras dúvidas, é só perguntar.

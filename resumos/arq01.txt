@@ -1,0 +1,22 @@
+1. Gestão da Informação e Sistemas Organizacionais
+A Gestão da Informação (GI) é o processo que visa identificar as necessidades informacionais e mapear os fluxos de informação dentro da organização, potencializando seus recursos para torná-la mais competitiva e adaptável.
+
+O Ciclo da Informação
+A FAFIPA entende a GI como a aplicação do ciclo informacional, que envolve etapas essenciais:
+
+Geração / Aquisição: Obtenção da informação (interna ou externa).
+
+Representação / Armazenamento: Organização e guarda da informação.
+
+Recuperação / Distribuição: Busca e disseminação para quem precisa.
+
+Uso: Aplicação efetiva da informação no processo decisório.
+
+Sistemas de Informação Organizacional (SIGs)
+A banca cobra a sigla e a função de cada sistema. Os mais citados são:
+
+Sistema	Função Principal
+ERP (Enterprise Resource Planning)	Integra diversos processos e dados da empresa em um único local (ex.: finanças, estoque, RH).
+CRM (Customer Relationship Management)	Automatiza o contato com o cliente, armazenando histórico de compras, preferências e dados de contato.
+SCM (Supply Chain Management)	Integra os processos da cadeia de fornecimento (relação com fornecedores e logística).
+SIG (Sistemas de Informação Gerenciais)	Apoiam a tomada de decisão nos níveis estratégico, tático e operacional, transformando dados em informações úteis.

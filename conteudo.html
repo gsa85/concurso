@@ -14,19 +14,21 @@
   <p id="subtitulo"></p>
 </header>
 
-<main class="container">
-  <!-- TELA DE LISTA -->
-  <div id="tela-lista">
+<main class="container-layout">
+  <!-- COLUNA DA ESQUERDA: A LISTA DE TEMAS -->
+  <aside class="sidebar">
+    <h3>Temas</h3>
     <ul class="lista" id="lista-topicos"></ul>
-  </div>
+  </aside>
 
-  <!-- TELA DE RESUMO -->
-  <div id="tela-resumo" style="display: none;">
-    <button class="btn-voltar" onclick="voltarLista()">⬅️ Voltar para os tópicos</button>
-    <div class="leitor-resumo">
-      <h2 id="titulo-resumo"></h2>
-      <!-- A caixa onde o texto vai aparecer -->
-      <div id="texto-resumo" class="texto-formatado"></div>
+  <!-- COLUNA DA DIREITA: O RESUMO (IFRAME) -->
+  <div class="area-resumo">
+    <div id="tela-resumo">
+      <div class="aviso-inicial">
+        <h2>👈 Selecione um tema</h2>
+        <p>Clique em um dos assuntos ao lado para ler o resumo.</p>
+      </div>
+      <div id="texto-resumo" style="display: none;"></div>
     </div>
   </div>
 </main>
@@ -46,12 +48,12 @@
 
     const lista = document.getElementById("lista-topicos");
 
-    materia.topicos.forEach(function (topico) {
+    materia.topicos.forEach(function (topico, index) {
       const isObj = typeof topico === "object";
       const texto = isObj ? topico.t : topico;
       
       const li = document.createElement("li");
-      li.className = "item";
+      li.className = "item-sidebar";
       
       const span = document.createElement("span");
       span.innerHTML = texto;
@@ -59,37 +61,38 @@
 
       if (isObj && topico.arquivo) {
         li.classList.add("clicavel");
-        const tag = document.createElement("span");
-        tag.className = "tag-resumo";
-        tag.textContent = "📝 Ler Resumo";
-        li.appendChild(tag);
-        
-        li.addEventListener("click", () => abrirResumo(texto, topico.arquivo));
+        li.addEventListener("click", (e) => {
+          // Remove a cor de selecionado de todos
+          document.querySelectorAll('.item-sidebar').forEach(el => el.classList.remove('ativo'));
+          // Adiciona a cor no que foi clicado
+          li.classList.add('ativo');
+          
+          abrirResumo(texto, topico.arquivo);
+        });
+      } else {
+        li.classList.add("sem-resumo");
       }
 
       lista.appendChild(li);
     });
   }
 
-  // Função que abre o TXT usando iframe (funciona localmente no seu Linux)
+  // Função que abre o TXT usando iframe no lado direito
   function abrirResumo(titulo, caminhoArquivo) {
-    document.getElementById("tela-lista").style.display = "none";
-    document.getElementById("tela-resumo").style.display = "block";
-    document.getElementById("titulo-resumo").textContent = titulo;
+    const containerResumo = document.getElementById("texto-resumo");
+    const avisoInicial = document.querySelector(".aviso-inicial");
+    
+    // Esconde o aviso e mostra o iframe
+    avisoInicial.style.display = "none";
+    containerResumo.style.display = "block";
     window.scrollTo(0,0);
 
-    // Aqui está a mágica: ele carrega o arquivo de texto numa janelinha invisível
-    document.getElementById("texto-resumo").innerHTML = `
+    containerResumo.innerHTML = `
+      <h2 style="margin-bottom: 15px; color: var(--primaria-esc);">${titulo}</h2>
       <iframe src="${caminhoArquivo}" 
-              style="width: 100%; height: 600px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+              style="width: 100%; height: 70vh; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       </iframe>
     `;
-  }
-
-  function voltarLista() {
-    document.getElementById("tela-resumo").style.display = "none";
-    document.getElementById("tela-lista").style.display = "block";
-    window.scrollTo(0,0);
   }
 </script>
 </body>
