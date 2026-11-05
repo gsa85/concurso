@@ -1,0 +1,18 @@
+Poder Constituinte
+Poder Constituinte Originário
+Também chamado de genuíno.
+
+Características: inicial, autônomo, ilimitado juridicamente e incondicionado.
+
+Cria uma nova ordem constitucional.
+
+Não se sujeita a controle de constitucionalidade.
+
+Poder Constituinte Derivado
+Características: secundário, limitado, condicionado e subordinado.
+
+Espécie	Função	Base
+Reformador	Alterar a CF por emendas constitucionais	Art. 60
+Decorrente	Elaborar Constituições Estaduais	Art. 25 e ADCT, art. 11
+Revisor	Revisão constitucional (já exercida em 1993)	ADCT, art. 3º
+Pegadinha: não confundir “originário” com “instituído” ou “constituído”.
