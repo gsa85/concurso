@@ -1,0 +1,15 @@
+. Responsabilidade dos Agentes Públicos e Improbidade Administrativa (CF/88 e Lei 8.429/1992)
+A Constituição Federal (art. 37, § 4º) e a Lei de Improbidade Administrativa (LIA) tratam da responsabilização por atos que atentam contra a moralidade e o patrimônio público.
+
+Atualizações cruciais (pós-Lei 14.230/2021 e julgamentos do STF):
+
+Exigência de Dolo Específico: O STF consolidou o entendimento de que não há mais improbidade na modalidade culposa. É indispensável a comprovação de dolo (vontade livre e consciente) para a configuração do ato ímprobo.
+
+Tipificação Taxativa: O rol de condutas que configuram improbidade por violação a princípios (art. 11 da LIA) é taxativo, ou seja, não admite interpretação ampliativa. O STF validou essa restrição.
+
+Sanções: As penas incluem perda de bens, ressarcimento integral do dano, perda da função pública, suspensão dos direitos políticos, multa civil e proibição de contratar com o Poder Público.
+
+Independência de Instâncias: A responsabilidade administrativa, civil e criminal é independente. A absolvição em uma esfera (ex.: criminal) não impede automaticamente a punição em outra (ex.: civil por improbidade), pois as instâncias são autônomas.
+
+
+Dica final para a FAFIPA: Para os temas de Atos Administrativos e Improbidade, a banca costuma explorar as diferenças conceituais (ato vs. fato; dolo vs. culpa) e as consequências práticas (atributos dos atos, sanções da LIA). Para as leis municipais de Curitiba (16.466/2024 e 1.656/1958), foque no rito processual, nos prazos e nas inovações trazidas pela legislação recente.
