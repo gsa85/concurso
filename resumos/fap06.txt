@@ -1,0 +1,54 @@
+1. Conceito
+O orçamento público é o instrumento de planejamento e gestão que organiza e discrimina as receitas (previsão de arrecadação) e as despesas (fixação de gastos) do Estado para um período determinado, visando atender às necessidades da população e evidenciar a política econômico-financeira do governo.
+
+2. Princípios orçamentários
+São regras que conferem racionalidade, transparência e eficiência ao processo. Os clássicos, previstos na Lei nº 4.320/1964, incluem:
+
+Unidade/Totalidade: o orçamento deve ser uno, compreendendo todas as receitas e despesas.
+
+Universalidade: todas as receitas e despesas devem estar previstas na lei orçamentária.
+
+Anualidade: o orçamento tem vigência de um exercício financeiro (um ano).
+
+Orçamento Bruto: receitas e despesas são registradas pelo valor total, sem deduções.
+
+Legalidade, Publicidade, Exclusividade, Especificação, Não Afetação das Receitas, entre outros.
+
+3. Instrumentos de planejamento (CF/1988, art. 165)
+O processo orçamentário é integrado por três leis de iniciativa do Poder Executivo:
+
+PPA (Plano Plurianual): estabelece, de forma regionalizada, as diretrizes, objetivos e metas de médio prazo (quatro anos) para as despesas de capital e programas de duração continuada.
+
+LDO (Lei de Diretrizes Orçamentárias): define as metas e prioridades para o ano seguinte, orienta a elaboração da LOA e dispõe sobre alterações tributárias.
+
+LOA (Lei Orçamentária Anual): é o orçamento propriamente dito; estima as receitas e fixa as despesas para o exercício, concretizando os objetivos do PPA segundo as diretrizes da LDO.
+
+4. Ciclo orçamentário
+Compreende quatro fases interligadas:
+
+Elaboração: pelo Poder Executivo.
+
+Aprovação: pelo Poder Legislativo.
+
+Execução: realização das receitas e despesas.
+
+Controle e Avaliação: acompanhamento da execução e verificação de resultados.
+
+5. Tipos/Modalidades (no âmbito da União)
+A LOA abrange três orçamentos distintos (CF, art. 165, §5º):
+
+Orçamento Fiscal: entidades da administração direta, fundos, autarquias e fundações.
+
+Orçamento da Seguridade Social: saúde, previdência e assistência social.
+
+Orçamento de Investimento das Empresas Estatais: investimentos das empresas em que a União detém a maioria do capital.
+
+6. Base legal principal
+
+Constituição Federal de 1988 (artigos 165 a 169): institui o processo orçamentário e os três instrumentos.
+
+Lei nº 4.320/1964: estatui normas gerais de direito financeiro para elaboração e controle dos orçamentos.
+
+Lei de Responsabilidade Fiscal (LRF — LC nº 101/2000): estabelece normas de gestão fiscal responsável.
+
+Ideia-chave: O orçamento público é o elo entre o planejamento (PPA, LDO) e a execução (LOA), traduzindo em números as prioridades do Estado, sempre submetido aos princípios da legalidade, transparência e responsabilidade fiscal.

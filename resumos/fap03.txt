@@ -1,0 +1,36 @@
+Resumo rápido — Processos Administrativos
+
+1. Conceito
+Processo administrativo é a sequência ordenada de atos e fatos que visa à formação de uma decisão final da Administração Pública, seja para aplicar a lei, apurar fatos ou resolver litígios. Difere-se do procedimento, que é o rito, a forma, o conjunto de formalidades observadas na prática dos atos.
+
+2. Princípios (Lei 9.784/99, art. 2º)
+A Administração deve obedecer, entre outros, aos princípios de: legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência. A motivação é destacada: exige indicar os fundamentos de fato e de direito que embasam a decisão.
+
+3. Fases
+O processo administrativo percorre, em regra, as seguintes fases:
+
+Instauração: ato que inicia o processo e define seu objeto. Pode ser de ofício ou a pedido do interessado.
+
+Instrução: juntada de provas, documentos e realização de diligências para apurar os fatos.
+
+Defesa: oportunidade para o interessado apresentar suas alegações (quando cabível).
+
+Relatório: análise das informações contidas nos autos.
+
+Decisão: consolidação do entendimento da Administração.
+
+Recurso: possibilidade de impugnação da decisão, com prazo e efeitos definidos em lei.
+
+Em processos que envolvem litígio (como o PAD), a doutrina aponta quatro fases mínimas: instauração, instrução, defesa e decisão.
+
+4. Modalidades
+A classificação mais destacada pela doutrina é entre processo gracioso e processo contencioso:
+
+Gracioso: é o que se aplica ao contexto brasileiro. A própria Administração conduz os atos, apura fatos e decide, sem julgar com força de coisa julgada.
+
+Contencioso: desenvolver-se-ia perante órgão com garantias de independência e imparcialidade, apto a proferir decisões com força de coisa julgada — característica não adotada no Brasil, onde a Administração é parte interessada.
+
+Outras classificações doutrinárias incluem: processos de gestão, outorga, verificação/determinação e revisão (recursos administrativos).
+
+Ideia-chave: O processo administrativo é o instrumento que garante transparência, padronização e participação do cidadão, evitando atuação arbitrária ou improvisada da Administração.
+

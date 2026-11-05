@@ -15,41 +15,37 @@
 </header>
 
 <main class="container">
-  <!-- TELA DE LISTA (onde aparecem os temas) -->
+  <!-- TELA DE LISTA -->
   <div id="tela-lista">
     <ul class="lista" id="lista-topicos"></ul>
   </div>
 
-  <!-- TELA DE RESUMO (abre quando clica em um tema com .txt) -->
+  <!-- TELA DE RESUMO -->
   <div id="tela-resumo" style="display: none;">
     <button class="btn-voltar" onclick="voltarLista()">⬅️ Voltar para os tópicos</button>
     <div class="leitor-resumo">
       <h2 id="titulo-resumo"></h2>
-      <div id="texto-resumo" class="texto-formatado">Carregando resumo...</div>
+      <!-- A caixa onde o texto vai aparecer -->
+      <div id="texto-resumo" class="texto-formatado"></div>
     </div>
   </div>
 </main>
 
-<!-- Carrega os dados das matérias -->
 <script src="dados.js"></script>
 <script>
-  // 1. Pega a matéria que foi clicada lá na página inicial (ex: ?t=portugues)
   const slug = new URLSearchParams(location.search).get("t");
   const materia = CONTEUDOS[slug];
 
   if (!materia) {
-    // Se a pessoa entrou no link errado
     document.getElementById("titulo").textContent = "Conteúdo não encontrado";
     document.getElementById("subtitulo").textContent = "Volte ao início e escolha uma matéria.";
   } else {
-    // 2. Se achou a matéria, monta a tela
     document.title = materia.titulo + " — Estudos";
     document.getElementById("titulo").textContent = materia.titulo;
     document.getElementById("subtitulo").textContent = materia.grupo + (materia.questoes ? " · " + materia.questoes + " questões" : "");
 
     const lista = document.getElementById("lista-topicos");
 
-    // 3. Passa por cada tópico da matéria e cria a caixinha na tela
     materia.topicos.forEach(function (topico) {
       const isObj = typeof topico === "object";
       const texto = isObj ? topico.t : topico;
@@ -61,7 +57,6 @@
       span.innerHTML = texto;
       li.appendChild(span);
 
-      // Se o tópico tiver a propriedade "arquivo", ele vira um botão de resumo
       if (isObj && topico.arquivo) {
         li.classList.add("clicavel");
         const tag = document.createElement("span");
@@ -76,32 +71,21 @@
     });
   }
 
-  // 4. Função que busca o arquivo .txt e mostra na tela
+  // Função que abre o TXT usando iframe (funciona localmente no seu Linux)
   function abrirResumo(titulo, caminhoArquivo) {
     document.getElementById("tela-lista").style.display = "none";
     document.getElementById("tela-resumo").style.display = "block";
     document.getElementById("titulo-resumo").textContent = titulo;
-    document.getElementById("texto-resumo").textContent = "Buscando arquivo...";
     window.scrollTo(0,0);
 
-    // O fetch é o que vai lá na pasta "resumos" e pega o seu arquivo txt
-    fetch(caminhoArquivo)
-      .then(response => {
-        if (!response.ok) throw new Error("Arquivo não encontrado");
-        return response.text();
-      })
-      .then(texto => {
-        // Transforma as quebras de linha do bloco de notas em parágrafos bonitos
-        document.getElementById("texto-resumo").innerHTML = texto.replace(/\n/g, "<br>");
-      })
-      .catch(erro => {
-        document.getElementById("texto-resumo").innerHTML = 
-          "<span style='color:#dc2626; font-weight:bold;'>⚠️ Erro: O arquivo não foi encontrado.</span><br><br>" +
-          "Verifique se você criou a pasta <b>resumos</b> e o arquivo <b>" + caminhoArquivo + "</b> dentro dela.";
-      });
+    // Aqui está a mágica: ele carrega o arquivo de texto numa janelinha invisível
+    document.getElementById("texto-resumo").innerHTML = `
+      <iframe src="${caminhoArquivo}" 
+              style="width: 100%; height: 600px; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+      </iframe>
+    `;
   }
 
-  // 5. Função para voltar da tela de resumo para a lista de tópicos
   function voltarLista() {
     document.getElementById("tela-resumo").style.display = "none";
     document.getElementById("tela-lista").style.display = "block";
