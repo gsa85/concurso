@@ -1,9 +1,8 @@
 const CONTEUDOS = {
-
   "portugues": {
     titulo: "Língua Portuguesa",
-    grupo: "Conteúdos Básicos",
-    questoes: 5,
+    grupo: "1. Conteúdos Básicos",
+    questoes: "5",
     topicos: [
       "Análise e interpretação de texto: compreensão global; ponto de vista do autor; ideias centrais desenvolvidas em cada parágrafo; inferências.",
       "Comunicação, linguagem e variações linguísticas.",
@@ -15,16 +14,14 @@ const CONTEUDOS = {
       "Funções sintáticas.",
       "Concordâncias nominal e verbal.",
       "Pontuação.",
-      // 👇 exemplo
-      { t: "Uso dos porquês.", resumo: "Por que = pergunta ou início de frase (Por que você saiu?). Porque = resposta/causa (Saí porque chovia). Por quê = fim de frase ou isolado (Você saiu por quê?). Porquê = substantivo, com artigo (Não sei o porquê)." },
+      { t: "Uso dos porquês.", arquivo: "resumos/porques.txt" }, // 👈 Exemplo
       "Literatura Brasileira: prosa e poesia, autores e obras, figuras de linguagem."
     ]
   },
-
   "raciocinio": {
     titulo: "Raciocínio Lógico",
-    grupo: "Conteúdos Básicos",
-    questoes: 5,
+    grupo: "1. Conteúdos Básicos",
+    questoes: "5",
     topicos: [
       "As quatro operações fundamentais.",
       "Comparações, arredondamentos, aproximações e estimativas.",
@@ -33,8 +30,7 @@ const CONTEUDOS = {
       "Cálculo de área: triângulos, retângulos e círculos.",
       "Medidas de superfícies.",
       "Noções de direção: norte, sul, leste e oeste, esquerda e direita, para cima e para baixo.",
-      // 👇 exemplo
-      { t: "Estatística: média, moda e mediana.", resumo: "Média = soma dos valores ÷ quantidade. Moda = valor que mais aparece. Mediana = valor central quando os dados estão em ordem crescente (se a quantidade for par, é a média dos dois centrais)." },
+      { t: "Estatística: média, moda e mediana.", arquivo: "resumos/estatistica.txt" }, // 👈 Exemplo
       "Dados, tabelas, gráficos e suas interpretações.",
       "Sequência de números, figuras e letras.",
       "Sequências lógicas.",
@@ -48,17 +44,15 @@ const CONTEUDOS = {
       "Resolução de problemas."
     ]
   },
-
   "informatica": {
     titulo: "Noções de Informática",
-    grupo: "Conteúdos Básicos",
-    questoes: 5,
+    grupo: "1. Conteúdos Básicos",
+    questoes: "5",
     topicos: [
       "Conceitos de informática.",
       "Hardware de entrada e saída.",
       "Software.",
-      // 👇 exemplo
-      { t: "Atalhos de teclado.", resumo: "Ctrl+C copiar · Ctrl+V colar · Ctrl+X recortar · Ctrl+Z desfazer · Ctrl+Y refazer · Ctrl+A selecionar tudo · Ctrl+S salvar · Ctrl+P imprimir · Alt+Tab alternar janelas · Ctrl+Shift+Esc abrir o Gerenciador de Tarefas." },
+      "Atalhos de teclado.",
       "Gerenciamento de arquivos.",
       "Segurança de dados.",
       "Ambientes operacionais: Windows 10 e 11 e Linux Ubuntu.",
@@ -71,37 +65,27 @@ const CONTEUDOS = {
       "Inteligência artificial e ferramentas generativas de texto: ChatGPT, Copilot, Gemini."
     ]
   },
-
   "legislacao": {
     titulo: "Legislação",
-    grupo: "Conteúdos Básicos",
-    questoes: 5,
+    grupo: "1. Conteúdos Básicos",
+    questoes: "5",
     topicos: [
       "Lei Orgânica do Município de Curitiba (10/04/1990): organização político-administrativa do Município.",
       "Lei Municipal nº 1.656/1958: Estatuto dos Funcionários Públicos Municipais.",
       "Lei Municipal nº 7.671/1991: Organização Administrativa do Poder Executivo do Município de Curitiba.",
-      {
-        t: "Constituição Federal de 1988:",
-        sub: [
-          "Título I – Dos Princípios Fundamentais (arts. 1º ao 4º)",
-          "Título II – Dos Direitos e Garantias Fundamentais (arts. 5º ao 17)",
-          "Título III – Da Organização do Estado (arts. 18, 19, 29, 30, 37 ao 41)",
-          "Título IV – Da Organização dos Poderes (arts. 44 ao 75)"
-        ]
-      },
+      "Constituição Federal de 1988: Título I (arts. 1º ao 4º); Título II (arts. 5º ao 17); Título III (arts. 18, 19, 29, 30, 37 ao 41); Título IV (arts. 44 ao 75).",
       "Lei Federal nº 8.429/1992 e Lei Federal nº 14.230/2021: improbidade administrativa.",
-      // 👇 exemplo
-      { t: "Lei Federal nº 12.527/2011: acesso à informação.", resumo: "Regula o direito constitucional de acesso a informações públicas. Prevê transparência ativa (divulgação proativa de dados pelo órgão) e passiva (via pedido do cidadão). O prazo de resposta é de 20 dias, prorrogável por mais 10." },
+      { t: "Lei Federal nº 12.527/2011: acesso à informação.", arquivo: "resumos/lei-acesso.txt" }, // 👈 Exemplo
       "Lei Federal nº 10.048/2000: prioridade de atendimento às pessoas.",
       "Lei Federal nº 8.069/1990: Estatuto da Criança e do Adolescente – Disposições Preliminares e Direitos Fundamentais.",
       "Decreto-Lei Federal nº 4.657/1942: Lei de Introdução às Normas do Direito Brasileiro (arts. 20 ao 30).",
       "Lei Federal nº 13.709/2018: Lei Geral de Proteção de Dados Pessoais (Capítulo IV)."
     ]
   },
-
   "adm-publica": {
     titulo: "Fundamentos da Administração Pública",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "20",
     topicos: [
       "Fundamentos da Administração Pública: conceitos, princípios e organização.",
       "Planejamento, organização, direção e controle.",
@@ -111,10 +95,10 @@ const CONTEUDOS = {
       "Orçamento público."
     ]
   },
-
   "direito-adm": {
     titulo: "Direito Administrativo",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "20",
     topicos: [
       "Atos administrativos.",
       "Bens públicos.",
@@ -125,10 +109,10 @@ const CONTEUDOS = {
       "Constituição Federal de 1988 e Lei Federal nº 8.429/1992: responsabilidade dos agentes públicos e improbidade administrativa."
     ]
   },
-
   "direito-const": {
     titulo: "Direito Constitucional",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "20",
     topicos: [
       "Princípios fundamentais.",
       "Direitos e garantias fundamentais.",
@@ -138,10 +122,10 @@ const CONTEUDOS = {
       "Administração Pública na Constituição Federal."
     ]
   },
-
   "etica": {
-    titulo: "Ética, Relacionamento e Atendimento no Serviço Público",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    titulo: "Ética, Relacionamento e Atendimento",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "20",
     topicos: [
       "Ética, integridade, transparência e conflitos de interesses.",
       "Relações interpessoais.",
@@ -149,10 +133,10 @@ const CONTEUDOS = {
       "Comunicação."
     ]
   },
-
   "arquivologia": {
-    titulo: "Gestão da Informação, Arquivologia e Redação Oficial",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    titulo: "Gestão da Informação e Arquivologia",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "20",
     topicos: [
       "Sistemas de informação organizacional.",
       "Arquivologia: conceitos, princípios e gestão documental. Lei Federal nº 8.159/1991: política nacional de arquivos públicos e privados.",
@@ -160,13 +144,12 @@ const CONTEUDOS = {
       "Redação oficial."
     ]
   },
-
   "pesquisa": {
     titulo: "Métodos e Técnicas de Pesquisa",
-    grupo: "Conhecimentos Específicos — Agente Administrativo",
+    grupo: "2. Conhecimentos Específicos",
+    questoes: "Único",
     topicos: [
-      "⚠️ Tópicos não informados no arquivo enviado — complete esta lista conforme o edital oficial."
+      "Métodos e Técnicas de Pesquisa."
     ]
   }
-
 };

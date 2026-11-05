@@ -15,167 +15,98 @@
 </header>
 
 <main class="container">
-  <p class="progresso" id="progresso"></p>
-  <ul class="lista" id="lista"></ul>
+  <!-- TELA DE LISTA (onde aparecem os temas) -->
+  <div id="tela-lista">
+    <ul class="lista" id="lista-topicos"></ul>
+  </div>
+
+  <!-- TELA DE RESUMO (abre quando clica em um tema com .txt) -->
+  <div id="tela-resumo" style="display: none;">
+    <button class="btn-voltar" onclick="voltarLista()">⬅️ Voltar para os tópicos</button>
+    <div class="leitor-resumo">
+      <h2 id="titulo-resumo"></h2>
+      <div id="texto-resumo" class="texto-formatado">Carregando resumo...</div>
+    </div>
+  </div>
 </main>
 
+<!-- Carrega os dados das matérias -->
 <script src="dados.js"></script>
 <script>
-(function () {
+  // 1. Pega a matéria que foi clicada lá na página inicial (ex: ?t=portugues)
   const slug = new URLSearchParams(location.search).get("t");
   const materia = CONTEUDOS[slug];
 
   if (!materia) {
+    // Se a pessoa entrou no link errado
     document.getElementById("titulo").textContent = "Conteúdo não encontrado";
-    document.getElementById("subtitulo").textContent =
-      "Volte ao início e escolha uma matéria.";
-    return;
-  }
+    document.getElementById("subtitulo").textContent = "Volte ao início e escolha uma matéria.";
+  } else {
+    // 2. Se achou a matéria, monta a tela
+    document.title = materia.titulo + " — Estudos";
+    document.getElementById("titulo").textContent = materia.titulo;
+    document.getElementById("subtitulo").textContent = materia.grupo + (materia.questoes ? " · " + materia.questoes + " questões" : "");
 
-  document.title = materia.titulo + " — Estudos";
-  document.getElementById("titulo").textContent = materia.titulo;
-  document.getElementById("subtitulo").textContent =
-    materia.grupo + (materia.questoes ? " · " + materia.questoes + " questões" : "");
+    const lista = document.getElementById("lista-topicos");
 
-  const chaveCheck = "estudo:" + slug;
-  let marcados = {};
-  try { marcados = JSON.parse(localStorage.getItem(chaveCheck) || "{}"); } catch (e) {}
+    // 3. Passa por cada tópico da matéria e cria a caixinha na tela
+    materia.topicos.forEach(function (topico) {
+      const isObj = typeof topico === "object";
+      const texto = isObj ? topico.t : topico;
+      
+      const li = document.createElement("li");
+      li.className = "item";
+      
+      const span = document.createElement("span");
+      span.innerHTML = texto;
+      li.appendChild(span);
 
-  const lista = document.getElementById("lista");
-
-  function atualizarProgresso() {
-    const total = materia.topicos.length;
-    const feitos = Object.values(marcados).filter(Boolean).length;
-    document.getElementById("progresso").textContent =
-      "✅ " + feitos + " de " + total + " tópicos concluídos";
-  }
-
-  function chaveResumo(i) { return "resumo:" + slug + ":" + i; }
-
-  function temResumoSalvo(i) {
-    const v = localStorage.getItem(chaveResumo(i));
-    return v !== null && v.trim() !== "";
-  }
-
-  materia.topicos.forEach(function (topico, i) {
-    const isObj = typeof topico === "object" && topico !== null;
-    const textoTopico = isObj ? topico.t : topico;
-    const resumoInicial = isObj && topico.resumo ? topico.resumo : "";
-
-    const li = document.createElement("li");
-    li.className = "item";
-
-    // --- Cabeçalho: checkbox + texto + botão 📝 ---
-    const header = document.createElement("div");
-    header.className = "item-header";
-
-    const label = document.createElement("label");
-    const caixa = document.createElement("input");
-    caixa.type = "checkbox";
-    caixa.checked = !!marcados[i];
-    const span = document.createElement("span");
-    span.innerHTML = textoTopico;
-    label.appendChild(caixa);
-    label.appendChild(span);
-
-    const btnResumo = document.createElement("button");
-    btnResumo.type = "button";
-    btnResumo.className = "btn-resumo";
-    btnResumo.title = "Adicionar / editar resumo";
-    btnResumo.textContent = "📝";
-    if (temResumoSalvo(i)) btnResumo.classList.add("tem-resumo");
-
-    header.appendChild(label);
-    header.appendChild(btnResumo);
-    li.appendChild(header);
-
-    // --- Subtópicos (ex.: CF/88) ---
-    if (isObj && topico.sub) {
-      const sub = document.createElement("ul");
-      sub.className = "sub";
-      topico.sub.forEach(function (s) {
-        const sli = document.createElement("li");
-        sli.textContent = s;
-        sub.appendChild(sli);
-      });
-      li.appendChild(sub);
-    }
-
-    // --- Área de resumo (colapsada) ---
-    const area = document.createElement("div");
-    area.className = "resumo-area";
-    area.hidden = true;
-
-    const textarea = document.createElement("textarea");
-    textarea.placeholder = "Escreva aqui um resumo rápido sobre este tópico...";
-    const salvo = localStorage.getItem(chaveResumo(i));
-    textarea.value = salvo !== null ? salvo : resumoInicial;
-
-    const acoes = document.createElement("div");
-    acoes.className = "resumo-acoes";
-
-    const status = document.createElement("span");
-    status.className = "resumo-status";
-
-    const btnLimpar = document.createElement("button");
-    btnLimpar.type = "button";
-    btnLimpar.className = "btn-limpar";
-    btnLimpar.textContent = "🗑️ Limpar";
-
-    acoes.appendChild(status);
-    acoes.appendChild(btnLimpar);
-    area.appendChild(textarea);
-    area.appendChild(acoes);
-    li.appendChild(area);
-
-    // --- Auto-save com debounce ---
-    let timer;
-    textarea.addEventListener("input", function () {
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        const v = textarea.value;
-        if (v.trim() === "") {
-          localStorage.removeItem(chaveResumo(i));
-          btnResumo.classList.remove("tem-resumo");
-        } else {
-          localStorage.setItem(chaveResumo(i), v);
-          btnResumo.classList.add("tem-resumo");
-        }
-        status.textContent = "Salvo ✓";
-        setTimeout(function () { status.textContent = ""; }, 1500);
-      }, 400);
-    });
-
-    btnLimpar.addEventListener("click", function () {
-      if (!confirm("Apagar este resumo?")) return;
-      textarea.value = "";
-      localStorage.removeItem(chaveResumo(i));
-      btnResumo.classList.remove("tem-resumo");
-      status.textContent = "Resumo apagado";
-      setTimeout(function () { status.textContent = ""; }, 1500);
-      textarea.focus();
-    });
-
-    btnResumo.addEventListener("click", function () {
-      area.hidden = !area.hidden;
-      if (!area.hidden) {
-        textarea.focus();
-        textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+      // Se o tópico tiver a propriedade "arquivo", ele vira um botão de resumo
+      if (isObj && topico.arquivo) {
+        li.classList.add("clicavel");
+        const tag = document.createElement("span");
+        tag.className = "tag-resumo";
+        tag.textContent = "📝 Ler Resumo";
+        li.appendChild(tag);
+        
+        li.addEventListener("click", () => abrirResumo(texto, topico.arquivo));
       }
+
+      lista.appendChild(li);
     });
+  }
 
-    caixa.addEventListener("change", function () {
-      marcados[i] = caixa.checked;
-      try { localStorage.setItem(chaveCheck, JSON.stringify(marcados)); } catch (e) {}
-      atualizarProgresso();
-    });
+  // 4. Função que busca o arquivo .txt e mostra na tela
+  function abrirResumo(titulo, caminhoArquivo) {
+    document.getElementById("tela-lista").style.display = "none";
+    document.getElementById("tela-resumo").style.display = "block";
+    document.getElementById("titulo-resumo").textContent = titulo;
+    document.getElementById("texto-resumo").textContent = "Buscando arquivo...";
+    window.scrollTo(0,0);
 
-    lista.appendChild(li);
-  });
+    // O fetch é o que vai lá na pasta "resumos" e pega o seu arquivo txt
+    fetch(caminhoArquivo)
+      .then(response => {
+        if (!response.ok) throw new Error("Arquivo não encontrado");
+        return response.text();
+      })
+      .then(texto => {
+        // Transforma as quebras de linha do bloco de notas em parágrafos bonitos
+        document.getElementById("texto-resumo").innerHTML = texto.replace(/\n/g, "<br>");
+      })
+      .catch(erro => {
+        document.getElementById("texto-resumo").innerHTML = 
+          "<span style='color:#dc2626; font-weight:bold;'>⚠️ Erro: O arquivo não foi encontrado.</span><br><br>" +
+          "Verifique se você criou a pasta <b>resumos</b> e o arquivo <b>" + caminhoArquivo + "</b> dentro dela.";
+      });
+  }
 
-  atualizarProgresso();
-})();
+  // 5. Função para voltar da tela de resumo para a lista de tópicos
+  function voltarLista() {
+    document.getElementById("tela-resumo").style.display = "none";
+    document.getElementById("tela-lista").style.display = "block";
+    window.scrollTo(0,0);
+  }
 </script>
-
 </body>
 </html>

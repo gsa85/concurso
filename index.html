@@ -1,252 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <base target="_top">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    
-    :root {
-      --bg: #f1f5f9; --card: #ffffff; --texto: #1e293b; --suave: #64748b;
-      --primaria: #2563eb; --primaria-esc: #1d4ed8; --borda: #e2e8f0; --verde: #10b981;
-    }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding-bottom: 50px; }
-    
-    .topo { background: linear-gradient(135deg, #2563eb, #7c3aed); color: white; padding: 30px 20px; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; margin-bottom: 20px; }
-    .topo h1 { font-size: 1.5rem; }
-    
-    .container { max-width: 800px; margin: 0 auto; padding: 0 15px; }
-    
-    /* Controle de Telas */
-    .tela { display: none; animation: fadeIn 0.3s; }
-    .tela.ativa { display: block; }
-    
-    /* Tela 1: Cards */
-    .grid-materias { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
-    .card-materia { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-    .card-materia:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--primaria); }
-    .card-materia h3 { color: var(--primaria-esc); font-size: 1.1rem; margin-bottom: 8px; }
-    .card-materia p { color: var(--suave); font-size: 0.9rem; }
-    
-    /* Botões Voltar */
-    .btn-voltar { background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    
-    /* Tela 2: Lista de Tópicos */
-    .item-topico { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; transition: 0.2s; }
-    .item-topico:hover { border-color: var(--primaria); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-    .item-topico input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; accent-color: var(--verde); flex-shrink: 0; }
-    .item-topico .texto-topico { flex: 1; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: 0.2s; }
-    .item-topico .texto-topico:hover { color: var(--primaria); }
-    .item-topico .texto-topico.concluido { text-decoration: line-through; color: var(--suave); }
-    .tag-resumo { font-size: 0.75rem; background: #dbeafe; color: var(--primaria-esc); padding: 3px 8px; border-radius: 10px; font-weight: bold; margin-left: 10px; }
-    
-    /* Tela 3: Página de Resumo */
-    .resumo-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-    .resumo-titulo { font-size: 1.4rem; font-weight: 700; color: var(--texto); line-height: 1.3; flex: 1; }
-    
-    .editor-container { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    .editor-textarea { width: 100%; min-height: 400px; border: none; font-family: inherit; font-size: 1rem; line-height: 1.6; color: var(--texto); resize: vertical; outline: none; background: transparent; }
-    
-    .status-barra { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--borda); }
-    .status-salvo { font-size: 0.85rem; color: var(--verde); font-weight: 600; opacity: 0; transition: 0.3s; }
-    
-    .check-status { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--suave); background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--borda); transition: 0.2s; }
-    .check-status:hover { background: #e2e8f0; }
-    .check-status input { width: 18px; height: 18px; accent-color: var(--verde); cursor: pointer; }
-
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-    .loading { text-align: center; color: var(--suave); font-size: 1.1rem; margin-top: 50px; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudos — Concurso Curitiba</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<div class="topo">
+<header class="topo">
   <h1>Concurso Curitiba</h1>
-  <p>Agente Administrativo</p>
-</div>
+  <p>Agente Administrativo · Conteúdos e Resumos</p>
+</header>
 
-<div class="container">
-  <div id="loading" class="loading">Carregando seus dados...</div>
+<main class="container">
 
-  <!-- TELA 1: INÍCIO -->
-  <div id="tela-inicio" class="tela">
-    <div class="grid-materias" id="lista-materias"></div>
+  <h2 class="secao">1. Conteúdos Básicos</h2>
+  <div class="grade">
+    <a class="card" href="conteudo.html?t=portugues">
+      <span class="tag">5 questões</span>
+      <h3>Língua Portuguesa</h3>
+      <p>Interpretação, gramática, ortografia e literatura.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=raciocinio">
+      <span class="tag">5 questões</span>
+      <h3>Raciocínio Lógico</h3>
+      <p>Operações, geometria, estatística, probabilidade e proporção.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=informatica">
+      <span class="tag">5 questões</span>
+      <h3>Noções de Informática</h3>
+      <p>Hardware, Windows, Office, internet, e-mail e IA generativa.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=legislacao">
+      <span class="tag">5 questões</span>
+      <h3>Legislação</h3>
+      <p>Lei Orgânica, Estatuto, CF/88, improbidade, LGPD e mais.</p>
+    </a>
   </div>
 
-  <!-- TELA 2: MATÉRIA (Lista) -->
-  <div id="tela-materia" class="tela">
-    <button class="btn-voltar" onclick="voltarInicio()">⬅️ Voltar aos Cards</button>
-    <h2 id="titulo-materia" style="margin-bottom: 20px; color: var(--primaria-esc); font-size: 1.3rem;"></h2>
-    <div id="lista-topicos"></div>
+  <h2 class="secao">2. Conhecimentos Específicos</h2>
+  <div class="grade">
+    <a class="card" href="conteudo.html?t=adm-publica">
+      <span class="tag">20 questões</span>
+      <h3>Fundamentos da Adm. Pública</h3>
+      <p>Conceitos, princípios, PODC, processos e orçamento.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=direito-adm">
+      <span class="tag">20 questões</span>
+      <h3>Direito Administrativo</h3>
+      <p>Atos, bens, serviços públicos, licitações e responsabilidade.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=direito-const">
+      <span class="tag">20 questões</span>
+      <h3>Direito Constitucional</h3>
+      <p>Princípios, direitos fundamentais, hierarquia das normas.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=etica">
+      <span class="tag">20 questões</span>
+      <h3>Ética e Atendimento</h3>
+      <p>Integridade, conflitos de interesses e Lei 13.460/2017.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=arquivologia">
+      <span class="tag">20 questões</span>
+      <h3>Arquivologia e Redação</h3>
+      <p>Sistemas de informação, gestão documental e redação oficial.</p>
+    </a>
+    <a class="card" href="conteudo.html?t=pesquisa">
+      <span class="tag">Único</span>
+      <h3>Métodos de Pesquisa</h3>
+      <p>Métodos e Técnicas de Pesquisa.</p>
+    </a>
   </div>
 
-  <!-- TELA 3: RESUMO (Foco) -->
-  <div id="tela-resumo" class="tela">
-    <button class="btn-voltar" id="btn-voltar-materia" onclick="voltarMateria()">⬅️ Voltar aos Tópicos</button>
-    
-    <div class="resumo-header">
-      <div class="resumo-titulo" id="resumo-topico-nome"></div>
-    </div>
+</main>
 
-    <div class="editor-container">
-      <textarea class="editor-textarea" id="resumo-textarea" placeholder="Escreva tudo o que você aprendeu sobre este tema... Pode usar tópicos, links, o que quiser." oninput="salvarResumoFocado()"></textarea>
-      
-      <div class="status-barra">
-        <label class="check-status">
-          <input type="checkbox" id="resumo-checkbox" onchange="mudarStatusFocado()">
-          Tópico Concluído
-        </label>
-        <div class="status-salvo" id="status-salvo-resumo">Salvo automaticamente ✓</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script>
-  let dadosGlobais = [];
-  let materiaAtual = "";
-  let topicoAtualId = null;
-
-  window.onload = function() {
-    google.script.run.withSuccessHandler(function(dados) {
-      dadosGlobais = dados;
-      document.getElementById('loading').style.display = 'none';
-      renderizarInicio();
-      trocarTela('tela-inicio');
-    }).getDados();
-  };
-
-  function trocarTela(idTela) {
-    document.querySelectorAll('.tela').forEach(t => t.classList.remove('ativa'));
-    document.getElementById(idTela).classList.add('ativa');
-    window.scrollTo(0, 0);
-  }
-
-  // ========== TELA 1 ==========
-  function renderizarInicio() {
-    const container = document.getElementById('lista-materias');
-    container.innerHTML = '';
-    const materias = [...new Set(dadosGlobais.map(d => d.materia))];
-    
-    if (materias.length === 0) {
-      container.innerHTML = '<p>Sua planilha está vazia. Adicione dados na planilha para vê-los aqui.</p>';
-      return;
-    }
-
-    materias.forEach(mat => {
-      const card = document.createElement('div');
-      card.className = 'card-materia';
-      card.onclick = () => abrirMateria(mat);
-      
-      const topicosMat = dadosGlobais.filter(d => d.materia === mat);
-      const concluidos = topicosMat.filter(d => d.status).length;
-      
-      card.innerHTML = `
-        <h3>${mat}</h3>
-        <p>${concluidos} de ${topicosMat.length} tópicos concluídos</p>
-      `;
-      container.appendChild(card);
-    });
-  }
-
-  // ========== TELA 2 ==========
-  function abrirMateria(materia) {
-    materiaAtual = materia;
-    document.getElementById('titulo-materia').innerText = materia;
-    document.getElementById('btn-voltar-materia').innerHTML = `⬅️ Voltar aos Tópicos de ${materia}`;
-    
-    const container = document.getElementById('lista-topicos');
-    container.innerHTML = '';
-    
-    const topicos = dadosGlobais.filter(d => d.materia === materia);
-    
-    topicos.forEach(t => {
-      const div = document.createElement('div');
-      div.className = 'item-topico';
-      
-      const temResumo = t.resumo && t.resumo.trim().length > 0;
-      
-      div.innerHTML = `
-        <input type="checkbox" ${t.status ? 'checked' : ''} onchange="mudarStatusLista(this, ${t.id})">
-        <div class="texto-topico ${t.status ? 'concluido' : ''}" onclick="abrirResumo(${t.id})">
-          ${t.topico}
-          ${temResumo ? '<span class="tag-resumo">📝 Resumo feito</span>' : ''}
-        </div>
-      `;
-      container.appendChild(div);
-    });
-    
-    trocarTela('tela-materia');
-  }
-
-  function voltarInicio() {
-    renderizarInicio(); 
-    trocarTela('tela-inicio');
-  }
-
-  // ========== TELA 3 (O RESUMO) ==========
-  function abrirResumo(id) {
-    topicoAtualId = id;
-    const item = dadosGlobais.find(d => d.id === id);
-    if (!item) return;
-
-    document.getElementById('resumo-topico-nome').innerText = item.topico;
-    document.getElementById('resumo-textarea').value = item.resumo || "";
-    document.getElementById('resumo-checkbox').checked = item.status;
-
-    trocarTela('tela-resumo');
-    document.getElementById('resumo-textarea').focus();
-  }
-
-  function voltarMateria() {
-    // Atualiza a tela 2 caso você tenha mudado o status do checkbox na tela 3
-    abrirMateria(materiaAtual); 
-  }
-
-  // Salvar o texto do resumo com atraso (para não salvar a cada letra digitada)
-  let timerResumo;
-  function salvarResumoFocado() {
-    const status = document.getElementById('status-salvo-resumo');
-    status.style.opacity = '0';
-    const texto = document.getElementById('resumo-textarea').value;
-    
-    clearTimeout(timerResumo);
-    timerResumo = setTimeout(() => {
-      google.script.run.withSuccessHandler(() => {
-        status.style.opacity = '1';
-        setTimeout(() => status.style.opacity = '0', 2000);
-      }).salvarAlteracao(topicoAtualId, 'resumo', texto);
-      
-      const item = dadosGlobais.find(d => d.id === topicoAtualId);
-      if (item) item.resumo = texto;
-    }, 800); // Salva 0.8 segundos depois de parar de digitar
-  }
-
-  // ========== CHECKBOXES ==========
-  // 1. Mudar status na lista (Tela 2)
-  function mudarStatusLista(checkbox, id) {
-    const texto = checkbox.nextElementSibling;
-    if (checkbox.checked) texto.classList.add('concluido');
-    else texto.classList.remove('concluido');
-    
-    const item = dadosGlobais.find(d => d.id === id);
-    if (item) item.status = checkbox.checked;
-
-    google.script.run.salvarAlteracao(id, 'status', checkbox.checked);
-  }
-
-  // 2. Mudar status dentro do Resumo (Tela 3)
-  function mudarStatusFocado() {
-    const checkbox = document.getElementById('resumo-checkbox');
-    
-    const item = dadosGlobais.find(d => d.id === topicoAtualId);
-    if (item) item.status = checkbox.checked;
-
-    google.script.run.salvarAlteracao(topicoAtualId, 'status', checkbox.checked);
-  }
-</script>
 </body>
 </html>
