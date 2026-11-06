@@ -1,35 +1,204 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comparações, arredondamentos, aproximações e estimativas — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Comparações, arredondamentos, aproximações e estimativas</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: COMPARAÇÕES, ARREDONDAMENTOS E ESTIMATIVAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Comparações, Arredondamentos e Estimativas</h1>
+        <p>Raciocínio Lógico e Matemática – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#comparacoes">Comparações</a>
+        <a href="#arredondamentos">Arredondamentos</a>
+        <a href="#estimativas">Aproximações e Estimativas</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: COMPARAÇÕES -->
+    <div id="comparacoes" class="secao">
+        <h2>1. Comparações de Números</h2>
+        <div class="card">
+            <p>Comparar números significa dizer se um é maior (>), menor (<) ou igual (=) a outro.</p>
+            <h3>Números Decimais</h3>
+            <p>Para comparar números com vírgula, iguale a quantidade de casas decimais (adicionando zeros à direita) e compare como se fossem números inteiros.</p>
+            <ul>
+                <li>Exemplo: Comparar 0,5 e 0,05. <br>Igualando as casas: 0,50 e 0,05. <br>Como 50 > 05, então <strong>0,5 > 0,05</strong>.</li>
+            </ul>
+            <h3>Números Negativos</h3>
+            <p>Aqui mora a maior pegadinha! Em números negativos, o que tem o <strong>maior valor absoluto (sem o sinal) é o menor número</strong>.</p>
+            <ul>
+                <li>Exemplo: Quem é maior, -10 ou -2? <br>Pense na reta numérica: -10 está mais para a esquerda. Portanto, <strong>-10 < -2</strong>.</li>
+            </ul>
+            <h3>Frações</h3>
+            <p>Se os denominadores (números de baixo) forem iguais, a maior fração é a que tem o maior numerador (número de cima). Ex: 3/5 > 2/5.</p>
+            <p>Se os denominadores forem diferentes, você pode transformá-los em decimais (dividindo) ou tirar o MMC.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ARREDONDAMENTOS -->
+    <div id="arredondamentos" class="secao">
+        <h2>2. Arredondamentos</h2>
+        <div class="card">
+            <p>Arredondar é simplificar um número para uma quantidade menor de casas decimais, mantendo-o próximo do valor real.</p>
+            <h3>A Regra de Ouro do Arredondamento</h3>
+            <p>Para arredondar, você olha para o <strong>primeiro algarismo que será descartado</strong> (o número imediatamente à direita da casa que você quer manter):</p>
+            <ul>
+                <li>Se o algarismo for <strong>0, 1, 2, 3 ou 4</strong>: você <strong>mantém</strong> o número anterior como está. (Arredonda para baixo)</li>
+                <li>Se o algarismo for <strong>5, 6, 7, 8 ou 9</strong>: você <strong>aumenta em 1 unidade</strong> o número anterior. (Arredonda para cima)</li>
+            </ul>
+            <p><strong>Exemplos:</strong></p>
+            <ul>
+                <li>Arredondar 4,<strong>3</strong>8 para uma casa decimal: O número a ser descartado é o 8 (maior que 5). Então o 3 aumenta: <strong>4,4</strong>.</li>
+                <li>Arredondar 7,<strong>2</strong>1 para uma casa decimal: O número a ser descartado é o 1 (menor que 5). Então o 2 se mantém: <strong>7,2</strong>.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Quando o algarismo a ser descartado for exatamente <strong>5</strong>, a regra matemática padrão manda arredondar para cima. Exemplo: 3,<strong>5</strong> arredondado para inteiro vira <strong>4</strong>. Mas fique atento se o edital citar regras específicas de instituições (como o IBGE, que em alguns casos usa o "arredondamento bancário" para números pares). Para a FAFIPA, use a regra do "5 para cima".
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: APROXIMAÇÕES E ESTIMATIVAS -->
+    <div id="estimativas" class="secao">
+        <h2>3. Aproximações e Estimativas</h2>
+        <div class="card">
+            <p>Na prova, muitas vezes você não precisa fazer a conta exata. Você pode <strong>estimar</strong> o resultado arredondando os números para valores mais fáceis.</p>
+            <p><strong>Exemplo prático:</strong> Quanto é 48 × 21?</p>
+            <ul>
+                <li>Fazendo a conta exata: 1.008.</li>
+                <li>Estimando: Arredonda 48 para 50, e 21 para 20. Multiplicando 50 × 20 = <strong>1.000</strong>.</li>
+                <li>Veja que a estimativa (1.000) é muito próxima do valor real (1.008). Em questões de múltipla escolha, se as alternativas forem muito distantes umas das outras, a estimativa te leva direto para a resposta certa sem você precisar fazer a conta completa.</li>
+            </ul>
+            <p><strong>Ordem de Grandeza:</strong> Às vezes a banca pede apenas a "potência de 10" mais próxima. Ex: 9.800 é da ordem de 10.000 (10<sup>4</sup>).</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Números Negativos:</strong> A banca vai colocar -15 e -3 e perguntar qual é o menor. O -15 é o menor! Pense sempre na reta numérica (quanto mais para a esquerda, menor).</li>
+                <li><strong>Zeros após a vírgula:</strong> 0,3 é MAIOR que 0,299. Muitos candidatos acham que 299 é maior que 3, mas 0,3 = 0,300, que é maior que 0,299.</li>
+                <li><strong>Arredondamento de 5:</strong> Se precisar arredondar 8,5 para inteiro, a resposta é 9 (regra do 5 para cima).</li>
+                <li><strong>Estimativa em múltipla escolha:</strong> Antes de fazer contas gigantes, olhe as alternativas. Se a A for 10, B for 1.000, C for 100.000, você só precisa estimar a "ordem de grandeza" para acertar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Comparando os números decimais 0,45 e 0,405, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Igualando as casas decimais, temos 0,450 e 0,405. Como 450 > 405, o 0,45 é maior.')">0,405 é maior que 0,45.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 0,45 é o mesmo que 0,450. Comparando 450 com 405, vemos que 0,45 é maior que 0,405.')">0,45 é maior que 0,405.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles não são iguais. 0,45 = 0,450, que é diferente de 0,405.')">0,45 é igual a 0,405.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é o resultado do arredondamento do número 7,268 para uma casa decimal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O algarismo a ser descartado é o 6 (segunda casa decimal). Como 6 é maior que 5, aumentamos o 2 para 3.')">7,2</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Para uma casa decimal, olhamos o segundo algarismo após a vírgula (6). Como 6 >= 5, o 2 vira 3. Resultado: 7,3.')">7,3</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Arredondar para uma casa decimal significa deixar apenas um número após a vírgula.')">7,26</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Em relação aos números negativos, qual é a alternativa correta?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Em números negativos, quanto maior o valor absoluto, menor é o número. O -20 é menor que o -5.')">-20 é maior que -5.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Na reta numérica, o -20 está mais à esquerda que o -5, portanto é menor.')">-20 é menor que -5.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Todos os números negativos são menores que zero.')">-20 é maior que zero.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Para estimar o resultado da operação 39 × 21, um candidato arredondou os dois números para a dezena mais próxima. Qual foi a estimativa obtida?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Arredondando 39 para 40 e 21 para 20, a conta fica 40 × 20 = 800.')">600</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 39 ≈ 40 e 21 ≈ 20. Logo, 40 × 20 = 800.')">800</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa seria a estimativa se arredondássemos para 50 × 20, o que não é a dezena mais próxima de 39.')">1.000</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. O número 5,67 arredondado para o inteiro mais próximo é:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O número a ser descartado é o 6. Como 6 >= 5, aumentamos o 5 para 6.')">5</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Olhando para a primeira casa decimal (6), como é maior ou igual a 5, arredondamos o 5 para cima, resultando em 6.')">6</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O arredondamento para inteiro não deixa casas decimais.')">7</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: COMPARAÇÕES, ARREDONDAMENTOS E ESTIMATIVAS -->

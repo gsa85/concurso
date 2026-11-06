@@ -1,35 +1,259 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lei Municipal nº 1.656/1958 (Estatuto dos Funcionários Públicos Municipais) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Lei Municipal nº 1.656/1958 (Estatuto dos Funcionários Públicos Municipais)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ESTATUTO DOS FUNCIONÁRIOS PÚBLICOS DE CURITIBA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Estatuto dos Funcionários Públicos</h1>
+        <p>Lei Municipal nº 1.656/1958 (Curitiba) – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#visao">Visão Geral</a>
+        <a href="#provimento">Provimento, Posse e Exercício</a>
+        <a href="#direitos">Direitos e Vantagens</a>
+        <a href="#deveres">Deveres e Proibições</a>
+        <a href="#penalidades">Penalidades</a>
+        <a href="#tabela">Tabela Comparativa</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: VISÃO GERAL -->
+    <div id="visao" class="secao">
+        <h2>1. Visão Geral do Estatuto</h2>
+        <div class="card">
+            <p>O Estatuto (Lei 1.656/1958) regula o <strong>provimento dos cargos públicos</strong>, os <strong>direitos, garantias e vantagens</strong>, bem como os <strong>deveres e responsabilidades</strong> dos funcionários públicos municipais de Curitiba.</p>
+            <p><strong>Conceitos iniciais (Art. 1º a 7º):</strong></p>
+            <ul>
+                <li><strong>Funcionário Público:</strong> pessoa legalmente investida em cargo público.</li>
+                <li><strong>Cargo Público:</strong> criado por lei, em número certo, com denominação própria e pago pelo Tesouro Municipal.</li>
+                <li><strong>Cargos de Carreira:</strong> permitem acesso hierárquico às classes subsequentes.</li>
+                <li><strong>Cargos Isolados:</strong> correspondem a certa e determinada função, não integrando carreiras.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PROVIMENTO, POSSE E EXERCÍCIO -->
+    <div id="provimento" class="secao">
+        <h2>2. Provimento, Posse e Exercício</h2>
+        <div class="card">
+            <h3>Provimento (Art. 8º a 16)</h3>
+            <ul>
+                <li>Os cargos são acessíveis a <strong>todos os brasileiros</strong> (natos ou naturalizados) que preencham os requisitos legais.</li>
+                <li>A primeira investidura em cargo de carreira ou isolado se dá mediante <strong>concurso de provas ou de provas e títulos</strong>.</li>
+                <li>Compete ao <strong>Prefeito</strong> prover os cargos por decreto, salvo exceções legais.</li>
+            </ul>
+            <h3>Posse (Art. 17 a 21)</h3>
+            <ul>
+                <li><strong>Posse</strong> é o ato que investe o cidadão em cargo ou função gratificada.</li>
+                <li>O prazo para tomar posse é de <strong>15 (quinze) dias úteis</strong>, contados da publicação do ato de nomeação, podendo ser prorrogado por mais 30 dias mediante requerimento.</li>
+                <li>Não haverá posse nos casos de <strong>promoção</strong> e de <strong>designação para função não gratificada</strong>.</li>
+            </ul>
+            <h3>Exercício (Art. 26 a 31)</h3>
+            <ul>
+                <li>O exercício do cargo tem início <strong>na data da posse</strong>.</li>
+                <li>No caso de <strong>reintegração</strong>, o exercício inicia no prazo de <strong>30 dias</strong> contados da publicação oficial do ato.</li>
+                <li>O funcionário que interromper o exercício por <strong>30 dias consecutivos</strong> será <strong>demitido por abandono de cargo</strong>.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca costuma trocar os prazos. Memorize: <strong>Posse = 15 dias úteis</strong> (prorrogável por 30 dias). <strong>Exercício após reintegração = 30 dias</strong>. <strong>Abandono = 30 dias consecutivos</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: DIREITOS E VANTAGENS -->
+    <div id="direitos" class="secao">
+        <h2>3. Direitos, Garantias e Vantagens</h2>
+        <div class="card">
+            <h3>Estágio Probatório</h3>
+            <p>O estágio probatório é o período de avaliação do servidor nomeado para cargo efetivo. Durante ele, apuram-se requisitos como <strong>assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade</strong>. O funcionário que já foi ocupante de cargo público municipal e concluiu o estágio probatório <strong>não se sujeita a novo estágio</strong>.</p>
+            <h3>Promoção (Art. 35 a 44)</h3>
+            <ul>
+                <li>A promoção pode ocorrer por <strong>antiguidade</strong> (2/3 das vagas) e por <strong>merecimento</strong> (1/3 das vagas).</li>
+                <li>Exige-se <strong>interstício de 735 dias</strong> de efetivo exercício na classe para promoção. Na falta de funcionário com esse interstício, admite-se <strong>365 dias</strong>.</li>
+                <li>Somente concorrem à promoção por merecimento os funcionários colocados nos <strong>dois primeiros terços da classe</strong>, por ordem de antiguidade.</li>
+            </ul>
+            <h3>Outras Formas de Provimento (Art. 53 a 71)</h3>
+            <ul>
+                <li><strong>Transferência:</strong> passa de um cargo para outro da mesma natureza, respeitada a habilitação profissional.</li>
+                <li><strong>Reintegração:</strong> retorno do funcionário demitido, com ressarcimento de prejuízos, por decisão judicial ou administrativa.</li>
+                <li><strong>Reversão:</strong> retorno do aposentado ao serviço público, após verificação de que não subsistem os motivos da aposentadoria.</li>
+                <li><strong>Aproveitamento:</strong> retorno do funcionário em disponibilidade ao cargo, com preferência no preenchimento de vagas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DEVERES E PROIBIÇÕES -->
+    <div id="deveres" class="secao">
+        <h2>4. Deveres e Proibições</h2>
+        <div class="card">
+            <p>O Estatuto enumera deveres, proibições e responsabilidades do funcionário[reference:23]. Entre os deveres, destaca-se o compromisso de <strong>desempenhar com lealdade e exação os deveres do cargo</strong>, cumprindo fielmente a Constituição, as leis e os regulamentos.</p>
+            <p><strong>Proibições relevantes (Art. 209 e alterações recentes):</strong></p>
+            <ul>
+                <li>O servidor <strong>não pode exercer o comércio</strong> nem participar de sociedades comerciais, industriais ou bancárias[reference:25].</li>
+                <li>Recentemente, a Câmara Municipal aprovou alteração para permitir que o servidor seja <strong>cotista de sociedade privada</strong>, desde que <strong>não exerça funções de administração ou gerência</strong>[reference:26].</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A lei permite que o servidor seja <strong>cotista</strong> (sócio), mas <strong>venda</strong> a participação na gestão da empresa. A banca pode afirmar que “é vedada qualquer participação em sociedade privada”, o que está <strong>incorreto</strong> após a atualização legislativa.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: PENALIDADES E RESPONSABILIDADES -->
+    <div id="penalidades" class="secao">
+        <h2>5. Responsabilidades e Penalidades</h2>
+        <div class="card">
+            <p>O funcionário público responde nas esferas <strong>administrativa, civil e penal</strong> pelo exercício irregular de suas atribuições. As penalidades disciplinares previstas no Estatuto incluem:</p>
+            <ul>
+                <li><strong>Advertência;</strong></li>
+                <li><strong>Suspensão;</strong></li>
+                <li><strong>Demissão;</strong></li>
+                <li><strong>Cassacão de aposentadoria;</strong></li>
+                <li><strong>Destituição de função gratificada.</strong></li>
+            </ul>
+            <p>A <strong>demissão por abandono de cargo</strong> ocorre quando o funcionário interrompe o exercício por <strong>30 dias consecutivos</strong>.</p>
+            <p>O <strong>Processo de Revisão</strong> está previsto nos artigos 252 e seguintes do Estatuto e serve para apurar falta funcional e aplicar penalidade[reference:28].</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: TABELA COMPARATIVA -->
+    <div id="tabela" class="secao">
+        <h2>6. Tabela Comparativa – Formas de Provimento</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Instituto</th>
+                    <th>Definição</th>
+                    <th>Prazo / Condição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Posse</strong></td>
+                    <td>Investidura em cargo ou função gratificada</td>
+                    <td>15 dias úteis (prorrogável por 30 dias)</td>
+                </tr>
+                <tr>
+                    <td><strong>Exercício</strong></td>
+                    <td>Início efetivo das atribuições</td>
+                    <td>Na data da posse (reintegração: 30 dias)</td>
+                </tr>
+                <tr>
+                    <td><strong>Transferência</strong></td>
+                    <td>Passagem para cargo da mesma natureza</td>
+                    <td>Respeitada a habilitação profissional</td>
+                </tr>
+                <tr>
+                    <td><strong>Reintegração</strong></td>
+                    <td>Retorno do demitido com ressarcimento</td>
+                    <td>Por sentença judicial ou decisão administrativa</td>
+                </tr>
+                <tr>
+                    <td><strong>Reversão</strong></td>
+                    <td>Retorno do aposentado ao serviço</td>
+                    <td>Não subsistindo os motivos da aposentadoria</td>
+                </tr>
+                <tr>
+                    <td><strong>Aproveitamento</strong></td>
+                    <td>Retorno do funcionário em disponibilidade</td>
+                    <td>Preferência no preenchimento de vagas</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 1.656/1958, qual é o prazo para o funcionário tomar posse após a publicação do ato de nomeação?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 15 dias úteis, conforme o Art. 21 (redação da Lei 8.606/1995).')">30 dias corridos</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 21: 15 dias úteis, prorrogáveis por mais 30 dias mediante requerimento.')">15 dias úteis</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 30 dias é o prazo para exercício em caso de reintegração (Art. 26, parágrafo único).')">30 dias úteis</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O funcionário que interromper o exercício por 30 dias consecutivos será demitido por qual motivo?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A demissão por abandono de cargo está prevista no Art. 31.')">Inassiduidade habitual</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 31: interrupção por 30 dias consecutivos gera demissão por abandono de cargo.')">Abandono de cargo</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A demissão por indisciplina é outra hipótese, não se confunde com abandono.')">Indisciplina</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Sobre a promoção, qual é o interstício mínimo exigido de efetivo exercício na classe?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 365 dias é a exceção quando não há funcionário com 735 dias.')">365 dias</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 39: 735 dias de efetivo exercício na classe.')">735 dias</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 730 dias não está previsto no Estatuto.')">730 dias</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A reintegração é o ato pelo qual o funcionário demitido reingressa ao serviço público. Qual é o prazo para entrar em exercício nesse caso?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 15 dias úteis é o prazo para posse, não para exercício em reintegração.')">15 dias úteis</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 26, parágrafo único: 30 dias contados da publicação oficial do ato.')">30 dias</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 60 dias não é o prazo previsto para reintegração.')">60 dias</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ESTATUTO DOS FUNCIONÁRIOS PÚBLICOS DE CURITIBA -->

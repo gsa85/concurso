@@ -1,35 +1,210 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Noções de direção: norte, sul, leste e oeste, esquerda e direita, para cima e para baixo — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Noções de direção: norte, sul, leste e oeste, esquerda e direita, para cima e para baixo</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: MEDIDAS DE SUPERFÍCIES -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Medidas de Superfícies</h1>
+        <p>Conversão de Unidades e Figuras Compostas – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#unidades">Unidades de Medida</a>
+        <a href="#compostas">Figuras Compostas</a>
+        <a href="#subtração">Área Subtraída</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: UNIDADES DE MEDIDA -->
+    <div id="unidades" class="secao">
+        <h2>1. Unidades de Medida de Superfície</h2>
+        <div class="card">
+            <p>A unidade padrão de medida de superfície é o <strong>metro quadrado (m²)</strong>. Porém, dependendo do tamanho da área, usamos múltiplos (para áreas grandes) e submúltiplos (para áreas pequenas).</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Múltiplos</th>
+                        <th>Unidade Base</th>
+                        <th>Submúltiplos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>km² > hm² > dam²</td>
+                        <td><strong>m²</strong></td>
+                        <td>dm² > cm² > mm²</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Como converter?</h3>
+            <p>Aqui mora o perigo! Como estamos ao quadrado (2 dimensões), cada "pulo" de uma casa para outra <strong>multiplica ou divide por 100</strong> (e não por 10, como nas medidas de comprimento).</p>
+            <ul>
+                <li>Para descer (m² para cm²): multiplica por 100.</li>
+                <li>Para subir (cm² para m²): divide por 100.</li>
+            </ul>
+
+            <div class="box-formula">
+                1 m² = 100 dm² = 10.000 cm²
+            </div>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que 1 metro quadrado tem 100 centímetros quadrados. <strong>Falso!</strong> 1 m² tem <strong>10.000 cm²</strong> (porque 100 cm × 100 cm = 10.000 cm²).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: FIGURAS COMPOSTAS -->
+    <div id="compostas" class="secao">
+        <h2>2. Medidas de Figuras Compostas (Decomposição)</h2>
+        <div class="card">
+            <p>Muitas questões de concursos não apresentam um quadrado ou círculo perfeito, mas sim plantas de casas, terrenos em "L" ou formatos irregulares.</p>
+            <p>A técnica para calcular a área dessas figuras é a <strong>decomposição</strong>: você "corta" a figura imaginariamente em pedaços que você sabe calcular (retângulos, triângulos, etc.).</p>
+            <p><strong>Exemplo:</strong> Um terreno em forma de "L" pode ser dividido em dois retângulos. Você calcula a área do retângulo 1, calcula a área do retângulo 2 e <strong>soma</strong> os resultados.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ÁREA SUBTRAÍDA -->
+    <div id="subtração" class="secao">
+        <h2>3. Área Subtraída (O que sobra)</h2>
+        <div class="card">
+            <p>Outra forma de resolver figuras compostas é pela <strong>subtração</strong>. Isso acontece quando você tem uma figura maior e uma menor "recortada" de dentro dela.</p>
+            <p><strong>Exemplo clássico:</strong> Um terreno quadrado com uma piscina circular no meio. Para saber a área da grama, você calcula a área total do quadrado e <strong>subtrai</strong> a área do círculo.</p>
+            <ul>
+                <li>Área da grama = Área do quadrado - Área do círculo</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Conversão ao Quadrado:</strong> Grave isto: <strong>1 m² = 10.000 cm²</strong>. A banca coloca 100 cm² nas alternativas para pegar quem está desatento.</li>
+                <li><strong>Unidades misturadas:</strong> Se um terreno tem a base em <strong>metros</strong> e a altura em <strong>centímetros</strong>, converta tudo para a mesma unidade ANTES de multiplicar. O contrário gera uma área errada.</li>
+                <li><strong>Leia o comando:</strong> A questão quer a área total ou a área "sombreada"/"restante"? Se quiser a restante, geralmente é necessário subtrair uma figura da outra.</li>
+                <li><strong>Área vs. Perímetro:</strong> Perímetro é a soma das bordas (m, cm). Área é a multiplicação (m², cm²). Se a questão fala em "cerca", é perímetro. Se fala em "piso" ou "grama", é área.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. A quantos centímetros quadrados (cm²) equivale uma área de 2 metros quadrados (m²)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você multiplicou por 100. Como estamos ao quadrado, a multiplicação é por 100 a cada casa. Logo, 2 × 10.000 = 20.000.')">200 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 1 m² = 10.000 cm². Logo, 2 m² = 20.000 cm².')">20.000 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 2.000 cm² seria se a conversão fosse linear (metros para centímetros), mas a área é quadrada.')">2.000 cm²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Um terreno tem formato de um retângulo de 10 metros de comprimento por 4 metros de largura. Nele, será construída uma casa que ocupa um quadrado de 3 metros de lado. Qual será a área livre do terreno?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você calculou a área total do terreno (40 m²), mas esqueceu de subtrair a área da casa (9 m²).')">40 m²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Área do terreno = 10 × 4 = 40 m². Área da casa = 3 × 3 = 9 m². Área livre = 40 - 9 = 31 m².')">31 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Verifique os cálculos: 40 m² (terreno) - 9 m² (casa) = 31 m².')">49 m²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Uma sala comercial tem o formato de um "L". Ela é composta por dois retângulos: um medindo 5m por 3m e outro medindo 2m por 4m. Qual é a área total da sala?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Área 1 = 5 × 3 = 15 m². Área 2 = 2 × 4 = 8 m². Área total = 15 + 8 = 23 m².')">23 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você provavelmente somou as medidas sem multiplicar. O correto é (5×3) + (2×4) = 23.')">14 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Lembre-se de calcular a área de cada retângulo separadamente e depois somar.')">30 m²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Um piso retangular tem 2 metros de largura e 150 centímetros de comprimento. Qual é a sua área em metros quadrados (m²)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você multiplicou 2 por 150, mas esqueceu de converter os 150 cm para metros (1,5 m).')">300 m²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Primeiro converta: 150 cm = 1,5 m. Depois calcule a área: 2 × 1,5 = 3 m².')">3 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A conversão de 150 cm para metros é 1,5. Logo, 2 × 1,5 = 3 m².')">1,5 m²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Se uma fazenda tem 1 km² (um quilômetro quadrado) de extensão, quantos metros quadrados (m²) ela possui?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1 km = 1.000 m. Logo, 1 km² = 1.000 × 1.000 = 1.000.000 m².')">100.000 m²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Como 1 km = 1.000 m, então 1 km² = 1.000 m × 1.000 m = 1.000.000 m² (um milhão de metros quadrados).')">1.000.000 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cuidado, a conversão de km² para m² multiplica por 1.000.000 (milhão), e não por mil.')">10.000 m²</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: MEDIDAS DE SUPERFÍCIES -->

@@ -1,35 +1,228 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>As quatro operações fundamentais — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>As quatro operações fundamentais</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: MATEMÁTICA - QUATRO OPERAÇÕES -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* NOVO: Estilo do Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR (Adicionado aqui) -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>As Quatro Operações Fundamentais</h1>
+        <p>Matemática Básica para Concursos – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">Conceitos Básicos</a>
+        <a href="#regras-sinais">Regras de Sinais</a>
+        <a href="#expressoes">Ordem de Resolução</a>
+        <a href="#propriedades">Propriedades</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS BÁSICOS -->
+    <div id="conceitos" class="secao">
+        <h2>1. Conceitos Básicos</h2>
+        <div class="card">
+            <p>As quatro operações fundamentais da aritmética são a base para quase todas as questões de matemática (e até de raciocínio lógico) em provas.</p>
+            <ul>
+                <li><strong>Adição (+):</strong> Aumentar, juntar quantidades. Os termos são chamados de <strong>parcelas</strong> e o resultado de <strong>soma</strong> ou <strong>total</strong>.</li>
+                <li><strong>Subtração (-):</strong> Diminuir, retirar. O primeiro termo é o <strong>minuendo</strong>, o segundo é o <strong>subtraendo</strong> e o resultado é a <strong>diferença</strong> ou <strong>resto</strong>.</li>
+                <li><strong>Multiplicação (×):</strong> É uma soma de parcelas iguais. Os termos são <strong>multiplicando</strong> e <strong>multiplicador</strong> (ou fatores) e o resultado é o <strong>produto</strong>.</li>
+                <li><strong>Divisão (÷):</strong> Repartir em partes iguais. O termo a ser dividido é o <strong>dividendo</strong>, quem divide é o <strong>divisor</strong>, o resultado é o <strong>quociente</strong> e o que sobra é o <strong>resto</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: REGRAS DE SINAIS -->
+    <div id="regras-sinais" class="secao">
+        <h2>2. Regras de Sinais (Jogo do Sinal)</h2>
+        <div class="card">
+            <h3>Adição e Subtração</h3>
+            <p><strong>Sinais Iguais:</strong> Somam-se os valores e conserva-se o sinal.</p>
+            <ul>
+                <li>(+5) + (+3) = +8</li>
+                <li>(-5) + (-3) = -8</li>
+            </ul>
+            <p><strong>Sinais Diferentes:</strong> Subtraem-se os valores (maior pelo menor) e conserva-se o sinal do maior número (em módulo).</p>
+            <ul>
+                <li>(+7) + (-2) = +5</li>
+                <li>(-9) + (+4) = -5</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Multiplicação e Divisão</h3>
+            <p>Na multiplicação e divisão, o "jogo de sinais" é o mesmo:</p>
+            <ul>
+                <li>(+) com (+) = (+)</li>
+                <li>(-) com (-) = (+)</li>
+                <li>(+) com (-) = (-)</li>
+                <li>(-) com (+) = (-)</li>
+            </ul>
+            <p><em>Macete: Sinais iguais dão positivo (+); sinais diferentes dão negativo (-).</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ORDEM DE RESOLUÇÃO -->
+    <div id="expressoes" class="secao">
+        <h2>3. Ordem de Resolução (Expressões Numéricas)</h2>
+        <div class="card">
+            <p>A FAFIPA ama cobrar expressões numéricas. Se você errar a ordem, a questão fica errada, mesmo sabendo fazer a conta.</p>
+            <p><strong>A ordem correta é:</strong></p>
+            <ol>
+                <li>Resolver o que está dentro de parênteses <strong>( )</strong>;</li>
+                <li>Depois o que está dentro de colchetes <strong>[ ]</strong>;</li>
+                <li>Por último, o que está dentro de chaves <strong>{ }</strong>.</li>
+            </ol>
+            <p><strong>Dentro dos sinais gráficos (ou se não houver nenhum), a ordem é:</strong></p>
+            <ol>
+                <li><strong>Potenciação / Radiciação</strong></li>
+                <li><strong>Multiplicação / Divisão</strong> (na ordem em que aparecem, da esquerda para a direita)</li>
+                <li><strong>Adição / Subtração</strong> (na ordem em que aparecem, da esquerda para a direita)</li>
+            </ol>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Em expressões como <strong>10 - 2 × 3</strong>, a multiplicação deve ser feita primeiro. O resultado correto é <strong>10 - 6 = 4</strong>. A banca vai tentar te induzir a fazer a subtração primeiro (10 - 2 = 8, depois 8 × 3 = 24), o que está <strong>errado</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: PROPRIEDADES -->
+    <div id="propriedades" class="secao">
+        <h2>4. Propriedades Importantes</h2>
+        <div class="card">
+            <h3>Propriedades da Adição e Multiplicação</h3>
+            <ul>
+                <li><strong>Comutativa:</strong> A ordem dos números não altera o resultado. Ex: 3 + 2 = 2 + 3 (Adição); 4 × 5 = 5 × 4 (Multiplicação).</li>
+                <li><strong>Associativa:</strong> O agrupamento não altera o resultado. Ex: (2 + 3) + 4 = 2 + (3 + 4).</li>
+                <li><strong>Distributiva:</strong> A multiplicação distribui sobre a soma/subtração. Ex: 2 × (3 + 4) = (2 × 3) + (2 × 4) = 6 + 8 = 14.</li>
+                <li><strong>Elemento Neutro:</strong> Na adição é o <strong>0</strong> (zero). Na multiplicação é o <strong>1</strong> (um).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Ordem de Operações:</strong> Nunca resolva uma expressão da esquerda para a direita ignorando a multiplicação/divisão antes da soma/subtração.</li>
+                <li><strong>Jogo de Sinais:</strong> Cuidado com os parênteses antecedidos por sinal negativo. Ex: -(3 + 2) = -5.</li>
+                <li><strong>Divisão por Zero:</strong> <strong>Não existe</strong> divisão por zero (ex: 5 ÷ 0). A banca coloca isso para te confundir. Zero dividido por qualquer número é zero (0 ÷ 5 = 0).</li>
+                <li><strong>Zero na Multiplicação:</strong> Qualquer número multiplicado por zero é zero (99 × 0 = 0).</li>
+                <li><strong>Elemento Neutro:</strong> Não confunda! O neutro da soma é 0, o da multiplicação é 1.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é o resultado da expressão numérica: 10 - 2 × 3 + 4?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você deve resolver a multiplicação primeiro. 2 × 3 = 6. Depois 10 - 6 = 4. Por fim, 4 + 4 = 8.')">28</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Primeiro a multiplicação (2 × 3 = 6). Depois, da esquerda para a direita: 10 - 6 = 4; 4 + 4 = 8.')">8</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A multiplicação tem prioridade sobre a adição e subtração.')">12</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é a propriedade da multiplicação que afirma que 3 × (4 + 5) = (3 × 4) + (3 × 5)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A propriedade comutativa trata da troca de ordem (ex: 3 × 4 = 4 × 3).')">Comutativa.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Essa é a propriedade distributiva, onde a multiplicação se distribui sobre a adição.')">Distributiva.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A propriedade associativa trata do agrupamento (ex: 3 × (4 × 5) = (3 × 4) × 5).')">Associativa.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. De acordo com as regras de sinais, qual é o resultado da multiplicação: (-5) × (-4)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Sinais iguais (negativo com negativo) resultam em positivo.')">-20</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Na multiplicação, sinais iguais resultam em positivo (+). Portanto, (-5) × (-4) = +20.')">+20</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O resultado da multiplicação é 20, e os sinais iguais tornam o resultado positivo.')">-9</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Na expressão { [ (2 + 3) × 2 ] + 5 }, qual é o resultado correto?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Resolva primeiro os parênteses: (2+3)=5. Depois o colchete: 5 × 2 = 10. Por fim a chave: 10 + 5 = 15.')">20</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! (2+3)=5; [5 × 2]=10; {10 + 5} = 15.')">15</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem dos sinais gráficos deve ser respeitada: primeiro ( ), depois [ ], depois { }.')">12</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre as operações matemáticas básicas, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Não existe divisão por zero. A operação é indefinida.')">A divisão de um número por zero é sempre igual a zero.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Qualquer número multiplicado por zero resulta em zero.')">A multiplicação de qualquer número por zero resulta em zero.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O elemento neutro da adição é o 0, o da multiplicação é o 1.')">O elemento neutro da multiplicação é o zero.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: MATEMÁTICA - QUATRO OPERAÇÕES -->

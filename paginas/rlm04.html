@@ -1,35 +1,214 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprimento da circunferência — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Comprimento da circunferência</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: COMPRIMENTO DA CIRCUNFERÊNCIA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Comprimento da Circunferência</h1>
+        <p>Geometria Plana – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito e Fórmulas</a>
+        <a href="#raio-diametro">Raio vs. Diâmetro</a>
+        <a href="#como-calcular">Como Calcular</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO E FÓRMULAS -->
+    <div id="conceito" class="secao">
+        <h2>1. O Conceito e as Fórmulas</h2>
+        <div class="card">
+            <p>O <strong>comprimento da circunferência</strong> é a medida do contorno de um círculo (o seu "perímetro"). Para calculá-lo, precisamos de duas coisas: do número <strong>π (pi)</strong> e da medida do <strong>raio</strong> ou do <strong>diâmetro</strong>.</p>
+            <p>O valor de π é um número irracional que vale aproximadamente <strong>3,14</strong> (ou 3,14159...). Em provas de concurso, a banca geralmente fornece "use π = 3,14" no enunciado.</p>
+            
+            <p>Existem duas fórmulas para calcular o comprimento, dependendo do dado que a questão fornece:</p>
+            
+            <div class="box-formula">
+                C = 2 × π × r<br><br>
+                ou<br><br>
+                C = π × d
+            </div>
+            
+            <ul>
+                <li><strong>C</strong> = Comprimento da circunferência.</li>
+                <li><strong>π</strong> = Pi (geralmente 3,14).</li>
+                <li><strong>r</strong> = Raio (distância do centro até a borda).</li>
+                <li><strong>d</strong> = Diâmetro (a maior distância de ponta a ponta, passando pelo centro).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: RAIO VS. DIÂMETRO -->
+    <div id="raio-diametro" class="secao">
+        <h2>2. A Relação entre Raio e Diâmetro</h2>
+        <div class="card">
+            <p>Essa é a parte que mais derruba candidatos. O <strong>diâmetro é sempre o dobro do raio</strong>. Ou seja:</p>
+            <ul>
+                <li><strong>d = 2 × r</strong> (Diâmetro é duas vezes o raio).</li>
+                <li><strong>r = d / 2</strong> (O raio é a metade do diâmetro).</li>
+            </ul>
+            <p>Se a questão te der o diâmetro, você pode usar a fórmula <strong>C = π × d</strong> diretamente, ou dividir o diâmetro por 2 para achar o raio e usar a fórmula <strong>C = 2 × π × r</strong>. O resultado será o mesmo!</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dar o <strong>diâmetro</strong> no enunciado (ex: "uma praça circular tem 20 metros de diâmetro") e o candidato desatento usa o 20 como se fosse o raio na fórmula. Se usar o raio errado, a resposta fica o dobro do correto.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: COMO CALCULAR -->
+    <div id="como-calcular" class="secao">
+        <h2>3. Como Calcular (Passo a Passo)</h2>
+        <div class="card">
+            <h3>Exemplo 1: A questão dá o RAIO</h3>
+            <p>Qual é o comprimento de uma circunferência de raio 5 cm? (Use π = 3,14)</p>
+            <ul>
+                <li>Fórmula: C = 2 × π × r</li>
+                <li>Substituindo: C = 2 × 3,14 × 5</li>
+                <li>Calculando: C = 6,28 × 5</li>
+                <li><strong>C = 31,4 cm</strong></li>
+            </ul>
+
+            <h3>Exemplo 2: A questão dá o DIÂMETRO</h3>
+            <p>Qual é o comprimento de uma circunferência de diâmetro 10 cm? (Use π = 3,14)</p>
+            <ul>
+                <li>Fórmula: C = π × d</li>
+                <li>Substituindo: C = 3,14 × 10</li>
+                <li><strong>C = 31,4 cm</strong></li>
+            </ul>
+            <p><em>Veja que o resultado é o mesmo, pois um diâmetro de 10 cm equivale a um raio de 5 cm.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Raio vs. Diâmetro:</strong> Leia o enunciado com atenção. Se ele disser "diâmetro", use C = π × d ou divida por 2 antes de usar a fórmula com o raio.</li>
+                <li><strong>Não confunda com Área:</strong> Comprimento é a "cerca" (1 dimensão). Área é o "terreno" (2 dimensões). A fórmula da área é <strong>A = π × r²</strong> (não use o 2 na frente!).</li>
+                <li><strong>Valor do π:</strong> Se a questão não der o valor de π, deixe a resposta em função de π (ex: C = 10π). Se ela der π = 3,14, faça a multiplicação.</li>
+                <li><strong>Unidades de medida:</strong> Fique atento se a questão mistura metros e centímetros. Converta tudo para a mesma unidade antes de calcular.</li>
+                <li><strong>Voltas na roda:</strong> Se a questão falar em "quantas voltas uma roda dá em uma determinada distância", você divide a distância total pelo comprimento da roda (uma volta).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Uma circunferência tem raio de 4 cm. Qual é o seu comprimento? (Use π = 3,14)</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A fórmula é C = 2 × π × r. Se você usou apenas π × r, esqueceu de multiplicar por 2.')">12,56 cm</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! C = 2 × 3,14 × 4 = 25,12 cm.')">25,12 cm</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O comprimento é 25,12. Esse valor de 50,24 seria se o raio fosse 8.')">50,24 cm</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Uma praça circular tem 20 metros de diâmetro. Qual é a medida do comprimento da sua borda? (Use π = 3,14)</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cuidado: 20 é o diâmetro. Se você usou a fórmula com o raio, deveria ter dividido 20 por 2 primeiro.')">125,6 m</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Como temos o diâmetro, usamos C = π × d. Logo, C = 3,14 × 20 = 62,8 metros.')">62,8 m</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! C = 3,14 × 20 = 62,8. O valor 31,4 seria para um diâmetro de 10.')">31,4 m</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Se o raio de uma circunferência mede 7 cm, qual é o valor do seu diâmetro?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O diâmetro é sempre o dobro do raio. d = 2 × r = 2 × 7 = 14 cm.')">14 cm</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O diâmetro é o dobro do raio, não a metade.')">3,5 cm</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O diâmetro é 14 cm. 49 cm é o valor da área (7²).')">49 cm</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Uma bicicleta tem rodas com 0,5 metros de raio. Quantos metros ela percorre em uma volta completa da roda? (Use π = 3,14)</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você esqueceu de multiplicar por 2. A fórmula é C = 2 × π × r.')">1,57 m</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! C = 2 × 3,14 × 0,5 = 3,14 metros por volta.')">3,14 m</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O comprimento da roda é 3,14 m.')">0,785 m</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual é a fórmula correta para calcular o comprimento da circunferência quando se conhece o seu diâmetro (d)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa é a fórmula da ÁREA do círculo, não do comprimento.')">C = π × d²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A fórmula do comprimento em função do diâmetro é C = π × d.')">C = π × d</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A fórmula com o raio é C = 2 × π × r.')">C = π × r²</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: COMPRIMENTO DA CIRCUNFERÊNCIA -->

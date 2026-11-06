@@ -1,35 +1,435 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Lei Federal nº 13.709/2018 (LGPD – Capítulo IV) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1> Lei Federal nº 13.709/2018 (LGPD – Capítulo IV)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg10</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LGPD - CAPÍTULO IV (ARTS. 23 A 32) -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>LGPD – Capítulo IV</h1>
+        <p>Tratamento de Dados Pessoais pelo Poder Público (Arts. 23 a 32)</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#regras">Regras Gerais (Art. 23)</a>
+        <a href="#empresas">Empresas Públicas (Art. 24)</a>
+        <a href="#interoperabilidade">Interoperabilidade (Art. 25)</a>
+        <a href="#compartilhamento">Compartilhamento (Art. 26 e 27)</a>
+        <a href="#responsabilidade">Responsabilidade (Art. 31 e 32)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: REGRAS GERAIS -->
+    <div id="regras" class="secao">
+        <h2>1. Regras Gerais para o Poder Público (Art. 23)</h2>
+        <div class="card">
+            <p>O tratamento de dados pessoais pelas <strong>pessoas jurídicas de direito público</strong> (órgãos e entidades dos três Poderes, de todas as esferas) deverá ser realizado para o atendimento de sua <strong>finalidade pública</strong>, na persecução do <strong>interesse público</strong>, com o objetivo de <strong>executar as competências legais ou cumprir as atribuições legais do serviço público</strong>.</p>
+            <p><strong>O que a lei exige (Art. 23, I a III):</strong></p>
+            <ul>
+                <li><strong>Transparência ativa (I):</strong> Informar as hipóteses em que realizam o tratamento, fornecendo informações claras e atualizadas sobre a previsão legal, a finalidade, os procedimentos e as práticas utilizadas, em veículos de fácil acesso, preferencialmente em seus sítios eletrônicos.</li>
+                <li><strong>Encarregado (III):</strong> Indicar um encarregado pelo tratamento de dados pessoais, que será o ponto de contato entre o órgão, os titulares e a ANPD.</li>
+            </ul>
+            <p><strong>Relação com a LAI (Art. 23, §2º):</strong> A LGPD <strong>não substitui</strong> a Lei de Acesso à Informação (LAI). Elas são complementares: a LAI cuida do acesso a informações públicas em geral, e a LGPD protege o que é dado pessoal dentro desse universo.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O art. 23 exige que o Poder Público trate dados para **finalidade pública** e **interesse público**. A banca vai tentar trocar por "interesse privado" ou "vantagem econômica". Além disso, a **transparência ativa** é um dever do órgão, não uma faculdade.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: EMPRESAS PÚBLICAS -->
+    <div id="empresas" class="secao">
+        <h2>2. Empresas Públicas e Sociedades de Economia Mista (Art. 24)</h2>
+        <div class="card">
+            <p>As empresas públicas e as sociedades de economia mista que <strong>atuam em regime de concorrência</strong> (sujeitas ao art. 173 da CF/88) terão o <strong>mesmo tratamento dispensado às pessoas jurídicas de direito privado</strong> particulares.</p>
+            <p><strong>Exceção (Art. 24, parágrafo único):</strong> Quando essas empresas estiverem <strong>operacionalizando políticas públicas</strong> e no âmbito da execução delas, terão o mesmo tratamento dispensado aos <strong>órgãos e entidades do Poder Público</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A regra geral é que empresas públicas que **concorrem** no mercado seguem as regras das **empresas privadas**. A exceção é quando elas **executam políticas públicas** (ex: Caixa pagando Bolsa Família), aí seguem as regras do **Poder Público**. A banca vai tentar inverter essa lógica.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: INTEROPERABILIDADE -->
+    <div id="interoperabilidade" class="secao">
+        <h2>3. Interoperabilidade (Art. 25)</h2>
+        <div class="card">
+            <p>Os dados deverão ser mantidos em formato <strong>interoperável e estruturado</strong> para <strong>uso compartilhado</strong>, com o objetivo de atender à <strong>finalidade pública</strong> e ao <strong>interesse público</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: COMPARTILHAMENTO E COMUNICAÇÃO -->
+    <div id="compartilhamento" class="secao">
+        <h2>4. Uso Compartilhado e Comunicação a Entes Privados (Art. 26 e 27)</h2>
+        <div class="card">
+            <h3>Art. 26 – Uso compartilhado entre órgãos públicos</h3>
+            <p>O uso compartilhado de dados pessoais pelo Poder Público deve atender a <strong>finalidades específicas de execução de políticas públicas</strong> e <strong>atribuição legal</strong> pelos órgãos e entidades públicas, respeitados os princípios de proteção de dados pessoais elencados no art. 6º da LGPD.</p>
+            <p><strong>Vedação (Art. 26, §1º):</strong> É <strong>vedado</strong> ao Poder Público transferir a <strong>entidades privadas</strong> dados pessoais, exceto:</p>
+            <ul>
+                <li>Em casos de <strong>execução descentralizada de atividade pública</strong> que exija a transferência, exclusivamente para esse fim específico e determinado;</li>
+                <li>Em casos de <strong>uso compartilhado</strong> (quando houver previsão legal);</li>
+                <li>Nas hipóteses de <strong>dispensa de consentimento</strong> previstas na LGPD.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Art. 27 – Comunicação a pessoas de direito privado</h3>
+            <p>A comunicação ou o uso compartilhado de dados pessoais de <strong>pessoa jurídica de direito público</strong> a <strong>pessoa de direito privado</strong> será <strong>informado à autoridade nacional</strong> (ANPD) e <strong>dependerá de consentimento do titular</strong>, exceto:</p>
+            <ul>
+                <li>Nas hipóteses de <strong>dispensa de consentimento</strong> previstas na LGPD;</li>
+                <li>Nos casos de <strong>uso compartilhado</strong> em que será dada publicidade (art. 23, I);</li>
+                <li>Nas <strong>exceções do art. 26, §1º</strong> (execução descentralizada, etc.).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A regra é que a transferência de dados do Poder Público para **empresas privadas** depende de **consentimento do titular** e deve ser **informada à ANPD**. As exceções são taxativas (execução descentralizada, dispensa de consentimento, uso compartilhado com publicidade). A banca vai tentar dizer que é permitido livremente.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: RESPONSABILIDADE E ANPD -->
+    <div id="responsabilidade" class="secao">
+        <h2>5. Responsabilidade e Atuação da ANPD (Art. 31 e 32)</h2>
+        <div class="card">
+            <h3>Art. 31 – Infração por órgão público</h3>
+            <p>Quando houver infração à LGPD em decorrência do tratamento de dados pessoais por <strong>órgãos públicos</strong>, a <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> poderá enviar <strong>informe com medidas cabíveis</strong> para fazer cessar a violação.</p>
+            <h3>Art. 32 – Relatórios de impacto e boas práticas</h3>
+            <p>A ANPD poderá solicitar a agentes do Poder Público a <strong>publicação de relatórios de impacto à proteção de dados pessoais</strong> e <strong>sugerir a adoção de padrões e de boas práticas</strong> para os tratamentos de dados pessoais pelo Poder Público.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A ANPD, no caso de infração por **órgão público**, não aplica multa diretamente como faz com empresas privadas (o regime é distinto). Ela envia um **informe com medidas cabíveis** para cessar a violação (Art. 31). A banca vai tentar dizer que a ANPD aplica multa a órgão público da mesma forma que a empresa privada.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Finalidade (Art. 23):</strong> O tratamento pelo Poder Público só se justifica para **finalidade pública** e **interesse público**, na execução de **competências legais**.</li>
+                <li><strong>Empresas Públicas (Art. 24):</strong> Regra geral = **regras privadas** (se concorrem). Exceção = **regras públicas** (se operacionalizam políticas públicas).</li>
+                <li><strong>Transferência para Privados (Art. 26 e 27):</strong> Regra = **vedado** transferir dados a entidades privadas. Exceções = execução descentralizada, dispensa de consentimento e uso compartilhado com publicidade. Além disso, a comunicação deve ser **informada à ANPD** e depende de **consentimento do titular** (salvo exceções).</li>
+                <li><strong>ANPD (Art. 31):</strong> Em caso de infração por órgão público, a ANPD envia **informe com medidas cabíveis** para cessar a violação (não é multa direta como na iniciativa privada).</li>
+                <li><strong>Transparência Ativa (Art. 23, I):</strong> O órgão deve informar em **sítios eletrônicos** as hipóteses em que trata dados, a base legal, a finalidade e os procedimentos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. (FAFIPA – Pref. Paranavaí/PR – 2025 – Adaptada) Segundo a Lei nº 13.709/2018 (LGPD), o tratamento de dados pessoais pelo Poder Público deve ser realizado com qual finalidade principal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Poder Público não pode tratar dados para venda ou vantagem econômica.')">Para a venda de informações a empresas públicas e privadas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 23: para a execução de políticas públicas, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público.')">Para a execução de políticas públicas, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A finalidade é pública, não para facilitar serviços da iniciativa privada.')">Para a coleta de dados para cumprir a finalidade de facilitar a execução de serviços da iniciativa privada.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre as empresas públicas e sociedades de economia mista, de acordo com o Art. 24 da LGPD, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A regra geral é que, se atuam em regime de concorrência, seguem as regras das empresas privadas.')">Sempre seguirão as regras destinadas ao Poder Público, independentemente da atividade exercida.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 24: as que atuam em regime de concorrência terão o mesmo tratamento das pessoas jurídicas de direito privado. A exceção (parágrafo único) é quando operacionalizam políticas públicas, aí seguem as regras do Poder Público.')">As que atuam em regime de concorrência terão o mesmo tratamento das pessoas jurídicas de direito privado, salvo quando operacionalizarem políticas públicas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Elas podem, sim, ser tratadas como Poder Público quando executam políticas públicas.')">Nunca poderão ser tratadas como Poder Público, mesmo quando executam políticas públicas.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A comunicação ou o uso compartilhado de dados pessoais de pessoa jurídica de direito público a pessoa de direito privado (Art. 27 da LGPD):</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A regra é que depende de consentimento do titular e deve ser informada à ANPD, salvo as exceções legais.')">É livre, independentemente de consentimento ou informação à ANPD.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 27: será informado à autoridade nacional e dependerá de consentimento do titular, exceto nas hipóteses de dispensa de consentimento, uso compartilhado com publicidade ou exceções do art. 26, §1º.')">Será informado à autoridade nacional e dependerá de consentimento do titular, exceto nas hipóteses legais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A transferência é, em regra, vedada, e não permitida sem restrições.')">É vedada em qualquer hipótese, sem exceções.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Quando houver infração à LGPD em decorrência do tratamento de dados pessoais por órgãos públicos, a Autoridade Nacional de Proteção de Dados (ANPD) poderá (Art. 31):</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ANPD não aplica multa diretamente a órgão público como faz com empresas privadas. Ela envia informe com medidas cabíveis.')">Aplicar multa diretamente ao órgão público, como faz com as empresas privadas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 31: a ANPD poderá enviar informe com medidas cabíveis para fazer cessar a violação.')">Enviar informe com medidas cabíveis para fazer cessar a violação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ANPD não pode determinar a prisão de agentes públicos.')">Determinar a prisão dos agentes públicos responsáveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. De acordo com o Art. 23 da LGPD, o tratamento de dados pessoais pelo Poder Público exige, entre outras obrigações, que o órgão:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 23, I: informar as hipóteses em que realiza o tratamento, em veículos de fácil acesso, preferencialmente em sítios eletrônicos.')">Informe as hipóteses em que realiza o tratamento de dados, em veículos de fácil acesso, preferencialmente em seus sítios eletrônicos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O consentimento é a regra para a iniciativa privada, mas o Poder Público pode tratar dados com base na finalidade pública (Art. 23), independentemente de consentimento em diversas hipóteses.')">Obtenha consentimento expresso do titular para qualquer tratamento de dados, sem exceções.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O encarregado é obrigatório (Art. 23, III), não facultativo.')">Indique um encarregado de dados apenas se o órgão tratar dados sensíveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LGPD - CAPÍTULO IV --><!-- INÍCIO DO MÓDULO: LGPD - CAPÍTULO IV (ARTS. 23 A 32) -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>LGPD – Capítulo IV</h1>
+        <p>Tratamento de Dados Pessoais pelo Poder Público (Arts. 23 a 32)</p>
+    </div>
+
+    <div class="nav-menu">
+        <a href="#regras">Regras Gerais (Art. 23)</a>
+        <a href="#empresas">Empresas Públicas (Art. 24)</a>
+        <a href="#interoperabilidade">Interoperabilidade (Art. 25)</a>
+        <a href="#compartilhamento">Compartilhamento (Art. 26 e 27)</a>
+        <a href="#responsabilidade">Responsabilidade (Art. 31 e 32)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: REGRAS GERAIS -->
+    <div id="regras" class="secao">
+        <h2>1. Regras Gerais para o Poder Público (Art. 23)</h2>
+        <div class="card">
+            <p>O tratamento de dados pessoais pelas <strong>pessoas jurídicas de direito público</strong> (órgãos e entidades dos três Poderes, de todas as esferas) deverá ser realizado para o atendimento de sua <strong>finalidade pública</strong>, na persecução do <strong>interesse público</strong>, com o objetivo de <strong>executar as competências legais ou cumprir as atribuições legais do serviço público</strong>.</p>
+            <p><strong>O que a lei exige (Art. 23, I a III):</strong></p>
+            <ul>
+                <li><strong>Transparência ativa (I):</strong> Informar as hipóteses em que realizam o tratamento, fornecendo informações claras e atualizadas sobre a previsão legal, a finalidade, os procedimentos e as práticas utilizadas, em veículos de fácil acesso, preferencialmente em seus sítios eletrônicos.</li>
+                <li><strong>Encarregado (III):</strong> Indicar um encarregado pelo tratamento de dados pessoais, que será o ponto de contato entre o órgão, os titulares e a ANPD.</li>
+            </ul>
+            <p><strong>Relação com a LAI (Art. 23, §2º):</strong> A LGPD <strong>não substitui</strong> a Lei de Acesso à Informação (LAI). Elas são complementares: a LAI cuida do acesso a informações públicas em geral, e a LGPD protege o que é dado pessoal dentro desse universo.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O art. 23 exige que o Poder Público trate dados para **finalidade pública** e **interesse público**. A banca vai tentar trocar por "interesse privado" ou "vantagem econômica". Além disso, a **transparência ativa** é um dever do órgão, não uma faculdade.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: EMPRESAS PÚBLICAS -->
+    <div id="empresas" class="secao">
+        <h2>2. Empresas Públicas e Sociedades de Economia Mista (Art. 24)</h2>
+        <div class="card">
+            <p>As empresas públicas e as sociedades de economia mista que <strong>atuam em regime de concorrência</strong> (sujeitas ao art. 173 da CF/88) terão o <strong>mesmo tratamento dispensado às pessoas jurídicas de direito privado</strong> particulares.</p>
+            <p><strong>Exceção (Art. 24, parágrafo único):</strong> Quando essas empresas estiverem <strong>operacionalizando políticas públicas</strong> e no âmbito da execução delas, terão o mesmo tratamento dispensado aos <strong>órgãos e entidades do Poder Público</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A regra geral é que empresas públicas que **concorrem** no mercado seguem as regras das **empresas privadas**. A exceção é quando elas **executam políticas públicas** (ex: Caixa pagando Bolsa Família), aí seguem as regras do **Poder Público**. A banca vai tentar inverter essa lógica.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: INTEROPERABILIDADE -->
+    <div id="interoperabilidade" class="secao">
+        <h2>3. Interoperabilidade (Art. 25)</h2>
+        <div class="card">
+            <p>Os dados deverão ser mantidos em formato <strong>interoperável e estruturado</strong> para <strong>uso compartilhado</strong>, com o objetivo de atender à <strong>finalidade pública</strong> e ao <strong>interesse público</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: COMPARTILHAMENTO E COMUNICAÇÃO -->
+    <div id="compartilhamento" class="secao">
+        <h2>4. Uso Compartilhado e Comunicação a Entes Privados (Art. 26 e 27)</h2>
+        <div class="card">
+            <h3>Art. 26 – Uso compartilhado entre órgãos públicos</h3>
+            <p>O uso compartilhado de dados pessoais pelo Poder Público deve atender a <strong>finalidades específicas de execução de políticas públicas</strong> e <strong>atribuição legal</strong> pelos órgãos e entidades públicas, respeitados os princípios de proteção de dados pessoais elencados no art. 6º da LGPD.</p>
+            <p><strong>Vedação (Art. 26, §1º):</strong> É <strong>vedado</strong> ao Poder Público transferir a <strong>entidades privadas</strong> dados pessoais, exceto:</p>
+            <ul>
+                <li>Em casos de <strong>execução descentralizada de atividade pública</strong> que exija a transferência, exclusivamente para esse fim específico e determinado;</li>
+                <li>Em casos de <strong>uso compartilhado</strong> (quando houver previsão legal);</li>
+                <li>Nas hipóteses de <strong>dispensa de consentimento</strong> previstas na LGPD.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Art. 27 – Comunicação a pessoas de direito privado</h3>
+            <p>A comunicação ou o uso compartilhado de dados pessoais de <strong>pessoa jurídica de direito público</strong> a <strong>pessoa de direito privado</strong> será <strong>informado à autoridade nacional</strong> (ANPD) e <strong>dependerá de consentimento do titular</strong>, exceto:</p>
+            <ul>
+                <li>Nas hipóteses de <strong>dispensa de consentimento</strong> previstas na LGPD;</li>
+                <li>Nos casos de <strong>uso compartilhado</strong> em que será dada publicidade (art. 23, I);</li>
+                <li>Nas <strong>exceções do art. 26, §1º</strong> (execução descentralizada, etc.).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A regra é que a transferência de dados do Poder Público para **empresas privadas** depende de **consentimento do titular** e deve ser **informada à ANPD**. As exceções são taxativas (execução descentralizada, dispensa de consentimento, uso compartilhado com publicidade). A banca vai tentar dizer que é permitido livremente.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: RESPONSABILIDADE E ANPD -->
+    <div id="responsabilidade" class="secao">
+        <h2>5. Responsabilidade e Atuação da ANPD (Art. 31 e 32)</h2>
+        <div class="card">
+            <h3>Art. 31 – Infração por órgão público</h3>
+            <p>Quando houver infração à LGPD em decorrência do tratamento de dados pessoais por <strong>órgãos públicos</strong>, a <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> poderá enviar <strong>informe com medidas cabíveis</strong> para fazer cessar a violação.</p>
+            <h3>Art. 32 – Relatórios de impacto e boas práticas</h3>
+            <p>A ANPD poderá solicitar a agentes do Poder Público a <strong>publicação de relatórios de impacto à proteção de dados pessoais</strong> e <strong>sugerir a adoção de padrões e de boas práticas</strong> para os tratamentos de dados pessoais pelo Poder Público.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A ANPD, no caso de infração por **órgão público**, não aplica multa diretamente como faz com empresas privadas (o regime é distinto). Ela envia um **informe com medidas cabíveis** para cessar a violação (Art. 31). A banca vai tentar dizer que a ANPD aplica multa a órgão público da mesma forma que a empresa privada.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Finalidade (Art. 23):</strong> O tratamento pelo Poder Público só se justifica para **finalidade pública** e **interesse público**, na execução de **competências legais**.</li>
+                <li><strong>Empresas Públicas (Art. 24):</strong> Regra geral = **regras privadas** (se concorrem). Exceção = **regras públicas** (se operacionalizam políticas públicas).</li>
+                <li><strong>Transferência para Privados (Art. 26 e 27):</strong> Regra = **vedado** transferir dados a entidades privadas. Exceções = execução descentralizada, dispensa de consentimento e uso compartilhado com publicidade. Além disso, a comunicação deve ser **informada à ANPD** e depende de **consentimento do titular** (salvo exceções).</li>
+                <li><strong>ANPD (Art. 31):</strong> Em caso de infração por órgão público, a ANPD envia **informe com medidas cabíveis** para cessar a violação (não é multa direta como na iniciativa privada).</li>
+                <li><strong>Transparência Ativa (Art. 23, I):</strong> O órgão deve informar em **sítios eletrônicos** as hipóteses em que trata dados, a base legal, a finalidade e os procedimentos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. (FAFIPA – Pref. Paranavaí/PR – 2025 – Adaptada) Segundo a Lei nº 13.709/2018 (LGPD), o tratamento de dados pessoais pelo Poder Público deve ser realizado com qual finalidade principal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Poder Público não pode tratar dados para venda ou vantagem econômica.')">Para a venda de informações a empresas públicas e privadas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 23: para a execução de políticas públicas, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público.')">Para a execução de políticas públicas, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A finalidade é pública, não para facilitar serviços da iniciativa privada.')">Para a coleta de dados para cumprir a finalidade de facilitar a execução de serviços da iniciativa privada.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre as empresas públicas e sociedades de economia mista, de acordo com o Art. 24 da LGPD, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A regra geral é que, se atuam em regime de concorrência, seguem as regras das empresas privadas.')">Sempre seguirão as regras destinadas ao Poder Público, independentemente da atividade exercida.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 24: as que atuam em regime de concorrência terão o mesmo tratamento das pessoas jurídicas de direito privado. A exceção (parágrafo único) é quando operacionalizam políticas públicas, aí seguem as regras do Poder Público.')">As que atuam em regime de concorrência terão o mesmo tratamento das pessoas jurídicas de direito privado, salvo quando operacionalizarem políticas públicas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Elas podem, sim, ser tratadas como Poder Público quando executam políticas públicas.')">Nunca poderão ser tratadas como Poder Público, mesmo quando executam políticas públicas.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A comunicação ou o uso compartilhado de dados pessoais de pessoa jurídica de direito público a pessoa de direito privado (Art. 27 da LGPD):</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A regra é que depende de consentimento do titular e deve ser informada à ANPD, salvo as exceções legais.')">É livre, independentemente de consentimento ou informação à ANPD.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 27: será informado à autoridade nacional e dependerá de consentimento do titular, exceto nas hipóteses de dispensa de consentimento, uso compartilhado com publicidade ou exceções do art. 26, §1º.')">Será informado à autoridade nacional e dependerá de consentimento do titular, exceto nas hipóteses legais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A transferência é, em regra, vedada, e não permitida sem restrições.')">É vedada em qualquer hipótese, sem exceções.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Quando houver infração à LGPD em decorrência do tratamento de dados pessoais por órgãos públicos, a Autoridade Nacional de Proteção de Dados (ANPD) poderá (Art. 31):</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ANPD não aplica multa diretamente a órgão público como faz com empresas privadas. Ela envia informe com medidas cabíveis.')">Aplicar multa diretamente ao órgão público, como faz com as empresas privadas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 31: a ANPD poderá enviar informe com medidas cabíveis para fazer cessar a violação.')">Enviar informe com medidas cabíveis para fazer cessar a violação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ANPD não pode determinar a prisão de agentes públicos.')">Determinar a prisão dos agentes públicos responsáveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. De acordo com o Art. 23 da LGPD, o tratamento de dados pessoais pelo Poder Público exige, entre outras obrigações, que o órgão:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 23, I: informar as hipóteses em que realiza o tratamento, em veículos de fácil acesso, preferencialmente em sítios eletrônicos.')">Informe as hipóteses em que realiza o tratamento de dados, em veículos de fácil acesso, preferencialmente em seus sítios eletrônicos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O consentimento é a regra para a iniciativa privada, mas o Poder Público pode tratar dados com base na finalidade pública (Art. 23), independentemente de consentimento em diversas hipóteses.')">Obtenha consentimento expresso do titular para qualquer tratamento de dados, sem exceções.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O encarregado é obrigatório (Art. 23, III), não facultativo.')">Indique um encarregado de dados apenas se o órgão tratar dados sensíveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LGPD - CAPÍTULO IV -->

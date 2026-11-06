@@ -1,35 +1,226 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Decreto-Lei Federal nº 4.657/1942 (LINDB – Arts. 20 ao 30) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Decreto-Lei Federal nº 4.657/1942 (LINDB – Arts. 20 ao 30)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg09</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LINDB - ARTS. 20 AO 30 -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>LINDB – Arts. 20 ao 30</h1>
+        <p>Segurança Jurídica e Eficiência na Aplicação do Direito Público (Lei 13.655/2018)</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#diretrizes">Diretrizes Gerais (Art. 20 e 21)</a>
+        <a href="#realidade">Realidade Administrativa (Art. 22)</a>
+        <a href="#seguranca">Segurança Jurídica (Art. 23 e 24)</a>
+        <a href="#consensualidade">Consensualidade (Art. 26 e 27)</a>
+        <a href="#responsabilidade">Responsabilidade (Art. 28)</a>
+        <a href="#consultas">Consultas e Precedentes (Art. 29 e 30)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: DIRETRIZES GERAIS -->
+    <div id="diretrizes" class="secao">
+        <h2>1. Diretrizes Gerais para Decisões (Art. 20 e 21)</h2>
+        <div class="card">
+            <h3>Art. 20 – Consequencialismo</h3>
+            <p>Nas esferas <strong>administrativa, controladora e judicial</strong>, não se decidirá com base em <strong>valores jurídicos abstratos</strong> sem que sejam consideradas as <strong>consequências práticas da decisão</strong>.</p>
+            <p><strong>Parágrafo único:</strong> A motivação demonstrará a necessidade e a adequação da medida imposta ou da invalidação de ato, contrato, ajuste, processo ou norma administrativa, <strong>inclusive em face das possíveis alternativas</strong>.</p>
+        </div>
+        <div class="card">
+            <h3>Art. 21 – Dever de indicar consequências da invalidação</h3>
+            <p>A decisão que decretar a <strong>invalidação</strong> de ato, contrato, ajuste, processo ou norma administrativa deverá indicar de modo <strong>expresso suas consequências jurídicas e administrativas</strong>.</p>
+            <p><strong>Parágrafo único:</strong> A decisão deverá, quando for o caso, indicar as <strong>condições para que a regularização</strong> ocorra de modo <strong>proporcional e equânime</strong> e sem prejuízo aos interesses gerais, não se podendo impor aos sujeitos atingidos ônus ou perdas que sejam <strong>anormais ou excessivos</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Art. 20 fala em <strong>“consequências práticas”</strong> (consequencialismo). O Art. 21 fala em <strong>“consequências jurídicas e administrativas”</strong> (dever de indicar expressamente). Não confunda os termos: a banca troca um pelo outro.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: REALIDADE ADMINISTRATIVA -->
+    <div id="realidade" class="secao">
+        <h2>2. Primado da Realidade (Art. 22)</h2>
+        <div class="card">
+            <p>Na interpretação de normas sobre <strong>gestão pública</strong>, serão considerados os <strong>obstáculos e as dificuldades reais do gestor</strong> e as exigências das políticas públicas a seu cargo, <strong>sem prejuízo dos direitos dos administrados</strong>.</p>
+            <p><strong>§ 1º:</strong> Em decisão sobre regularidade de conduta ou validade de ato, serão consideradas as <strong>circunstâncias práticas</strong> que houverem imposto, limitado ou condicionado a ação do agente.</p>
+            <p><strong>§ 2º:</strong> Na aplicação de sanções, serão consideradas a natureza e a gravidade da infração, os danos, as circunstâncias agravantes ou atenuantes e os antecedentes do agente.</p>
+            <p><strong>§ 3º:</strong> As sanções aplicadas ao agente serão levadas em conta na <strong>dosimetria das demais sanções</strong> de mesma natureza e relativas ao mesmo fato.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: SEGURANÇA JURÍDICA -->
+    <div id="seguranca" class="secao">
+        <h2>3. Segurança Jurídica e Proteção da Confiança (Art. 23 e 24)</h2>
+        <div class="card">
+            <h3>Art. 23 – Regime de transição</h3>
+            <p>A decisão que estabelecer <strong>interpretação ou orientação nova</strong> sobre norma de conteúdo indeterminado, impondo novo dever ou novo condicionamento de direito, deverá prever <strong>regime de transição</strong> quando indispensável para que o novo dever seja cumprido de modo proporcional, equânime e eficiente e sem prejuízo aos interesses gerais.</p>
+            <h3>Art. 24 – Irretroatividade da nova interpretação</h3>
+            <p>A revisão quanto à validade de ato, contrato, ajuste, processo ou norma administrativa <strong>cuja produção já se houver completado</strong> levará em conta as <strong>orientações gerais da época</strong>, sendo <strong>vedado</strong> que, com base em <strong>mudança posterior de orientação geral</strong>, se declarem inválidas <strong>situações plenamente constituídas</strong>.</p>
+            <p><strong>Parágrafo único:</strong> Consideram-se orientações gerais as interpretações e especificações contidas em atos públicos de caráter geral ou em jurisprudência judicial ou administrativa majoritária, e ainda as adotadas por prática administrativa reiterada e de amplo conhecimento público.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: CONSENSUALIDADE E COMPENSAÇÃO -->
+    <div id="consensualidade" class="secao">
+        <h2>4. Consensualidade e Compensação (Art. 26 e 27)</h2>
+        <div class="card">
+            <h3>Art. 26 – Compromisso para eliminar irregularidade</h3>
+            <p>Para eliminar irregularidade, incerteza jurídica ou situação contenciosa na aplicação do direito público, inclusive no caso de expedição de licença, a autoridade administrativa poderá, após oitiva do órgão jurídico e, quando for o caso, após consulta pública, e presentes razões de <strong>relevante interesse geral</strong>, celebrar <strong>compromisso com os interessados</strong>, observada a legislação aplicável.</p>
+            <p>O compromisso só produzirá efeitos a partir de sua <strong>publicação oficial</strong> e deverá prever com clareza as obrigações das partes, o prazo para seu cumprimento e as sanções aplicáveis em caso de descumprimento.</p>
+        </div>
+        <div class="card">
+            <h3>Art. 27 – Compensação</h3>
+            <p>A decisão do processo, nas esferas administrativa, controladora ou judicial, poderá impor <strong>compensação por benefícios indevidos ou prejuízos anormais ou injustos</strong> resultantes do processo ou da conduta dos envolvidos.</p>
+            <p>A decisão sobre a compensação será <strong>motivada</strong>, ouvidas previamente as partes sobre seu cabimento, sua forma e, se for o caso, seu valor.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: RESPONSABILIDADE DO AGENTE -->
+    <div id="responsabilidade" class="secao">
+        <h2>5. Responsabilidade do Agente Público (Art. 28)</h2>
+        <div class="card">
+            <p>O agente público responderá <strong>pessoalmente</strong> por suas decisões ou opiniões técnicas em caso de <strong>dolo ou erro grosseiro</strong>.</p>
+            <p><strong>O que é erro grosseiro?</strong> O STF e a doutrina consolidaram que o erro grosseiro abrange as noções de <strong>imprudência, negligência e imperícia</strong>, quando efetivamente graves.</p>
+            <p><strong>O que NÃO é erro grosseiro?</strong> A decisão ou opinião baseada em jurisprudência ou doutrina, ainda que não pacificadas, não configura erro grosseiro.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Art. 28 exige <strong>dolo ou erro grosseiro</strong> para a responsabilização pessoal do agente. A banca vai tentar colocar “culpa leve”, “culpa simples” ou “erro escusável”. Está <strong>errado</strong>. A responsabilidade pessoal só surge com dolo ou erro grosseiro.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: CONSULTAS E PRECEDENTES -->
+    <div id="consultas" class="secao">
+        <h2>6. Consulta Pública e Precedentes Administrativos (Art. 29 e 30)</h2>
+        <div class="card">
+            <h3>Art. 29 – Consulta pública</h3>
+            <p>Em qualquer órgão ou Poder, a edição de <strong>atos normativos</strong> por autoridade administrativa, <strong>salvo os de mera organização interna</strong>, poderá ser precedida de <strong>consulta pública</strong> para manifestação de interessados, preferencialmente por meio eletrônico, a qual será considerada na decisão.</p>
+            <p>A convocação conterá a <strong>minuta do ato normativo</strong> e fixará o prazo e demais condições da consulta pública.</p>
+        </div>
+        <div class="card">
+            <h3>Art. 30 – Dever de segurança jurídica e precedentes</h3>
+            <p>As autoridades públicas <strong>devem atuar para aumentar a segurança jurídica</strong> na aplicação das normas, inclusive por meio de <strong>regulamentos, súmulas administrativas e respostas a consultas</strong>.</p>
+            <p><strong>Parágrafo único:</strong> Os instrumentos previstos no caput terão <strong>caráter vinculante</strong> em relação ao órgão ou entidade a que se destinam, <strong>até ulterior revisão</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Art. 20:</strong> Não se decide com base em <strong>valores jurídicos abstratos</strong> sem considerar as <strong>consequências práticas</strong>.</li>
+                <li><strong>Art. 21:</strong> A decisão que invalida ato/contrato deve indicar <strong>expressamente</strong> as <strong>consequências jurídicas e administrativas</strong>.</li>
+                <li><strong>Art. 22:</strong> Considerar os <strong>obstáculos e dificuldades reais do gestor</strong> na interpretação das normas de gestão pública.</li>
+                <li><strong>Art. 23 e 24:</strong> <strong>Regime de transição</strong> para nova interpretação e <strong>proteção das situações plenamente constituídas</strong> contra mudança posterior de orientação.</li>
+                <li><strong>Art. 28:</strong> Responsabilidade pessoal do agente apenas por <strong>dolo ou erro grosseiro</strong>. Não confunda com culpa leve.</li>
+                <li><strong>Art. 30:</strong> Instrumentos como <strong>regulamentos, súmulas administrativas e respostas a consultas</strong> têm <strong>caráter vinculante</strong> para o órgão que os editou.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 8: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. (FAFIPA – PGM/Foz do Iguaçu – 2019 – Adaptada) De acordo com o Art. 20 da LINDB, nas esferas administrativa, controladora e judicial, não se decidirá com base em valores jurídicos abstratos sem que sejam consideradas:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Art. 20 fala em consequências práticas, não em consequências jurídicas (que é o termo do Art. 21).')">As consequências jurídicas e administrativas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 20: “...sem que sejam consideradas as consequências práticas da decisão.”')">As consequências práticas da decisão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Art. 20 não menciona orientações gerais da época (isso é o Art. 24).')">As orientações gerais da época.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a responsabilidade pessoal do agente público (Art. 28 da LINDB), é correto afirmar que ele responderá por suas decisões ou opiniões técnicas em caso de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A culpa leve não é suficiente para a responsabilização pessoal nos termos do Art. 28.')">Culpa leve ou imprudência simples.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 28: “O agente público responderá pessoalmente por suas decisões ou opiniões técnicas em caso de dolo ou erro grosseiro.”')">Dolo ou erro grosseiro.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A responsabilidade pessoal não é objetiva; exige dolo ou erro grosseiro.')">Qualquer tipo de erro, independentemente da gravidade.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A decisão que, nas esferas administrativa, controladora ou judicial, decretar a invalidação de ato, contrato, ajuste, processo ou norma administrativa deverá:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 21: a decisão deverá indicar de modo expresso suas consequências jurídicas e administrativas.')">Indicar de modo expresso suas consequências jurídicas e administrativas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Art. 21 não fala em “consequências práticas” (esse é o Art. 20).')">Indicar apenas as consequências práticas da decisão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A LINDB não prevê a anulação automática sem indicação de consequências.')">Ser automaticamente nula, sem necessidade de motivação.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre o regime de transição previsto no Art. 23 da LINDB, é correto afirmar que ele é exigido quando a decisão estabelecer interpretação ou orientação nova sobre norma de conteúdo indeterminado e:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O regime de transição não é uma faculdade; é uma exigência quando indispensável para que o novo dever seja cumprido de modo proporcional.')">For facultativo à autoridade, que decidirá conforme sua conveniência.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 23: o regime de transição é exigido quando indispensável para que o novo dever ou condicionamento de direito seja cumprido de modo proporcional, equânime e eficiente.')">For indispensável para que o novo dever ou condicionamento de direito seja cumprido de modo proporcional, equânime e eficiente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O regime de transição não se aplica apenas a normas de conteúdo determinado.')">A norma tiver conteúdo determinado e já estiver em vigor há mais de cinco anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. De acordo com o Art. 30 da LINDB, os instrumentos como regulamentos, súmulas administrativas e respostas a consultas, editados pelas autoridades públicas para aumentar a segurança jurídica, terão:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Art. 30, parágrafo único, confere caráter vinculante, e não meramente orientativo.')">Caráter meramente orientativo, sem força obrigatória.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 30, parágrafo único: os instrumentos terão caráter vinculante em relação ao órgão ou entidade a que se destinam, até ulterior revisão.')">Caráter vinculante em relação ao órgão ou entidade a que se destinam, até ulterior revisão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O caráter vinculante não se estende a todos os órgãos da Administração Pública, apenas ao órgão ou entidade destinatária.')">Caráter vinculante para todos os órgãos da Administração Pública, em qualquer esfera.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LINDB - ARTS. 20 AO 30 -->

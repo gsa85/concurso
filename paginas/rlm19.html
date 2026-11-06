@@ -1,35 +1,211 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resolução de problemas — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Resolução de problemas</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm19</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: RESOLUÇÃO DE PROBLEMAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Resolução de Problemas</h1>
+        <p>Interpretação, Tradução Matemática e Estratégias – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#traducao">Traduzindo o Português</a>
+        <a href="#etapas">Problemas de Múltiplas Etapas</a>
+        <a href="#resto">Problemas com Resto</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: TRADUZINDO O PORTUGUÊS -->
+    <div id="traducao" class="secao">
+        <h2>1. Traduzindo o Português para a Matemática</h2>
+        <div class="card">
+            <p>A primeira barreira na resolução de problemas é entender o que a banca está pedindo. Muitas palavras do dia a dia têm um significado matemático específico.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Palavra no Enunciado</th>
+                        <th>Operação Matemática</th>
+                        <th>Exemplo Prático</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Total, soma, juntou, adicionou</strong></td><td>Adição (+)</td><td>João tinha 5 e ganhou 3. Total = 8.</td></tr>
+                    <tr><td><strong>Diferença, restou, sobrou, perdeu</strong></td><td>Subtração (-)</td><td>Tinha 10, perdeu 4. Restou = 6.</td></tr>
+                    <tr><td><strong>Dobro, triplo, vezes, produto</strong></td><td>Multiplicação (×)</td><td>O dobro de 5 = 10.</td></tr>
+                    <tr><td><strong>Dividir, repartir, metade, quociente</strong></td><td>Divisão (÷)</td><td>Repartir 20 em 4 partes = 5.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="box-formula">
+                Dobro = 2x | Triplo = 3x | Metade = x/2 | Terça parte = x/3
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PROBLEMAS DE MÚLTIPLAS ETAPAS -->
+    <div id="etapas" class="secao">
+        <h2>2. Problemas de Múltiplas Etapas</h2>
+        <div class="card">
+            <p>A FAFIPA adora problemas que exigem mais de uma conta para chegar ao resultado. A dica é <strong>ler uma frase de cada vez</strong> e ir resolvendo os "pedaços" do problema.</p>
+            
+            <p><strong>Exemplo:</strong> Uma loja vendeu 30 camisetas na segunda-feira. Na terça, vendeu o dobro da segunda-feira. Na quarta, vendeu 15 camisetas a menos que na terça. Quantas camisetas foram vendidas na quarta-feira?</p>
+            <ul>
+                <li><strong>1ª etapa (Segunda):</strong> 30 camisetas.</li>
+                <li><strong>2ª etapa (Terça):</strong> O dobro de 30 = 30 × 2 = 60 camisetas.</li>
+                <li><strong>3ª etapa (Quarta):</strong> 15 a menos que a terça = 60 - 15 = <strong>45 camisetas</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PROBLEMAS COM RESTO -->
+    <div id="resto" class="secao">
+        <h2>3. Problemas com Resto (Divisão com Sobra)</h2>
+        <div class="card">
+            <p>Muitas questões envolvem a ideia de repartir algo e sobrar um resto. O candidato precisa saber que a divisão nem sempre é exata.</p>
+            
+            <p><strong>Exemplo:</strong> Uma professora tem 25 lápis para distribuir igualmente entre 4 alunos. Quantos lápis cada aluno recebe e quantos sobram?</p>
+            <ul>
+                <li><strong>Cálculo:</strong> 25 ÷ 4 = 6 (com resto 1).</li>
+                <li><strong>Resposta:</strong> Cada aluno recebe 6 lápis e sobra 1 lápis.</li>
+            </ul>
+            <p>A banca costuma perguntar: "Quantos lápis sobram?" (o resto) ou "Quantos lápis cada um recebeu?" (o quociente).</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Em problemas de repartir itens (ex: doces, figurinhas), o <strong>resto</strong> é o que sobra e não pode ser dividido igualmente. A banca vai tentar colocar o "número total" ou o "número dividido" nas alternativas, mas a resposta certa pode ser o resto (a sobra).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Leia o enunciado 2 vezes:</strong> A primeira leitura é para entender o contexto. A segunda leitura é para extrair os dados e as operações.</li>
+                <li><strong>Anote os dados:</strong> Sublinhe ou circule os números do problema. Isso evita que você se perca no texto.</li>
+                <li><strong>Ignore a informação inútil:</strong> A banca coloca dados que NÃO servem para a resposta. Ex: "João tem 10 anos, sua irmã tem 8, e seu pai comprou 5 kg de arroz a R$ 20 o kg". Se a pergunta for "quanto gastou o pai?", a idade de João e da irmã é irrelevante.</li>
+                <li><strong>Cuidado com "a metade", "o dobro", "a terça parte":</strong> Essas palavras exigem que você faça a operação antes de continuar. Não pule etapas.</li>
+                <li><strong>Verifique a pergunta final:</strong> O problema pede o valor total, a diferença ou a sobra? Muitos candidatos calculam o valor total mas a questão pede apenas o resto.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Em uma prateleira há 15 livros de Matemática e 20 livros de Português. Se 5 livros de Matemática e 8 de Português forem retirados, quantos livros ainda restam na prateleira?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você calculou apenas os livros retirados (13), mas a questão quer os que restaram. Total inicial = 35; Retirados = 13; Restam = 22.')">13 livros</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Total inicial: 15 + 20 = 35 livros. Retirados: 5 + 8 = 13 livros. Restantes: 35 - 13 = 22 livros.')">22 livros</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 35 é o total inicial de livros, antes de qualquer retirada.')">35 livros</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Um feirante tinha 100 laranjas. Vendeu 45 de manhã e 32 à tarde. Quantas laranjas ainda restam?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você calculou o total vendido (45 + 32 = 77). O restante é 100 - 77 = 23.')">77 laranjas</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Laranjas vendidas: 45 + 32 = 77. Restantes: 100 - 77 = 23 laranjas.')">23 laranjas</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A conta correta é 100 - (45 + 32) = 23.')">32 laranjas</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Para uma festa, foram compradas 12 dúzias de salgadinhos. Se cada pessoa come 4 salgadinhos e há 30 pessoas na festa, quantos salgadinhos vão sobrar?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 144 é o total de salgadinhos (12 × 12). Para saber a sobra, subtraia o que foi consumido (30 × 4 = 120).')">144 salgadinhos</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Total de salgadinhos: 12 × 12 = 144. Consumidos: 30 × 4 = 120. Sobraram: 144 - 120 = 24 salgadinhos.')">24 salgadinhos</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 120 é o total consumido pelas pessoas. A questão quer a sobra.')">120 salgadinhos</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Ana tem 45 figurinhas. Ela quer dividir igualmente entre 6 amigos. Quantas figurinhas cada amigo recebe e quantas sobram para Ana?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 45 dividido por 6 dá 7, com resto 3. A alternativa não representa a divisão correta.')">Cada um recebe 6 e sobram 9.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 45 ÷ 6 = 7 (quociente) com resto 3. Logo, cada amigo recebe 7 figurinhas e Ana fica com 3.')">Cada um recebe 7 e sobram 3.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 45 ÷ 6 não é uma divisão exata. Sobram 3 figurinhas.')">Cada um recebe 8 e não sobram nenhuma.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Um comerciante comprou um produto por R$ 80,00 e o revendeu com um lucro de 25% sobre o preço de compra. Qual foi o preço de venda?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 20 é apenas o valor do lucro. O preço de venda é o custo + lucro: 80 + 20 = 100.')">R$ 20,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O lucro é 25% de 80 = 0,25 × 80 = 20. O preço de venda é 80 + 20 = R$ 100,00.')">R$ 100,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 105 seria se o lucro fosse de 31,25%. O correto é R$ 100.')">R$ 105,00</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: RESOLUÇÃO DE PROBLEMAS -->

@@ -1,35 +1,193 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lei Federal nº 10.048/2000 (Prioridade de Atendimento) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Lei Federal nº 10.048/2000 (Prioridade de Atendimento)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg07</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI 10.048/2000 - PRIORIDADE DE ATENDIMENTO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        
+        /* NOVO ESTILO: Dicas de Ouro */
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Prioridade de Atendimento</h1>
+        <p>Lei Federal nº 10.048/2000 – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#quem">Quem tem direito?</a>
+        <a href="#ordem">Ordem de Prioridade</a>
+        <a href="#locais">Locais de Aplicação</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: QUEM TEM DIREITO -->
+    <div id="quem" class="secao">
+        <h2>1. Quem tem direito à prioridade? (Art. 1º)</h2>
+        <div class="card">
+            <p>A lei assegura tratamento prioritário às seguintes pessoas:</p>
+            <ul>
+                <li><strong>Pessoas com deficiência (PCD);</strong></li>
+                <li><strong>Pessoas com Transtorno do Espectro Autista (TEA);</strong></li>
+                <li><strong>Pessoas idosas</strong> com idade igual ou superior a <strong>60 (sessenta) anos</strong>;</li>
+                <li><strong>Gestantes;</strong></li>
+                <li><strong>Lactantes</strong> (mulheres amamentando);</li>
+                <li><strong>Pessoas com crianças de colo</strong> (crianças de até 2 anos);</li>
+                <li><strong>Obesos</strong> com índice de massa corporal (IMC) igual ou superior a <strong>40 (quarenta)</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ORDEM DE PRIORIDADE -->
+    <div id="ordem" class="secao">
+        <h2>2. Ordem de Prioridade (Art. 3º)</h2>
+        <div class="card">
+            <p>Quando houver mais de uma pessoa com direito à prioridade no mesmo local, a ordem de atendimento será:</p>
+            <ol>
+                <li><strong>Pessoas com deficiência</strong> (e autistas);</li>
+                <li><strong>Idosos</strong> (60 anos ou mais);</li>
+                <li><strong>Gestantes;</strong></li>
+                <li><strong>Lactantes;</strong></li>
+                <li><strong>Pessoas acompanhadas por crianças de colo.</strong></li>
+            </ol>
+            <h3>Regras Especiais</h3>
+            <ul>
+                <li><strong>Dentro do grupo de idosos:</strong> Os idosos com <strong>80 anos ou mais</strong> têm prioridade <strong>especial</strong> sobre os demais idosos.</li>
+                <li><strong>Assentos reservados:</strong> Deve ser reservado no mínimo <strong>10% (dez por cento)</strong> dos assentos para pessoas com deficiência.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: LOCAIS DE APLICAÇÃO -->
+    <div id="locais" class="secao">
+        <h2>3. Onde a lei se aplica? (Art. 2º)</h2>
+        <div class="card">
+            <p>O atendimento prioritário deve ser garantido em:</p>
+            <ul>
+                <li>Repartições públicas (União, Estados, DF e Municípios);</li>
+                <li>Empresas concessionárias de serviços públicos;</li>
+                <li>Instituições financeiras (bancos);</li>
+                <li>Estabelecimentos privados (lojas, supermercados, etc.).</li>
+            </ul>
+            <p>O atendimento prioritário é aquele que garante <strong>atendimento imediato e diferenciado</strong>. O descumprimento sujeita o infrator a multas e sanções.</p>
+        </div>
+    </div>
+
+    <!-- NOVA SEÇÃO: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Idade do Idoso:</strong> A lei fala em <strong>60 anos</strong>. A banca vai tentar colocar 65 anos para te derrubar (era a regra antiga).</li>
+                <li><strong>Obesos:</strong> Não é qualquer grau de obesidade. A lei exige expressamente <strong>IMC igual ou superior a 40</strong>.</li>
+                <li><strong>A Ordem (Decore o P-I-G-L-C):</strong> <strong>P</strong>CD > <strong>I</strong>doso > <strong>G</strong>estante > <strong>L</strong>actante > <strong>C</strong>riança de colo.</li>
+                <li><strong>A Superprioridade:</strong> Idoso com <strong>80 anos ou mais</strong> passa na frente de TODOS os outros grupos.</li>
+                <li><strong>Criança de colo:</strong> O limite de idade é <strong>até 2 anos</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>4. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 10.048/2000, assinale a alternativa que apresenta corretamente a idade mínima para que a pessoa idosa tenha direito ao atendimento prioritário:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A idade de 65 anos era a regra antiga, mas foi alterada para 60 anos (Lei 13.466/2017).')">65 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 1º estabelece idade igual ou superior a 60 anos.')">60 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 70 anos é a idade em que o voto se torna facultativo, não a idade do atendimento prioritário.')">70 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. A Lei 10.048/2000 garante atendimento prioritário aos obesos. Qual é o critério estabelecido pela lei para essa condição?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O IMC deve ser igual ou superior a 40 (obesidade mórbida).')">Qualquer grau de obesidade (IMC acima de 25).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A lei exige índice de massa corporal (IMC) igual ou superior a 40.')">Índice de massa corporal (IMC) igual ou superior a 40.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O critério legal é IMC 40, e não a pesagem em quilogramas.')">Peso superior a 120 kg, independentemente do IMC.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Em um banco, estão na fila: uma pessoa com deficiência (PCD), uma idosa de 65 anos, uma gestante e uma lactante. Qual é a ordem correta de atendimento prioritário?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A ordem do Art. 3º é: PCD > Idoso > Gestante > Lactante.')">PCD, idosa, gestante, lactante.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A PCD tem prioridade sobre o idoso na ordem legal (Art. 3º, § 1º).')">Idosa, PCD, gestante, lactante.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Gestantes e lactantes vêm depois dos idosos e das PCDs.')">Gestante, PCD, idosa, lactante.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre o percentual de assentos reservados para pessoas com deficiência em veículos de transporte público, a Lei 10.048/2000 estabelece um mínimo de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O percentual mínimo é de 10%, e não 5%.')">5% dos assentos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 3º, parágrafo único, estabelece o mínimo de 10% dos assentos.')">10% dos assentos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 15% não é o percentual previsto na lei.')">15% dos assentos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Se em uma fila de atendimento prioritário estiverem um idoso de 65 anos e um idoso de 85 anos, como deve ser procedido o atendimento?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O idoso de 85 anos tem prioridade especial sobre o de 65.')">O idoso de 65 anos tem preferência por ser mais velho.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Conforme o Estatuto do Idoso, os maiores de 80 anos têm prioridade especial sobre os demais idosos.')">O idoso de 85 anos tem prioridade especial sobre o de 65 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os dois são idosos, mas a lei garante prioridade especial aos maiores de 80 anos.')">Os dois devem ser atendidos simultaneamente, pois ambos têm a mesma prioridade.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI 10.048/2000 -->

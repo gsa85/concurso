@@ -1,35 +1,221 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sequência de números, figuras e letras — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Sequência de números, figuras e letras</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm10</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: SEQUÊNCIAS LÓGICAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Sequências Lógicas</h1>
+        <p>Números, Figuras e Letras – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#numeros">Sequências Numéricas</a>
+        <a href="#letras">Sequências de Letras</a>
+        <a href="#figuras">Sequências de Figuras</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: SEQUÊNCIAS NUMÉRICAS -->
+    <div id="numeros" class="secao">
+        <h2>1. Sequências Numéricas</h2>
+        <div class="card">
+            <p>O objetivo é descobrir a regra (lógica) que rege os números e, a partir dela, descobrir o próximo termo. As regras mais comuns são:</p>
+            
+            <h3>Soma ou Subtração Constante</h3>
+            <p>Você soma ou subtrai sempre o mesmo valor.</p>
+            <p><em>Exemplo: 2, 5, 8, 11, 14... (A regra é "somar 3").</em></p>
+
+            <h3>Multiplicação ou Divisão</h3>
+            <p>Os números crescem ou diminuem de forma multiplicativa.</p>
+            <p><em>Exemplo: 3, 6, 12, 24, 48... (A regra é "multiplicar por 2").</em></p>
+
+            <h3>Sequência de Fibonacci</h3>
+            <p>Cada número é a soma dos dois anteriores.</p>
+            <p><em>Exemplo: 1, 1, 2, 3, 5, 8, 13... (1+1=2; 1+2=3; 2+3=5; 3+5=8...).</em></p>
+
+            <h3>Números Primos</h3>
+            <p>Sequência de números que só são divisíveis por 1 e por eles mesmos.</p>
+            <p><em>Exemplo: 2, 3, 5, 7, 11, 13, 17...</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: SEQUÊNCIAS DE LETRAS -->
+    <div id="letras" class="secao">
+        <h2>2. Sequências de Letras</h2>
+        <div class="card">
+            <p>Para resolver sequências de letras, você precisa ter em mente a posição de cada letra no alfabeto (A=1, B=2, C=3... Z=26). A banca costuma cobrar três tipos de padrões:</p>
+            
+            <h3>Pular Letras de Forma Constante</h3>
+            <p><em>Exemplo: A, C, E, G, I... (Pula 1 letra sempre).</em></p>
+            <p><em>Exemplo: B, F, J, N, R... (Pula 3 letras sempre: B->C,D,E->F).</em></p>
+
+            <h3>Alfabeto Invertido</h3>
+            <p>A sequência começa do Z e vai voltando.</p>
+            <p><em>Exemplo: Z, X, V, T, R... (Volta 2 letras sempre).</em></p>
+
+            <h3>Vogais e Consoantes Separadas</h3>
+            <p>Às vezes, a banca mistura, mas a regra é apenas para as vogais ou apenas para as consoantes.</p>
+            <p><em>Exemplo: A, B, E, D, I, F, O... (Vogais seguem a ordem A, E, I, O; Consoantes seguem B, D, F).</em></p>
+
+            <div class="box-formula">
+                Dica: Escreva o alfabeto no rascunho e numere de 1 a 26!
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: SEQUÊNCIAS DE FIGURAS -->
+    <div id="figuras" class="secao">
+        <h2>3. Sequências de Figuras</h2>
+        <div class="card">
+            <p>Esse é o tipo de questão que exige mais atenção visual. As regras mais comuns envolvem:</p>
+            
+            <ul>
+                <li><strong>Rotação:</strong> A figura gira 90º ou 180º para a direita ou esquerda.</li>
+                <li><strong>Quantidade de lados:</strong> Triângulo (3 lados) -> Quadrado (4) -> Pentágono (5) -> Hexágono (6).</li>
+                <li><strong>Preenchimento:</strong> A figura alterna entre vazada e preenchida (colorida).</li>
+                <li><strong>Movimentação de elementos:</strong> Um pontinho que se move para cima, para baixo ou para os lados dentro da figura.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Sequências Alternadas (Intercaladas):</strong> A banca coloca duas regras ao mesmo tempo. Ex: 2, 10, 4, 20, 6, 30... (Os números ímpares somam 2; os pares multiplicam por 10). <strong>Sempre olhe pulando de 2 em 2!</strong></li>
+                <li><strong>Posição das Letras:</strong> Decore o início do alfabeto (A=1, B=2, C=3...). Se a sequência for E, G, I..., pense nos números (5, 7, 9).</li>
+                <li><strong>Figuras com números de lados:</strong> Se aparecer um triângulo, quadrado, pentágono, a próxima figura é um hexágono (6 lados).</li>
+                <li><strong>Não complique:</strong> A regra geralmente é simples. Se você está fazendo cálculos complexos (ex: potências de 3 com raiz quadrada), provavelmente está no caminho errado.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é o próximo número da sequência: 3, 7, 11, 15, ...?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A diferença entre os números é sempre 4 (3+4=7, 7+4=11...). Logo, 15+4 = 19.')">18</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A regra é somar 4 a cada termo. Portanto, 15 + 4 = 19.')">19</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 20 seria se a regra fosse somar 5, mas a regra é somar 4.')">20</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Na sequência de Fibonacci: 1, 1, 2, 3, 5, 8, ..., qual é o próximo número?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você deve somar os dois últimos números: 5 + 8 = 13.')">10</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A regra é que cada número é a soma dos dois anteriores. Logo, 5 + 8 = 13.')">13</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soma de 5 + 8 é 13, não 16.')">16</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a próxima letra da sequência: B, D, F, H, ...?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A sequência pula uma letra a cada passo (B -> pula C -> D -> pula E -> F...). Depois do H, pula o I e vem o J.')">J</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O I é a letra que foi pulada. A próxima é o J.')">I</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O K pularia duas letras (I e J). A sequência pula apenas uma letra.')">K</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Observe a sequência intercalada: 2, 10, 4, 20, 6, 30, 8, ... Qual é o próximo número?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cuidado, essa é a lógica dos números pares (2, 4, 6, 8). A questão pede o próximo após o 8, que segue a lógica dos ímpares.')">10</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Temos duas sequências alternadas: (2, 4, 6, 8...) e (10, 20, 30, 40...). O próximo número pertence à segunda sequência, que multiplica por 10 ou soma 10. Logo, 40.')">40</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 50 seria se a segunda sequência estivesse somando 20. A regra é 10, 20, 30, 40...')">50</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Em uma sequência de figuras geométricas, aparecem respectivamente: um Triângulo (3 lados), um Quadrado (4 lados) e um Pentágono (5 lados). Seguindo o padrão, qual é a próxima figura?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Círculo não tem lados. A sequência cresce em número de lados.')">Círculo</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A regra é aumentar 1 lado a cada figura. Após o Pentágono (5 lados), vem o Hexágono (6 lados).')">Hexágono (6 lados)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Heptágono tem 7 lados, o que pularia o Hexágono. A sequência é 3, 4, 5, 6...')">Heptágono (7 lados)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <!-- NOVA QUESTÃO EXTRA -->
+            <div class="pergunta">
+                <p>6. (Extra) Qual é o próximo termo da sequência: 1, 4, 9, 16, 25, ...?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A sequência é de quadrados perfeitos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25. O próximo é 6² = 36.')">30</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A sequência são os quadrados dos números naturais (1², 2², 3², 4², 5²...). Logo, o próximo é 6² = 36.')">36</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 49 seria 7², mas o próximo termo é 6² = 36.')">49</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SEQUÊNCIAS LÓGICAS -->

@@ -45,7 +45,7 @@
 </head>
 <body>
   <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
     
     <div class="card">
       <h1>Lei Orgânica de Curitiba e Lei nº 7.671/1991</h1>

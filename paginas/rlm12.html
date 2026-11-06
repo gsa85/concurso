@@ -1,35 +1,230 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Probabilidade: certeza e impossibilidade, fenômenos aleatórios, espaço amostral e evento — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Probabilidade: certeza e impossibilidade, fenômenos aleatórios, espaço amostral e evento</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm12</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: PROBABILIDADE BÁSICA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Probabilidade Básica</h1>
+        <p>Certeza, Impossibilidade, Espaço Amostral e Evento – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#fenomenos">Fenômenos Aleatórios</a>
+        <a href="#certeza">Certeza e Impossibilidade</a>
+        <a href="#amostral">Espaço Amostral e Evento</a>
+        <a href="#formula">Fórmula da Probabilidade</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: FENÔMENOS ALEATÓRIOS -->
+    <div id="fenomenos" class="secao">
+        <h2>1. Fenômenos Aleatórios</h2>
+        <div class="card">
+            <p>Um <strong>fenômeno aleatório</strong> é aquele em que não podemos prever o resultado exato antes de acontecer, mesmo conhecendo todas as condições. O resultado depende do acaso.</p>
+            <p><strong>Exemplos:</strong></p>
+            <ul>
+                <li>Jogar uma moeda para cima (não sabemos se dará Cara ou Coroa).</li>
+                <li>Lançar um dado (não sabemos qual número cairá).</li>
+                <li>Sortear uma bola em uma urna.</li>
+            </ul>
+            <p><em>Diferente do fenômeno determinístico, que sempre acontece da mesma forma (ex: a água ferve a 100º C ao nível do mar).</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CERTEZA E IMPOSSIBILIDADE -->
+    <div id="certeza" class="secao">
+        <h2>2. Certeza e Impossibilidade</h2>
+        <div class="card">
+            <p>Esses dois conceitos representam os extremos da probabilidade:</p>
+            
+            <h3>Evento Certo (Probabilidade = 1 ou 100%)</h3>
+            <p>É aquele que <strong>com certeza</strong> vai acontecer. O número de casos favoráveis é igual ao número de casos possíveis.</p>
+            <p><em>Exemplo: Lançar um dado de 6 lados e tirar um número de 1 a 6. A probabilidade é 6/6 = 1 (100%).</em></p>
+
+            <h3>Evento Impossível (Probabilidade = 0 ou 0%)</h3>
+            <p>É aquele que <strong>nunca</strong> vai acontecer. Não há casos favoráveis.</p>
+            <p><em>Exemplo: Lançar um dado de 6 lados e tirar o número 7. A probabilidade é 0/6 = 0 (0%).</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A probabilidade de um evento <strong>sempre</strong> é um número entre <strong>0 e 1</strong> (ou entre 0% e 100%). Se você calcular uma probabilidade de 1,5 ou -0,2, com certeza errou a conta.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ESPAÇO AMOSTRAL E EVENTO -->
+    <div id="amostral" class="secao">
+        <h2>3. Espaço Amostral e Evento</h2>
+        <div class="card">
+            <h3>Espaço Amostral (Ω)</h3>
+            <p>É o conjunto de <strong>todos os resultados possíveis</strong> de um experimento aleatório.</p>
+            <ul>
+                <li><strong>Moeda:</strong> Ω = {Cara, Coroa} (2 possibilidades).</li>
+                <li><strong>Dado:</strong> Ω = {1, 2, 3, 4, 5, 6} (6 possibilidades).</li>
+            </ul>
+
+            <h3>Evento (E)</h3>
+            <p>É qualquer <strong>subconjunto do espaço amostral</strong>. Ou seja, é o que você quer que aconteça (o seu "favorito").</p>
+            <ul>
+                <li><em>Exemplo: No lançamento de um dado, o evento "tirar um número par" é E = {2, 4, 6}. Esse evento tem 3 elementos.</em></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: FÓRMULA -->
+    <div id="formula" class="secao">
+        <h2>4. Fórmula da Probabilidade</h2>
+        <div class="card">
+            <p>Para calcular a probabilidade de um evento acontecer, usamos a razão entre os casos favoráveis e os casos possíveis:</p>
+            
+            <div class="box-formula">
+                P(E) = (Número de casos favoráveis) / (Número de casos possíveis)
+            </div>
+            
+            <p><strong>Passo a passo:</strong></p>
+            <ol>
+                <li>Determine o <strong>Espaço Amostral (Ω)</strong>: todos os resultados possíveis.</li>
+                <li>Determine o <strong>Evento (E)</strong>: os resultados que você quer.</li>
+                <li>Monte a fração: <strong>Evento / Espaço Amostral</strong>.</li>
+                <li>Se a questão pedir em porcentagem, divida a fração e multiplique por 100.</li>
+            </ol>
+
+            <p><em>Exemplo: Qual a probabilidade de tirar um número ímpar no lançamento de um dado?</em></p>
+            <ul>
+                <li>Espaço Amostral: 6 números (1, 2, 3, 4, 5, 6).</li>
+                <li>Evento (ímpares): 3 números (1, 3, 5).</li>
+                <li>Probabilidade: 3/6 = 1/2 = 0,5 = 50%.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Os extremos:</strong> Evento certo tem probabilidade 1 (100%). Evento impossível tem probabilidade 0 (0%). A banca vai tentar inverter esses valores.</li>
+                <li><strong>Limite da Probabilidade:</strong> Nenhuma probabilidade pode ser maior que 1 ou menor que 0. Se a sua fração der um número fora desse intervalo, a conta está errada.</li>
+                <li><strong>Espaço Amostral:</strong> Não esqueça de contar <strong>todas</strong> as possibilidades. No lançamento de <strong>dois dados</strong>, por exemplo, o espaço amostral não é 12, mas sim 6 × 6 = <strong>36</strong> (todas as combinações possíveis).</li>
+                <li><strong>O que é evento:</strong> O evento é um pedaço do espaço amostral. No dado, "tirar par" é um evento com 3 elementos (2, 4 e 6).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Em relação aos conceitos de probabilidade, qual é a probabilidade de ocorrer um evento <strong>impossível</strong>?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1 ou 100% é a probabilidade de um evento certo.')">1 (100%)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O evento impossível tem 0% de chance de ocorrer (probabilidade 0).')">0 (0%)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 0,5 representa 50% de chance, o que não é impossível.')">0,5 (50%)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. No lançamento de um dado comum de 6 faces, qual é o espaço amostral (todos os resultados possíveis)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 2 possibilidades é o espaço amostral de uma moeda (Cara ou Coroa).')">{1, 2}</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O dado tem 6 faces numeradas de 1 a 6. Logo, o espaço amostral é Ω = {1, 2, 3, 4, 5, 6}.')">{1, 2, 3, 4, 5, 6}</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Esse é o evento "tirar número par", não o espaço amostral completo.')">{2, 4, 6}</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a probabilidade de se tirar um número maior que 4 no lançamento de um dado de 6 faces?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os números maiores que 4 são 5 e 6 (2 possibilidades). Logo, a probabilidade é 2/6 = 1/3.')">4/6 (aproximadamente 66%)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Espaço amostral: 6. Evento (maior que 4): {5, 6}, ou seja, 2 possibilidades. Probabilidade = 2/6 = 1/3 (aproximadamente 33%).')">2/6 ou 1/3 (aproximadamente 33%)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1/6 seria se você estivesse procurando um único número específico (ex: tirar o 6).')">1/6 (aproximadamente 16%)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Se lançarmos uma moeda honesta, qual é a probabilidade de tirar "Cara"?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1/4 é a probabilidade de tirar "cara" em duas moedas (cara e cara). Em uma moeda, são 2 possibilidades.')">1/4 (25%)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O espaço amostral é {Cara, Coroa} (2 possibilidades). O evento é {Cara} (1 possibilidade). Logo, 1/2 = 50%.')">1/2 (50%)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1/6 é a probabilidade de tirar um número específico em um dado de 6 faces.')">1/6 (aproximadamente 16%)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre o conceito de "Evento" na probabilidade, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O evento é um subconjunto do espaço amostral, não o todo.')">É o conjunto de todos os resultados possíveis de um experimento.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O evento é qualquer subconjunto do espaço amostral. Ou seja, é um pedaço dos resultados possíveis que nos interessa.')">É qualquer subconjunto do espaço amostral.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A probabilidade de um evento impossível é 0.')">É o resultado que sempre acontece.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: PROBABILIDADE BÁSICA -->

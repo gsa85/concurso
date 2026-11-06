@@ -1,35 +1,304 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Constituição Federal de 1988 (Títulos I a IV e artigos selecionados) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Constituição Federal de 1988 (Títulos I a IV e artigos selecionados)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: CONSTITUIÇÃO FEDERAL DE 1988 -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Constituição Federal de 1988</h1>
+        <p>Títulos I, II, III (arts. 18, 19, 29, 30, 37 a 41) e IV (arts. 44 a 75)</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#principios">Princípios Fundamentais</a>
+        <a href="#direitos">Direitos e Garantias</a>
+        <a href="#organizacao">Organização do Estado</a>
+        <a href="#adm">Administração Pública</a>
+        <a href="#legislativo">Poder Legislativo</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: PRINCÍPIOS FUNDAMENTAIS (ART. 1º AO 4º) -->
+    <div id="principios" class="secao">
+        <h2>1. Título I – Princípios Fundamentais (Art. 1º a 4º)</h2>
+        <div class="card">
+            <h3>Fundamentos da República (Art. 1º)</h3>
+            <p>A República Federativa do Brasil constitui-se em Estado Democrático de Direito e tem como fundamentos (mnemônico: <strong>SO-CI-DI-VA-PLU</strong>):</p>
+            <ul>
+                <li><strong>So</strong>berania;</li>
+                <li><strong>Ci</strong>dadania;</li>
+                <li><strong>Di</strong>gnidade da pessoa humana;</li>
+                <li><strong>Va</strong>lores sociais do trabalho e da livre iniciativa;</li>
+                <li><strong>Plu</strong>ralismo político.</li>
+            </ul>
+            <p><strong>Parágrafo único:</strong> Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente.</p>
+        </div>
+        <div class="card">
+            <h3>Objetivos Fundamentais (Art. 3º)</h3>
+            <p>Constituem objetivos fundamentais da República Federativa do Brasil (mnemônico: <strong>CON-GA-ERRA-PRO</strong>):</p>
+            <ul>
+                <li><strong>Con</strong>struir uma sociedade livre, justa e solidária;</li>
+                <li><strong>Ga</strong>rantir o desenvolvimento nacional;</li>
+                <li><strong>Erra</strong>dicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;</li>
+                <li><strong>Pro</strong>mover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Princípios das Relações Internacionais (Art. 4º)</h3>
+            <p>A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios (mnemônico: <strong>IN-PRE-AUTO-NÃO-IGUAL-DEFESA-SOLUÇÃO-REPÚDIO-COOPERAÇÃO-ASILO</strong>):</p>
+            <ul>
+                <li><strong>In</strong>dependência nacional;</li>
+                <li><strong>Pre</strong>valência dos direitos humanos;</li>
+                <li><strong>Auto</strong>determinação dos povos;</li>
+                <li><strong>Não</strong>-intervenção;</li>
+                <li><strong>Igual</strong>dade entre os Estados;</li>
+                <li><strong>Defesa</strong> da paz;</li>
+                <li><strong>Solução</strong> pacífica dos conflitos;</li>
+                <li><strong>Repúdio</strong> ao terrorismo e ao racismo;</li>
+                <li><strong>Cooperação</strong> entre os povos para o progresso da humanidade;</li>
+                <li><strong>Concessão de asilo</strong> político.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Não confunda <strong>Fundamentos</strong> (Art. 1º) com <strong>Objetivos</strong> (Art. 3º) nem com <strong>Princípios das relações internacionais</strong> (Art. 4º). A banca costuma trocar os verbos: "construir", "garantir", "erradicar" e "promover" são <strong>objetivos</strong>, não fundamentos.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: DIREITOS E GARANTIAS FUNDAMENTAIS (ART. 5º AO 17) -->
+    <div id="direitos" class="secao">
+        <h2>2. Título II – Direitos e Garantias Fundamentais (Art. 5º a 17)</h2>
+        <div class="card">
+            <h3>Direitos Individuais e Coletivos (Art. 5º)</h3>
+            <p>O Art. 5º é o artigo mais cobrado em concursos[reference:2]. Ele garante a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.</p>
+            <p><strong>Incisos mais cobrados:</strong></p>
+            <ul>
+                <li><strong>XI – Casa é asilo inviolável:</strong> ninguém nela pode penetrar sem consentimento do morador, salvo em caso de <strong>flagrante delito, desastre, para prestar socorro</strong> ou, durante o dia, por <strong>determinação judicial</strong>.</li>
+                <li><strong>XII – Sigilo de comunicações:</strong> interceptação telefônica apenas por ordem judicial, para investigação criminal ou instrução penal.</li>
+                <li><strong>XXXV – Inafastabilidade do Poder Judiciário:</strong> a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito.</li>
+                <li><strong>LXVIII a LXXIII – Remédios constitucionais:</strong> Habeas Corpus (liberdade de locomoção), Habeas Data (acesso/retificação de dados), Mandado de Segurança (direito líquido e certo), Mandado de Injunção (falta de norma regulamentadora) e Ação Popular (anular ato lesivo ao patrimônio público).</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Direitos Sociais (Art. 6º a 11)</h3>
+            <p>São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados[reference:3].</p>
+            <p><strong>Direitos dos trabalhadores (Art. 7º):</strong> rol extenso de direitos (ex: 13º salário, férias, FGTS, aviso prévio proporcional, etc.).</p>
+        </div>
+        <div class="card">
+            <h3>Nacionalidade, Direitos Políticos e Partidos (Art. 12 a 17)</h3>
+            <ul>
+                <li><strong>Nacionalidade (Art. 12):</strong> brasileiros natos e naturalizados. Cargos privativos de nato: Presidente, Vice, Presidente da Câmara, Presidente do Senado, Ministro do STF, carreira diplomática, oficial das Forças Armadas e Ministro da Defesa.</li>
+                <li><strong>Direitos Políticos (Art. 14 a 16):</strong> voto direto e secreto, plebiscito, referendo, iniciativa popular. Votam os maiores de 16 anos; o voto é obrigatório para maiores de 18 e facultativo para analfabetos, maiores de 70 e maiores de 16 e menores de 18.</li>
+                <li><strong>Partidos Políticos (Art. 17):</strong> liberdade de criação, fusão, incorporação e extinção, resguardados a soberania nacional, o regime democrático, o pluripartidarismo e os direitos fundamentais da pessoa humana.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> No Art. 5º, XI (casa como asilo inviolável), a entrada com <strong>ordem judicial</strong> só pode ocorrer <strong>durante o dia</strong>. À noite, apenas em caso de flagrante, desastre ou socorro. A banca vai tentar dizer que a ordem judicial vale a qualquer hora.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ORGANIZAÇÃO DO ESTADO (ARTS. 18, 19, 29, 30) -->
+    <div id="organizacao" class="secao">
+        <h2>3. Título III – Organização do Estado (Arts. 18, 19, 29 e 30)</h2>
+        <div class="card">
+            <h3>Organização Político-Administrativa (Art. 18 e 19)</h3>
+            <p>A organização político-administrativa da República Federativa do Brasil compreende a <strong>União, os Estados, o Distrito Federal e os Municípios</strong>, todos autônomos, nos termos da Constituição[reference:4].</p>
+            <p><strong>Vedações (Art. 19):</strong> é vedado à União, aos Estados, ao Distrito Federal e aos Municípios:</p>
+            <ul>
+                <li>Estabelecer cultos religiosos ou igrejas, subvencioná-los, embaraçar-lhes o funcionamento ou manter com eles ou seus representantes relações de dependência ou aliança (salvo colaboração de interesse público).</li>
+                <li>Recusar fé aos documentos públicos.</li>
+                <li>Criar distinções entre brasileiros ou preferências entre si.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Municípios (Art. 29 e 30)</h3>
+            <p><strong>Art. 29:</strong> O Município reger-se-á por <strong>Lei Orgânica</strong>, votada em dois turnos, com interstício mínimo de dez dias, e aprovada por <strong>dois terços</strong> dos membros da Câmara Municipal, que a promulgará[reference:5].</p>
+            <p><strong>Art. 30 – Competência dos Municípios:</strong></p>
+            <ul>
+                <li>Legislar sobre assuntos de <strong>interesse local</strong>;</li>
+                <li><strong>Suplementar</strong> a legislação federal e estadual no que couber;</li>
+                <li>Instituir e arrecadar os tributos de sua competência;</li>
+                <li>Criar, organizar e suprimir distritos, observada a legislação estadual;</li>
+                <li>Organizar e prestar, diretamente ou sob regime de concessão ou permissão, os <strong>serviços públicos de interesse local</strong>, incluído o de <strong>transporte coletivo</strong>, que tem caráter essencial;</li>
+                <li>Manter, com a cooperação técnica e financeira da União e do Estado, programas de <strong>educação infantil e de ensino fundamental</strong>;</li>
+                <li>Prestar, com a cooperação técnica e financeira da União e do Estado, serviços de atendimento à <strong>saúde</strong> da população;</li>
+                <li>Promover, no que couber, o adequado <strong>ordenamento territorial</strong>;</li>
+                <li>Promover a proteção do <strong>patrimônio histórico-cultural local</strong>.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A Lei Orgânica municipal é aprovada por <strong>dois terços</strong> dos membros da Câmara, em <strong>dois turnos</strong>, com interstício mínimo de <strong>dez dias</strong>. A banca costuma trocar por "maioria absoluta" ou "turno único".
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: ADMINISTRAÇÃO PÚBLICA (ARTS. 37 A 41) -->
+    <div id="adm" class="secao">
+        <h2>4. Título III – Administração Pública (Arts. 37 a 41)</h2>
+        <div class="card">
+            <h3>Princípios da Administração Pública (Art. 37, caput)</h3>
+            <p>A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de <strong>Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência</strong> (mnemônico: <strong>LIMPE</strong>)[reference:6].</p>
+            <p><strong>Incisos mais cobrados do Art. 37:</strong></p>
+            <ul>
+                <li><strong>II – Concurso público:</strong> a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, ressalvadas as nomeações para cargo em comissão de livre nomeação e exoneração.</li>
+                <li><strong>III – Prazo de validade do concurso:</strong> até <strong>dois anos</strong>, prorrogável <strong>uma vez</strong>, por igual período.</li>
+                <li><strong>V – Funções de confiança e cargos em comissão:</strong> as funções de confiança são exercidas <strong>exclusivamente por servidores ocupantes de cargo efetivo</strong>; os cargos em comissão destinam-se apenas às atribuições de direção, chefia e assessoramento.</li>
+                <li><strong>XVI – Acumulação de cargos:</strong> é vedada a acumulação remunerada de cargos públicos, exceto quando houver compatibilidade de horários: (a) dois cargos de professor; (b) um cargo de professor com outro técnico ou científico; (c) dois cargos ou empregos privativos de profissionais de saúde[reference:7].</li>
+                <li><strong>XIX – Criação de entidades:</strong> somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Servidores Públicos (Art. 39 a 41)</h3>
+            <ul>
+                <li><strong>Art. 39:</strong> a União, os Estados, o Distrito Federal e os Municípios instituirão conselho de política de administração e remuneração de pessoal, integrado por servidores designados pelos respectivos Poderes.</li>
+                <li><strong>Art. 40:</strong> regime próprio de previdência social para os servidores titulares de cargos efetivos.</li>
+                <li><strong>Art. 41 – Estabilidade:</strong> são <strong>estáveis</strong> os servidores nomeados para cargo de provimento efetivo em virtude de concurso público após <strong>três anos</strong> de efetivo exercício. A estabilidade não impede a perda do cargo nas hipóteses de sentença judicial transitada em julgado, processo administrativo com ampla defesa ou avaliação periódica de desempenho[reference:8].</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O prazo de validade do concurso público é de <strong>até dois anos</strong>, prorrogável <strong>uma única vez</strong> por <strong>igual período</strong> (totalizando até 4 anos). A banca costuma dizer que é "dois anos improrrogáveis" ou "prorrogável por mais dois anos, sucessivamente".
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: PODER LEGISLATIVO (ARTS. 44 A 75) -->
+    <div id="legislativo" class="secao">
+        <h2>5. Título IV – Poder Legislativo (Arts. 44 a 75)</h2>
+        <div class="card">
+            <h3>Congresso Nacional (Art. 44 a 47)</h3>
+            <p>O Poder Legislativo é exercido pelo <strong>Congresso Nacional</strong>, que se compõe da <strong>Câmara dos Deputados</strong> e do <strong>Senado Federal</strong>[reference:9].</p>
+            <ul>
+                <li><strong>Cada legislatura</strong> terá a duração de <strong>quatro anos</strong>.</li>
+                <li><strong>Câmara dos Deputados (Art. 45):</strong> representantes do povo, eleitos pelo sistema <strong>proporcional</strong>, em cada Estado, Território e Distrito Federal. Número total estabelecido por lei complementar, proporcional à população, com mínimo de 8 e máximo de 70 Deputados por Estado.</li>
+                <li><strong>Senado Federal (Art. 46):</strong> representantes dos Estados e do Distrito Federal, eleitos segundo o princípio <strong>majoritário</strong>. Cada Estado e o DF elegem <strong>três Senadores</strong>, com mandato de <strong>oito anos</strong>. A representação é renovada de quatro em quatro anos, alternadamente, por um e dois terços.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Atribuições do Congresso Nacional (Art. 48 a 52)</h3>
+            <ul>
+                <li><strong>Art. 48:</strong> cabe ao Congresso Nacional, com sanção do Presidente da República, dispor sobre todas as matérias de competência da União.</li>
+                <li><strong>Art. 49:</strong> é da competência <strong>exclusiva</strong> do Congresso Nacional (sem sanção presidencial) resolver definitivamente sobre tratados, autorizar guerra e paz, aprovar estado de defesa e intervenção federal, etc.</li>
+                <li><strong>Art. 51 e 52:</strong> competências privativas da Câmara dos Deputados e do Senado Federal, respectivamente.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Deputados e Senadores (Art. 53 a 56)</h3>
+            <ul>
+                <li><strong>Imunidade material (Art. 53, caput):</strong> os Deputados e Senadores são invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos.</li>
+                <li><strong>Imunidade formal (Art. 53, §§ 2º a 5º):</strong> desde a expedição do diploma, os membros do Congresso Nacional não poderão ser presos, salvo em flagrante de crime inafiançável.</li>
+                <li><strong>Perda do mandato (Art. 55):</strong> hipóteses taxativas, como infringir as proibições do Art. 54, deixar de comparecer a um terço das sessões ordinárias, perder ou tiver suspensos os direitos políticos, etc.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Processo Legislativo (Art. 59 a 69)</h3>
+            <p>O processo legislativo compreende a elaboração de: emendas à Constituição, leis complementares, leis ordinárias, leis delegadas, medidas provisórias, decretos legislativos e resoluções[reference:10].</p>
+        </div>
+        <div class="card">
+            <h3>Fiscalização e Controle (Art. 70 a 75)</h3>
+            <p>A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta será exercida pelo <strong>Congresso Nacional</strong>, mediante <strong>controle externo</strong>, e pelo <strong>sistema de controle interno</strong> de cada Poder.</p>
+            <p>O controle externo é exercido com o auxílio do <strong>Tribunal de Contas da União (TCU)</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Senado Federal é composto por <strong>três Senadores por Estado</strong>, com mandato de <strong>oito anos</strong>, e a renovação é de <strong>quatro em quatro anos</strong> (alternando 1/3 e 2/3). A banca costuma dizer que o mandato é de quatro anos ou que a renovação é total.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com o Art. 1º da CF/88, são fundamentos da República Federativa do Brasil, EXCETO:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soberania é um dos fundamentos (Art. 1º, I).')">A soberania.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A cidadania é um dos fundamentos (Art. 1º, II).')">A cidadania.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A alternativa correta é a letra C. "Construir uma sociedade livre, justa e solidária" é um OBJETIVO fundamental (Art. 3º, I), e não um fundamento.')">Construir uma sociedade livre, justa e solidária.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre o prazo de validade do concurso público, é correto afirmar que será de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 37, III: até dois anos, prorrogável uma vez, por igual período.')">Até dois anos, prorrogável uma vez, por igual período.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de até dois anos, e não um ano.')">Até um ano, improrrogável.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A prorrogação é permitida uma única vez, por igual período.')">Até dois anos, prorrogável sucessivamente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A casa é asilo inviolável do indivíduo. De acordo com o Art. 5º, XI, da CF/88, é permitido penetrar na casa sem consentimento do morador, durante o dia, em caso de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A determinação judicial só pode ser cumprida durante o dia. À noite, apenas flagrante, desastre ou socorro.')">Determinação judicial, a qualquer hora.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 5º, XI: durante o dia, por determinação judicial; ou, a qualquer hora, em caso de flagrante delito, desastre ou para prestar socorro.')">Flagrante delito, desastre ou para prestar socorro.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem judicial, durante o dia, é uma das exceções, mas não a única.')">Apenas por ordem judicial.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre a estabilidade do servidor público, de acordo com o Art. 41 da CF/88, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de três anos de efetivo exercício.')">O servidor adquire estabilidade após dois anos de efetivo exercício.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 41: são estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.')">O servidor adquire estabilidade após três anos de efetivo exercício.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A estabilidade é adquirida após três anos, não cinco.')">O servidor adquire estabilidade após cinco anos de efetivo exercício.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. O Poder Legislativo é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputados e do Senado Federal. Sobre o Senado Federal, é correto afirmar que cada Estado elegerá:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! São três Senadores por Estado, com mandato de oito anos.')">Dois Senadores, com mandato de quatro anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 46, § 1º: cada Estado e o Distrito Federal elegerão três Senadores, com mandato de oito anos.')">Três Senadores, com mandato de oito anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! São três Senadores, e não quatro, e o mandato é de oito anos.')">Quatro Senadores, com mandato de oito anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: CONSTITUIÇÃO FEDERAL DE 1988 -->

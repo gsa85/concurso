@@ -1,35 +1,211 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Lei de Acesso à Informação (Lei 12.527/2011) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1> Lei de Acesso à Informação (Lei 12.527/2011)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI DE ACESSO À INFORMAÇÃO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Lei de Acesso à Informação</h1>
+        <p>Lei Federal nº 12.527/2011 – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#abrangencia">Abrangência e Conceitos</a>
+        <a href="#transparencia">Transparência Ativa e Passiva</a>
+        <a href="#prazos">Prazos e Gratuidade</a>
+        <a href="#sigilo">Restrições e Sigilo</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: ABRANGÊNCIA E CONCEITOS -->
+    <div id="abrangencia" class="secao">
+        <h2>1. Abrangência e Conceitos</h2>
+        <div class="card">
+            <p>A LAI regulamenta o direito constitucional de acesso às informações públicas e estabelece os procedimentos para sua obtenção.</p>
+            <h3>Quem deve obedecer? (Art. 1º, Parágrafo Único)</h3>
+            <p>Os órgãos públicos dos três Poderes (Executivo, Legislativo e Judiciário) de todas as esferas (União, Estados, DF e Municípios), incluindo Autarquias, Fundações, Empresas Públicas e Sociedades de Economia Mista.</p>
+            <p><strong>E as entidades privadas?</strong> As entidades privadas <strong>sem fins lucrativos</strong> também se submetem à LAI, mas <strong>apenas</strong> no que diz respeito aos recursos públicos que receberem (ex: ONGs, OSs).</p>
+            <h3>Conceitos importantes (Art. 4º)</h3>
+            <ul>
+                <li><strong>Informação:</strong> dados, processados ou não, que podem ser utilizados para produção e transmissão de conhecimento.</li>
+                <li><strong>Documento:</strong> unidade de registro de informações, qualquer que seja o suporte ou formato.</li>
+                <li><strong>Informação pessoal:</strong> aquela relacionada à pessoa natural identificada ou identificável (ex: CPF, endereço, dados de saúde).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: TRANSPARÊNCIA ATIVA E PASSIVA -->
+    <div id="transparencia" class="secao">
+        <h2>2. Transparência Ativa e Passiva</h2>
+        <div class="card">
+            <h3>Transparência Ativa (Art. 8º)</h3>
+            <p>É o dever dos órgãos públicos de <strong>divulgar informações de interesse coletivo ou geral</strong> de forma proativa, independentemente de qualquer solicitação. Devem ser divulgadas em sites oficiais na internet.</p>
+            <p><strong>Informações mínimas que devem ser divulgadas:</strong></p>
+            <ul>
+                <li>Competências e estrutura organizacional;</li>
+                <li>Endereços e telefones das unidades;</li>
+                <li>Registros de repasses ou transferências de recursos;</li>
+                <li>Registros das despesas;</li>
+                <li>Procedimentos licitatórios e contratos;</li>
+                <li>Respostas a perguntas mais frequentes da sociedade.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Transparência Passiva (Art. 10 a 14)</h3>
+            <p>É o acesso à informação mediante <strong>solicitação</strong> do interessado.</p>
+            <ul>
+                <li><strong>Qualquer pessoa</strong> pode pedir informação (não precisa ser brasileiro, nem ter interesse específico).</li>
+                <li>O pedido pode ser feito por qualquer meio (físico ou eletrônico).</li>
+                <li>O órgão não pode exigir a motivação do pedido (a pessoa não precisa dizer para que quer a informação).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PRAZOS E GRATUIDADE -->
+    <div id="prazos" class="secao">
+        <h2>3. Prazos e Gratuidade</h2>
+        <div class="card">
+            <h3>Prazo de Resposta (Art. 11)</h3>
+            <p>O órgão público tem o prazo de <strong>20 (vinte) dias</strong> para responder ao pedido, contados a partir do recebimento.</p>
+            <p>Esse prazo pode ser <strong>prorrogado por mais 10 (dez) dias</strong>, mediante <strong>justificativa expressa</strong> e com ciência do interessado.</p>
+            <h3>Gratuidade (Art. 12)</h3>
+            <p>O serviço de busca e fornecimento da informação é <strong>gratuito</strong>.</p>
+            <p><strong>Exceção:</strong> O órgão pode cobrar o valor referente ao <strong>custo dos materiais</strong> utilizados para reproduzir a informação (ex: custo de impressão, cópias, mídias), mas nunca a mão de obra.</p>
+            <p>Pessoas em situação de hipossuficiência (baixa renda) são isentas até mesmo desses custos de reprodução.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Memorize a soma: <strong>20 dias + 10 de prorrogação = 30 dias no máximo</strong>. A banca costuma inverter os números (ex: 10 dias + 20 de prorrogação) ou dizer que o prazo é de 15 dias.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: RESTRIÇÕES E SIGILO -->
+    <div id="sigilo" class="secao">
+        <h2>4. Restrições de Acesso e Sigilo</h2>
+        <div class="card">
+            <p>A LAI estabelece que o acesso à informação pode ser negado em casos de sigilo legal, informação classificada ou informação pessoal.</p>
+            <h3>Informações Classificadas (Art. 23 a 25)</h3>
+            <p>São informações cuja divulgação pode comprometer a segurança da sociedade ou do Estado. Elas possuem prazos de sigilo máximos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grau de Sigilo</th>
+                        <th>Prazo Máximo</th>
+                        <th>Quem Classifica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Ultrassecreta</strong></td><td>25 anos</td><td>Presidente, Vice, Ministros, Comandantes, etc.</td></tr>
+                    <tr><td><strong>Secreta</strong></td><td>15 anos</td><td>Autoridades de alto escalão</td></tr>
+                    <tr><td><strong>Reservada</strong></td><td>5 anos</td><td>Autoridades de médio escalão</td></tr>
+                </tbody>
+            </table>
+            <h3>Informações Pessoais (Art. 31)</h3>
+            <p>O acesso à informação pessoal (relativa à intimidade, vida privada, honra e imagem) é restrito pelo prazo máximo de <strong>100 (cem) anos</strong>, contados da data de sua produção, independentemente de classificação.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a confusão de prazos! <strong>Ultrassecreto = 25</strong>; <strong>Secreto = 15</strong>; <strong>Reservado = 5</strong>. E a informação pessoal é protegida por <strong>100 anos</strong> (e não 50 ou 70). As bancas adoram inverter esses números.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei nº 12.527/2011, o prazo para a resposta a um pedido de acesso à informação é de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 20 dias, prorrogável por mais 10.')">15 dias, improrrogáveis.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 11: 20 dias, prorrogáveis por mais 10 dias mediante justificativa.')">20 dias, prorrogáveis por mais 10 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 30 dias é o prazo total máximo (20+10), não o prazo inicial.')">30 dias, improrrogáveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a gratuidade do serviço de acesso à informação, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O serviço é gratuito, a cobrança é apenas do custo de reprodução.')">É totalmente vedada qualquer cobrança, mesmo de cópias.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 12: O serviço é gratuito, ressalvada a cobrança do custo dos materiais de reprodução.')">É gratuito, podendo ser cobrado apenas o custo de reprodução de documentos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A motivação do pedido não pode ser exigida, tampouco pode haver cobrança de taxas.')">É cobrada uma taxa padrão para qualquer solicitação.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A Lei de Acesso à Informação aplica-se a entidades privadas sem fins lucrativos:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A LAI aplica-se a elas, mas de forma restrita.')">Em nenhuma hipótese.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 1º, § 2º: aplica-se aos recursos públicos recebidos por essas entidades.')">Apenas no que diz respeito aos recursos públicos que receberem.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A aplicação é limitada aos recursos públicos.')">Em sua totalidade, assim como os órgãos públicos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Segundo a LAI, qual é o prazo máximo de sigilo para uma informação classificada como "ultrassecreta"?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 15 anos é o prazo das informações secretas.')">15 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 5 anos é o prazo das informações reservadas.')">5 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 24, I: o prazo máximo de restrição para informações ultrassecretas é de 25 anos.')">25 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. O acesso a informações pessoais relativas à intimidade, vida privada, honra e imagem é restrito pelo prazo máximo de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 50 anos não está previsto na LAI.')">50 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 31: o prazo de restrição de acesso a informações pessoais é de 100 anos.')">100 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 25 anos é o prazo das informações ultrassecretas, não das pessoais.')">25 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI DE ACESSO À INFORMAÇÃO -->

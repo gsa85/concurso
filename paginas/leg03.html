@@ -1,35 +1,224 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lei Municipal nº 7.671/1991 (Organização Administrativa do Poder Executivo) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Lei Municipal nº 7.671/1991 (Organização Administrativa do Poder Executivo)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg03</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI 7.671/1991 - ORGANIZAÇÃO ADMINISTRATIVA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Organização Administrativa</h1>
+        <p>Lei Municipal nº 7.671/1991 (Curitiba) – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#estrutura">Estrutura Básica</a>
+        <a href="#cargos">Cargos e Salários</a>
+        <a href="#secretarias">Secretarias (Competências)</a>
+        <a href="#indireta">Adm. Indireta</a>
+        <a href="#auxiliares">Sistemas Auxiliares</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: ESTRUTURA BÁSICA -->
+    <div id="estrutura" class="secao">
+        <h2>1. Estrutura Básica</h2>
+        <div class="card">
+            <p>A Administração Pública Municipal de Curitiba divide-se em:</p>
+            <ul>
+                <li><strong>Administração Direta:</strong> Gabinete do Prefeito, Assessorias, Procuradoria, Secretaria de Comunicação e as <strong>Secretarias Municipais</strong>.</li>
+                <li><strong>Administração Indireta:</strong> Autarquias, Fundações Públicas e Sociedades de Economia Mista.</li>
+            </ul>
+            <h3>Secretarias Municipais</h3>
+            <ul>
+                <li><strong>Natureza Meio:</strong> Administração, Recursos Humanos e Finanças.</li>
+                <li><strong>Natureza Fim:</strong> Abastecimento, Criança, Educação, Meio Ambiente, Obras Públicas, Saúde e Urbanismo.</li>
+                <li><strong>Natureza Extraordinária:</strong> O Prefeito pode criar, via decreto, até <strong>2 (duas)</strong> para assuntos transitórios.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CARGOS E SALÁRIOS -->
+    <div id="cargos" class="secao">
+        <h2>2. Cargos e Proporções Salariais</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Símbolo</th>
+                    <th>Cargo / Função</th>
+                    <th>Proporção Salarial (Art. 10)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>S-1</strong></td><td>Secretário Municipal / Procurador Geral</td><td>1.50</td></tr>
+                <tr><td><strong>S-2 / C-2</strong></td><td>Superintendente / Diretor</td><td>1.25</td></tr>
+                <tr><td><strong>C-3</strong></td><td>Chefe de Equipe de Apoio Técnico</td><td>0.70</td></tr>
+                <tr><td><strong>C-4</strong></td><td>Chefe de Gabinete</td><td>0.45</td></tr>
+            </tbody>
+        </table>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> As funções gratificadas FG-6 e FG-5 não têm valor fixo, elas recebem a <strong>diferença</strong> entre o cargo em comissão e o cargo de carreira. FG-6 = diferença entre C-2 e carreira. FG-5 = diferença entre C-3 e carreira.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: SECRETARIAS E COMPETÊNCIAS -->
+    <div id="secretarias" class="secao">
+        <h2>3. Competências das Secretarias (Art. 24 a 27)</h2>
+        <div class="card">
+            <h3>Secretaria da Criança (Art. 24)</h3>
+            <p>Atendimento à criança e ao adolescente de <strong>0 a 16 anos</strong>. Creches para crianças de <strong>0 a 6 anos</strong> (diretas ou terceirizadas).</p>
+        </div>
+        <div class="card">
+            <h3>Secretaria do Meio Ambiente (Art. 25)</h3>
+            <p>Preservação ambiental, fauna e flora. Limpeza urbana, coleta de lixo e reciclagem. Parques, praças e jardins. <strong>Administração de cemitérios e serviços funerários.</strong></p>
+        </div>
+        <div class="card">
+            <h3>Secretaria do Urbanismo (Art. 26)</h3>
+            <p>Uso e parcelamento do solo, Código de Obras. Expedição de alvarás e "habite-se". Emplacamento de logradouros. Repressão a construções clandestinas e poluição visual/sonora.</p>
+        </div>
+        <div class="card">
+            <h3>Secretaria de Obras Públicas (Art. 27)</h3>
+            <p>Execução de obras públicas, pavimentação, drenagem, calçamento. Iluminação pública e sinalização urbana. Controle do sistema de trânsito.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: ADMINISTRAÇÃO INDIRETA -->
+    <div id="indireta" class="secao">
+        <h2>4. Entidades da Administração Indireta</h2>
+        <div class="card">
+            <ul>
+                <li><strong>URBS:</strong> Transporte de massa, táxis e tarifas.</li>
+                <li><strong>CIC:</strong> Desenvolvimento da Cidade Industrial e atração de empresas.</li>
+                <li><strong>COHAB-CT:</strong> Regularização fundiária.</li>
+                <li><strong>IPPUC:</strong> Planejamento urbano e elaboração de orçamentos.</li>
+                <li><strong>IPMC:</strong> Previdência dos servidores (Presidente precisa de 10 anos de contribuição; Diretores, 5 anos).</li>
+                <li><strong>FCC (Fundação Cultural):</strong> Inclui projetos para a <strong>terceira idade</strong> (Art. 37).</li>
+                <li><strong>FREI (Fundação de Ação Social):</strong> Foco na população de baixa renda e banco de dados social.</li>
+            </ul>
+            <h3>IMAP – Instituto Municipal de Administração Pública (Art. 40)</h3>
+            <p>Autarquia voltada para o desenvolvimento de recursos humanos e modernização da gestão.</p>
+            <ul>
+                <li><strong>Conselho Deliberativo:</strong> 5 membros (Secretário de RH, Finanças, Presidente do IPPUC, Rep. do Gabinete e Rep. da SUSEP).</li>
+                <li><strong>Diretoria Executiva:</strong> 3 membros (Presidente, Superintendente e Diretor Adm. Financeiro).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: SISTEMAS AUXILIARES -->
+    <div id="auxiliares" class="secao">
+        <h2>5. Sistemas Auxiliares (Art. 30 a 32)</h2>
+        <div class="card">
+            <p>São 4 sistemas de atividades centralizadas:</p>
+            <ul>
+                <li>I - Sistema Financeiro;</li>
+                <li>II - Sistema de Administração Geral;</li>
+                <li>III - Sistema de Recursos Humanos;</li>
+                <li>IV - Sistema de Assessoramento Jurídico.</li>
+            </ul>
+            <p><strong>Como funcionam:</strong> A Procuradoria e as Secretarias "Meio" são as organizações-base. Elas criam <strong>Núcleos</strong> que atuam dentro das outras secretarias para padronizar a linguagem e executar as atividades.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Um mesmo Núcleo pode atender a <strong>mais de uma Secretaria simultaneamente</strong> (Art. 32, §3º). Além disso, o pessoal do Núcleo está sujeito à orientação técnica da organização-base, mas à subordinação administrativa da secretaria onde está lotado!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 7.671/91, a competência para administrar os cemitérios e os serviços funerários do município é da:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Obras Públicas cuida de pavimentação, drenagem e iluminação (Art. 27).')">Secretaria Municipal de Obras Públicas</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 25 define que a administração de cemitérios é da Secretaria Municipal do Meio Ambiente.')">Secretaria Municipal do Meio Ambiente</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Urbanismo cuida do uso do solo e código de obras (Art. 26).')">Secretaria Municipal do Urbanismo</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Segundo a Lei 7.671/91, a Secretaria Municipal da Criança presta atendimento a qual faixa etária?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cuidado, a lei fala em 0 a 16 anos no Art. 24, e não até os 18.')">De 0 a 18 anos</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 24: atendimento à criança e ao adolescente carente de 0 a 16 anos.')">De 0 a 16 anos</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 0 a 6 anos é a idade atendida pelas creches, mas a secretaria atende até os 16.')">De 0 a 6 anos</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a proporção salarial do cargo em comissão símbolo S-1 (Secretário Municipal) em relação ao maior padrão da administração direta?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1.25 é a proporção dos cargos S-2 e C-2.')">1.25</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 0.45 é a proporção do C-4.')">0.45</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Conforme o Art. 10, o símbolo S-1 tem proporção 1.50.')">1.50</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre as Secretarias Municipais de Natureza Extraordinária, quantas o Prefeito pode instalar mediante decreto?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 3 é um número inventado pela banca para te confundir.')">Até 3</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 3º permite a instalação de até 2 Secretarias Extraordinárias.')">Até 2</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A lei prevê expressamente a possibilidade de criar até 2.')">Nenhuma, apenas as de natureza meio e fim</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Em relação aos Sistemas Auxiliares (Art. 32), é correto afirmar que um mesmo Núcleo:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles são flexíveis e podem atender a mais de uma secretaria.')">Só pode atender a uma única Secretaria</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O §3º do Art. 32 prevê que um mesmo Núcleo poderá, simultaneamente, atender a mais de uma Secretaria.')">Pode atender simultaneamente a mais de uma Secretaria</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles são criados justamente para atuar dentro das unidades da Administração Direta.')">Não pode atuar na Administração Direta</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI 7.671/1991 -->

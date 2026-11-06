@@ -1,35 +1,205 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rlm07 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>rlm07</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm07</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: NOÇÕES DE DIREÇÃO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Noções de Direção</h1>
+        <p>Norte, Sul, Leste, Oeste, Esquerda, Direita, Cima e Baixo</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#cardeais">Pontos Cardeais</a>
+        <a href="#esquerda">Esquerda e Direita</a>
+        <a href="#cima">Para Cima e Para Baixo</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: PONTOS CARDEAIS -->
+    <div id="cardeais" class="secao">
+        <h2>1. Pontos Cardeais (Norte, Sul, Leste e Oeste)</h2>
+        <div class="card">
+            <p>Os pontos cardeais são as quatro principais direções no espaço geográfico. Eles são baseados no movimento do Sol:</p>
+            <ul>
+                <li><strong>Leste (L) ou Este (E):</strong> É onde o <strong>Sol nasce</strong> pela manhã.</li>
+                <li><strong>Oeste (O) ou Weste (W):</strong> É onde o <strong>Sol se põe</strong> no final da tarde.</li>
+                <li><strong>Norte (N):</strong> É a direção que fica à frente quando você está de costas para o Sul.</li>
+                <li><strong>Sul (S):</strong> É a direção oposta ao Norte.</li>
+            </ul>
+
+            <h3>Como memorizar a posição?</h3>
+            <p>Se você estiver de frente para o <strong>Norte</strong>, a sua direita será o <strong>Leste</strong>, a sua esquerda será o <strong>Oeste</strong> e as suas costas serão o <strong>Sul</strong>.</p>
+
+            <div class="box-formula">
+                🌅 Leste (Nasce) ←→ Oeste (Põe) 🌇<br>
+                ⬆️ Norte ←→ Sul ⬇️
+            </div>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que o Sol nasce no Oeste. <strong>Falso!</strong> O Sol nasce no <strong>Leste</strong> (Este) e se põe no <strong>Oeste</strong>. Essa é a base de toda a orientação geográfica.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ESQUERDA E DIREITA -->
+    <div id="esquerda" class="secao">
+        <h2>2. Esquerda e Direita (Direções Relativas)</h2>
+        <div class="card">
+            <p>Diferente do Norte e do Sul, que são fixos, a <strong>esquerda e a direita dependem da posição de quem está olhando</strong>. Isso é chamado de direção relativa.</p>
+            <p><strong>Exemplo prático:</strong></p>
+            <ul>
+                <li>Se você está de frente para o <strong>Norte</strong>, a sua direita é o <strong>Leste</strong>.</li>
+                <li>Se você girar e ficar de frente para o <strong>Sul</strong>, a sua direita agora será o <strong>Oeste</strong>.</li>
+            </ul>
+            <p>Por isso, ao resolver uma questão, o primeiro passo é sempre identificar <strong>para onde a pessoa do enunciado está virada</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai te dar uma direção (ex: "João está de frente para o Norte") e depois pedir "o que está à sua direita". Se você não desenhar a rosa dos ventos, é fácil se confundir. Sempre desenhe a cruz (N, S, L, O) no papel antes de responder.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PARA CIMA E PARA BAIXO -->
+    <div id="cima" class="secao">
+        <h2>3. Para Cima e Para Baixo (Direções Verticais)</h2>
+        <div class="card">
+            <p>Em questões de raciocínio espacial, "para cima" e "para baixo" geralmente aparecem em mapas ou plantas, representando o eixo <strong>vertical</strong>.</p>
+            <p>Nos mapas convencionais, a direção "para cima" costuma representar o <strong>Norte</strong>, e "para baixo" representa o <strong>Sul</strong>. Já "para a direita" é o <strong>Leste</strong>, e "para a esquerda" é o <strong>Oeste</strong>.</p>
+            <p>No entanto, em questões de deslocamento (ex: "ande 3 passos para cima"), a banca está falando do eixo vertical da página, e não necessariamente de pontos cardeais.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Se a questão falar de <strong>deslocamento em um mapa</strong> (ex: "suba 2 quarteirões"), isso significa andar para o <strong>Norte</strong>. Se falar de um <strong>desenho/labirinto</strong>, "para cima" é apenas a direção vertical da folha. Fique atento ao contexto.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Nascer e pôr do Sol:</strong> O Sol nasce no <strong>Leste</strong> e se põe no <strong>Oeste</strong>. Nunca erre isso.</li>
+                <li><strong>Desenhe a rosa dos ventos:</strong> Antes de resolver qualquer questão, desenhe uma cruz no papel com N em cima, S embaixo, L à direita e O à esquerda. Isso evita 90% dos erros.</li>
+                <li><strong>Gire mentalmente:</strong> Se a pessoa do enunciado estiver virada para o Sul, você precisa girar a sua cruz mental em 180º. A direita dela será o Oeste.</li>
+                <li><strong>Esquerda e Direita mudam:</strong> Lembre-se: Norte e Sul são fixos, mas esquerda e direita dependem de quem olha. Não confunda os dois conceitos.</li>
+                <li><strong>Cima e Baixo em mapas:</strong> Em mapas, "para cima" geralmente significa Norte, e "para baixo" significa Sul. Mas em labirintos, é apenas a direção da folha.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Se uma pessoa está de frente para o Norte, qual é a direção que fica às suas costas?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Leste fica à direita de quem está de frente para o Norte.')">Leste</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Se você está de frente para o Norte, as suas costas estão voltadas para o Sul.')">Sul</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Oeste fica à esquerda de quem está de frente para o Norte.')">Oeste</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O Sol nasce todas as manhãs na direção:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Sol nasce no Leste (ou Este) e se põe no Oeste.')">Leste</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Oeste é onde o Sol se põe, no final da tarde.')">Oeste</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Norte não é a direção do nascer do Sol.')">Norte</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Maria está de frente para o Sul. Qual é a direção que fica à sua direita?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Se ela está de frente para o Sul, a direita dela é o Oeste, e não o Leste.')">Leste</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! De frente para o Sul, a direita é o Oeste, a esquerda é o Leste e as costas são o Norte.')">Oeste</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Norte fica atrás dela, não à direita.')">Norte</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em um mapa, a direção "para cima" geralmente representa qual ponto cardeal?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Nos mapas convencionais, o Norte é representado na parte superior (para cima).')">Norte</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Sul é representado na parte inferior (para baixo).')">Sul</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Leste é representado à direita no mapa.')">Leste</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Pedro está de frente para o Leste. Ele gira 90º para a sua direita. Para qual direção ele estará virado agora?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ao girar 90º para a direita, ele sai do Leste e vai para o Sul.')">Norte</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Se ele está de frente para o Leste e gira 90º para a direita, ele passa a olhar para o Sul.')">Sul</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ao girar para a direita, ele não volta para o Oeste, mas sim para o Sul.')">Oeste</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: NOÇÕES DE DIREÇÃO -->

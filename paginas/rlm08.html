@@ -1,35 +1,221 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estatística: média, moda e mediana — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Estatística: média, moda e mediana</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm08</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ESTATÍSTICA - MÉDIA, MODA E MEDIANA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Estatística Básica</h1>
+        <p>Média, Moda e Mediana – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#media">Média</a>
+        <a href="#moda">Moda</a>
+        <a href="#mediana">Mediana</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: MÉDIA -->
+    <div id="media" class="secao">
+        <h2>1. Média Aritmética</h2>
+        <div class="card">
+            <p>A média é o valor central de um conjunto de dados. É como se "nivelássemos" todos os valores para que todos tivessem a mesma quantidade.</p>
+            
+            <h3>Média Simples</h3>
+            <p>Para calcular, basta somar todos os valores e dividir pela quantidade de valores.</p>
+            <div class="box-formula">
+                Média = (Soma dos valores) / (Quantidade de valores)
+            </div>
+            <p><em>Exemplo: As notas de um aluno foram 5, 7 e 9. A média é (5 + 7 + 9) / 3 = 21 / 3 = 7.</em></p>
+
+            <h3>Média Ponderada (A mais cobrada!)</h3>
+            <p>Na média ponderada, alguns valores têm "peso" maior que outros. Multiplicamos cada valor pelo seu peso, somamos tudo e dividimos pela soma dos pesos.</p>
+            <div class="box-formula">
+                Média Ponderada = (V1 × P1 + V2 × P2 + ...) / (P1 + P2 + ...)
+            </div>
+            <p><em>Exemplo: Um aluno tirou nota 5 em uma prova com peso 2, e nota 8 em uma prova com peso 3. Média = (5×2 + 8×3) / (2+3) = (10 + 24) / 5 = 34 / 5 = 6,8.</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai te dar as notas e os pesos, e colocar a média simples nas alternativas (ex: 6,5). Se tiver a palavra <strong>"peso"</strong> no enunciado, use SEMPRE a média ponderada.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: MODA -->
+    <div id="moda" class="secao">
+        <h2>2. Moda (Mo)</h2>
+        <div class="card">
+            <p>A moda é o valor que <strong>mais se repete</strong> em um conjunto de dados. É o "valor da moda", o que está na "moda" de aparecer.</p>
+            
+            <h3>Tipos de Moda</h3>
+            <ul>
+                <li><strong>Amodal:</strong> Nenhum valor se repete (todos são diferentes).</li>
+                <li><strong>Unimodal:</strong> Apenas um valor se repete mais vezes.</li>
+                <li><strong>Bimodal:</strong> Dois valores se repetem a mesma quantidade de vezes (e são os mais frequentes).</li>
+                <li><strong>Multimodal:</strong> Três ou mais valores empatam como mais frequentes.</li>
+            </ul>
+            <p><em>Exemplo 1 (Unimodal): 2, 3, 3, 5, 7. A moda é 3.</em></p>
+            <p><em>Exemplo 2 (Bimodal): 1, 2, 2, 4, 4, 5. As modas são 2 e 4.</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Se a questão disser que o conjunto é <strong>Amodal</strong>, significa que <strong>não há moda</strong>. A banca vai tentar colocar "moda = 0" nas alternativas. Zero é um número, mas amodal significa "nenhum valor".
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: MEDIANA -->
+    <div id="mediana" class="secao">
+        <h2>3. Mediana (Md)</h2>
+        <div class="card">
+            <p>A mediana é o valor que fica <strong>exatamente no meio</strong> do conjunto, quando os dados estão organizados em ordem (crescente ou decrescente).</p>
+            
+            <h3>Passo a Passo</h3>
+            <ol>
+                <li><strong>Coloque em ordem (rol):</strong> Organize os números do menor para o maior.</li>
+                <li><strong>Veja se a quantidade é ÍMPAR ou PAR:</strong></li>
+            </ol>
+            
+            <h3>Se a quantidade for ÍMPAR:</h3>
+            <p>A mediana é o número que está na posição central.</p>
+            <p><em>Exemplo: 2, 4, <strong>6</strong>, 8, 10 (5 números). A mediana é o 6 (o 3º número).</em></p>
+
+            <h3>Se a quantidade for PAR:</h3>
+            <p>A mediana é a <strong>média dos dois números centrais</strong>.</p>
+            <p><em>Exemplo: 2, 4, <strong>6, 8</strong>, 10, 12 (6 números). Os centrais são 6 e 8. A mediana é (6 + 8) / 2 = 14 / 2 = <strong>7</strong>.</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dar os números <strong>fora de ordem</strong> (ex: 8, 2, 10, 4, 6) e perguntar a mediana. Se você não ordenar primeiro, vai errar! O primeiro passo é SEMPRE colocar em ordem.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Média Ponderada:</strong> Palavra-chave "peso". Não faça média simples se houver pesos.</li>
+                <li><strong>Mediana com quantidade PAR:</strong> Lembre-se de tirar a média dos dois números do meio. Muitos candidatos esquecem de somar e dividir por 2.</li>
+                <li><strong>Ordenação da Mediana:</strong> Coloque os números em ordem (crescente) antes de achar o meio. A banca embaralha de propósito.</li>
+                <li><strong>Moda Amodal:</strong> Se todos os números forem diferentes, não há moda (amodal), e não "moda zero".</li>
+                <li><strong>Média com valores negativos:</strong> Cuidado ao somar números negativos. A média pode ser negativa.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Um aluno obteve as notas 6, 7, 8, 9 e 10 em cinco matérias. Qual é a sua média aritmética simples?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soma é 40. Dividindo por 5, a média é 8.')">7</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! (6 + 7 + 8 + 9 + 10) / 5 = 40 / 5 = 8.')">8</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A média é 8. 9 seria a nota do meio se fosse mediana, mas a média é 8.')">9</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Em um campeonato, um jogador fez a seguinte quantidade de gols por partida: 2, 3, 3, 4, 5, 3, 2. Qual é a moda desse conjunto de dados?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O número 2 aparece 2 vezes, mas o 3 aparece 3 vezes.')">2</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O número 3 é o que mais se repete (aparece 3 vezes).')">3</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O 4 aparece apenas 1 vez.')">4</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a mediana do conjunto de dados: 3, 7, 5, 9, 2?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você esqueceu de colocar em ordem. A ordem é 2, 3, 5, 7, 9. O central é 5.')">7</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Primeiro ordenamos: 2, 3, 5, 7, 9. Como são 5 números (ímpar), a mediana é o valor central: 5.')">5</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A mediana é 5. O número 3 é o segundo menor, não o central.')">3</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é a mediana do conjunto: 2, 4, 6, 8, 10, 12?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Como a quantidade é PAR (6 números), a mediana é a média dos dois centrais (6 e 8).')">6</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os números já estão em ordem. Os dois centrais são 6 e 8. A mediana é (6 + 8) / 2 = 14 / 2 = 7.')">7</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O 8 é um dos centrais, mas a mediana é a média entre 6 e 8, que dá 7.')">8</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Em um concurso, a prova de Português teve peso 2 e a de Matemática teve peso 3. Um candidato tirou 8 em Português e 6 em Matemática. Qual foi a sua média ponderada final?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 7 seria a média simples (8+6)/2. Mas como há pesos, precisamos calcular a média ponderada.')">7,0</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Média = (8×2 + 6×3) / (2+3) = (16 + 18) / 5 = 34 / 5 = 6,8.')">6,8</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Verifique a conta: (8×2 + 6×3) / 5 = 34 / 5 = 6,8.')">6,5</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ESTATÍSTICA - MÉDIA, MODA E MEDIANA -->

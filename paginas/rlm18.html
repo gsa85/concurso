@@ -1,35 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>atemática financeira: sistema monetário brasileiro, porcentagem, juros simples — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>atemática financeira: sistema monetário brasileiro, porcentagem, juros simples</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm18</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: MATEMÁTICA FINANCEIRA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Matemática Financeira</h1>
+        <p>Sistema Monetário, Porcentagem e Juros Simples – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#monetario">Sistema Monetário</a>
+        <a href="#porcentagem">Porcentagem</a>
+        <a href="#juros">Juros Simples</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: SISTEMA MONETÁRIO -->
+    <div id="monetario" class="secao">
+        <h2>1. Sistema Monetário Brasileiro</h2>
+        <div class="card">
+            <p>A moeda oficial do Brasil é o <strong>Real (R$)</strong>. Ele é dividido em 100 centavos.</p>
+            
+            <h3>Como escrever valores?</h3>
+            <p>Usamos a <strong>vírgula</strong> para separar os reais dos centavos e o <strong>ponto</strong> para separar os milhares.</p>
+            <ul>
+                <li><em>Exemplo: R$ 1.250,50 (mil duzentos e cinquenta reais e cinquenta centavos).</em></li>
+            </ul>
+
+            <h3>Operações com dinheiro</h3>
+            <p>O candidato precisa ter atenção nas contas de adição e subtração, especialmente quando há centavos.</p>
+            <p><em>Exemplo: R$ 15,30 + R$ 2,70 = R$ 18,00.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PORCENTAGEM -->
+    <div id="porcentagem" class="secao">
+        <h2>2. Porcentagem (%)</h2>
+        <div class="card">
+            <p>A porcentagem é uma forma de representar uma fração de denominador 100. O símbolo "%" significa "por cento", ou seja, "dividido por 100".</p>
+            
+            <div class="box-formula">
+                Porcentagem = (Taxa / 100) × Valor Total
+            </div>
+            
+            <p><em>Exemplo: 20% de R$ 500,00. <br>20/100 = 0,20. <br>0,20 × 500 = R$ 100,00.</em></p>
+
+            <h3>O Fator de Multiplicação (A Dica de Ouro)</h3>
+            <p>Em vez de fazer duas contas (achar a porcentagem e depois somar ou subtrair), você pode usar um fator:</p>
+            <ul>
+                <li><strong>Aumento de 20%:</strong> Basta multiplicar por <strong>1,20</strong> (100% + 20%).</li>
+                <li><strong>Desconto de 20%:</strong> Basta multiplicar por <strong>0,80</strong> (100% - 20%).</li>
+            </ul>
+            <p><em>Se um produto de R$ 500 tem aumento de 20%: 500 × 1,20 = R$ 600. Se tem desconto de 20%: 500 × 0,80 = R$ 400.</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Um aumento de 20% e depois um desconto de 20% <strong>não voltam ao valor original</strong>. Se um produto custa R$ 100 e sobe 20% (vira 120) e depois cai 20% (120 × 0,8 = 96), o valor final é R$ 96, ou seja, 4% menor que o original.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: JUROS SIMPLES -->
+    <div id="juros" class="secao">
+        <h2>3. Juros Simples</h2>
+        <div class="card">
+            <p>Juros são a remuneração pelo uso do capital (dinheiro) ao longo do tempo. No regime de <strong>juros simples</strong>, a taxa incide sempre sobre o <strong>valor inicial (Capital)</strong>, e não sobre os juros acumulados.</p>
+            
+            <div class="box-formula">
+                J = C × i × t
+            </div>
+            
+            <p><strong>Onde:</strong></p>
+            <ul>
+                <li><strong>J</strong> = Juros (o valor extra pago).</li>
+                <li><strong>C</strong> = Capital (o valor inicial).</li>
+                <li><strong>i</strong> = Taxa de juros (em decimal ou fração).</li>
+                <li><strong>t</strong> = Tempo (período da aplicação).</li>
+            </ul>
+
+            <h3>Montante (M)</h3>
+            <p>O montante é o valor total a ser pago ou recebido: o capital + os juros.</p>
+            <div class="box-formula">
+                M = C + J
+            </div>
+            <p><em>Ou ainda: M = C × (1 + i × t).</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A taxa e o tempo devem estar na <strong>mesma unidade</strong>! Se a taxa for de 2% ao mês e o tempo for de 1 ano, você precisa converter o tempo para 12 meses. Se a taxa for de 10% ao ano e o tempo for de 3 meses, converta o tempo para 0,25 anos (ou a taxa para mensal).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Fator de Aumento/Desconto:</strong> Se for aumento, o fator é 1 + taxa (ex: 15% → 1,15). Se for desconto, o fator é 1 - taxa (ex: 15% → 0,85).</li>
+                <li><strong>Taxa em decimal:</strong> Na fórmula dos juros, a taxa deve ser usada em decimal. Se a taxa é 5%, use 0,05.</li>
+                <li><strong>Unidade de Tempo e Taxa:</strong> Sempre confira se a taxa é mensal, anual, diária. Se não for igual ao tempo, converta tudo para a mesma unidade.</li>
+                <li><strong>Leia o que se pede:</strong> A questão quer os Juros (J) ou o Montante (M)? Muitos candidatos calculam o J e colocam na resposta, mas o enunciado pede o total (M).</li>
+                <li><strong>Cuidado com a vírgula:</strong> R$ 1.200,00 não é R$ 120,00. Preste atenção no valor do capital.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Uma blusa custa R$ 80,00 e está com um desconto de 25%. Qual é o valor final da blusa?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você calculou o valor do desconto (R$ 20), mas a questão pede o valor final. R$ 80 - R$ 20 = R$ 60.')">R$ 20,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O fator de desconto é 0,75 (100% - 25%). Logo, 80 × 0,75 = R$ 60,00.')">R$ 60,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 100 seria um aumento de 25%, não um desconto.')">R$ 100,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Um capital de R$ 2.000,00 foi aplicado a uma taxa de juros simples de 3% ao mês durante 4 meses. Qual foi o valor dos juros obtidos?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você provavelmente usou a taxa sem converter para decimal. 3% = 0,03. A conta é 2000 × 0,03 × 4 = 240.')">R$ 60,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! J = C × i × t. J = 2000 × 0,03 × 4 = R$ 240,00.')">R$ 240,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 2.240 é o montante (capital + juros). A questão pede apenas os juros.')">R$ 2.240,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Um produto que custava R$ 500,00 sofreu um aumento de 10%. Qual é o novo preço?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 50 é apenas o valor do aumento. O novo preço é 500 + 50 = 550.')">R$ 550,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O fator de aumento é 1,10. Logo, 500 × 1,10 = R$ 550,00.')">R$ 550,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 450 seria se fosse um desconto de 10%.')">R$ 450,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é o montante (M) de uma aplicação de R$ 1.000,00 a juros simples de 2% ao mês, durante 5 meses?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você calculou apenas os juros (100). O montante é o capital + juros. M = 1000 + 100 = 1100.')">R$ 100,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! J = 1000 × 0,02 × 5 = 100. O montante M = C + J = 1000 + 100 = R$ 1.100,00.')">R$ 1.100,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! R$ 1.200 seria se a taxa fosse de 4% ao mês, mas a taxa é 2%.')">R$ 1.200,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre juros simples, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Nos juros simples, a taxa incide sempre sobre o capital inicial, e não sobre o montante acumulado.')">Os juros de cada período são calculados sobre o montante acumulado do período anterior.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Nos juros simples, a taxa incide sempre sobre o capital inicial (C), e não sobre os juros acumulados.')">Os juros de cada período são calculados sempre sobre o capital inicial.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Isso descreve os juros compostos.')">Os juros simples são calculados com base na inflação do período.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: MATEMÁTICA FINANCEIRA -->

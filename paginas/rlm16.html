@@ -1,35 +1,248 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Razão e proporção — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Razão e proporção</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm16</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: RAZÃO E PROPORÇÃO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Razão e Proporção</h1>
+        <p>Conceitos, Propriedades e Aplicações – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#razao">Razão</a>
+        <a href="#proporcao">Proporção</a>
+        <a href="#propriedades">Propriedades</a>
+        <a href="#escala">Escala</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: RAZÃO -->
+    <div id="razao" class="secao">
+        <h2>1. Razão</h2>
+        <div class="card">
+            <p>A <strong>razão</strong> entre dois números (a e b, com b ≠ 0) é o quociente (a divisão) entre eles. A razão é geralmente escrita na forma de fração ou com dois pontos.</p>
+            
+            <div class="box-formula">
+                Razão = a / b (ou a : b)
+            </div>
+
+            <p><strong>Exemplo:</strong> Em uma sala com 20 alunos, sendo 12 meninas e 8 meninos:</p>
+            <ul>
+                <li>A razão entre meninas e meninos é 12/8 = 3/2 (simplificando).</li>
+                <li>A razão entre meninos e o total é 8/20 = 2/5.</li>
+            </ul>
+
+            <h3>Razão com unidades diferentes</h3>
+            <p>Se as grandezas tiverem unidades diferentes, a razão terá uma unidade. Ex: 200 km em 4 horas → 200/4 = 50 km/h.</p>
+            <p>Se tiverem a mesma unidade, a razão é um número puro (sem unidade). Ex: 10 cm / 5 cm = 2.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PROPORÇÃO -->
+    <div id="proporcao" class="secao">
+        <h2>2. Proporção</h2>
+        <div class="card">
+            <p>A <strong>proporção</strong> é a igualdade entre duas razões.</p>
+            
+            <div class="box-formula">
+                a / b = c / d
+            </div>
+
+            <p><strong>Onde:</strong></p>
+            <ul>
+                <li><strong>Extremos:</strong> a e d (os "de fora").</li>
+                <li><strong>Meios:</strong> b e c (os "de dentro").</li>
+            </ul>
+
+            <h3>A Propriedade Fundamental das Proporções</h3>
+            <p>Em toda proporção, o <strong>produto dos meios é igual ao produto dos extremos</strong>. Essa é a regra que você usa para multiplicar em cruz.</p>
+
+            <div class="box-formula">
+                a × d = b × c
+            </div>
+
+            <p><em>Exemplo: 3/4 = 6/8. Verificando: 4 × 6 = 24 e 3 × 8 = 24. Está correto!</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai te dar uma proporção e pedir o valor desconhecido (x). Você só precisa aplicar a regra do "produto dos meios = produto dos extremos" e resolver a equação simples.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PROPRIEDADES -->
+    <div id="propriedades" class="secao">
+        <h2>3. Propriedades das Proporções (e Divisão Proporcional)</h2>
+        <div class="card">
+            <h3>Divisão em Partes Diretamente Proporcionais</h3>
+            <p>É quando um valor total precisa ser dividido em partes que seguem uma proporção direta. Por exemplo, dividir R$ 300 em partes proporcionais a 2, 3 e 5.</p>
+            <ul>
+                <li><strong>Passo 1:</strong> Some as partes (2 + 3 + 5 = 10).</li>
+                <li><strong>Passo 2:</strong> Descubra quanto vale cada "parte" (300 / 10 = 30).</li>
+                <li><strong>Passo 3:</strong> Multiplique cada parte pelo valor unitário.</li>
+                <li>Parte 1: 2 × 30 = R$ 60.</li>
+                <li>Parte 2: 3 × 30 = R$ 90.</li>
+                <li>Parte 3: 5 × 30 = R$ 150.</li>
+            </ul>
+
+            <h3>Divisão em Partes Inversamente Proporcionais</h3>
+            <p>O valor é dividido de forma inversa (o maior número recebe a menor parte). Para resolver, você inverte os números proporcionais e usa o mesmo raciocínio.</p>
+            <p><em>Exemplo: Dividir R$ 300 em partes inversamente proporcionais a 2, 3 e 6.</em></p>
+            <ul>
+                <li><strong>Passo 1:</strong> Inverta os números: 1/2, 1/3 e 1/6.</li>
+                <li><strong>Passo 2:</strong> Faça o MMC (6) e transforme em números inteiros: 3, 2 e 1.</li>
+                <li><strong>Passo 3:</strong> Some (3 + 2 + 1 = 6) e divida o total: 300 / 6 = 50.</li>
+                <li>Parte 1: 3 × 50 = 150. Parte 2: 2 × 50 = 100. Parte 3: 1 × 50 = 50.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: ESCALA -->
+    <div id="escala" class="secao">
+        <h2>4. Escala (Uma Aplicação de Razão)</h2>
+        <div class="card">
+            <p>A <strong>escala</strong> é a razão entre a medida no desenho (ou mapa) e a medida real. Ela sempre é escrita na forma 1 : n.</p>
+            
+            <div class="box-formula">
+                Escala = Medida no desenho / Medida real
+            </div>
+
+            <p><em>Exemplo: Uma escala 1:100 significa que 1 cm no desenho equivale a 100 cm (1 metro) na realidade.</em></p>
+            <p>Se no mapa a distância entre duas cidades é de 5 cm, e a escala é 1:1.000.000, então a distância real é 5 × 1.000.000 = 5.000.000 cm = 50 km.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A escala é sempre <strong>desenho/real</strong>. A banca vai inverter e dizer que é real/desenho, gerando um resultado absurdo. E lembre-se de converter as unidades (cm para km, por exemplo).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Produto dos meios = produto dos extremos:</strong> É a regra para qualquer proporção. Você só precisa igualar a multiplicação em cruz.</li>
+                <li><strong>Unidades iguais:</strong> Se a razão for entre grandezas de mesma unidade (ex: cm/cm), o resultado é um número puro. Se for entre unidades diferentes (km/h), o resultado tem unidade.</li>
+                <li><strong>Divisão Proporcional:</strong> Some as partes, divida o total pela soma e multiplique cada parte.</li>
+                <li><strong>Divisão Inversamente Proporcional:</strong> Inverta as frações, faça o MMC e aplique o mesmo raciocínio da direta.</li>
+                <li><strong>Escala:</strong> Sempre é desenho/real. Se você tem a escala e a medida do desenho, multiplique pela escala para achar o real. Se tiver a medida real, divida.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. A razão entre 15 e 25, na forma irredutível, é:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você não simplificou. 15/25 pode ser dividido por 5, resultando em 3/5.')">15/25</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Dividindo o numerador e o denominador por 5: 15÷5 = 3 e 25÷5 = 5. Logo, 3/5.')">3/5</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A simplificação correta é 3/5, e não 5/3.')">5/3</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Se 4/10 = x/25, qual é o valor de x?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Aplicando a propriedade fundamental: 4 × 25 = 10 × x. Logo, 100 = 10x, x = 10.')">8</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Produto dos meios = produto dos extremos. 4 × 25 = 10 × x → 100 = 10x → x = 10.')">10</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! x = 10, não 12. Refaça a multiplicação em cruz.')">12</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Um valor de R$ 600,00 será dividido em partes diretamente proporcionais a 2, 3 e 5. Quanto receberá a maior parte?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A maior parte corresponde ao número 5. A soma das partes é 2+3+5=10. 600/10 = 60. A maior parte é 5 × 60 = 300.')">R$ 120,00</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Soma das partes = 10. 600/10 = 60. A maior parte é 5 × 60 = R$ 300,00.')">R$ 300,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 600 é o valor total. A maior parte é 5 × 60 = 300.')">R$ 600,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em um mapa, a distância entre duas cidades é de 3 cm. Se a escala é 1:500.000, qual é a distância real entre as cidades?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A distância real é 3 × 500.000 = 1.500.000 cm = 15 km.')">1,5 km</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 3 × 500.000 = 1.500.000 cm. Convertendo para km: 1.500.000 / 100.000 = 15 km.')">15 km</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 150 km seria 10 vezes o valor correto. A conta é 1.500.000 cm / 100.000 = 15 km.')">150 km</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual é a principal propriedade que caracteriza uma proporção?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soma dos meios não é a propriedade fundamental.')">A soma dos meios é igual à soma dos extremos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A propriedade fundamental das proporções diz que o produto dos meios é igual ao produto dos extremos.')">O produto dos meios é igual ao produto dos extremos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A subtração não é a propriedade fundamental das proporções.')">A diferença entre os extremos é igual à diferença entre os meios.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: RAZÃO E PROPORÇÃO -->

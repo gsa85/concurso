@@ -1,35 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medidas de superfícies — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Medidas de superfícies</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm05</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: CÁLCULO DE ÁREA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Cálculo de Área</h1>
+        <p>Triângulos, Retângulos e Círculos – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#retangulos">Retângulos e Quadrados</a>
+        <a href="#triangulos">Triângulos</a>
+        <a href="#circulos">Círculos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: RETÂNGULOS E QUADRADOS -->
+    <div id="retangulos" class="secao">
+        <h2>1. Área de Retângulos e Quadrados</h2>
+        <div class="card">
+            <p>A área é a medida da superfície de uma figura plana (o "terreno"). A unidade de medida é sempre elevada ao quadrado (ex: cm², m²).</p>
+            
+            <h3>Retângulo</h3>
+            <p>Para calcular a área de um retângulo, basta multiplicar a medida da <strong>base</strong> pela medida da <strong>altura</strong>.</p>
+            
+            <div class="box-formula">
+                A = b × h
+            </div>
+            
+            <ul>
+                <li><strong>A</strong> = Área.</li>
+                <li><strong>b</strong> = Base (largura).</li>
+                <li><strong>h</strong> = Altura.</li>
+            </ul>
+
+            <h3>Quadrado</h3>
+            <p>O quadrado é um retângulo especial, onde todos os lados têm a mesma medida. Logo, a área é o lado multiplicado por ele mesmo (lado ao quadrado).</p>
+            
+            <div class="box-formula">
+                A = l²
+            </div>
+            <p><em>Exemplo: Um quadrado de lado 4 cm tem área de 4 × 4 = 16 cm².</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: TRIÂNGULOS -->
+    <div id="triangulos" class="secao">
+        <h2>2. Área de Triângulos</h2>
+        <div class="card">
+            <p>Para calcular a área de qualquer triângulo (retângulo, isósceles, equilátero ou escaleno), usamos a mesma fórmula: base vezes altura, dividido por 2.</p>
+            
+            <div class="box-formula">
+                A = (b × h) / 2
+            </div>
+            
+            <ul>
+                <li><strong>b</strong> = Base do triângulo.</li>
+                <li><strong>h</strong> = Altura do triângulo (a linha reta que desce do vértice oposto à base formando um ângulo de 90º).</li>
+            </ul>
+            <p><em>Exemplo: Um triângulo com base de 10 cm e altura de 6 cm tem área de (10 × 6) / 2 = 60 / 2 = 30 cm².</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A altura do triângulo <strong>não é</strong> o lado inclinado! A altura é sempre a linha perpendicular (reta, formando um "T" ou ângulo de 90º) em relação à base. A banca vai dar o lado inclinado para ver se você usa o valor errado.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: CÍRCULOS -->
+    <div id="circulos" class="secao">
+        <h2>3. Área do Círculo</h2>
+        <div class="card">
+            <p>Para calcular a área de um círculo, precisamos do valor de π (geralmente 3,14) e do raio.</p>
+            
+            <div class="box-formula">
+                A = π × r²
+            </div>
+            
+            <ul>
+                <li><strong>A</strong> = Área.</li>
+                <li><strong>π</strong> = 3,14 (valor aproximado).</li>
+                <li><strong>r</strong> = Raio (a distância do centro até a borda).</li>
+            </ul>
+            <p><strong>Atenção redobrada:</strong> o raio é elevado ao quadrado (<strong>r²</strong>), ou seja, multiplicado por ele mesmo.</p>
+            <p><em>Exemplo: Um círculo com raio de 3 cm tem área de 3,14 × 3² = 3,14 × 9 = 28,26 cm².</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Se a questão te der o <strong>diâmetro</strong>, você precisa dividir por 2 para achar o raio antes de jogar na fórmula! Se usar o diâmetro direto, a área dará 4 vezes o valor correto.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Área vs. Perímetro:</strong> Perímetro é a soma dos lados (contorno). Área é a multiplicação das dimensões (superfície). A banca troca os conceitos nas alternativas.</li>
+                <li><strong>O famoso "r²":</strong> A área do círculo tem o raio ao quadrado. Já o comprimento (perímetro) do círculo é <strong>2 × π × r</strong> (sem quadrado). Não misture!</li>
+                <li><strong>O "/2" do triângulo:</strong> A fórmula do triângulo é a única que divide por 2. Muitos candidatos esquecem e calculam como se fosse retângulo.</li>
+                <li><strong>Unidades:</strong> A área é sempre em m², cm², km². Se a questão misturar metros com centímetros, converta tudo para a mesma unidade antes de calcular.</li>
+                <li><strong>Quadrado da soma:</strong> No círculo, <strong>NÃO</strong> faça π × r × 2. O "r²" significa r × r, e não r × 2.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Um retângulo tem 8 cm de base e 5 cm de altura. Qual é a sua área?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 26 cm é o perímetro (8 + 8 + 5 + 5). A área é base × altura.')">26 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A fórmula é A = b × h. Logo, A = 8 × 5 = 40 cm².')">40 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A área é 40 cm². 13 cm é a soma da base com a altura, e não o cálculo da área.')">13 cm²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Um triângulo tem base de 10 cm e altura de 6 cm. Qual é a sua área?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 60 cm² seria se a figura fosse um retângulo. No triângulo, dividimos por 2.')">60 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A fórmula é A = (b × h) / 2. Logo, A = (10 × 6) / 2 = 60 / 2 = 30 cm².')">30 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Esse valor não corresponde ao cálculo da área. A área é 30 cm².')">16 cm²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Um círculo tem raio de 5 cm. Qual é a sua área? (Use π = 3,14)</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 31,4 cm é o comprimento da circunferência (2 × π × r). A área usa o raio ao quadrado.')">31,4 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A = π × r². Logo, A = 3,14 × 5² = 3,14 × 25 = 78,5 cm².')">78,5 cm²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você esqueceu de elevar o raio ao quadrado. O correto é 3,14 × 25.')">15,7 cm²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Um quadrado tem 4 metros de lado. Qual é a sua área?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 16 metros é o perímetro (4 + 4 + 4 + 4). A área é lado × lado.')">16 m</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A fórmula é A = l². Logo, A = 4² = 16 m².')">16 m²</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A área é 16 m². 8 m² seria 4 × 2, mas o quadrado tem todos os lados iguais.')">8 m²</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre o cálculo de áreas, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A área do triângulo é dividida por 2, justamente porque ele é metade de um retângulo de mesma base e altura.')">A área do triângulo é calculada multiplicando a base pela altura, sem divisão.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A área do círculo é dada por π × r², e não por 2 × π × r (que é o comprimento).')">A área do círculo é calculada por π × r², onde r é o raio.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A área do quadrado é l², enquanto o perímetro é 4 × l.')">A área do quadrado é calculada por 4 × l (quatro vezes o lado).</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: CÁLCULO DE ÁREA -->

@@ -1,35 +1,201 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lei de Improbidade Administrativa (Lei 8.429/1992 e Lei 14.230/2021) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Lei de Improbidade Administrativa (Lei 8.429/1992 e Lei 14.230/2021)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>leg05</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: IMPROBIDADE ADMINISTRATIVA (LEI 8.429/92 E LEI 14.230/21) -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <div class="header-modulo">
+        <h1>Improbidade Administrativa</h1>
+        <p>Lei nº 8.429/1992 e as alterações da Lei nº 14.230/2021</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito e Dolo</a>
+        <a href="#atos">Atos de Improbidade (Arts. 9º a 11)</a>
+        <a href="#sancoes">Sanções (Art. 12)</a>
+        <a href="#prescricao">Prescrição</a>
+        <a href="#acordo">Acordo de Não Persecução</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO E DOLO -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito e a Exigência de Dolo (Art. 1º)</h2>
+        <div class="card">
+            <p>A Lei de Improbidade Administrativa (LIA) tutela a **probidade** na organização do Estado e no exercício de suas funções, visando assegurar a integridade do patrimônio público e social[reference:0].</p>
+            <p><strong>A grande mudança da Lei 14.230/2021:</strong> A partir da reforma, **não existe mais improbidade culposa**. Consideram-se atos de improbidade apenas as **condutas dolosas** tipificadas nos arts. 9º, 10 e 11[reference:1].</p>
+            <h3>Como a lei define o dolo? (Art. 1º, § 2º)</h3>
+            <p>Considera-se dolo a **vontade livre e consciente** de alcançar o resultado ilícito tipificado nos arts. 9º, 10 e 11, **não bastando a voluntariedade do agente**[reference:2].</p>
+            <p>O STF, ao analisar a reforma, **manteve a exigência de dolo** (Tema 1.199), consolidando o entendimento de que erros, falhas administrativas ou condutas negligentes, sem a intenção de praticar o ato ímprobo, não configuram improbidade[reference:3].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai tentar te convencer de que a "culpa grave" ainda é suficiente. **Não é!** Desde 2021, a lei exige **dolo** (vontade livre e consciente de alcançar o resultado ilícito). Se a questão falar em "culpa" ou "mera imprudência", a resposta estará **errada**.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ATOS DE IMPROBIDADE -->
+    <div id="atos" class="secao">
+        <h2>2. Os Atos de Improbidade (Arts. 9º, 10 e 11)</h2>
+        <div class="card">
+            <p>A lei tipifica três categorias de atos de improbidade, todas exigindo **dolo** (Art. 1º, § 1º)[reference:4].</p>
+            <h3>Art. 9º – Enriquecimento Ilícito</h3>
+            <p>Auferir qualquer tipo de **vantagem patrimonial indevida** em razão do exercício de cargo, mandato, função, emprego ou atividade pública.</p>
+            <h3>Art. 10 – Dano ao Erário</h3>
+            <p>Qualquer ação ou omissão dolosa que enseje **perda patrimonial, desvio, apropriação, malbaratamento ou dilapidação** dos bens ou haveres públicos. A lei exige a **comprovação de dano patrimonial efetivo** para a configuração deste tipo[reference:5].</p>
+            <h3>Art. 11 – Violação a Princípios da Administração Pública</h3>
+            <p>Esta é a categoria que mais mudou. Antes da reforma, o rol era aberto. **Agora, o rol é TAXATIVO** (numerus clausus): só configura improbidade por violação a princípios a conduta que estiver **expressamente prevista** nos incisos do art. 11[reference:6].</p>
+            <p>Além disso, para os atos do art. 11, a lei exige a comprovação de **lesividade relevante** ao bem jurídico tutelado, não bastando a mera irregularidade formal[reference:7].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O rol do Art. 11 é **taxativo**. Se a questão apresentar uma conduta que "atenta contra os princípios" mas não estiver na lista expressa dos incisos do art. 11, **não configura improbidade**. A banca vai tentar usar a "abertura" do texto antigo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: SANÇÕES -->
+    <div id="sancoes" class="secao">
+        <h2>3. Sanções (Art. 12)</h2>
+        <div class="card">
+            <p>As sanções da LIA são aplicadas **isolada ou cumulativamente**, de acordo com a gravidade do fato, **independentemente** das sanções penais, civis e administrativas previstas em legislação específica[reference:8]. O ressarcimento integral do dano, quando efetivo, não é mais classificado como "sanção" pela reforma, mas sim como um **efeito civil acessório** da condenação[reference:9].</p>
+            <p><strong>Principais sanções por categoria (Art. 12, I, II e III):</strong></p>
+            <ul>
+                <li><strong>Art. 9º (Enriquecimento Ilícito):</strong> Perda dos bens ou valores acrescidos ilicitamente, perda da função pública, suspensão dos direitos políticos de **8 a 14 anos**, multa civil de até **3 vezes** o valor do acréscimo patrimonial, e proibição de contratar com o Poder Público por **10 anos**[reference:10].</li>
+                <li><strong>Art. 10 (Dano ao Erário):</strong> Perda da função pública, suspensão dos direitos políticos de **4 a 12 anos**, multa civil de até **2 vezes** o valor do dano, e proibição de contratar com o Poder Público por **10 anos** (conforme a nova redação, que majorou prazos).</li>
+                <li><strong>Art. 11 (Violação a Princípios):</strong> Sanções mais brandas, como advertência, multa civil e proibição de contratar com o Poder Público por até **4 anos**.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A reforma **aumentou o prazo máximo** de suspensão dos direitos políticos. No caso de enriquecimento ilícito (Art. 9º), o prazo máximo passou a ser de **14 anos** (antes o máximo era 8)[reference:11][reference:12]. A banca vai tentar manter o prazo antigo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: PRESCRIÇÃO -->
+    <div id="prescricao" class="secao">
+        <h2>4. Prescrição</h2>
+        <div class="card">
+            <p>A Lei 14.230/2021 unificou e alterou substancialmente as regras de prescrição da LIA.</p>
+            <ul>
+                <li><strong>Prazo Geral (Art. 23, I):</strong> **8 anos** contados do dia seguinte à ocorrência do fato ou, no caso de infração permanente, do dia em que tiver cessado[reference:13].</li>
+                <li><strong>Prescrição Intercorrente (Art. 23, § 5º):</strong> A lei previu que, se a ação ficar parada por mais de **4 anos** no curso do processo (sem movimentação relevante), ocorre a prescrição intercorrente. O STF, contudo, analisou a constitucionalidade desse dispositivo e a questão ainda está em discussão, mas o texto legal prevê essa regra[reference:14][reference:15].</li>
+                <li><strong>Irretroatividade:</strong> O STF fixou o entendimento (Tema 1.199) de que o **novo regime prescricional é irretroativo**. Ele se aplica apenas a fatos ocorridos **após** a publicação da Lei 14.230/2021 (26/10/2021), não atingindo processos com condenação transitada em julgado ou fatos pretéritos já consumados[reference:16][reference:17].</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A prescrição geral é de **8 anos**, mas a lei fala em **4 anos** para a prescrição intercorrente. Não confunda os prazos. Além disso, a aplicação das novas regras de prescrição **não retroage** para atingir fatos anteriores à reforma.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: ACORDO DE NÃO PERSECUÇÃO CIVIL -->
+    <div id="acordo" class="secao">
+        <h2>5. Acordo de Não Persecução Civil (Art. 17-B)</h2>
+        <div class="card">
+            <p>A Lei 14.230/2021 incluiu expressamente a previsão do **Acordo de Não Persecução Civil (ANPC)** na LIA.</p>
+            <ul>
+                <li>O **Ministério Público** poderá, conforme as circunstâncias do caso concreto, celebrar o acordo[reference:18].</li>
+                <li>O acordo deve observar os requisitos legais e pode ser firmado **até mesmo na fase de execução da sentença**[reference:19].</li>
+                <li>A celebração do acordo não afasta a necessidade de ressarcimento do dano.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei de Improbidade Administrativa, após as alterações da Lei 14.230/2021, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A improbidade culposa foi expressamente afastada pela reforma.')">A improbidade administrativa pode ser configurada por culpa grave.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 1º, § 1º, exige conduta dolosa. O STF manteve a exigência de dolo (Tema 1.199).')">Exige-se dolo específico para a configuração de ato de improbidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O rol do Art. 11 é taxativo, não exemplificativo.')">O rol de atos de improbidade do Art. 11 é exemplificativo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre o prazo de prescrição geral para a propositura da ação de improbidade administrativa, a Lei 14.230/2021 estabeleceu o prazo de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 5 anos é o prazo para a ação disciplinar, não para a improbidade.')">5 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 23, I, fixou o prazo geral de 8 anos.')">8 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 10 anos não é o prazo geral previsto na LIA.')">10 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A Lei 14.230/2021 alterou o Art. 12 da LIA, que trata das sanções. Qual é o prazo máximo de suspensão dos direitos políticos na hipótese de ato de improbidade que importe em enriquecimento ilícito (Art. 9º)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 8 anos era o prazo máximo antes da reforma.')">8 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 10 anos é o prazo máximo para a proibição de contratar, não para a suspensão dos direitos políticos.')">10 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A reforma majorou o prazo máximo para 14 anos (Art. 12, I).')">14 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre a aplicação das novas regras de prescrição trazidas pela Lei 14.230/2021, o STF fixou o entendimento de que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O STF decidiu que o novo regime prescricional é irretroativo.')">As novas regras retroagem para atingir fatos anteriores à lei.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O STF fixou a irretroatividade do novo regime prescricional (Tema 1.199), aplicando-se apenas a fatos ocorridos após a publicação da lei.')">As novas regras são irretroativas, aplicando-se apenas a fatos ocorridos após a publicação da lei.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A irretroatividade foi confirmada pelo STF, não há aplicação imediata a fatos pretéritos.')">As novas regras têm aplicação imediata a todos os processos em curso, inclusive fatos pretéritos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A Lei 14.230/2021 trouxe uma importante inovação ao prever expressamente a possibilidade de o Ministério Público celebrar, nos casos de improbidade administrativa:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A delação premiada é instituto de outras leis (ex: Lei de Organizações Criminosas), não foi a inovação da LIA.')">Acordo de delação premiada.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 17-B introduziu expressamente o Acordo de Não Persecução Civil (ANPC) na LIA.')">Acordo de Não Persecução Civil (ANPC).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A transação penal é instituto do Juizado Especial Criminal, não da improbidade.')">Transação penal.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: IMPROBIDADE ADMINISTRATIVA -->
