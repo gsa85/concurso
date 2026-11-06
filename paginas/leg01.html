@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legislação de Curitiba - FAFIPA</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f7f6; }
+        header { background-color: #004b87; color: white; padding: 2rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; margin-top: 10px; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #004b87; border-bottom: 2px solid #004b87; padding-bottom: 5px; }
+        h3 { color: #e67e22; }
+        .card { background: #eef2f5; padding: 15px; border-left: 5px solid #004b87; margin-bottom: 15px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #004b87; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .quiz-container { background: #fdfbf7; border: 2px dashed #e67e22; padding: 20px; border-radius: 8px; margin-top: 30px; }
+        .btn { background-color: #004b87; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; font-weight: bold; margin-top: 10px;}
+        .btn:hover { background-color: #00365f; }
+        .result { margin-top: 15px; font-weight: bold; }
+        footer { text-align: center; padding: 20px; margin-top: 40px; color: #777; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Legislação de Curitiba</h1>
+        <p>Guia de Estudos Rápido para a FAFIPA (LOM e Lei 7.671/91)</p>
+    </header>
+
+    <div class="container">
+        <h2>1. A Lógica Principal</h2>
+        <div class="card">
+            <p><strong>Lei Orgânica (LOM):</strong> Dita as regras gerais, princípios e a estrutura do município (Direta vs Indireta).</p>
+            <p><strong>Lei 7.671/91:</strong> Dita o "manual de instruções", criando as secretarias específicas, seus cargos, salários e competências.</p>
+        </div>
+
+        <h2>2. Estrutura e Princípios (LOM)</h2>
+        <ul>
+            <li><strong>Administração Direta:</strong> Secretarias Municipais (Vínculo de Subordinação).</li>
+            <li><strong>Administração Indireta:</strong> Autarquias, Fundações, Sociedades de Economia Mista (Vínculo de Tutela).</li>
+            <li><strong>Princípios (Art. 80):</strong> Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência e <strong>Razoabilidade</strong>.</li>
+            <li><strong>Nepotismo:</strong> Vedado até o 3º grau. Não pode assumir até 180 dias após o fim do vínculo.</li>
+        </ul>
+
+        <h2>3. Cargos e Salários (Lei 7.671/91)</h2>
+        <table>
+            <tr>
+                <th>Símbolo</th>
+                <th>Cargo/Função</th>
+                <th>Proporção Salarial</th>
+            </tr>
+            <tr><td>S-1</td><td>Secretário Municipal / Procurador</td><td>1.50</td></tr>
+            <tr><td>S-2 / C-2</td><td>Superintendente / Diretor</td><td>1.25</td></tr>
+            <tr><td>C-3</td><td>Chefe de Equipe de Apoio Técnico</td><td>0.70</td></tr>
+            <tr><td>C-4</td><td>Chefe de Gabinete</td><td>0.45</td></tr>
+        </table>
+
+        <h2>4. Competências das Secretarias (Decore as Palavras-Chave)</h2>
+        <ul>
+            <li><strong>Secretaria da Criança:</strong> 0 a 16 anos. Creches (0 a 6).</li>
+            <li><strong>Secretaria do Meio Ambiente:</strong> Fauna, flora, limpeza urbana, lixo, cemitérios e funerários.</li>
+            <li><strong>Secretaria do Urbanismo:</strong> Uso do solo, código de obras, emplacamento de ruas, poluição visual.</li>
+            <li><strong>Secretaria de Obras Públicas:</strong> Pavimentação, drenagem, iluminação pública, sinalização de trânsito.</li>
+        </ul>
+
+        <h2>5. Entidades da Administração Indireta</h2>
+        <ul>
+            <li><strong>URBS:</strong> Transporte público e táxi.</li>
+            <li><strong>CIC:</strong> Desenvolvimento industrial.</li>
+            <li><strong>COHAB:</strong> Regularização fundiária.</li>
+            <li><strong>IMAP:</strong> Instituto Municipal de Administração Pública (Conselho com 5 membros; Diretoria com 3).</li>
+            <li><strong>FREI:</strong> Fundação de Ação Social (Foco em baixa renda e capacitação).</li>
+        </ul>
+
+        <!-- MINI QUIZ -->
+        <div class="quiz-container">
+            <h3>Teste seus Conhecimentos (Mini-Quiz FAFIPA)</h3>
+            <p>1. Qual Secretaria é responsável pela administração de cemitérios?</p>
+            <button class="btn" onclick="alert('Errado! É a Secretaria do MEIO AMBIENTE (Art. 25).')">Obras Públicas</button>
+            <button class="btn" onclick="alert('Correto! Art. 25 da Lei 7.671/91.')">Meio Ambiente</button>
+            
+            <p style="margin-top: 15px;">2. A Secretaria da Criança atende qual faixa etária?</p>
+            <button class="btn" onclick="alert('Correto! O texto da lei diz 0 a 16 anos (Art. 24).')">0 a 16 anos</button>
+            <button class="btn" onclick="alert('Errado! A lei diz 0 a 16 anos, e não até 18.')">0 a 18 anos</button>
+        </div>
+    </div>
+
+    <footer>
+        Material de apoio criado para estudos focados na banca FAFIPA. Baseado na LOM e Lei 7.671/1991.
+    </footer>
+
+</body>
+</html>

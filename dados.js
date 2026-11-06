@@ -70,7 +70,7 @@ const CONTEUDOS = {
     grupo: "1. Conteúdos Básicos",
     questoes: "5",
     topicos: [
-      { t: "Lei Orgânica do Município de Curitiba (10/04/1990): organização político-administrativa do Município.", arquivo: "resumos/leg01.txt" },
+      { t: "Lei Orgânica do Município de Curitiba (10/04/1990): organização político-administrativa do Município.", arquivo: "resumos/leg01.txt", pagina: "paginas/leg01.html"},
       { t: "Lei Municipal nº 1.656/1958: Estatuto dos Funcionários Públicos Municipais.", arquivo: "resumos/leg02.txt" },
       { t: "Lei Municipal nº 7.671/1991: Organização Administrativa do Poder Executivo do Município de Curitiba.", arquivo: "resumos/leg03.txt" },
       { t: "Constituição Federal de 1988: Título I (arts. 1º ao 4º); Título II (arts. 5º ao 17); Título III (arts. 18, 19, 29, 30, 37 ao 41); Título IV (arts. 44 ao 75).", arquivo: "resumos/leg04.txt" },

@@ -48,7 +48,7 @@
 
     const lista = document.getElementById("lista-topicos");
 
-    materia.topicos.forEach(function (topico, index) {
+    materia.topicos.forEach(function (topico) {
       const isObj = typeof topico === "object";
       const texto = isObj ? topico.t : topico;
       
@@ -61,13 +61,17 @@
 
       if (isObj && topico.arquivo) {
         li.classList.add("clicavel");
-        li.addEventListener("click", (e) => {
+        li.addEventListener("click", () => {
           // Remove a cor de selecionado de todos
           document.querySelectorAll('.item-sidebar').forEach(el => el.classList.remove('ativo'));
           // Adiciona a cor no que foi clicado
           li.classList.add('ativo');
           
-          abrirResumo(texto, topico.arquivo);
+          // 🪄 MÁGICA: Gera o link do HTML automaticamente baseado no nome do TXT
+          const nomeBase = topico.arquivo.replace('resumos/', '').replace('.txt', '');
+          const linkPagina = `paginas/${nomeBase}.html`;
+          
+          abrirResumo(texto, topico.arquivo, linkPagina);
         });
       } else {
         li.classList.add("sem-resumo");
@@ -77,18 +81,31 @@
     });
   }
 
-  // Função que abre o TXT usando iframe no lado direito
-  function abrirResumo(titulo, caminhoArquivo) {
+  // Função que abre o TXT e adiciona o botão do HTML
+  function abrirResumo(titulo, caminhoArquivo, linkPagina) {
     const containerResumo = document.getElementById("texto-resumo");
     const avisoInicial = document.querySelector(".aviso-inicial");
     
-    // Esconde o aviso e mostra o iframe
     avisoInicial.style.display = "none";
     containerResumo.style.display = "block";
     window.scrollTo(0,0);
 
+    // Monta o título com o botão verde do lado direito
+    let htmlTitulo = `<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">`;
+    htmlTitulo += `<h2 style="color: var(--primaria-esc); margin: 0; flex: 1;">${titulo}</h2>`;
+    
+    if (linkPagina) {
+      htmlTitulo += `
+        <a href="${linkPagina}" target="_blank" 
+           style="font-size: 0.85rem; background: #10b981; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap; box-shadow: 0 2px 4px rgba(16,185,129,0.3); transition: 0.2s;">
+           🔗 Página de Estudo
+        </a>`;
+    }
+    htmlTitulo += `</div>`;
+
+    // Coloca o título e o iframe na tela
     containerResumo.innerHTML = `
-      <h2 style="margin-bottom: 15px; color: var(--primaria-esc);">${titulo}</h2>
+      ${htmlTitulo}
       <iframe src="${caminhoArquivo}" 
               style="width: 100%; height: 70vh; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
       </iframe>
