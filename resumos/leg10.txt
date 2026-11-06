@@ -1,0 +1,12 @@
+ Lei Federal nº 13.709/2018 (LGPD – Capítulo IV)
+O Capítulo IV da LGPD é dedicado exclusivamente ao tratamento de dados pessoais pelo Poder Público, estabelecendo um regime jurídico específico para a Administração.
+
+Pontos-chave para prova:
+
+Bases Legais Específicas: O tratamento de dados pelo Poder Público deve atender a finalidades públicas específicas. As hipóteses mais comuns incluem: cumprimento de obrigação legal ou regulatória, execução de políticas públicas previstas em leis e regulamentos, e realização de estudos por órgão de pesquisa, garantida a anonimização sempre que possível.
+
+Consentimento: Geralmente, o consentimento do titular não é a base legal aplicável para atividades típicas de órgãos e entidades da Administração Pública.
+
+Compartilhamento de Dados: Dados pessoais tratados pelo poder público podem ser compartilhados entre entes e instituições públicas, desde que observadas as finalidades específicas de execução de políticas públicas e respeitados os princípios de proteção de dados.
+
+Definição de Tratamento: O conceito é amplo, abrangendo toda operação realizada com dados pessoais, como coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, entre outras.
