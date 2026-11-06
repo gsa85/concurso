@@ -1,0 +1,9 @@
+Armazenamento em Nuvem e Google Drive
+O Google Drive é um serviço de armazenamento e compartilhamento de arquivos em nuvem.
+
+Compartilhamento: Ao compartilhar um arquivo ou pasta, você define permissões para outros usuários. As três permissões básicas são:
+
+Visualizador: Pode apenas ver o arquivo.
+Comentador: Pode ver e adicionar comentários.
+Editor: Pode ver, comentar e editar o conteúdo.
+Herança de Permissões: Ao compartilhar uma pasta, todos os arquivos e subpastas dentro dela herdam as mesmas permissões automaticamente.

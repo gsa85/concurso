@@ -1,0 +1,17 @@
+Comparações, arredondamentos, aproximações e estimativas
+Comparação: Usa os símbolos 
+>
+>, 
+<
+<, 
+=
+= e 
+≠
+
+= para indicar se um número é maior, menor, igual ou diferente de outro.
+
+Arredondamento: Técnica para substituir um número por outro mais "redondo" (próximo de uma dezena, centena, etc.). Por exemplo, 34 arredondado para a dezena mais próxima é 30; 2750 para a unidade de milhar mais próxima é 3000.
+
+Aproximação: Um valor próximo do exato, obtido por truncamento (cortando as casas decimais) ou por arredondamento. Pode ser por falta (menor que o valor exato) ou por excesso (maior que o valor exato).
+
+Estimativa: Um cálculo aproximado, geralmente feito com números arredondados, para se obter uma ideia rápida do resultado. É útil para verificar se uma resposta exata é razoável.

@@ -1,0 +1,9 @@
+Ambientes Operacionais: Windows 10, 11 e Linux Ubuntu
+O Sistema Operacional (SO) gerencia o hardware e fornece a interface para o usuário.
+
+Windows 10/11: Interface gráfica baseada em janelas, menu Iniciar e área de trabalho. A banca cobra atalhos (como Win + V para histórico) e recursos como a Área de Trabalho Virtual.
+
+Linux Ubuntu: SO de código aberto. A banca pode cobrar o gerenciador de arquivos padrão (Nautilus) e comandos básicos de terminal:
+
+ls (listar), pwd (caminho atual), mkdir (criar pasta), cd (navegar), cp (copiar), mv (mover), rm (remover).
+

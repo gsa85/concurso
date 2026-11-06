@@ -1,0 +1,12 @@
+Segurança de Dados
+Conceitos para proteger a informação contra acessos não autorizados.
+
+Phishing: Golpe que tenta "pescar" dados sensíveis (senhas, dados bancários) por meio de mensagens falsas que imitam instituições confiáveis.
+
+Senha Segura: Deve ser complexa, combinando letras maiúsculas, minúsculas, números e símbolos.
+
+Backup: Cópia de segurança dos dados, essencial para recuperá-los em caso de perda ou ataque.
+
+Antivírus: Software que detecta e remove programas maliciosos (malwares).
+
+A FAFIPA já cobrou práticas recomendadas para aumentar a segurança em contas de e-mail (como Outlook, Gmail e Zimbra).

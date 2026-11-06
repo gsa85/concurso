@@ -1,0 +1,14 @@
+Atalhos de Teclado
+A FAFIPA valoriza muito o conhecimento de atalhos, pois medem a produtividade do usuário. Os essenciais para a prova são:
+
+Atalho	Função
+Ctrl + C / Ctrl + V / Ctrl + X	Copiar / Colar / Recortar
+Ctrl + Z / Ctrl + Y	Desfazer / Refazer
+Alt + Tab	Alternar entre janelas abertas
+Alt + F4	Fechar a janela ativa
+Win + D	Exibir a área de trabalho
+Win + E	Abrir o Explorador de Arquivos
+Win + L	Bloquear a sessão do usuário
+Ctrl + Shift + Esc	Abrir o Gerenciador de Tarefas
+A banca já cobrou, por exemplo, o atalho para acessar o histórico da área de transferência no Windows 10/11, que é Win + V.
+

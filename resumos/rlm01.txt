@@ -1,0 +1,36 @@
+As quatro operações fundamentais
+As quatro operações básicas da aritmética são a adição, a subtração, a multiplicação e a divisão.
+
+Adição ( + ): Combina quantidades para obter uma soma. Exemplo: 
+3
++
+4
+=
+7
+3+4=7 (3 e 4 são parcelas; 7 é a soma).
+
+Subtração ( - ): É a operação inversa da adição. Determina a diferença entre quantidades. Exemplo: 
+8
+−
+5
+=
+3
+8−5=3.
+
+Multiplicação ( × ): Representa uma adição sucessiva de uma mesma quantidade. O resultado é o produto. Exemplo: 
+3
+×
+4
+=
+12
+3×4=12 (3 somado 4 vezes).
+
+Divisão ( ÷ ): É a operação inversa da multiplicação. Determina o quociente de uma quantidade. Exemplo: 
+12
+÷
+4
+=
+3
+12÷4=3.
+
+Ordem de resolução: Em expressões numéricas, multiplicações e divisões devem ser resolvidas antes de adições e subtrações.

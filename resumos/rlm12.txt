@@ -1,0 +1,57 @@
+Probabilidade: certeza e impossibilidade, fenômenos aleatórios, espaço amostral e evento
+Fenômeno aleatório: Aquele cujo resultado não pode ser previsto com certeza (ex: lançar um dado).
+
+Espaço amostral (
+S
+S ou 
+Ω
+Ω): Conjunto de todos os resultados possíveis de um experimento aleatório.
+
+Evento: Qualquer subconjunto do espaço amostral. Pode ser:
+
+Evento certo: É o próprio espaço amostral (
+S
+S). Sua probabilidade é 1 (100%).
+
+Evento impossível: É o conjunto vazio (
+∅
+∅). Sua probabilidade é 0.
+
+Probabilidade: 
+P
+(
+A
+)
+=
+n
+u
+ˊ
+mero de casos favor
+a
+ˊ
+veis
+n
+u
+ˊ
+mero de casos poss
+ı
+ˊ
+veis
+P(A)= 
+n 
+u
+ˊ
+ mero de casos poss 
+ı
+ˊ
+ veis
+n 
+u
+ˊ
+ mero de casos favor 
+a
+ˊ
+ veis
+​
+ . O valor está sempre entre 0 e 1.
+

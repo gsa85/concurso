@@ -1,0 +1,9 @@
+Noções de direção: norte, sul, leste e oeste, esquerda e direita, para cima e para baixo
+Pontos cardeais: Norte (N), Sul (S), Leste (L) e Oeste (O).
+
+Orientação pelo Sol: Esticando o braço direito na direção em que o Sol nasce (Leste), o braço esquerdo apontará para o Oeste. À frente estará o Norte e, às costas, o Sul.
+
+Direções relativas: Em um mapa, geralmente o Norte fica para cima, o Sul para baixo, o Leste para a direita e o Oeste para a esquerda.
+
+Rosa dos Ventos: Inclui também os pontos colaterais (Nordeste, Sudeste, Sudoeste, Noroeste) e subcolaterais.
+

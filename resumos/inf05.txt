@@ -1,0 +1,10 @@
+Gerenciamento de Arquivos
+É a organização dos dados no computador, utilizando Pastas (para agrupar) e Arquivos (os dados em si, como .docx, .xlsx, .jpg).
+
+As operações fundamentais são:
+
+Copiar: Mantém o arquivo original e cria uma cópia em outro local.
+
+Recortar (Mover): O arquivo é removido do local original e movido para o destino.
+
+Excluir: Envia o arquivo para a Lixeira (no Windows) ou o remove permanentemente (dependendo do comando no Linux).

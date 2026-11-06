@@ -1,0 +1,71 @@
+Medidas de superfícies
+As unidades de medida de superfície (área) seguem o sistema métrico decimal, mas com numeração centesimal: cada unidade vale 100 vezes a unidade imediatamente inferior.
+
+Unidades principais: quilômetro quadrado (km²), hectômetro quadrado (hm²), decâmetro quadrado (dam²), metro quadrado (m²), decímetro quadrado (dm²), centímetro quadrado (cm²), milímetro quadrado (mm²).
+
+Conversões:
+
+1
+ km
+2
+=
+100
+ hm
+2
+1 km 
+2
+ =100 hm 
+2
+ 
+
+1
+ m
+2
+=
+100
+ dm
+2
+1 m 
+2
+ =100 dm 
+2
+ 
+
+1
+ dm
+2
+=
+100
+ cm
+2
+1 dm 
+2
+ =100 cm 
+2
+ 
+
+1
+ m
+2
+=
+10.000
+ cm
+2
+1 m 
+2
+ =10.000 cm 
+2
+ 
+
+1
+ km
+2
+=
+1.000.000
+ m
+2
+1 km 
+2
+ =1.000.000 m 
+2
+ .

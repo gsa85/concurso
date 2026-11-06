@@ -1,0 +1,17 @@
+Dados, tabelas, gráficos e suas interpretações
+Dados: Informações brutas coletadas (números, categorias, etc.).
+
+Tabelas: Organizam os dados em linhas e colunas, facilitando a leitura e a identificação de frequências.
+
+Gráficos: Representações visuais dos dados. Os tipos mais comuns são:
+
+Gráfico de barras/colunas: Compara categorias.
+
+Gráfico de linhas: Mostra a evolução de um valor ao longo do tempo.
+
+Gráfico de setores (pizza): Mostra a proporção de cada categoria em relação ao todo.
+
+Histograma: Mostra a distribuição de frequências de dados contínuos.
+
+Interpretação: Requer a identificação de títulos, legendas, eixos, escalas e a análise da relação entre as variáveis apresentadas.
+

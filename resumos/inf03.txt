@@ -1,0 +1,164 @@
+Software
+O software é a parte lógica, composta por instruções que o hardware executa. Pode ser classificado em:
+
+Software Básico: Essencial para o funcionamento do computador. O principal exemplo é o Sistema Operacional (Windows, Linux).
+
+Software Aplicativo: Programas voltados para tarefas específicas do usuário (Word, Excel, navegadores, ChatGPT).
+
+A banca já cobrou a definição mais adequada de "software" para diferenciar de hardware.
+
+4. Atalhos de Teclado
+A FAFIPA valoriza muito o conhecimento de atalhos, pois medem a produtividade do usuário. Os essenciais para a prova são:
+
+Atalho	Função
+Ctrl + C / Ctrl + V / Ctrl + X	Copiar / Colar / Recortar
+Ctrl + Z / Ctrl + Y	Desfazer / Refazer
+Alt + Tab	Alternar entre janelas abertas
+Alt + F4	Fechar a janela ativa
+Win + D	Exibir a área de trabalho
+Win + E	Abrir o Explorador de Arquivos
+Win + L	Bloquear a sessão do usuário
+Ctrl + Shift + Esc	Abrir o Gerenciador de Tarefas
+A banca já cobrou, por exemplo, o atalho para acessar o histórico da área de transferência no Windows 10/11, que é Win + V.
+
+5. Gerenciamento de Arquivos
+É a organização dos dados no computador, utilizando Pastas (para agrupar) e Arquivos (os dados em si, como .docx, .xlsx, .jpg).
+
+As operações fundamentais são:
+
+Copiar: Mantém o arquivo original e cria uma cópia em outro local.
+
+Recortar (Mover): O arquivo é removido do local original e movido para o destino.
+
+Excluir: Envia o arquivo para a Lixeira (no Windows) ou o remove permanentemente (dependendo do comando no Linux).
+
+6. Segurança de Dados
+Conceitos para proteger a informação contra acessos não autorizados.
+
+Phishing: Golpe que tenta "pescar" dados sensíveis (senhas, dados bancários) por meio de mensagens falsas que imitam instituições confiáveis.
+
+Senha Segura: Deve ser complexa, combinando letras maiúsculas, minúsculas, números e símbolos.
+
+Backup: Cópia de segurança dos dados, essencial para recuperá-los em caso de perda ou ataque.
+
+Antivírus: Software que detecta e remove programas maliciosos (malwares).
+
+A FAFIPA já cobrou práticas recomendadas para aumentar a segurança em contas de e-mail (como Outlook, Gmail e Zimbra).
+
+7. Ambientes Operacionais: Windows 10, 11 e Linux Ubuntu
+O Sistema Operacional (SO) gerencia o hardware e fornece a interface para o usuário.
+
+Windows 10/11: Interface gráfica baseada em janelas, menu Iniciar e área de trabalho. A banca cobra atalhos (como Win + V para histórico) e recursos como a Área de Trabalho Virtual.
+
+Linux Ubuntu: SO de código aberto. A banca pode cobrar o gerenciador de arquivos padrão (Nautilus) e comandos básicos de terminal:
+
+ls (listar), pwd (caminho atual), mkdir (criar pasta), cd (navegar), cp (copiar), mv (mover), rm (remover).
+
+8. Processador de Texto: Word 2016
+Software para criar e editar documentos de texto. O foco da FAFIPA está nos atalhos de formatação e comandos de arquivo.
+
+Atalhos de Formatação:
+
+Ctrl + N → Negrito
+
+Ctrl + I → Itálico
+
+Ctrl + S → Sublinhado
+
+Ctrl + J → Justificar
+
+Outros Atalhos:
+
+Ctrl + A → Selecionar todo o texto.
+
+Ctrl + P → Imprimir.
+
+Ctrl + F4 → Fechar o documento (a banca já cobrou este atalho específico).
+
+Pegadinha: A banca pode pedir a sequência de atalhos para "selecionar tudo, colocar negrito e imprimir", que seria Ctrl + A, Ctrl + N, Ctrl + P.
+
+9. Planilhas Eletrônicas: Excel 2016
+Software para cálculos, organização de dados e gráficos. O essencial é dominar as fórmulas e funções básicas.
+
+Início de Fórmula: Toda fórmula começa com o sinal de igual =.
+
+Funções Mais Cobradas:
+
+=SOMA(intervalo) → Soma os valores.
+
+=MÉDIA(intervalo) → Calcula a média.
+
+=MÁXIMO(intervalo) / =MÍNIMO(intervalo) → Retorna o maior/menor valor.
+
+Referência Absoluta: Usa o cifrão para fixar a célula (ex.: $A$1). A referência relativa (A1) se ajusta ao copiar a fórmula.
+
+A FAFIPA já cobrou o atalho para inserir a função Soma automaticamente (AutoSoma), que é Alt + =.
+
+10. Navegadores de Internet
+Programas para acessar a Web. Os mais cobrados são Chrome, Firefox e Edge. A banca explora atalhos e conceitos.
+
+Atalhos Úteis:
+
+Ctrl + T → Nova aba.
+
+Ctrl + W → Fechar aba.
+
+Ctrl + Shift + T → Reabrir a última aba fechada.
+
+Ctrl + D → Favoritar a página.
+
+Ctrl + H → Abrir o histórico.
+
+Conceito: Google Chrome é um navegador, enquanto o Google é um mecanismo de busca (site). São coisas diferentes.
+
+11. Armazenamento em Nuvem e Google Drive
+O Google Drive é um serviço de armazenamento e compartilhamento de arquivos em nuvem.
+
+Compartilhamento: Ao compartilhar um arquivo ou pasta, você define permissões para outros usuários. As três permissões básicas são:
+
+Visualizador: Pode apenas ver o arquivo.
+Comentador: Pode ver e adicionar comentários.
+Editor: Pode ver, comentar e editar o conteúdo.
+Herança de Permissões: Ao compartilhar uma pasta, todos os arquivos e subpastas dentro dela herdam as mesmas permissões automaticamente.
+
+12. E-mails: Outlook, Gmail e Webmail (Zimbra)
+Ferramentas de comunicação eletrônica. A FAFIPA cobra os campos da mensagem e as particularidades de cada serviço.
+
+Campos Essenciais:
+
+Para: Destinatário principal.
+
+CC (Com Cópia): Todos os destinatários veem quem está em CC.
+
+CCO (Com Cópia Oculta): Os destinatários não veem quem está em CCO (a banca já cobrou este conceito para o Zimbra).
+
+Zimbra: É uma suíte de colaboração (e-mail, calendário, contatos). Um recurso muito cobrado é a "Resposta Automática" (ou Ausência Temporária), configurada nas preferências para enviar respostas automáticas durante um período (ex.: férias).
+
+Anexos: Ao Encaminhar um e-mail, o anexo original é mantido.
+
+13. Busca e Pesquisa na Web
+A FAFIPA não pergunta "o que é o Google", mas sim como usá-lo de forma avançada com operadores de busca.
+
+Operador	Função	Exemplo
+" "	Busca pela expressão exata.	"concurso público"
+site:	Restringe a busca a um site específico.	segurança site:gov.br
+filetype:	Busca por um tipo de arquivo.	manual filetype:pdf
+- (Hífen)	Exclui um termo da busca.	concurso -fafipa
+related:	Busca por sites similares a uma URL.	related:google.com
+A FAFIPA já cobrou explicitamente o operador related: para encontrar sites similares e o site: para restringir a busca a um domínio.
+
+14. Inteligência Artificial e Ferramentas Generativas
+A IA Generativa é uma tecnologia capaz de criar conteúdo novo (textos, resumos, traduções, imagens) a partir de comandos do usuário (prompts).
+
+As ferramentas citadas no edital são:
+
+ChatGPT: Chatbot da OpenAI, focado em conversação e geração de texto.
+
+Microsoft Copilot: Assistente de IA integrado ao ecossistema Microsoft (Windows, Edge, Office), com foco em produtividade.
+
+Google Gemini: IA do Google, integrada às ferramentas do Workspace (Gmail, Docs) e com capacidade multimodal.
+
+A banca costuma cobrar o conceito de que a IA generativa cria conteúdo e que essas ferramentas são exemplos de assistentes de IA para produtividade.
+
+Espero que este material ajude na construção do seu site. Se precisar de mais algum detalhamento, é só avisar.
+

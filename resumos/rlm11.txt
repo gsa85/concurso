@@ -1,0 +1,2 @@
+Sequências lógicas
+É o mesmo conceito do item anterior, mas com ênfase no raciocínio lógico para decifrar o padrão. O objetivo é descobrir qual será o próximo elemento da sequência com base na regra identificada.

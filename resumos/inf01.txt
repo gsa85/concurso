@@ -1,0 +1,8 @@
+Conceitos de Informática
+A base de tudo. A informática é o tratamento automático da informação por meio de computadores, que se dividem em duas partes fundamentais:
+
+Hardware: A parte física do computador, tudo o que você pode tocar (CPU, monitor, teclado, memória).
+
+Software: A parte lógica, os programas e sistemas que fazem o hardware funcionar (Windows, Word, navegadores).
+
+A FAFIPA costuma cobrar a definição exata de "software" em questões diretas.

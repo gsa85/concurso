@@ -1,0 +1,28 @@
+Estatística: média, moda e mediana
+São medidas de tendência central que resumem um conjunto de dados.
+
+Média (
+x
+ˉ
+x
+ˉ
+ ): Soma de todos os valores dividida pelo número total de dados.
+
+x
+ˉ
+=
+∑
+x
+n
+x
+ˉ
+ = 
+n
+∑x
+​
+ 
+.
+
+Mediana (Md): Valor que ocupa a posição central quando os dados são organizados em ordem crescente ou decrescente. Se o número de dados for par, a mediana é a média dos dois valores centrais.
+
+Moda (Mo): Valor que aparece com maior frequência em um conjunto de dados.

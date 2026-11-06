@@ -1,0 +1,95 @@
+Comprimento da circunferência
+O comprimento 
+C
+C de uma circunferência de raio 
+r
+r é dado pela fórmula:
+
+C
+=
+2
+⋅
+π
+⋅
+r
+C=2⋅π⋅r
+(ou 
+C
+=
+π
+⋅
+d
+C=π⋅d, onde 
+d
+=
+2
+r
+d=2r é o diâmetro).
+
+5. Cálculo de área: triângulos, retângulos e círculos
+Triângulo: 
+A
+=
+b
+a
+s
+e
+×
+a
+l
+t
+u
+r
+a
+2
+A= 
+2
+base×altura
+​
+  (ou 
+A
+=
+b
+⋅
+h
+2
+A= 
+2
+b⋅h
+​
+ ).
+
+Retângulo: 
+A
+=
+b
+a
+s
+e
+×
+a
+l
+t
+u
+r
+a
+A=base×altura (ou 
+A
+=
+b
+⋅
+h
+A=b⋅h).
+
+Círculo: 
+A
+=
+π
+⋅
+r
+2
+A=π⋅r 
+2
+  (onde 
+r
+r é o raio).

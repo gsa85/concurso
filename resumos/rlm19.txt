@@ -1,0 +1,10 @@
+Resolução de problemas
+A resolução de problemas matemáticos pode ser estruturada em quatro etapas clássicas (modelo de Polya):
+
+Compreender o problema: Ler atentamente, identificar os dados, a incógnita e o que é solicitado.
+
+Elaborar um plano: Escolher uma estratégia (fazer um diagrama, buscar um padrão, trabalhar de trás para frente, dividir em casos, etc.).
+
+Executar o plano: Aplicar a estratégia, realizando os cálculos e as etapas necessárias.
+
+Revisar a solução: Verificar se a resposta faz sentido, se está de acordo com o enunciado e se não há erros de cálculo.

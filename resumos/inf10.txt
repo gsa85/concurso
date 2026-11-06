@@ -1,0 +1,17 @@
+Navegadores de Internet
+Programas para acessar a Web. Os mais cobrados são Chrome, Firefox e Edge. A banca explora atalhos e conceitos.
+
+Atalhos Úteis:
+
+Ctrl + T → Nova aba.
+
+Ctrl + W → Fechar aba.
+
+Ctrl + Shift + T → Reabrir a última aba fechada.
+
+Ctrl + D → Favoritar a página.
+
+Ctrl + H → Abrir o histórico.
+
+Conceito: Google Chrome é um navegador, enquanto o Google é um mecanismo de busca (site). São coisas diferentes.
+

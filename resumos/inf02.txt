@@ -1,0 +1,11 @@
+Hardware de Entrada e Saída
+São os periféricos que permitem a comunicação com o computador.
+
+Dispositivos de Entrada: Enviam dados para o computador. Exemplos: teclado, mouse, scanner, microfone, webcam.
+
+Dispositivos de Saída: Exibem dados produzidos pelo computador. Exemplos: monitor, impressora, caixas de som, projetor.
+
+Dispositivos de Entrada e Saída (I/O): Fazem as duas coisas. Exemplos: pendrive, HD externo, tela touchscreen.
+
+Pegadinha clássica: O monitor é um periférico de saída, e o teclado é de entrada. Não confunda.
+

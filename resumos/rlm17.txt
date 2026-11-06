@@ -1,0 +1,4 @@
+egra de três simples e composta
+Regra de três simples: Envolve duas grandezas proporcionais (diretas ou inversas) para encontrar um valor desconhecido a partir de três valores conhecidos.
+
+Regra de três composta: Envolve três ou mais grandezas, que podem ser direta ou inversamente proporcionais entre si. O método consiste em analisar a proporcionalidade de cada grandeza em relação à grandeza da incógnita e montar a equação correspondente.

@@ -1,0 +1,9 @@
+Sequência de números, figuras e letras
+Uma sequência é um conjunto ordenado de elementos (números, letras, figuras, símbolos) que seguem um padrão ou lei de formação.
+
+Sequências numéricas: O padrão pode ser uma diferença constante (progressão aritmética), uma razão constante (progressão geométrica), ou outra regra lógica.
+
+Sequências de letras: Podem seguir a ordem alfabética, alternar consoantes e vogais, ou estar associadas a números (ex: A=1, B=2...).
+
+Sequências de figuras: O padrão pode envolver rotação, translação, mudança de cor, número de lados, etc.
+

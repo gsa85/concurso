@@ -1,0 +1,54 @@
+E-mails: Outlook, Gmail e Webmail (Zimbra)
+A FAFIPA costuma cobrar os conceitos básicos de correio eletrônico (campos, protocolos, anexos) e as particularidades de cada ferramenta, especialmente em questões que pedem a ação correta ou o recurso específico de um determinado cliente de e-mail.
+
+1. Conceitos Fundamentais (presentes em qualquer prova):
+
+Campos da Mensagem: É essencial dominar a diferença entre eles, pois é um tema recorrente.
+
+Para: Destinatário principal.
+
+CC (Com cópia): Destinatários que recebem a mensagem para ciência. Todos os destinatários podem ver quem está em CC.
+
+CCO (Com cópia oculta): Destinatários que recebem a mensagem, mas seus endereços não são visíveis para os demais. Uma questão clássica pede para identificar quem recebeu sem que os outros soubessem.
+
+Protocolos de E-mail: A banca FAFIPA já cobrou explicitamente quais protocolos são usados para envio e recebimento.
+
+Envio: SMTP (Simple Mail Transfer Protocol).
+
+Recebimento: POP (Post Office Protocol) ou IMAP (Internet Message Access Protocol).
+
+Pegadinha comum: A questão pode tentar inverter as funções (ex: dizer que o POP é para envio) ou associar o SMTP ao recebimento. A alternativa correta geralmente é IMAP ou POP para recebimento e SMTP para envio.
+
+Anexos e Ações: Entender a diferença entre Responder (apenas ao remetente), Responder a Todos (a todos em "Para" e "CC") e Encaminhar. Um detalhe importante é que, ao Encaminhar uma mensagem, o anexo original é mantido por padrão.
+
+2. Particularidades de Cada Ferramenta:
+
+Microsoft Outlook (Cliente de E-mail): É um software instalado no computador (cliente), que pode gerenciar várias contas de e-mail. A banca costuma cobrar atalhos de teclado para produtividade. Os mais prováveis de aparecer são:
+
+Ctrl + Shift + M: Criar uma nova mensagem de e-mail.
+
+Ctrl + R: Responder ao e-mail selecionado.
+
+Ctrl + Shift + R: Responder a Todos.
+
+Ctrl + Enter: Enviar a mensagem.
+
+Gmail (Webmail): É um serviço de e-mail acessado pelo navegador. A FAFIPA pode focar em recursos de organização e atalhos.
+
+Atalhos (requerem ativação nas configurações):
+
+C: Compor (criar nova mensagem).
+
+/: Ir para a caixa de pesquisa.
+
+Ctrl + Enter: Enviar a mensagem.
+
+Recursos: A "estrela" é usada para marcar mensagens importantes, não para exclusão automática. O Gmail também organiza mensagens em abas (Principal, Social, Promoções), o que pode ser tema de questão.
+
+Zimbra (Webmail Corporativo): É uma suíte de colaboração muito usada em órgãos públicos. A banca FAFIPA já dedicou questões a ele.
+
+Conceito: Não é apenas um e-mail; é uma suíte de colaboração que integra e-mail, calendário (agenda), contatos e tarefas em uma única interface.
+
+Recurso de "Ausência Temporária": Uma questão da FAFIPA pode pedir o nome da função que envia respostas automáticas para todos os remetentes durante um período (ex: férias). No Zimbra, isso é configurado nas Preferências, na opção "Resposta Automática" ou "Ausência Temporária" (Out of Office).
+
+Interface: Utiliza tecnologia Ajax (a mesma do Gmail), que permite arrastar e soltar e-mails para movê-los entre pastas de forma intuitiva.

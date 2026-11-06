@@ -1,0 +1,20 @@
+Busca e Pesquisa na Web
+Este é um tópico de alta incidência. A FAFIPA não pergunta "o que é o Google", mas sim como usá-lo de forma avançada por meio de seus operadores de busca. Dominar esses comandos é o segredo para acertar as questões.
+
+Operadores de Busca Essenciais para a Prova:
+
+Operador	Função	Exemplo Prático	O que a questão pode pedir
+" " (Aspas)	Busca pela expressão exata, na mesma ordem.	"concurso público"	Para encontrar uma frase ou um termo composto específico, sem que o buscador os separe.
+site:	Restringe a busca a um site ou domínio específico.	segurança site:gov.br	Para buscar informações apenas dentro de um site do governo, por exemplo.
+filetype:	Busca por um tipo específico de arquivo.	manual filetype:pdf	Para encontrar apenas arquivos em PDF, DOCX, XLSX, etc..
+- (Hífen)	Exclui um termo da pesquisa.	concurso -fafipa	Para refinar a busca, removendo resultados que contenham uma palavra indesejada.
+OR (ou)	Busca por um termo OU outro.	Windows OR Linux	Para ampliar a pesquisa, encontrando páginas que contenham qualquer um dos termos.
+related:	Busca por sites similares a uma URL.	related:google.com	A FAFIPA já cobrou este operador específico em uma prova de 2023.
+Outros Operadores Menos Frequentes, mas Possíveis:
+
+intitle:: Restringe a busca ao título da página.
+
+~ (til): Busca por sinônimos do termo.
+
+Dica de Prova: A banca costuma apresentar um cenário prático (ex: "um usuário deseja encontrar um arquivo PDF sobre segurança no site do governo") e pedir qual é a sintaxe correta. A combinação mais comum é filetype:pdf segurança site:gov.br. Saber identificar cada operador e sua função é o que garantirá o acerto.
+

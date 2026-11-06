@@ -1,0 +1,58 @@
+atemática financeira: sistema monetário brasileiro, porcentagem, juros simples
+Sistema Monetário Brasileiro: O Real (R$) é a moeda oficial. As representações incluem cédulas e moedas, com valores em reais e centavos.
+
+Porcentagem: Razão de base 100. Exemplo: 20% = 
+20
+100
+=
+0
+,
+20
+100
+20
+​
+ =0,20. É usada para calcular descontos, acréscimos, taxas, etc.
+
+Juros simples: Os juros incidem apenas sobre o capital inicial, não sobre os juros acumulados.
+
+Fórmulas:
+
+Juros (
+J
+J): 
+J
+=
+C
+⋅
+i
+⋅
+n
+J=C⋅i⋅n
+
+Montante (
+M
+M): 
+M
+=
+C
++
+J
+=
+C
+⋅
+(
+1
++
+i
+⋅
+n
+)
+M=C+J=C⋅(1+i⋅n)
+
+Onde: 
+C
+C = capital inicial, 
+i
+i = taxa de juros (em decimal), 
+n
+n = tempo (na mesma unidade da taxa).

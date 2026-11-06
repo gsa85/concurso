@@ -1,0 +1,12 @@
+🤖 10. Inteligência Artificial Generativa (ChatGPT, Copilot, Gemini)
+Conceito: A IA Generativa é uma tecnologia capaz de criar conteúdo novo (textos, resumos, traduções, imagens, códigos) a partir de comandos (prompts) do usuário.
+
+Ferramentas citadas:
+
+ChatGPT: Chatbot da OpenAI, focado em conversação e geração de texto.
+
+Microsoft Copilot: Assistente de IA integrado ao ecossistema Microsoft (Bing, Office), com foco em produtividade.
+
+Google Gemini: IA do Google, integrada às ferramentas do Workspace (Gmail, Docs, etc.) e com capacidade multimodal (processa texto, imagem, áudio).
+
+O que a banca cobra: Conceitos básicos, como "o que é IA generativa" e "quais ferramentas são exemplos", e não programação ou funcionamento interno avançado.

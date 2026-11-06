@@ -1,0 +1,163 @@
+Eventos dependentes e independentes
+Eventos independentes: A ocorrência de um evento não altera a probabilidade de ocorrência do outro. Dois eventos 
+A
+A e 
+B
+B são independentes se:
+
+P
+(
+A
+∩
+B
+)
+=
+P
+(
+A
+)
+⋅
+P
+(
+B
+)
+P(A∩B)=P(A)⋅P(B)
+.
+
+Eventos dependentes: A ocorrência de um evento altera a probabilidade do outro. Nesse caso, usa-se a probabilidade condicional: 
+P
+(
+A
+∣
+B
+)
+=
+P
+(
+A
+∩
+B
+)
+P
+(
+B
+)
+P(A∣B)= 
+P(B)
+P(A∩B)
+​
+ .
+
+14. Probabilidades da união e interseção
+União (
+A
+∪
+B
+A∪B): Probabilidade de ocorrer 
+A
+A ou 
+B
+B.
+
+Regra geral: 
+P
+(
+A
+∪
+B
+)
+=
+P
+(
+A
+)
++
+P
+(
+B
+)
+−
+P
+(
+A
+∩
+B
+)
+P(A∪B)=P(A)+P(B)−P(A∩B).
+
+Se 
+A
+A e 
+B
+B forem mutuamente exclusivos (interseção vazia), então 
+P
+(
+A
+∪
+B
+)
+=
+P
+(
+A
+)
++
+P
+(
+B
+)
+P(A∪B)=P(A)+P(B).
+
+Interseção (
+A
+∩
+B
+A∩B): Probabilidade de ocorrer 
+A
+A e 
+B
+B simultaneamente.
+
+Se 
+A
+A e 
+B
+B forem independentes: 
+P
+(
+A
+∩
+B
+)
+=
+P
+(
+A
+)
+⋅
+P
+(
+B
+)
+P(A∩B)=P(A)⋅P(B).
+
+Caso contrário: 
+P
+(
+A
+∩
+B
+)
+=
+P
+(
+A
+)
+⋅
+P
+(
+B
+∣
+A
+)
+P(A∩B)=P(A)⋅P(B∣A) (probabilidade condicional).

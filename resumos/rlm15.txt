@@ -1,0 +1,19 @@
+Grandezas direta e inversamente proporcionais
+Grandezas diretamente proporcionais: Quando uma aumenta, a outra aumenta na mesma proporção. A razão entre elas é constante: 
+y
+x
+=
+k
+x
+y
+​
+ =k.
+
+Grandezas inversamente proporcionais: Quando uma aumenta, a outra diminui na mesma proporção. O produto entre elas é constante: 
+x
+⋅
+y
+=
+k
+x⋅y=k.
+

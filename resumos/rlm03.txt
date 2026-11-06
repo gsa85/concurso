@@ -1,0 +1,39 @@
+Teorema de Tales
+O Teorema de Tales estabelece que um feixe de retas paralelas, ao ser cortado por duas retas transversais, determina sobre essas transversais segmentos proporcionais.
+
+Fórmula principal: Se as retas 
+r
+r, 
+s
+s e 
+t
+t são paralelas e são cortadas pelas transversais 
+u
+u e 
+v
+v, então a razão entre os segmentos de uma transversal é igual à razão entre os segmentos correspondentes da outra:
+
+A
+B
+B
+C
+=
+D
+E
+E
+F
+BC
+AB
+​
+ = 
+EF
+DE
+​
+ 
+(onde A, B, C estão em 
+u
+u e D, E, F estão em 
+v
+v).
+
+Corolário: Se uma reta é paralela a um dos lados de um triângulo e intersecta os outros dois lados, ela determina sobre esses lados segmentos proporcionais.

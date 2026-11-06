@@ -1,0 +1,48 @@
+Razão e proporção
+Razão: Quociente entre dois números 
+a
+a e 
+b
+b (com 
+b
+≠
+0
+b
+
+=0), indicado por 
+a
+b
+b
+a
+​
+  ou 
+a
+:
+b
+a:b.
+
+Proporção: Igualdade entre duas razões. Exemplo: 
+a
+b
+=
+c
+d
+b
+a
+​
+ = 
+d
+c
+​
+ .
+
+Propriedade fundamental: Em uma proporção, o produto dos meios é igual ao produto dos extremos: 
+a
+⋅
+d
+=
+b
+⋅
+c
+a⋅d=b⋅c.
+
