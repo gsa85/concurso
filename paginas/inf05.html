@@ -1,35 +1,217 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gerenciamento de Arquivos — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Gerenciamento de Arquivos</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf05</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: GERENCIAMENTO DE ARQUIVOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Gerenciamento de Arquivos</h1>
+        <p>Arquivos, Pastas, Extensões e Lixeira – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">Arquivos e Pastas</a>
+        <a href="#extensoes">Extensões de Arquivos</a>
+        <a href="#lixeira">Lixeira e Exclusão</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS -->
+    <div id="conceitos" class="secao">
+        <h2>1. Arquivos e Pastas</h2>
+        <div class="card">
+            <h3>O que é um Arquivo?</h3>
+            <p>É um conjunto de informações armazenadas em um dispositivo (HD, SSD, Pen Drive). Pode ser um texto, uma foto, um vídeo, um programa.</p>
+            
+            <h3>O que é uma Pasta (Diretório)?</h3>
+            <p>É um local onde organizamos os arquivos. As pastas podem conter outras pastas (subpastas) e arquivos. No Windows, a pasta principal de um usuário é a "Documentos", "Imagens", "Downloads", etc.</p>
+            
+            <h3>Atalhos vs. Cópia</h3>
+            <ul>
+                <li><strong>Atalho:</strong> É um ícone (com uma pequena seta) que aponta para o arquivo original. Ele não ocupa espaço significativo. Se você apagar o atalho, o arquivo original continua lá.</li>
+                <li><strong>Cópia:</strong> É uma duplicata do arquivo. Ocupa espaço em disco e é independente do original.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: EXTENSÕES -->
+    <div id="extensoes" class="secao">
+        <h2>2. Extensões de Arquivos (O que mais cai!)</h2>
+        <div class="card">
+            <p>A extensão é a parte final do nome do arquivo, após o ponto. Ela indica qual programa deve ser usado para abrir o arquivo.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Extensão</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Texto</strong></td><td>.txt, .docx, .pdf</td><td>documento.docx</td></tr>
+                    <tr><td><strong>Planilha</strong></td><td>.xlsx, .csv</td><td>planilha.xlsx</td></tr>
+                    <tr><td><strong>Apresentação</strong></td><td>.pptx</td><td>slide.pptx</td></tr>
+                    <tr><td><strong>Imagem</strong></td><td>.jpg, .png, .gif</td><td>foto.jpg</td></tr>
+                    <tr><td><strong>Áudio</strong></td><td>.mp3, .wav</td><td>musica.mp3</td></tr>
+                    <tr><td><strong>Vídeo</strong></td><td>.mp4, .avi</td><td>filme.mp4</td></tr>
+                    <tr><td><strong>Executável</strong></td><td>.exe, .msi</td><td>programa.exe</td></tr>
+                    <tr><td><strong>Compactado</strong></td><td>.zip, .rar</td><td>arquivo.zip</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O arquivo <strong>.exe</strong> é um <strong>executável</strong> (instala ou roda um programa). Já o arquivo <strong>.zip</strong> ou <strong>.rar</strong> é um <strong>arquivo compactado</strong> (precisa ser descompactado). A banca vai trocar as definições.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: LIXEIRA E EXCLUSÃO -->
+    <div id="lixeira" class="secao">
+        <h2>3. Lixeira e Exclusão de Arquivos</h2>
+        <div class="card">
+            <p>Ao excluir um arquivo no Windows, ele vai para a <strong>Lixeira</strong>, onde pode ser restaurado. Mas nem tudo vai para a lixeira!</p>
+            
+            <h3>O que NÃO vai para a Lixeira:</h3>
+            <ul>
+                <li>Arquivos excluídos de <strong>Pen Drives</strong> ou <strong>HDs Externos</strong>.</li>
+                <li>Arquivos excluídos de <strong>redes</strong> (servidores).</li>
+                <li>Arquivos excluídos com <strong>Shift + Delete</strong> (exclusão permanente).</li>
+                <li>Arquivos maiores que o limite da lixeira.</li>
+            </ul>
+            
+            <h3>Como restaurar um arquivo?</h3>
+            <p>Abra a Lixeira, clique com o botão direito no arquivo e escolha "Restaurar". Ele voltará para o local original.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Lixeira:</strong> Arquivos de <strong>Pen Drive</strong> não vão para a Lixeira. Eles são excluídos permanentemente.</li>
+                <li><strong>Shift + Delete:</strong> Exclui o arquivo permanentemente, sem passar pela Lixeira.</li>
+                <li><strong>Arrastar e Soltar:</strong> Se você arrastar um arquivo para outra pasta <strong>no mesmo disco</strong>, ele é <strong>movido</strong>. Se arrastar para <strong>outro disco</strong> (ex: do HD para o Pen Drive), ele é <strong>copiado</strong>.</li>
+                <li><strong>Extensão .exe:</strong> É um arquivo executável. A banca vai dizer que é um arquivo de texto ou compactado.</li>
+                <li><strong>Atalho:</strong> É representado por um ícone com uma seta. Não é o arquivo original.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual das extensões abaixo corresponde a um arquivo executável?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A extensão .txt é de arquivo de texto.')">.txt</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A extensão .exe corresponde a um arquivo executável, que instala ou roda um programa.')">.exe</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A extensão .zip é de arquivo compactado.')">.zip</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Ao excluir um arquivo de um Pen Drive, o que acontece?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Arquivos de Pen Drive NÃO vão para a Lixeira do Windows.')">O arquivo vai para a Lixeira e pode ser restaurado.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Arquivos excluídos de Pen Drives ou HDs externos são excluídos permanentemente, sem passar pela Lixeira.')">O arquivo é excluído permanentemente, sem passar pela Lixeira.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O arquivo é excluído permanentemente.')">O arquivo é movido para a pasta "Downloads".</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. O que acontece ao pressionar Shift + Delete em um arquivo?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Shift + Delete exclui o arquivo permanentemente, sem enviá-lo para a Lixeira.')">O arquivo é excluído permanentemente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa combinação não move o arquivo para a Lixeira.')">O arquivo é movido para a Lixeira.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Shift + Delete não renomeia o arquivo.')">O arquivo é renomeado automaticamente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. No Windows, ao arrastar um arquivo do HD para um Pen Drive, o que acontece?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Quando os discos são diferentes, o arquivo é copiado, não movido.')">O arquivo é movido (sai do HD e vai para o Pen Drive).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Ao arrastar entre discos diferentes (HD e Pen Drive), o Windows copia o arquivo. O original permanece no HD.')">O arquivo é copiado (permanece no HD e é copiado para o Pen Drive).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O arquivo não é excluído.')">O arquivo é excluído do HD.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Um arquivo com extensão .zip é um arquivo:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! .txt é arquivo de texto.')">De texto.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A extensão .zip (e .rar) indica um arquivo compactado, que precisa ser descompactado para ter acesso ao seu conteúdo.')">Compactado.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! .exe é arquivo executável.')">Executável.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: GERENCIAMENTO DE ARQUIVOS -->

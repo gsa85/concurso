@@ -1,35 +1,232 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navegadores de Internet — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Navegadores de Internet</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf10</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: NAVEGADORES DE INTERNET -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Navegadores de Internet</h1>
+        <p>Conceitos, Funcionalidades e Segurança – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">O que é um Navegador</a>
+        <a href="#principais">Principais Navegadores</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#seguranca">Segurança e Privacidade</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS -->
+    <div id="conceitos" class="secao">
+        <h2>1. O que é um Navegador de Internet?</h2>
+        <div class="card">
+            <p>O <strong>navegador (browser)</strong> é um software aplicativo que permite ao usuário acessar e visualizar páginas da internet. Ele interpreta o código HTML, CSS e JavaScript das páginas e as transforma em conteúdo visual.</p>
+            <p>Importante: o navegador <strong>não é a internet</strong>. A internet é a infraestrutura de rede; o navegador é apenas a ferramenta que usamos para acessá-la.</p>
+            <div class="box-formula">
+                Internet = Infraestrutura (rede mundial)<br>
+                Navegador = Ferramenta (software para acessar a web)
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PRINCIPAIS NAVEGADORES -->
+    <div id="principais" class="secao">
+        <h2>2. Principais Navegadores do Mercado</h2>
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Navegador</th>
+                        <th>Desenvolvedor</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Google Chrome</strong></td><td>Google</td><td>O mais utilizado no mundo. Sincroniza favoritos e senhas com a conta Google.</td></tr>
+                    <tr><td><strong>Mozilla Firefox</strong></td><td>Fundação Mozilla</td><td>Código aberto. Conhecido pelo foco em privacidade.</td></tr>
+                    <tr><td><strong>Microsoft Edge</strong></td><td>Microsoft</td><td>Substituto do Internet Explorer. Baseado no Chromium (mesmo motor do Chrome).</td></tr>
+                    <tr><td><strong>Safari</strong></td><td>Apple</td><td>Navegador padrão dos dispositivos Apple (Mac, iPhone, iPad).</td></tr>
+                    <tr><td><strong>Opera</strong></td><td>Opera Software</td><td>Possui bloqueador de anúncios integrado e VPN gratuita.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FUNCIONALIDADES -->
+    <div id="funcionalidades" class="secao">
+        <h2>3. Funcionalidades dos Navegadores</h2>
+        <div class="card">
+            <h3>Abas (Tabs)</h3>
+            <p>Permitem abrir várias páginas na mesma janela. Atalhos: <strong>Ctrl + T</strong> (nova aba), <strong>Ctrl + W</strong> (fechar aba), <strong>Ctrl + Tab</strong> (alternar entre abas).</p>
+            
+            <h3>Favoritos / Favoritos (Bookmarks)</h3>
+            <p>Permitem salvar endereços de páginas para acessar rapidamente depois. Atalho: <strong>Ctrl + D</strong> (adicionar aos favoritos).</p>
+
+            <h3>Histórico</h3>
+            <p>Registra todas as páginas visitadas. Pode ser acessado pelo atalho <strong>Ctrl + H</strong>.</p>
+
+            <h3>Downloads</h3>
+            <p>Gerencia os arquivos baixados da internet. Atalho: <strong>Ctrl + J</strong>.</p>
+
+            <h3>Barra de Endereços (URL)</h3>
+            <p>Local onde digitamos o endereço do site (ex: www.google.com). Também funciona como campo de busca, dependendo da configuração do navegador.</p>
+
+            <h3>Modo Anônimo / Navegação Privada</h3>
+            <p>Navega sem salvar histórico, cookies e dados de formulários. <strong>Não torna o usuário invisível na internet!</strong> Apenas não deixa rastros no computador local.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O <strong>Modo Anônimo</strong> NÃO torna o usuário invisível na internet. Ele apenas não salva histórico, cookies e senhas no computador local. O provedor de internet e os sites visitados ainda podem rastrear o acesso!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: SEGURANÇA E PRIVACIDADE -->
+    <div id="seguranca" class="secao">
+        <h2>4. Segurança e Privacidade nos Navegadores</h2>
+        <div class="card">
+            <h3>Cookies</h3>
+            <p>São pequenos arquivos de texto que os sites armazenam no computador do usuário para lembrar preferências (ex: idioma, login). Podem ser usados para rastreamento e publicidade.</p>
+
+            <h3>Cache</h3>
+            <p>É o armazenamento temporário de partes das páginas (imagens, vídeos, scripts) para acelerar o carregamento. Limpar o cache libera espaço e força o navegador a baixar versões atualizadas das páginas.</p>
+
+            <h3>Certificado Digital / HTTPS</h3>
+            <p>O cadeado na barra de endereços (HTTPS) indica que a conexão é <strong>criptografada</strong>. Não garante que o site seja confiável, mas garante que a comunicação é segura.</p>
+
+            <h3>Bloqueador de Pop-ups</h3>
+            <p>Recurso que impede a abertura automática de janelas indesejadas (pop-ups).</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Atalhos:</strong> Ctrl+T (nova aba), Ctrl+W (fechar aba), Ctrl+D (favoritos), Ctrl+H (histórico), Ctrl+J (downloads).</li>
+                <li><strong>Modo Anônimo:</strong> Não salva histórico no PC, mas não é invisível na internet.</li>
+                <li><strong>Cookies:</strong> Pequenos arquivos que guardam preferências e dados de login.</li>
+                <li><strong>HTTPS:</strong> O cadeado indica conexão criptografada (segura), mas não garante que o site é confiável.</li>
+                <li><strong>Chrome, Firefox, Edge e Safari:</strong> São os principais navegadores. O Edge substituiu o Internet Explorer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é a função do modo de navegação anônima (ou privada) nos navegadores?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O modo anônimo não torna o usuário invisível na internet. O provedor e os sites ainda podem rastrear o acesso.')">Tornar o usuário invisível na internet, impedindo qualquer rastreamento.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O modo anônimo não salva histórico, cookies e senhas no computador local. Porém, não torna o usuário invisível na internet.')">Não salvar o histórico de navegação, cookies e dados de formulários no computador local.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O modo anônimo não acelera a internet nem aumenta a velocidade de download.')">Aumentar a velocidade de conexão com a internet.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é o atalho utilizado nos navegadores para abrir uma NOVA ABA?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O atalho Ctrl+T abre uma nova aba no navegador.')">Ctrl + T</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ctrl+W fecha a aba atual.')">Ctrl + W</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ctrl+N abre uma nova janela (não uma nova aba).')">Ctrl + N</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. O que são os "cookies" na navegação na internet?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os cookies não são vírus. Eles são arquivos de texto para armazenar preferências.')">Vírus que infectam o computador quando navegamos em sites.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os cookies são pequenos arquivos de texto que os sites armazenam no computador para lembrar preferências (idioma, login, etc.) e podem ser usados para rastreamento.')">Pequenos arquivos de texto que armazenam preferências e informações de navegação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cookies não têm relação com a velocidade da internet.')">Programas que aceleram o carregamento das páginas.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. O cadeado exibido na barra de endereços de um navegador, acompanhado do prefixo "https://", indica que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O cadeado e o HTTPS indicam que a conexão entre o navegador e o site é criptografada, ou seja, os dados transmitidos estão seguros.')">A conexão entre o navegador e o site é criptografada (segura).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O cadeado não garante que o site é confiável. Ele apenas indica que a conexão é criptografada.')">O site é 100% confiável e não possui golpes.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O HTTPS não tem relação com a velocidade da página.')">A página vai carregar mais rápido que as outras.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual dos navegadores abaixo é o substituto oficial do Internet Explorer, desenvolvido pela Microsoft?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Chrome é do Google.')">Google Chrome</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Firefox é da Fundação Mozilla.')">Mozilla Firefox</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Microsoft Edge é o navegador que substituiu o Internet Explorer nas versões mais recentes do Windows.')">Microsoft Edge</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: NAVEGADORES DE INTERNET -->

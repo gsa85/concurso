@@ -1,35 +1,242 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Armazenamento em Nuvem e Google Drive — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Armazenamento em Nuvem e Google Drive</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf11</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: GOOGLE DRIVE -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Google Drive</h1>
+        <p>Armazenamento em Nuvem e Compartilhamento – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">O que é o Google Drive</a>
+        <a href="#armazenamento">Armazenamento</a>
+        <a href="#compartilhamento">Compartilhamento</a>
+        <a href="#lixeira">Lixeira e Recuperação</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO -->
+    <div id="conceito" class="secao">
+        <h2>1. O que é o Google Drive?</h2>
+        <div class="card">
+            <p>O Google Drive é um serviço de <strong>armazenamento em nuvem</strong> (cloud storage) oferecido pelo Google. Ele permite que o usuário armazene arquivos (fotos, vídeos, documentos) em servidores remotos e os acesse de qualquer dispositivo com internet.</p>
+            
+            <h3>Vantagens do Armazenamento em Nuvem:</h3>
+            <ul>
+                <li>Acesso aos arquivos de qualquer dispositivo (PC, celular, tablet).</li>
+                <li>Backup automático (proteção contra perda de dados locais).</li>
+                <li>Compartilhamento fácil de arquivos com outras pessoas.</li>
+                <li>Sincronização em tempo real.</li>
+            </ul>
+
+            <h3>Integração com o Ecossistema Google:</h3>
+            <p>O Drive é integrado com:</p>
+            <ul>
+                <li><strong>Google Docs:</strong> Editor de texto online.</li>
+                <li><strong>Google Sheets:</strong> Planilha eletrônica online.</li>
+                <li><strong>Google Slides:</strong> Editor de apresentações online.</li>
+                <li><strong>Gmail:</strong> Anexos de e-mail.</li>
+                <li><strong>Google Fotos:</strong> Armazenamento de imagens.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ARMAZENAMENTO -->
+    <div id="armazenamento" class="secao">
+        <h2>2. Limite de Armazenamento</h2>
+        <div class="card">
+            <p>O Google oferece <strong>15 GB de armazenamento gratuito</strong> para contas pessoais. No entanto, é importante saber que esse espaço é <strong>COMPARTILHADO</strong> entre:</p>
+            <ul>
+                <li><strong>Google Drive</strong> (arquivos, documentos, fotos)</li>
+                <li><strong>Gmail</strong> (e-mails e anexos)</li>
+                <li><strong>Google Fotos</strong> (fotos e vídeos em qualidade original)</li>
+            </ul>
+            <div class="box-formula">
+                15 GB (Gratuito) = Drive + Gmail + Google Fotos
+            </div>
+            <p>Para aumentar o espaço, o usuário pode assinar o <strong>Google One</strong> (planos pagos com mais armazenamento).</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que os 15 GB são <strong>exclusivos do Google Drive</strong>. Isso está <strong>errado</strong>! O espaço é compartilhado com o Gmail e o Google Fotos. Se você lotar a caixa de e-mails, o Drive também ficará sem espaço.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: COMPARTILHAMENTO -->
+    <div id="compartilhamento" class="secao">
+        <h2>3. Compartilhamento de Arquivos (Permissões)</h2>
+        <div class="card">
+            <p>Ao compartilhar um arquivo ou pasta no Google Drive, o usuário pode definir diferentes níveis de permissão:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permissão</th>
+                        <th>O que permite?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Leitor (Visualizador)</strong></td><td>Pode apenas visualizar o arquivo. Não pode editar nem comentar.</td></tr>
+                    <tr><td><strong>Comentador</strong></td><td>Pode visualizar e adicionar comentários, mas não pode editar o conteúdo.</td></tr>
+                    <tr><td><strong>Editor</strong></td><td>Pode visualizar, comentar, editar e até compartilhar o arquivo com outras pessoas.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Formas de compartilhamento:</h3>
+            <ul>
+                <li><strong>Link de acesso:</strong> Qualquer pessoa com o link pode acessar (se a permissão for "qualquer pessoa com o link").</li>
+                <li><strong>Convite por e-mail:</strong> O usuário envia um e-mail com o convite para a pessoa acessar o arquivo.</li>
+                <li><strong>Compartilhamento público:</strong> O arquivo fica visível para qualquer pessoa na internet (permissão "qualquer pessoa").</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: LIXEIRA -->
+    <div id="lixeira" class="secao">
+        <h2>4. Lixeira e Recuperação</h2>
+        <div class="card">
+            <p>Ao excluir um arquivo no Google Drive, ele vai para a <strong>Lixeira</strong>. O arquivo fica armazenado na lixeira por <strong>30 dias</strong>. Após esse prazo, é excluído permanentemente.</p>
+            
+            <h3>Como recuperar um arquivo?</h3>
+            <p>Abra a Lixeira, clique com o botão direito no arquivo e selecione "Restaurar".</p>
+
+            <h3>Como esvaziar a lixeira?</h3>
+            <p>Na lixeira, clique em "Esvaziar lixeira". Isso exclui todos os arquivos permanentemente.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O prazo de retenção da lixeira do Google Drive é de <strong>30 dias</strong>. A banca pode tentar trocar por 7 dias, 15 dias ou 60 dias.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>15 GB:</strong> É o limite gratuito, mas é <strong>compartilhado</strong> com Gmail e Google Fotos.</li>
+                <li><strong>Lixeira:</strong> Os arquivos ficam por <strong>30 dias</strong> antes de serem excluídos permanentemente.</li>
+                <li><strong>Permissões:</strong> Leitor (só vê), Comentador (vê e comenta), Editor (vê, comenta e edita).</li>
+                <li><strong>Integração:</strong> O Drive integra o Google Docs (texto), Sheets (planilha) e Slides (apresentação).</li>
+                <li><strong>Acesso offline:</strong> É possível acessar arquivos do Drive sem internet, desde que o usuário tenha configurado o acesso offline previamente.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Sobre o limite de armazenamento gratuito do Google Drive (15 GB), é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O espaço NÃO é exclusivo do Drive. Ele é compartilhado com o Gmail e o Google Fotos.')">É um espaço exclusivo para armazenamento de arquivos no Drive.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os 15 GB gratuitos são compartilhados entre o Google Drive, o Gmail e o Google Fotos. Se você lotar a caixa de e-mail, o Drive também ficará sem espaço.')">É um espaço compartilhado entre o Google Drive, o Gmail e o Google Fotos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O limite é de 15 GB, e não de 15 MB.')">É um espaço de 15 MB apenas para arquivos de texto.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Ao compartilhar um arquivo no Google Drive com a permissão "Editor", o usuário convidado pode:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A permissão "Editor" permite ao usuário visualizar, comentar, editar e até compartilhar o arquivo com outras pessoas.')">Visualizar, comentar, editar e compartilhar o arquivo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A permissão "Leitor" permite apenas visualizar, sem editar.')">Apenas visualizar o arquivo, sem poder editá-lo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A permissão "Comentador" permite visualizar e comentar, mas não editar.')">Visualizar e comentar, mas não editar o arquivo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Quando um arquivo é excluído no Google Drive, ele é movido para a Lixeira. Por quanto tempo o arquivo fica disponível na Lixeira antes de ser excluído permanentemente?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 30 dias.')">7 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os arquivos ficam na Lixeira do Google Drive por 30 dias antes de serem excluídos permanentemente.')">30 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 30 dias, e não 60.')">60 dias.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. O Google Drive é um exemplo de qual tipo de tecnologia?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Drive não é um software instalado apenas no computador local.')">Software instalado apenas no computador local (on-premise).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Google Drive é um serviço de armazenamento em nuvem (cloud storage), onde os arquivos ficam em servidores remotos acessados pela internet.')">Computação em nuvem (cloud storage).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Drive não é um hardware (componente físico).')">Hardware de armazenamento externo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual das ferramentas abaixo NÃO é integrada nativamente ao Google Drive?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Google Docs (editor de texto) é integrado ao Drive.')">Google Docs</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Microsoft Word é um software da Microsoft, não sendo integrado nativamente ao Google Drive. As ferramentas nativas do Google são Docs, Sheets e Slides.')">Microsoft Word</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Google Sheets (planilha) é integrado ao Drive.')">Google Sheets</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: GOOGLE DRIVE -->

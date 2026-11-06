@@ -1,35 +1,271 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>por11 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>por11</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por11</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: USO DOS PORQUÊS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; line-height: 2; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Uso dos Porquês</h1>
+        <p>As 4 Formas e suas Regras – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#regra-geral">A Regra de Ouro</a>
+        <a href="#porque">Por que</a>
+        <a href="#porque-junto">Porque</a>
+        <a href="#porque-acento">Porquê</a>
+        <a href="#porque-final">Por quê</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 0: A REGRA DE OURO -->
+    <div id="regra-geral" class="secao">
+        <h2>A Regra de Ouro (Memorize Primeiro)</h2>
+        <div class="card">
+            <p>Existem <strong>4 formas</strong> de escrever o "porquê", e a escolha depende de duas perguntas simples:</p>
+            <ol>
+                <li>Está no <strong>final da frase interrogativa</strong>? (Se sim, é o único caso com acento separado).</li>
+                <li>É <strong>substantivo</strong> (vem com artigo antes: "o porquê")? (Se sim, é o único caso junto com acento).</li>
+                <li>É <strong>resposta/explicação</strong>? (Se sim, é junto sem acento).</li>
+                <li>Nenhuma das anteriores? (Então é separado sem acento).</li>
+            </ol>
+        </div>
+        
+        <div class="box-formula">
+            <strong>Por que</strong> (separado, sem acento) → início ou meio de pergunta / "pelo qual"<br>
+            <strong>Por quê</strong> (separado, com acento) → final de pergunta<br>
+            <strong>Porque</strong> (junto, sem acento) → resposta / explicação<br>
+            <strong>Porquê</strong> (junto, com acento) → substantivo (com artigo)
+        </div>
+    </div>
+
+    <!-- SEÇÃO 1: POR QUE -->
+    <div id="porque" class="secao">
+        <h2>1. Por que (Separado e Sem Acento)</h2>
+        <div class="card">
+            <p>É usado em <strong>duas situações</strong>:</p>
+            
+            <h3>Situação 1: No início ou no meio de frases interrogativas (perguntas)</h3>
+            <ul>
+                <li><em><strong>Por que</strong> você não veio à aula?</em></li>
+                <li><em>Você não veio à aula <strong>por que</strong>?</em> (Neste caso, o "que" está no meio, mas ainda é interrogativa).</li>
+            </ul>
+
+            <h3>Situação 2: Equivale a "pelo qual", "pela qual", "por qual razão" (em frases afirmativas)</h3>
+            <ul>
+                <li><em>O caminho <strong>por que</strong> passei era longo.</em> (= pelo qual passei)</li>
+                <li><em>Não sei <strong>por que</strong> ele saiu.</em> (= por qual razão)</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> "Não sei por que ele saiu" é a forma correta. Muitos candidatos escrevem "porque" (junto), mas aqui não é resposta/explicação, é uma pergunta indireta. A dica é: se você pode substituir por "por qual razão", é <strong>separado</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PORQUE -->
+    <div id="porque-junto" class="secao">
+        <h2>2. Porque (Junto e Sem Acento)</h2>
+        <div class="card">
+            <p>É usado em <strong>respostas e explicações</strong>. Equivale a "pois", "já que", "uma vez que".</p>
+            
+            <h3>Exemplos</h3>
+            <ul>
+                <li><em>Não vim à aula <strong>porque</strong> estava doente.</em> (= pois estava doente)</li>
+                <li><em>Cheguei atrasado <strong>porque</strong> o trânsito estava caótico.</em></li>
+                <li><em>Ele foi aprovado <strong>porque</strong> estudou muito.</em></li>
+            </ul>
+
+            <h3>Como diferenciar de "por que" (separado)?</h3>
+            <p>Se você pode substituir por "pois" ou "já que", é <strong>junto</strong>. Se não pode, é separado.</p>
+            <ul>
+                <li><em>Não vim <strong>porque</strong> estava doente.</em> → "Não vim <strong>pois</strong> estava doente." (Faz sentido = junto)</li>
+                <li><em><strong>Por que</strong> você não veio?</em> → "<strong>Pois</strong> você não veio?" (Não faz sentido = separado)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PORQUÊ -->
+    <div id="porque-acento" class="secao">
+        <h2>3. Porquê (Junto e Com Acento)</h2>
+        <div class="card">
+            <p>É usado quando a palavra é um <strong>substantivo</strong>. Significa "o motivo", "a razão". Vem sempre acompanhado de artigo (o, um) ou de outra palavra que o determine (este, aquele, meu).</p>
+            
+            <h3>Exemplos</h3>
+            <ul>
+                <li><em>Não sei o <strong>porquê</strong> da sua ausência.</em> (= o motivo)</li>
+                <li><em>Existe um <strong>porquê</strong> para tudo.</em></li>
+                <li><em>Não entendo o <strong>porquê</strong> de tanta pressa.</em></li>
+                <li><em>Diga-me o <strong>porquê</strong> dessa decisão.</em></li>
+            </ul>
+
+            <h3>Teste rápido:</h3>
+            <p>Se antes da palavra tiver um artigo (o, um, este, aquele) ou se você puder trocar por "motivo", é <strong>Porquê</strong> (junto e com acento).</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai colocar "o porque" (sem acento) para confundir. Lembre-se: quando for substantivo, o acento é <strong>obrigatório</strong>. Ex: "Não sei o <strong>porquê</strong>" (correto) / "Não sei o porque" (errado).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: POR QUÊ -->
+    <div id="porque-final" class="secao">
+        <h2>4. Por quê (Separado e Com Acento)</h2>
+        <div class="card">
+            <p>É usado <strong>apenas</strong> no <strong>final de frases interrogativas</strong> (antes do ponto de interrogação, exclamação ou ponto final).</p>
+            
+            <h3>Exemplos</h3>
+            <ul>
+                <li><em>Você não veio à aula <strong>por quê</strong>?</em></li>
+                <li><em>Ele saiu tão cedo <strong>por quê</strong>?</em></li>
+                <li><em>Você fez isso <strong>por quê</strong>?</em></li>
+                <li><em>Não sei <strong>por quê</strong>.</em> (Quando "por quê" está no final de frase, mesmo em resposta, é acentuado).</li>
+            </ul>
+
+            <h3>Macete:</h3>
+            <p>Se o "porquê" estiver "sozinho" no final da frase, com o ponto logo depois, ele leva acento e fica separado.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A única situação de "por quê" (separado com acento) é no final de frase interrogativa. Se estiver no início ou no meio, é "por que" (sem acento). Ex: "<strong>Por que</strong> você veio?" (sem acento) / "Você veio <strong>por quê</strong>?" (com acento).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>"Por que" (separado, sem acento):</strong> Início de pergunta ou "por qual razão". Ex: "Por que você não veio?" ou "Não sei por que ele saiu".</li>
+                <li><strong>"Por quê" (separado, com acento):</strong> Final de pergunta. Ex: "Você não veio por quê?"</li>
+                <li><strong>"Porque" (junto, sem acento):</strong> Resposta/explicação. Ex: "Não vim porque estava doente".</li>
+                <li><strong>"Porquê" (junto, com acento):</strong> Substantivo (com artigo). Ex: "Não sei o porquê da sua ausência".</li>
+                <li><strong>Teste do "pois":</strong> Se a frase fizer sentido com "pois", use "porque" (junto). Se não fizer, é separado.</li>
+                <li><strong>Teste do "motivo":</strong> Se a palavra puder ser trocada por "motivo", use "porquê" (junto com acento).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Complete corretamente: "_____ você não veio à aula ontem?"</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! No início de frase interrogativa, usamos "Por que" (separado, sem acento).')">Por que</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porque" junto e sem acento é usado em respostas, não em perguntas.')">Porque</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porquê" junto e acentuado é substantivo (ex: o porquê).')">Porquê</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Complete corretamente: "Não fui ao trabalho _____ estava doente."</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Por que" separado e sem acento é usado em perguntas ou como "pelo qual".')">por que</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Porque" junto e sem acento é usado em respostas e explicações.')">porque</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Por quê" separado e com acento é usado no final de perguntas.')">por quê</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Complete corretamente: "Você saiu tão cedo _____?"</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! No final de pergunta, a forma correta é "por quê" (separado e acentuado).')">por que</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! No final de frase interrogativa, usamos "Por quê" (separado e com acento).')">por quê</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porque" junto e sem acento é usado em respostas, não em perguntas.')">porque</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Complete corretamente: "Não entendo o _____ de tanta pressa."</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Por que" separado não é substantivo.')">por que</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porque" junto e sem acento é conjunção (resposta), não substantivo.')">porque</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Porquê" junto e acentuado é substantivo, acompanhado de artigo "o". Significa "o motivo".')">porquê</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Na frase "Ele foi aprovado _____ estudou muito", a forma correta é:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Por que" separado é usado em perguntas ou como "pelo qual".')">por que</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A frase é uma explicação (causa). Podemos substituir por "pois": Ele foi aprovado pois estudou muito. Logo, "porque" (junto e sem acento).')">porque</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porquê" junto e acentuado é substantivo (o motivo), o que não é o caso aqui.')">porquê</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>6. Na frase "Não sei _____ ele tomou essa decisão", a forma correta é:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Não sei por que" equivale a "por qual razão". É uma pergunta indireta, então usa-se "Por que" (separado e sem acento).')">por que</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porque" junto seria resposta, mas aqui é uma pergunta indireta (por qual razão).')">porque</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Porquê" junto e acentuado seria substantivo (o motivo), mas falta o artigo.')">porquê</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: USO DOS PORQUÊS -->

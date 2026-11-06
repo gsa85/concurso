@@ -1,35 +1,156 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Software — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Software</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf03</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: SOFTWARE -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <div class="header-modulo">
+        <h1>Software</h1>
+        <p>Básico, Aplicativo e Utilitário – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+    <div class="nav-menu">
+        <a href="#conceito">O que é Software?</a>
+        <a href="#basico">Software Básico</a>
+        <a href="#aplicativo">Software Aplicativo</a>
+        <a href="#utilitario">Software Utilitário</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+    <div id="conceito" class="secao">
+        <h2>1. O que é Software?</h2>
+        <div class="card">
+            <p>Software é a parte <strong>lógica</strong> do computador. São os programas, instruções e dados que o hardware executa. Diferente do hardware, você não pode tocar no software.</p>
+            <p>Os softwares são divididos basicamente em três categorias: <strong>Básico</strong>, <strong>Aplicativo</strong> e <strong>Utilitário</strong>.</p>
+        </div>
+    </div>
+    <div id="basico" class="secao">
+        <h2>2. Software Básico</h2>
+        <div class="card">
+            <p>É o software <strong>essencial</strong> para o funcionamento do computador. Sem ele, a máquina não liga ou não funciona corretamente.</p>
+            <h3>Principais exemplos:</h3>
+            <ul>
+                <li><strong>Sistemas Operacionais:</strong> Windows, Linux, macOS, Android, iOS. São responsáveis por gerenciar o hardware e permitir a execução de outros programas.</li>
+                <li><strong>Drivers (Controladores):</strong> Programas que permitem a comunicação entre o sistema operacional e os hardwares (ex: driver da impressora, driver de vídeo).</li>
+                <li><strong>BIOS/UEFI:</strong> Software gravado na memória ROM que inicializa o computador.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="aplicativo" class="secao">
+        <h2>3. Software Aplicativo</h2>
+        <div class="card">
+            <p>São os programas que o usuário utiliza para realizar <strong>tarefas específicas</strong>. São os softwares "do dia a dia".</p>
+            <h3>Principais exemplos:</h3>
+            <ul>
+                <li><strong>Editores de texto:</strong> Word, Google Docs.</li>
+                <li><strong>Planilhas:</strong> Excel, Google Sheets.</li>
+                <li><strong>Navegadores:</strong> Chrome, Firefox, Edge.</li>
+                <li><strong>Comunicadores:</strong> WhatsApp, Telegram.</li>
+                <li><strong>Jogos:</strong> Qualquer jogo instalado no PC.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="utilitario" class="secao">
+        <h2>4. Software Utilitário</h2>
+        <div class="card">
+            <p>São programas que auxiliam na <strong>manutenção</strong>, <strong>segurança</strong> e <strong>otimização</strong> do sistema. Não são essenciais para ligar a máquina, mas ajudam a mantê-la saudável.</p>
+            <h3>Principais exemplos:</h3>
+            <ul>
+                <li><strong>Antivírus:</strong> Avast, Kaspersky, Windows Defender.</li>
+                <li><strong>Compactadores de arquivos:</strong> WinRAR, 7-Zip (compactam e descompactam arquivos).</li>
+                <li><strong>Limpadores de disco:</strong> CCleaner.</li>
+                <li><strong>Backup:</strong> Programas de cópia de segurança.</li>
+                <li><strong>Desfragmentadores de disco:</strong> Ferramentas para organizar o HD.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O <strong>Windows</strong> é Software <strong>Básico</strong> (Sistema Operacional). O <strong>Word</strong> é Software <strong>Aplicativo</strong>. O <strong>Antivírus</strong> é Software <strong>Utilitário</strong>. A banca vai trocar as classificações.
+        </div>
+    </div>
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Software Básico vs. Aplicativo:</strong> O Windows é básico (essencial). O Word é aplicativo (tarefa específica).</li>
+                <li><strong>Utilitário:</strong> Antivírus e compactadores (WinRAR) são utilitários, não aplicativos.</li>
+                <li><strong>Driver:</strong> É o software que faz a ponte entre o sistema operacional e o hardware (ex: driver da impressora).</li>
+                <li><strong>BIOS:</strong> É um software básico gravado na memória ROM (não volátil).</li>
+            </ul>
+        </div>
+    </div>
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. O Windows 11 e o Linux Ubuntu são exemplos de qual tipo de software?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Eles são Sistemas Operacionais, que fazem parte do Software Básico, pois são essenciais para o funcionamento da máquina.')">Software básico (Sistema Operacional).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O software aplicativo é aquele usado para tarefas específicas, como o Word ou o Excel.')">Software aplicativo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O software utilitário é o antivírus ou compactador de arquivos.')">Software utilitário.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. O Microsoft Word e o Google Chrome são exemplos de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles não são essenciais para o funcionamento do computador, são usados para tarefas específicas.')">Software básico.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Eles são softwares aplicativos, pois são usados para tarefas específicas (edição de texto e navegação na internet).')">Software aplicativo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles não são ferramentas de manutenção ou segurança.')">Software utilitário.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. O Antivírus e o WinRAR (compactador de arquivos) são classificados como:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles não são essenciais para o funcionamento do sistema.')">Software básico.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eles não são usados para tarefas de produtividade (como Word ou Excel).')">Software aplicativo.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Eles são softwares utilitários, pois auxiliam na segurança e manutenção do sistema.')">Software utilitário.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SOFTWARE -->

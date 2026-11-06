@@ -1,35 +1,252 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grandezas direta e inversamente proporcionais — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Grandezas direta e inversamente proporcionais</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm15</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: GRANDEZAS PROPORCIONAIS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Grandezas Proporcionais</h1>
+        <p>Direta e Inversamente Proporcionais – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#diretas">Diretamente Proporcionais</a>
+        <a href="#inversas">Inversamente Proporcionais</a>
+        <a href="#diferenca">Como Diferenciar</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: DIRETAMENTE PROPORCIONAIS -->
+    <div id="diretas" class="secao">
+        <h2>1. Grandezas Diretamente Proporcionais</h2>
+        <div class="card">
+            <p>Duas grandezas são <strong>diretamente proporcionais</strong> quando o aumento de uma provoca o aumento da outra na mesma proporção. Da mesma forma, se uma diminui, a outra também diminui.</p>
+            
+            <p><strong>Exemplo prático:</strong> Comprar maçãs.</p>
+            <ul>
+                <li>1 kg de maçã custa R$ 10,00.</li>
+                <li>2 kg de maçã custam R$ 20,00.</li>
+                <li>3 kg de maçã custam R$ 30,00.</li>
+            </ul>
+            <p>Veja que dobrando a quantidade de maçã, o preço dobra. Essa é a marca da proporcionalidade direta.</p>
+
+            <h3>Como resolver?</h3>
+            <p>A proporção é montada de forma direta. Você multiplica em cruz (regra de três tradicional).</p>
+            
+            <div class="box-formula">
+                A / B = C / D
+            </div>
+            
+            <p><em>Se você tem 3 kg e quer saber quanto custam 4 kg: 3 / 4 = 30 / x. Multiplicando em cruz: 3x = 120 → x = 40.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: INVERSAMENTE PROPORCIONAIS -->
+    <div id="inversas" class="secao">
+        <h2>2. Grandezas Inversamente Proporcionais</h2>
+        <div class="card">
+            <p>Duas grandezas são <strong>inversamente proporcionais</strong> quando o aumento de uma provoca a <strong>diminuição</strong> da outra, e vice-versa.</p>
+            
+            <p><strong>Exemplo prático:</strong> Velocidade e tempo de viagem.</p>
+            <ul>
+                <li>Se um carro faz uma viagem a 60 km/h em 4 horas...</li>
+                <li>...e outro carro faz a mesma viagem a 120 km/h, ele vai levar menos tempo (2 horas).</li>
+            </ul>
+            <p>Veja que aumentando a velocidade, o tempo diminuiu. As grandezas são inversamente proporcionais.</p>
+
+            <h3>Como resolver?</h3>
+            <p>Aqui mora o perigo! Na inversa, você <strong>não multiplica em cruz da forma tradicional</strong>. Você pode usar duas técnicas:</p>
+            <ul>
+                <li><strong>Multiplicar na horizontal:</strong> A × B = C × D.</li>
+                <li><strong>Inverter uma fração:</strong> A / B = D / C (inverteu a segunda fração).</li>
+            </ul>
+            
+            <div class="box-formula">
+                A × B = C × D
+            </div>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai colocar uma questão de velocidade/tempo ou torneiras e, se você fizer a conta "normal" (multiplicando em cruz), vai achar uma resposta errada que está nas alternativas! Você precisa inverter uma fração ou multiplicar na horizontal.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: DIFERENCIANDO AS DUAS -->
+    <div id="diferenca" class="secao">
+        <h2>3. Como Diferenciar na Hora da Prova?</h2>
+        <div class="card">
+            <p>Faça a si mesmo a seguinte pergunta: <strong>"Se eu aumentar essa grandeza, o que acontece com a outra?"</strong></p>
+            <ul>
+                <li><strong>Se a outra também aumentar:</strong> São diretamente proporcionais.</li>
+                <li><strong>Se a outra diminuir:</strong> São inversamente proporcionais.</li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exemplo</th>
+                        <th>Aumento de uma...</th>
+                        <th>Comportamento da outra</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Preço vs. Quantidade</td>
+                        <td>Mais kg de carne</td>
+                        <td>Paga mais</td>
+                        <td>Direta</td>
+                    </tr>
+                    <tr>
+                        <td>Velocidade vs. Tempo</td>
+                        <td>Mais velocidade</td>
+                        <td>Menos tempo</td>
+                        <td>Inversa</td>
+                    </tr>
+                    <tr>
+                        <td>Máquinas vs. Tempo</td>
+                        <td>Mais máquinas</td>
+                        <td>Menos tempo</td>
+                        <td>Inversa</td>
+                    </tr>
+                    <tr>
+                        <td>Operários vs. Produção</td>
+                        <td>Mais operários</td>
+                        <td>Produz mais</td>
+                        <td>Direta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Regra de Três Composta:</strong> Se a questão envolver 3 ou mais grandezas (ex: 5 máquinas fazem 100 peças em 2 dias. Quantas peças 10 máquinas farão em 4 dias?), você precisa testar a proporcionalidade uma por uma em relação à grandeza que você quer descobrir.</li>
+                <li><strong>Inverter a fração:</strong> Na inversa, o erro mais comum é multiplicar em cruz. Lembre-se de inverter a fração da grandeza inversamente proporcional.</li>
+                <li><strong>Lógica antes da conta:</strong> Pergunte-se sempre "se eu aumento isso, o resultado aumenta ou diminui?".</li>
+                <li><strong>Cuidado com unidades diferentes:</strong> Se a questão misturar horas e minutos, ou gramas e quilogramas, converta tudo para a mesma unidade antes de montar a regra de três.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Se um carro percorre uma distância a 80 km/h em 3 horas, quanto tempo ele levará para percorrer a mesma distância a 120 km/h?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você multiplicou em cruz. Como velocidade e tempo são inversamente proporcionais, é preciso inverter uma fração.')">4,5 horas</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Velocidade e tempo são inversamente proporcionais. 80/120 = x/3 → 120x = 240 → x = 2 horas.')">2 horas</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1,5 horas não é o resultado. Fazendo a conta inversa, 80 x 3 = 240, e 240 / 120 = 2.')">1,5 horas</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Uma equipe de 4 pedreiros constrói um muro em 10 dias. Se a equipe tivesse 8 pedreiros, em quantos dias o muro ficaria pronto?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Mais pedreiros significa menos dias. Logo, são inversamente proporcionais. 4/8 = x/10 → 8x = 40 → x = 5.')">20 dias</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Pedreiros e dias são inversamente proporcionais. 4 × 10 = 8 × x → 40 = 8x → x = 5 dias.')">5 dias</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 10 dias seria se a quantidade de pedreiros não mudasse. Com o dobro de pedreiros, o tempo cai pela metade.')">10 dias</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Se 2 kg de queijo custam R$ 40,00, quanto custarão 5 kg do mesmo queijo?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Peso e preço são diretamente proporcionais. 2/5 = 40/x → 2x = 200 → x = 100.')">R$ 100,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você fez a conta inversa. Peso e preço aumentam juntos, logo são diretamente proporcionais.')">R$ 16,00</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 2/5 = 40/x. Multiplicando em cruz: 2x = 200, x = 100.')">R$ 80,00</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual das alternativas abaixo apresenta um exemplo de grandezas <strong>inversamente proporcionais</strong>?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Quanto mais litros de gasolina, mais caro fica. Grandezas diretamente proporcionais.')">Quantidade de litros de gasolina e o valor a pagar.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Quanto maior a velocidade, menor o tempo de viagem. São inversamente proporcionais.')">Velocidade de um veículo e o tempo de viagem.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Quanto mais horas trabalhadas, maior o salário. Grandezas diretamente proporcionais.')">Horas trabalhadas e salário recebido.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Em uma fábrica, 6 máquinas produzem 1.200 peças em 5 horas. Quantas peças 12 máquinas produzirão em 5 horas?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O tempo é o mesmo (5 horas). Dobrando as máquinas, dobra a produção. Logo, 2.400 peças.')">1.200 peças</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Máquinas e produção são diretamente proporcionais (com o mesmo tempo). 6/12 = 1200/x → 6x = 14400 → x = 2400.')">2.400 peças</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 600 peças seria se a relação fosse inversa, mas mais máquinas produzem mais peças.')">600 peças</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: GRANDEZAS PROPORCIONAIS -->

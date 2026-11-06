@@ -1,35 +1,219 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>por01 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>por01</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ANÁLISE E INTERPRETAÇÃO DE TEXTO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Análise e Interpretação de Texto</h1>
+        <p>Compreensão, Ponto de Vista, Ideias Centrais e Inferências – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#compreensao">Compreensão vs. Interpretação</a>
+        <a href="#ponto-vista">Ponto de Vista do Autor</a>
+        <a href="#ideias">Ideias Centrais e Secundárias</a>
+        <a href="#inferencia">Inferências</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: COMPREENSÃO VS. INTERPRETAÇÃO -->
+    <div id="compreensao" class="secao">
+        <h2>1. Compreensão vs. Interpretação</h2>
+        <div class="card">
+            <p>Muitos candidatos perdem pontos porque não sabem a diferença entre esses dois conceitos. A FAFIPA explora essa diferença nas alternativas.</p>
+            
+            <h3>Compreensão (O que está escrito)</h3>
+            <p>É a extração de informações <strong>explícitas</strong> no texto. Aquilo que está literalmente escrito, "preto no branco".</p>
+            <p><em>Pergunta típica: "De acordo com o texto, pode-se afirmar que...".</em></p>
+
+            <h3>Interpretação (O que se deduz)</h3>
+            <p>É a extração de informações <strong>implícitas</strong>. Envolve dedução, relação de ideias e conclusões que o texto permite tirar, mas não fala diretamente.</p>
+            <p><em>Pergunta típica: "Infere-se do texto que...", "O autor sugere que...".</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a **extrapolação**! Se a alternativa fala algo que está de acordo com o mundo real, mas **não está no texto**, ela está errada. A resposta deve estar contida (mesmo que implicitamente) no texto.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PONTO DE VISTA DO AUTOR -->
+    <div id="ponto-vista" class="secao">
+        <h2>2. Ponto de Vista do Autor</h2>
+        <div class="card">
+            <p>Identificar a opinião do autor é crucial. Ele pode se posicionar de forma <strong>explícita</strong> (usando adjetivos e juízos de valor) ou <strong>implícita</strong> (usando ironias, escolha de palavras).</p>
+            
+            <p><strong>Palavras que denunciam o ponto de vista:</strong></p>
+            <ul>
+                <li><strong>Adjetivos:</strong> "uma ideia brilhante", "um ato vergonhoso".</li>
+                <li><strong>Verbos de opinião:</strong> "acredito", "defendo", "lamento".</li>
+                <li><strong>Ironia:</strong> Dizer o contrário do que se pensa para criticar.</li>
+            </ul>
+
+            <div class="box-formula">
+                O autor do texto é a voz que fala no texto. Não confunda com o "eu" do texto (que pode ser um personagem).
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: IDEIAS CENTRAIS E SECUNDÁRIAS -->
+    <div id="ideias" class="secao">
+        <h2>3. Ideias Centrais x Ideias Secundárias</h2>
+        <div class="card">
+            <p>Todo texto gira em torno de uma <strong>ideia central (tese)</strong>. As outras ideias são os <strong>argumentos</strong> ou <strong>exemplos</strong> que sustentam essa ideia principal.</p>
+            <ul>
+                <li><strong>Ideia Central:</strong> Geralmente está no primeiro parágrafo (introdução) ou no último (conclusão). É o "esqueleto" do texto.</li>
+                <li><strong>Ideias Secundárias:</strong> São os detalhes, os dados, os exemplos que explicam a ideia central.</li>
+            </ul>
+            <p><em>Dica de prova: Se a questão pedir a "ideia principal do parágrafo", procure a frase que resume o que o autor quis dizer, sem os exemplos.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: INFERÊNCIAS -->
+    <div id="inferencia" class="secao">
+        <h2>4. Inferências (O que está nas entrelinhas)</h2>
+        <div class="card">
+            <p>A inferência é a conclusão que o leitor tira a partir das pistas deixadas pelo autor. O texto não diz, mas permite que você deduza.</p>
+            <p><strong>Exemplo clássico:</strong></p>
+            <p><em>"João olhou para o céu escuro, pegou o guarda-chuva e saiu."</em></p>
+            <ul>
+                <li><strong>Explícito (compreensão):</strong> João pegou o guarda-chuva.</li>
+                <li><strong>Inferência:</strong> João acha que vai chover (pois o céu está escuro e ele pegou o guarda-chuva).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai colocar uma alternativa que parece uma inferência, mas é apenas um **senso comum** ou uma **opinião pessoal do candidato**. A inferência precisa ter base nas pistas do texto.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Palavras-chave do comando:</strong> Se o enunciado diz "De acordo com o texto", a resposta está escrita. Se diz "Infere-se", a resposta está nas entrelinhas.</li>
+                <li><strong>Cuidado com o "exceto" ou "incorreto":</strong> Muitas questões pedem a alternativa ERRADA. Sublinhe o "EXCETO" no enunciado!</li>
+                <li><strong>Extrapolação:</strong> A alternativa pode estar certa no mundo real, mas se não estiver no texto, está errada.</li>
+                <li><strong>Contradição:</strong> A alternativa diz o oposto do que está no texto.</li>
+                <li><strong>Redução:</strong> A alternativa generaliza o que o texto disse, ou restringe o que o texto disse de forma mais ampla.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. A diferença entre compreensão e interpretação textual é que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A compreensão extrai o que está explícito (escrito). A interpretação extrai o que está implícito (nas entrelinhas).')">A compreensão extrai informações explícitas, enquanto a interpretação extrai informações implícitas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário. A compreensão é o que está escrito (explícito) e a interpretação é o que está nas entrelinhas (implícito).')">A compreensão extrai informações implícitas, enquanto a interpretação extrai informações explícitas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ambos são processos distintos; um não anula o outro.')">Ambas significam a mesma coisa e podem ser usadas como sinônimos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Leia o trecho: "O político discursou por duas horas, mas não disse absolutamente nada de novo." Qual é o ponto de vista do autor em relação ao político?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O autor não elogia o político; ele critica a falta de conteúdo do discurso.')">O autor admira a capacidade de oratória do político.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O uso do "mas" e da expressão "não disse absolutamente nada de novo" demonstra uma crítica à falta de substância no discurso.')">O autor critica a falta de conteúdo do discurso do político.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O autor tem uma visão negativa, não é imparcial ou elogiosa.')">O autor é imparcial e apenas descreve um fato.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Sobre as ideias centrais e secundárias de um texto, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ideia central é a mais importante; as secundárias são os detalhes que a sustentam.')">A ideia central é sempre a mais longa do texto.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A ideia central (tese) é o núcleo do texto. As ideias secundárias servem para exemplificar, justificar ou detalhar a ideia principal.')">A ideia central é o núcleo do texto, e as secundárias são detalhes ou exemplos que a sustentam.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ideia central pode estar no começo, no meio ou no fim, embora seja mais comum na introdução ou conclusão.')">A ideia central só pode ser encontrada no último parágrafo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Leia o trecho: "Maria abriu a geladeira, suspirou e pegou o telefone para pedir uma pizza." A partir dessa leitura, é correto INFERIR que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O texto não diz isso; é uma extrapolação sua. A inferência deve estar baseada nas pistas do texto (geladeira vazia/suspiro).')">Maria não sabe cozinhar.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O suspiro ao abrir a geladeira e a decisão de pedir pizza permitem inferir que ela não encontrou comida pronta ou não quis cozinhar.')">Maria provavelmente não encontrou comida na geladeira ou não quis preparar uma refeição.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O texto não fornece pistas sobre a situação financeira de Maria, apenas sobre a falta de comida ou de vontade de cozinhar.')">Maria está com problemas financeiros.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Ao responder uma questão de interpretação, o candidato deve evitar:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É justamente o contrário: você deve se basear no texto.')">Basear-se nas informações contidas no texto.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A extrapolação é o erro de usar conhecimentos externos ou opiniões pessoais que não estão no texto. A resposta deve estar contida no texto.')">Extrapolar o texto, usando conhecimentos externos ou opiniões pessoais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Identificar o ponto de vista é uma habilidade necessária, não um erro.')">Identificar o ponto de vista do autor.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ANÁLISE E INTERPRETAÇÃO DE TEXTO -->

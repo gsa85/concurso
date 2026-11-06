@@ -25,7 +25,225 @@
       
       <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
       <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por07</b>.</p>
+        <p>Página de estudo personalizada<!-- INÍCIO DO MÓDULO: SEMÂNTICA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Semântica</h1>
+        <p>Sinônimos, Antônimos, Denotação e Conotação – Foco FAFIPA</p>
+    </div>
+
+    <div class="nav-menu">
+        <a href="#sinonimos">Sinônimos e Antônimos</a>
+        <a href="#denotacao">Denotação vs. Conotação</a>
+        <a href="#significacao">Homônimos e Parônimos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: SINÔNIMOS E ANTÔNIMOS -->
+    <div id="sinonimos" class="secao">
+        <h2>1. Sinônimos e Antônimos</h2>
+        <div class="card">
+            <h3>Sinônimos</h3>
+            <p>São palavras com significado igual ou semelhante. Ex: <strong>casa</strong> e <strong>moradia</strong>; <strong>belo</strong> e <strong>bonito</strong>.</p>
+            <p><strong>Atenção:</strong> Apesar de serem parecidos, os sinônimos raramente são perfeitos. O contexto importa! "Casa" pode ser o lar (emocional) ou o imóvel (físico).</p>
+
+            <h3>Antônimos</h3>
+            <p>São palavras com significado oposto. Ex: <strong>alto</strong> e <strong>baixo</strong>; <strong>bom</strong> e <strong>mau</strong>; <strong>claro</strong> e <strong>escuro</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: DENOTAÇÃO VS. CONOTAÇÃO -->
+    <div id="denotacao" class="secao">
+        <h2>2. Denotação vs. Conotação</h2>
+        <div class="card">
+            <h3>Denotação (Sentido Literal / Real)</h3>
+            <p>É o significado de dicionário, aquele objetivo e real. A palavra é usada no seu sentido comum.</p>
+            <p><em>Exemplo: "O leão é um animal selvagem da África." (Sentido real, literal).</em></p>
+
+            <h3>Conotação (Sentido Figurado / Simbólico)</h3>
+            <p>É o significado subjetivo, figurado, emocional. A palavra ganha um novo sentido de acordo com o contexto.</p>
+            <p><em>Exemplo: "Aquele jogador é um leão em campo." (Sentido figurado: forte, valente).</em></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dar uma frase conotativa e pedir o significado da expressão. Ex: "Chorar lágrimas de sangue" (conotação: sofrer muito). Não confunda com a denotação (as lágrimas serem literalmente de sangue).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: HOMÔNIMOS E PARÔNIMOS -->
+    <div id="significacao" class="secao">
+        <h2>3. Significação das Palavras (Homônimos e Parônimos)</h2>
+        
+        <div class="card">
+            <h3>Homônimos</h3>
+            <p>São palavras que têm a mesma pronúncia ou escrita, mas <strong>significados diferentes</strong>.</p>
+            <ul>
+                <li><strong>Homófonos (mesmo som):</strong> <strong>Cela</strong> (prisão) e <strong>Sela</strong> (de cavalo).</li>
+                <li><strong>Homógrafos (mesma escrita):</strong> <strong>Almoço</strong> (substantivo, a refeição) e <strong>Almoço</strong> (verbo, eu almoço).</li>
+                <li><strong>Perfeitos (mesmo som e escrita):</strong> <strong>Verão</strong> (estação do ano) e <strong>Verão</strong> (verbo ver no futuro).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Parônimos (A armadilha da FAFIPA)</h3>
+            <p>São palavras parecidas na escrita e na pronúncia, mas com <strong>significados totalmente diferentes</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parônimo 1</th>
+                        <th>Significado</th>
+                        <th>Parônimo 2</th>
+                        <th>Significado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Ratificar</strong></td><td>Confirmar</td><td><strong>Retificar</strong></td><td>Corrigir</td></tr>
+                    <tr><td><strong>Emergir</strong></td><td>Vir à tona</td><td><strong>Imergir</strong></td><td>Afundar</td></tr>
+                    <tr><td><strong>Despercebido</strong></td><td>Não percebido</td><td><strong>Desapercebido</strong></td><td>Desprevenido</td></tr>
+                    <tr><td><strong>Descrição</strong></td><td>Ato de descrever</td><td><strong>Discrição</strong></td><td>Reserva, sigilo</td></tr>
+                    <tr><td><strong>Concerto</strong></td><td>Música</td><td><strong>Conserto</strong></td><td>Reparo</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Eles amam **Ratificar vs. Retificar** e **Emergir vs. Imergir**. Se o texto diz "o ministro **retificou** a declaração", significa que ele **corrigiu**. Se ele "**ratificou**", ele **confirmou**.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Denotação vs. Conotação:</strong> Sentido de dicionário = Denotação. Sentido figurado (emocional, metafórico) = Conotação.</li>
+                <li><strong>Parônimos:</strong> Decore os pares mais comuns: Ratificar (confirmar) / Retificar (corrigir); Concerto (música) / Conserto (reparo); Descrição (ato de descrever) / Discrição (reserva).</li>
+                <li><strong>Homônimos:</strong> "Cela" (prisão) e "Sela" (cavalo) têm o mesmo som, mas escrita e significado diferentes.</li>
+                <li><strong>Sinônimos no contexto:</strong> A banca pode pedir para substituir uma palavra por um sinônimo no texto. Verifique se a substituição mantém o sentido original.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Na frase "Ele é um anjo", a palavra "anjo" está empregada em sentido:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! No sentido denotativo (literal), "anjo" é um ser celestial com asas.')">Denotativo (literal).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A palavra "anjo" está sendo usada no sentido figurado para elogiar a bondade ou a beleza da pessoa. Isso é conotação.')">Conotativo (figurado).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Não se trata de um sentido religioso, mas de uma comparação figurada.')">Religioso.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Assinale a alternativa que apresenta o uso CORRETO dos parônimos:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O correto é "retificar" (corrigir) a prova, e não "ratificar" (confirmar).')">O professor precisou ratificar a prova, pois havia um erro.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O professor precisou "retificar" (corrigir) a prova. Se ele fosse confirmar o gabarito, ele "ratificaria".')">O professor precisou retificar a prova, pois havia um erro.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O correto é "conserto" (reparo), e não "concerto" (música).')">O mecânico fez o concerto do carro.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A palavra "cela" (prisão) e "sela" (de cavalo) são exemplos de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Parônimos são palavras parecidas, mas com escrita e som diferentes (ex: ratificar/retificar).')">Parônimos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! São homônimos homófonos: têm o mesmo som, mas escritas e significados diferentes.')">Homônimos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Sinônimos são palavras com significado igual ou semelhante (ex: casa/moradia).')">Sinônimos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Na frase "Ele agiu com muita discrição", a palavra "discrição" significa:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Descrição" é o ato de descrever (detalhar algo).')">Ato de descrever algo.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Discrição" significa reserva, sigilo, modéstia. É um parônimo de "descrição" (ato de descrever).')">Reserva, sigilo, modéstia.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A palavra para ato de descrever é "descrição".')">Ato de corrigir um erro.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual das alternativas abaixo apresenta um par de ANTÔNIMOS?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Casa" e "moradia" são sinônimos (mesmo significado).')">Casa e moradia.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Bom" e "mau" são antônimos, pois têm significados opostos.')">Bom e mau.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Belo" e "bonito" são sinônimos (mesmo significado).')">Belo e bonito.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SEMÂNTICA --> criada para <b>por07</b>.</p>
         <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
       </div>
       

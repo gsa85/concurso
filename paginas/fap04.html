@@ -1,35 +1,211 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Conceito — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Conceito</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>fap04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ORGANIZAÇÃO DO AMBIENTE DE TRABALHO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <div class="header-modulo">
+        <h1>Organização do Ambiente de Trabalho</h1>
+        <p>Ergonomia, Programa 5S e Segurança – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+    <div class="nav-menu">
+        <a href="#conceito">Conceitos</a>
+        <a href="#ergonomia">Ergonomia</a>
+        <a href="#programa5s">Programa 5S</a>
+        <a href="#sst">Saúde e Segurança (SST)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+    
+    <div id="conceito" class="secao">
+        <h2>1. Conceitos de Organização do Trabalho</h2>
+        <div class="card">
+            <p>A organização do ambiente de trabalho busca criar condições adequadas para que o servidor/colaborador possa desempenhar suas funções com <strong>segurança, conforto e eficiência</strong>.</p>
+            <p>Ela envolve tanto o <strong>espaço físico</strong> (layout, mobiliário, iluminação) quanto às <strong>condições organizacionais</strong> (divisão de tarefas, ritmo de trabalho, relações interpessoais).</p>
+            <p>Um ambiente bem organizado reduz o estresse, previne acidentes, aumenta a produtividade e melhora a qualidade de vida no trabalho.</p>
+        </div>
+    </div>
+
+    <div id="ergonomia" class="secao">
+        <h2>2. Ergonomia</h2>
+        <div class="card">
+            <p>A <strong>Ergonomia</strong> é a ciência que estuda a <strong>adaptação do trabalho ao homem</strong> (e não o contrário). Ela busca adequar as condições de trabalho às características físicas e psicológicas do trabalhador, visando o conforto, a segurança e a eficiência.</p>
+            
+            <h3>Tipos de Ergonomia:</h3>
+            <ul>
+                <li><strong>Ergonomia Física:</strong> Trata da postura, movimentos repetitivos, mobiliário (cadeiras, mesas), iluminação e ruído. Ex: cadeira com apoio lombar, monitor na altura dos olhos.</li>
+                <li><strong>Ergonomia Cognitiva:</strong> Trata dos processos mentais (memória, raciocínio, tomada de decisão). Ex: softwares de fácil usabilidade, redução de distrações.</li>
+                <li><strong>Ergonomia Organizacional:</strong> Trata da estrutura da organização, divisão de tarefas, horários, pausas e relações de trabalho. Ex: pausas para descanso, flexibilização de jornada.</li>
+            </ul>
+            <p><strong>NR-17:</strong> É a Norma Regulamentadora do Ministério do Trabalho que estabelece os parâmetros de ergonomia no ambiente de trabalho (especialmente para atividades que exigem esforço físico ou postura sentada).</p>
+        </div>
+    </div>
+
+    <div id="programa5s" class="secao">
+        <h2>3. Programa 5S (A Pegadinha Clássica)</h2>
+        <div class="card">
+            <p>O Programa 5S é uma metodologia de origem japonesa que visa a <strong>organização e a melhoria contínua do ambiente de trabalho</strong>. Seu nome vem de cinco palavras japonesas que começam com a letra "S". A FAFIPA adora cobrar o significado de cada uma:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Palavra Japonesa</th>
+                        <th>Tradução / Senso</th>
+                        <th>O que significa na prática?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Seiri</strong></td>
+                        <td>Senso de Utilização</td>
+                        <td>Separar o útil do inútil e descartar o que não é necessário. (Não guardar lixo/coisas desnecessárias).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seiton</strong></td>
+                        <td>Senso de Ordenação (Organização)</td>
+                        <td>Cada coisa no seu devido lugar. Facilitar o acesso aos materiais.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seiso</strong></td>
+                        <td>Senso de Limpeza</td>
+                        <td>Manter o ambiente limpo e em boas condições de uso.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seiketsu</strong></td>
+                        <td>Senso de Saúde e Higiene (Padronização)</td>
+                        <td>Criar padrões de organização e higiene para manter os três primeiros "S".</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shitsuke</strong></td>
+                        <td>Senso de Disciplina</td>
+                        <td>Cumprir rigorosamente as regras e hábitos estabelecidos. É o "S" mais difícil, pois depende da mudança de comportamento.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai trocar o significado dos "S". Lembre-se: <strong>Seiri</strong> (Utilização/Descarte), <strong>Seiton</strong> (Ordenação), <strong>Seiso</strong> (Limpeza), <strong>Seiketsu</strong> (Saúde/Higiene/Padronização) e <strong>Shitsuke</strong> (Disciplina).
+        </div>
+    </div>
+
+    <div id="sst" class="secao">
+        <h2>4. Saúde e Segurança no Trabalho (SST)</h2>
+        <div class="card">
+            <p>A segurança no ambiente de trabalho é garantida por normas e equipamentos que protegem o trabalhador. A FAFIPA cobra a diferença entre:</p>
+            <ul>
+                <li><strong>EPI (Equipamento de Proteção Individual):</strong> Destina-se a proteger o <strong>indivíduo</strong>. Ex: luvas, capacete, óculos de proteção, protetor auricular, máscara.</li>
+                <li><strong>EPC (Equipamento de Proteção Coletiva):</strong> Destina-se a proteger <strong>um grupo de pessoas</strong> ou o ambiente. Ex: extintor de incêndio, corrimão, guarda-corpo, rede de proteção, sinalização de emergência.</li>
+            </ul>
+            
+            <h3>Outros Conceitos Importantes:</h3>
+            <ul>
+                <li><strong>Mapa de Risco:</strong> É uma representação gráfica dos riscos presentes no ambiente de trabalho (físicos, químicos, biológicos, ergonômicos e de acidentes).</li>
+                <li><strong>CIPA (Comissão Interna de Prevenção de Acidentes):</strong> É uma comissão formada por representantes dos empregados e do empregador, com o objetivo de prevenir acidentes e doenças ocupacionais.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Ergonomia:</strong> É a adaptação do trabalho ao homem (e não o contrário).</li>
+                <li><strong>Programa 5S:</strong> Decore a ordem: Seiri (Utilização), Seiton (Ordenação), Seiso (Limpeza), Seiketsu (Higiene/Padronização) e Shitsuke (Disciplina).</li>
+                <li><strong>EPI vs. EPC:</strong> EPI protege o indivíduo (luva, máscara). EPC protege o coletivo (extintor, corrimão).</li>
+                <li><strong>NR-17:</strong> É a norma de ergonomia.</li>
+                <li><strong>CIPA:</strong> Comissão Interna de Prevenção de Acidentes.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. Qual é o princípio básico da Ergonomia?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Ergonomia busca adaptar o trabalho ao homem, e não o contrário.')">Adaptar o homem ao trabalho, exigindo que ele se ajuste às condições impostas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Ergonomia busca adaptar as condições de trabalho (mobiliário, ferramentas, ritmo) às características físicas e psicológicas do trabalhador.')">Adaptar o trabalho ao homem, ajustando as condições de trabalho às características do trabalhador.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Ergonomia não tem relação com a redução de salários.')">Reduzir os custos da empresa por meio da diminuição dos salários.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. No Programa 5S, qual é o "Senso" que significa separar o útil do inútil, descartando o que não é necessário no ambiente de trabalho?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Seiri (Senso de Utilização) significa descartar o que é desnecessário, mantendo apenas o que é útil.')">Seiri (Senso de Utilização).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Seiton é o Senso de Ordenação (cada coisa no seu lugar).')">Seiton (Senso de Ordenação).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Seiso é o Senso de Limpeza.')">Seiso (Senso de Limpeza).</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. O extintor de incêndio e o corrimão de uma escada são exemplos de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O EPI protege apenas o indivíduo (ex: luvas, capacete).')">EPI (Equipamento de Proteção Individual).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O extintor e o corrimão são EPCs (Equipamentos de Proteção Coletiva), pois protegem um grupo de pessoas ou o ambiente.')">EPC (Equipamento de Proteção Coletiva).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Esses equipamentos não são classificados como ferramentas de trabalho.')">Ferramentas de trabalho.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>4. No Programa 5S, qual é o "Senso" que está relacionado à criação de padrões de organização e higiene, mantendo os três primeiros "S" em prática?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Shitsuke é o Senso de Disciplina (cumprir as regras).')">Shitsuke (Senso de Disciplina).</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Seiketsu (Senso de Saúde e Higiene / Padronização) é responsável por criar padrões e manter a organização.')">Seiketsu (Senso de Saúde e Higiene / Padronização).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Seiton é o Senso de Ordenação.')">Seiton (Senso de Ordenação).</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>5. Qual é a norma regulamentadora (NR) do Ministério do Trabalho que trata especificamente de Ergonomia?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A NR-17 é a norma de Ergonomia. A NR-01 trata das disposições gerais.')">NR-01.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A NR-17 é a Norma Regulamentadora que estabelece os parâmetros de Ergonomia no ambiente de trabalho.')">NR-17.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A NR-17 é a norma de Ergonomia. A NR-35 trata de trabalho em altura.')">NR-35.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ORGANIZAÇÃO DO AMBIENTE DE TRABALHO -->

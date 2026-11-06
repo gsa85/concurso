@@ -1,35 +1,244 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ambientes Operacionais: Windows 10, 11 e Linux Ubuntu — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Ambientes Operacionais: Windows 10, 11 e Linux Ubuntu</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf07</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: AMBIENTES OPERACIONAIS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Ambientes Operacionais</h1>
+        <p>Windows 10/11 e Linux Ubuntu – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#windows">Windows 10 e 11</a>
+        <a href="#linux">Linux Ubuntu</a>
+        <a href="#comparacao">Comparação Direta</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: WINDOWS -->
+    <div id="windows" class="secao">
+        <h2>1. Windows 10 e Windows 11</h2>
+        <div class="card">
+            <p>O Windows é um <strong>software básico</strong> (sistema operacional) proprietário, desenvolvido pela Microsoft. É o sistema mais utilizado em computadores pessoais.</p>
+            
+            <h3>Principais Recursos (Windows 10 e 11)</h3>
+            <ul>
+                <li><strong>Menu Iniciar:</strong> O ícone do Windows (tecla Windows) abre o menu com os programas instalados e a opção de desligar.</li>
+                <li><strong>Barra de Tarefas:</strong> Fica na parte inferior da tela. Exibe os programas abertos, o relógio e a área de notificação.</li>
+                <li><strong>Área de Trabalho (Desktop):</strong> É a tela principal, onde ficam os ícones de atalho.</li>
+                <li><strong>Explorador de Arquivos:</strong> É o gerenciador de arquivos do Windows. Aberto com o atalho Windows + E.</li>
+                <li><strong>Windows Update:</strong> Ferramenta de atualização do sistema. Mantém o Windows seguro e atualizado.</li>
+                <li><strong>Painel de Controle / Configurações:</strong> O Windows 10 e 11 centralizaram a maioria das configurações no aplicativo "Configurações" (Windows + I), mas o Painel de Controle clássico ainda existe.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Contas de Usuário</h3>
+            <p>O Windows permite diferentes tipos de contas:</p>
+            <ul>
+                <li><strong>Administrador:</strong> Tem controle total do computador. Pode instalar programas, alterar configurações e gerenciar outros usuários.</li>
+                <li><strong>Usuário Padrão:</strong> Pode usar os programas, mas não pode instalar softwares ou alterar configurações que afetem outros usuários ou a segurança do sistema.</li>
+                <li><strong>Conta de Convidado:</strong> Acesso limitado e temporário (desativada por padrão em versões mais recentes).</li>
+            </ul>
+        </div>
+
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O <strong>Windows Update</strong> é a ferramenta oficial de atualização da Microsoft. A banca vai tentar dizer que o Windows Update é um antivírus ou um limpador de disco. Ele apenas gerencia as atualizações de segurança e do sistema.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: LINUX -->
+    <div id="linux" class="secao">
+        <h2>2. Linux Ubuntu</h2>
+        <div class="card">
+            <p>O Linux é um sistema operacional de <strong>código aberto</strong> (open source), o que significa que seu código-fonte é público e pode ser modificado por qualquer pessoa. O <strong>Ubuntu</strong> é uma das distribuições (versões) mais populares do Linux.</p>
+            
+            <h3>Características do Linux</h3>
+            <ul>
+                <li><strong>Código Aberto:</strong> Gratuito e modificável.</li>
+                <li><strong>Multiusuário e Multitarefa:</strong> Vários usuários podem usar ao mesmo tempo, e vários programas podem rodar simultaneamente.</li>
+                <li><strong>Interface Gráfica (GNOME no Ubuntu):</strong> O Ubuntu possui interface gráfica amigável, mas o coração do sistema é o <strong>Terminal</strong>.</li>
+                <li><strong>Usuário Root:</strong> É o "superusuário" do Linux, equivalente ao Administrador do Windows. Tem poder total sobre o sistema.</li>
+                <li><strong>Sistema de Arquivos:</strong> O Linux não usa letras de unidade (C:, D:). Ele usa uma estrutura de diretórios em árvore, começando pela raiz "/".</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Comandos Básicos do Terminal Linux</h3>
+            <p>A FAFIPA pode cobrar o significado de alguns comandos. Decore os principais:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comando</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>ls</strong></td><td>Listar arquivos e pastas (equivalente ao "dir" no Windows).</td></tr>
+                    <tr><td><strong>cd</strong></td><td>Mudar de diretório (Change Directory).</td></tr>
+                    <tr><td><strong>pwd</strong></td><td>Mostra o caminho do diretório atual (Print Working Directory).</td></tr>
+                    <tr><td><strong>mkdir</strong></td><td>Criar uma nova pasta (Make Directory).</td></tr>
+                    <tr><td><strong>rm</strong></td><td>Remover arquivos (Remove).</td></tr>
+                    <tr><td><strong>cp</strong></td><td>Copiar arquivos (Copy).</td></tr>
+                    <tr><td><strong>mv</strong></td><td>Mover ou renomear arquivos (Move).</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: COMPARAÇÃO -->
+    <div id="comparacao" class="secao">
+        <h2>3. Comparação Direta: Windows vs. Linux</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Windows 10/11</th>
+                    <th>Linux Ubuntu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Licença</strong></td><td>Proprietário (Pago)</td><td>Código Aberto (Gratuito)</td></tr>
+                <tr><td><strong>Usuário Administrador</strong></td><td>Administrador</td><td>Root</td></tr>
+                <tr><td><strong>Sistema de Arquivos (Unidades)</strong></td><td>Letras de unidade (C:, D:, E:)</td><td>Árvore de diretórios a partir de "/" (raiz)</td></tr>
+                <tr><td><strong>Terminal / Linha de Comando</strong></td><td>Prompt de Comando (cmd) ou PowerShell</td><td>Terminal (Bash)</td></tr>
+                <tr><td><strong>Interface Gráfica Padrão</strong></td><td>Windows Desktop (menu Iniciar)</td><td>GNOME (no Ubuntu)</td></tr>
+                <tr><td><strong>Comando para listar arquivos</strong></td><td>dir</td><td>ls</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Linux é código aberto:</strong> Não é pago. O Windows é proprietário e pago.</li>
+                <li><strong>Usuário Root:</strong> É o administrador do Linux. A banca vai tentar chamar de "Administrador" ou "Superusuário".</li>
+                <li><strong>Sistema de arquivos:</strong> O Windows usa letras (C:, D:). O Linux usa uma árvore única com a raiz "/".</li>
+                <li><strong>Comandos Linux:</strong> <strong>ls</strong> = listar, <strong>cd</strong> = mudar de pasta, <strong>mkdir</strong> = criar pasta, <strong>rm</strong> = remover.</li>
+                <li><strong>Windows Update:</strong> É a ferramenta de atualização do Windows. Não é antivírus.</li>
+                <li><strong>Ubuntu:</strong> É uma distribuição Linux. A banca pode perguntar se o Ubuntu é um sistema operacional (sim) ou uma distribuição do Linux (sim).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Sobre o Linux Ubuntu, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Linux é um sistema de código aberto e gratuito, diferentemente do Windows, que é proprietário.')">É um sistema operacional proprietário e pago.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Linux Ubuntu é um sistema operacional de código aberto (open source), o que significa que seu código-fonte é público e gratuito.')">É um sistema operacional de código aberto e gratuito.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Ubuntu é um sistema operacional (distribuição Linux), não um aplicativo de escritório.')">É um aplicativo de escritório, semelhante ao Word.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. No Linux, o usuário que possui controle total sobre o sistema (equivalente ao Administrador do Windows) é chamado de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O usuário "root" é o superusuário do Linux, com poder total sobre o sistema.')">Root.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Admin" é um termo genérico, mas no Linux o superusuário é o "root".')">Admin.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Master" não é o termo usado no Linux.')">Master.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual comando do Linux é utilizado para listar os arquivos e pastas de um diretório?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "dir" é o comando equivalente no Windows (Prompt de Comando).')">dir</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O comando "ls" (list) é usado no Linux para listar os arquivos e diretórios.')">ls</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "cd" é o comando para mudar de diretório.')">cd</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre a estrutura de arquivos, qual é a principal diferença entre Windows e Linux?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Windows usa letras de unidade (C:, D:, E:), enquanto o Linux usa uma estrutura de árvore única com a raiz representada por "/".')">O Windows usa letras de unidade (C:, D:); o Linux usa uma árvore única a partir da raiz "/".</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: o Windows usa letras e o Linux usa a raiz "/".')">O Linux usa letras de unidade (C:, D:); o Windows usa uma árvore única a partir da raiz "/".</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os dois sistemas possuem estrutura de arquivos, mas com formas diferentes de organização.')">Nenhum dos dois sistemas possui estrutura de arquivos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. No Windows 10/11, qual ferramenta é responsável por baixar e instalar as atualizações de segurança do sistema?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Windows Defender é o antivírus nativo do Windows, não a ferramenta de atualização.')">Windows Defender.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Windows Update é a ferramenta oficial da Microsoft para baixar e instalar atualizações de segurança e do sistema.')">Windows Update.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Painel de Controle é uma ferramenta de configurações gerais, não de atualizações automáticas.')">Painel de Controle.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: AMBIENTES OPERACIONAIS -->

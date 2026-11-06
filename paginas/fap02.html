@@ -1,35 +1,233 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resumo — Funções Administrativas (PODC) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Resumo — Funções Administrativas (PODC)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>fap02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: PLANEJAMENTO, ORGANIZAÇÃO, DIREÇÃO E CONTROLE -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <div class="header-modulo">
+        <h1>Planejamento, Organização, Direção e Controle</h1>
+        <p>As Quatro Funções Clássicas da Administração (PODC) – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+    <div class="nav-menu">
+        <a href="#conceito">Ciclo PODC</a>
+        <a href="#planejamento">Planejamento</a>
+        <a href="#organizacao">Organização</a>
+        <a href="#direcao">Direção</a>
+        <a href="#controle">Controle</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+    
+    <div id="conceito" class="secao">
+        <h2>1. O Ciclo PODC (Administração como Processo)</h2>
+        <div class="card">
+            <p>A Administração é um processo contínuo e cíclico, composto por quatro funções fundamentais. São elas:</p>
+            <div class="box-formula">
+                P (Planejar) → O (Organizar) → D (Dirigir) → C (Controlar) → (reinicia o ciclo)
+            </div>
+            <ul>
+                <li><strong>Planejar:</strong> Definir objetivos e traçar o caminho (o que fazer, como fazer, quando fazer).</li>
+                <li><strong>Organizar:</strong> Estruturar recursos, dividir tarefas e criar órgãos para executar o plano.</li>
+                <li><strong>Dirigir:</strong> Liderar, motivar e orientar as pessoas para executar as tarefas.</li>
+                <li><strong>Controlar:</strong> Monitorar e verificar se o que foi planejado está sendo executado corretamente.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="planejamento" class="secao">
+        <h2>2. Planejamento</h2>
+        <div class="card">
+            <p>O planejamento é a <strong>função primordial</strong> (a primeira do ciclo). Ele define o que se pretende alcançar e como. É a "ponte" entre o presente e o futuro.</p>
+            
+            <h3>Principais Características:</h3>
+            <ul>
+                <li>É a função que <strong>precede</strong> todas as outras.</li>
+                <li>Define <strong>objetivos</strong> (o que se quer) e <strong>metas</strong> (resultados quantificáveis).</li>
+                <li>Elabora <strong>planos</strong> de ação.</li>
+                <li>Minimiza riscos e incertezas.</li>
+            </ul>
+
+            <h3>Níveis de Planejamento:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nível</th>
+                        <th>Responsável</th>
+                        <th>Características</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Estratégico</strong></td><td>Alta direção (Presidente, Secretário)</td><td>Longo prazo. Define a missão, visão e objetivos gerais da organização.</td></tr>
+                    <tr><td><strong>Tático</strong></td><td>Gerentes / Coordenadores</td><td>Médio prazo. Traduz o plano estratégico em planos departamentais (ex: plano de marketing).</td></tr>
+                    <tr><td><strong>Operacional</strong></td><td>Supervisores / Chefes</td><td>Curto prazo. Detalha as tarefas do dia a dia (ex: cronograma semanal).</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="organizacao" class="secao">
+        <h2>3. Organização</h2>
+        <div class="card">
+            <p>Organizar é a função que <strong>estrutura</strong> a empresa. Ela pega o que foi definido no planejamento e cria a "máquina" necessária para executar. Envolve:</p>
+            <ul>
+                <li><strong>Divisão do trabalho:</strong> Separar tarefas em partes menores (especialização).</li>
+                <li><strong>Departamentalização:</strong> Agrupar funções em departamentos (ex: RH, Financeiro, Compras).</li>
+                <li><strong>Cadeia de comando (Hierarquia):</strong> Definir quem manda em quem.</li>
+                <li><strong>Alocação de recursos:</strong> Distribuir pessoas, materiais e dinheiro.</li>
+            </ul>
+
+            <h3>Principais Estruturas Organizacionais:</h3>
+            <ul>
+                <li><strong>Linear (Militar):</strong> Hierarquia rígida, cada subordinado tem apenas um chefe. Autoridade centralizada. Vantagem: clareza. Desvantagem: rigidez e pouca especialização.</li>
+                <li><strong>Funcional:</strong> Baseada na especialização. Cada funcionário pode ter mais de um chefe (um para cada função). Vantagem: especialização. Desvantagem: conflito de ordens.</li>
+                <li><strong>Linha-Staff:</strong> Combina a linear (autoridade) com órgãos de assessoria (staff) que apenas aconselham, sem poder de mando.</li>
+                <li><strong>Matricial:</strong> Combina a estrutura funcional com a de projetos. O funcionário tem dois chefes (o chefe do projeto e o chefe funcional). Vantagem: flexibilidade. Desvantagem: ambiguidade de comando.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="direcao" class="secao">
+        <h2>4. Direção</h2>
+        <div class="card">
+            <p>A direção é a função que <strong>coloca as pessoas em ação</strong>. É a função que lida diretamente com as pessoas. Ela envolve:</p>
+            <ul>
+                <li><strong>Liderança:</strong> Influenciar e motivar as pessoas a atingirem os objetivos.</li>
+                <li><strong>Motivação:</strong> Criar condições para que as pessoas se sintam estimuladas a trabalhar.</li>
+                <li><strong>Comunicação:</strong> Transmitir informações de forma clara e eficiente.</li>
+                <li><strong>Orientação e supervisão:</strong> Guiar o trabalho diário dos subordinados.</li>
+            </ul>
+            <p><strong>Importante:</strong> A direção é a função que está no <strong>nível operacional</strong>, lidando com o "aqui e agora". A FAFIPA pode cobrar que a direção é a função que trata diretamente com as <strong>pessoas</strong>, enquanto as outras lidam mais com recursos e processos.</p>
+        </div>
+    </div>
+
+    <div id="controle" class="secao">
+        <h2>5. Controle</h2>
+        <div class="card">
+            <p>O controle é a função que <strong>verifica</strong> se o que foi planejado está sendo executado corretamente. É o "acompanhamento" do processo. Ele envolve:</p>
+            
+            <h3>As 4 Fases do Controle:</h3>
+            <ol>
+                <li><strong>Estabelecimento de padrões:</strong> Definir o que se espera (metas, indicadores de desempenho).</li>
+                <li><strong>Monitoramento do desempenho:</strong> Medir o que está sendo feito.</li>
+                <li><strong>Comparação do desempenho com o padrão:</strong> Verificar se o que foi feito corresponde ao que foi planejado.</li>
+                <li><strong>Ação corretiva:</strong> Se houver desvio, corrigir o rumo (ajustar o plano ou a execução).</li>
+            </ol>
+
+            <h3>Tipos de Controle:</h3>
+            <ul>
+                <li><strong>Prévio (Preventivo):</strong> Feito antes da execução, para evitar problemas. Ex: vistoria de materiais antes da compra.</li>
+                <li><strong>Simultâneo (Concorrente):</strong> Feito durante a execução. Ex: um supervisor acompanhando a linha de produção.</li>
+                <li><strong>Posterior (Corretivo):</strong> Feito após a execução, para corrigir erros. Ex: auditoria de contas após o balanço.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca pode dizer que o controle é a última etapa e que não se relaciona com o planejamento. <strong>Errado!</strong> O controle é a <strong>verificação do planejamento</strong>. Eles são interdependentes: sem planejamento não há controle, e sem controle o planejamento é só uma intenção.
+        </div>
+    </div>
+
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Ordem do ciclo:</strong> Planejar → Organizar → Dirigir → Controlar.</li>
+                <li><strong>Planejamento é a primeira função:</strong> Ela precede todas as outras.</li>
+                <li><strong>Direção:</strong> É a função que lida diretamente com <strong>pessoas</strong> (liderança e motivação).</li>
+                <li><strong>Controle:</strong> É a função que <strong>verifica</strong> se o planejamento está sendo cumprido. Possui 4 fases (padrão, monitoramento, comparação e ação corretiva).</li>
+                <li><strong>Estruturas organizacionais:</strong> Linear (chefia única), Funcional (vários chefes especializados), Linha-Staff (chefia + assessoria) e Matricial (dois chefes: projeto e função).</li>
+                <li><strong>Tipos de controle:</strong> Prévio (antes), Simultâneo (durante), Posterior (depois).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. Qual é a função administrativa que define os objetivos e traça os planos de ação, sendo a primeira do ciclo administrativo?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Planejamento é a função primordial que define objetivos e traça os caminhos para alcançá-los.')">Planejamento.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Organização estrutura os recursos, mas vem depois do Planejamento.')">Organização.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Controle verifica a execução, sendo a última etapa do ciclo.')">Controle.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. A função administrativa que lida diretamente com as pessoas, envolvendo liderança, motivação e comunicação, é a:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Planejamento lida com objetivos e planos, não diretamente com as pessoas.')">Planejamento.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Direção é a função que coloca as pessoas em ação, envolvendo liderança, motivação e comunicação.')">Direção.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Controle lida com a verificação de resultados, não com a liderança de pessoas.')">Controle.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. A estrutura organizacional em que cada funcionário pode ter mais de um chefe (um para cada função específica) é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Na estrutura Linear, cada subordinado tem apenas um chefe.')">Linear.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A estrutura Funcional é baseada na especialização, onde o funcionário pode ter múltiplos chefes (um para cada função).')">Funcional.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A estrutura Linha-Staff combina a hierarquia linear com órgãos de assessoria, mas a chefia ainda é única.')">Linha-Staff.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>4. Quais são as quatro fases do processo de Controle?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As fases são: estabelecimento de padrões, monitoramento do desempenho, comparação com o padrão e ação corretiva.')">Estabelecimento de padrões, monitoramento, comparação e ação corretiva.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa é a ordem do ciclo PODC (Planejar, Organizar, Dirigir, Controlar).')">Planejar, organizar, dirigir e controlar.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As fases do controle são padrão, monitoramento, comparação e ação corretiva.')">Definir, executar, verificar e punir.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>5. O tipo de controle realizado ANTES da execução, com o objetivo de evitar problemas futuros, é chamado de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O controle prévio (ou preventivo) é realizado antes da execução, como uma forma de prevenção.')">Controle prévio (preventivo).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O controle simultâneo é feito durante a execução.')">Controle simultâneo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O controle posterior é feito após a execução.')">Controle posterior.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: PLANEJAMENTO, ORGANIZAÇÃO, DIREÇÃO E CONTROLE -->

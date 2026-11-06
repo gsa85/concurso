@@ -1,35 +1,213 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Busca e Pesquisa na Web — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Busca e Pesquisa na Web</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf13</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: BUSCA E PESQUISA NA WEB -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Busca e Pesquisa na Web</h1>
+        <p>Motores de Busca, Operadores e Deep Web – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#motores">Motores de Busca</a>
+        <a href="#operadores">Operadores de Busca</a>
+        <a href="#deepweb">Surface, Deep e Dark Web</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: MOTORES DE BUSCA -->
+    <div id="motores" class="secao">
+        <h2>1. Motores de Busca (Search Engines)</h2>
+        <div class="card">
+            <p>São sistemas que rastreiam a internet e indexam páginas para que o usuário possa encontrá-las por meio de palavras-chave.</p>
+            
+            <h3>Principais Motores:</h3>
+            <ul>
+                <li><strong>Google:</strong> O mais utilizado no mundo. Possui o algoritmo de busca mais avançado e oferece diversos serviços integrados (Gmail, Drive, Maps).</li>
+                <li><strong>Bing:</strong> Motor de busca da Microsoft. É o padrão no navegador Edge e no Windows.</li>
+                <li><strong>Yahoo!:</strong> Um dos mais antigos, hoje utiliza a tecnologia do Bing para os resultados de busca.</li>
+                <li><strong>DuckDuckGo:</strong> Focado na <strong>privacidade</strong>. Ele não rastreia as pesquisas do usuário e não cria perfis de navegação.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: OPERADORES DE BUSCA -->
+    <div id="operadores" class="secao">
+        <h2>2. Operadores de Busca (A Pegadinha da FAFIPA)</h2>
+        <div class="card">
+            <p>Os operadores são comandos especiais que refinam a pesquisa no Google. A banca adora testar o significado de cada símbolo:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Função</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>" " (Aspas)</strong></td><td>Busca a <strong>frase exata</strong> ou expressão literal.</td><td>"concurso público"</td></tr>
+                    <tr><td><strong>- (Menos)</strong></td><td><strong>Exclui</strong> uma palavra da busca.</td><td>carro -usado (busca carro, mas não usado)</td></tr>
+                    <tr><td><strong>site:</strong></td><td>Busca apenas dentro de um <strong>site específico</strong>.</td><td>site:gov.br concursos</td></tr>
+                    <tr><td><strong>filetype:</strong></td><td>Busca por um <strong>tipo de arquivo</strong> específico.</td><td>filetype:pdf edital</td></tr>
+                    <tr><td><strong>* (Asterisco)</strong></td><td>Funciona como <strong>curinga</strong> (substitui qualquer palavra).</td><td>"melhor * do mundo"</td></tr>
+                    <tr><td><strong>OR ou |</strong></td><td>Busca por um termo <strong>OU</strong> outro.</td><td>gato OR cachorro</td></tr>
+                    <tr><td><strong>.. (Dois pontos)</strong></td><td>Busca por um <strong>intervalo de números</strong>.</td><td>notebook 1000..2000</td></tr>
+                    <tr><td><strong>@</strong></td><td>Busca em <strong>redes sociais</strong>.</td><td>@profricardoblanco</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> As aspas duplas <strong>" "</strong> são o operador mais cobrado. Elas servem para buscar a <strong>frase exata</strong>. Se você digitar <em>concurso público</em> sem aspas, o Google pode retornar páginas que tenham apenas "concurso" ou apenas "público". Com aspas, ele busca a expressão exata.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: SURFACE, DEEP E DARK WEB -->
+    <div id="deepweb" class="secao">
+        <h2>3. Surface Web, Deep Web e Dark Web</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Surface Web (Web de Superfície):</strong> É a parte da internet que é <strong>indexada pelos motores de busca</strong> (Google, Bing). É o que acessamos normalmente.</li>
+                <li><strong>Deep Web (Web Profunda):</strong> É a parte da internet que <strong>NÃO é indexada</strong> pelos motores de busca. Inclui sites de bancos, e-mails, intranets de empresas e bases de dados acadêmicos. <strong>Não é ilegal</strong>, é apenas conteúdo privado ou restrito.</li>
+                <li><strong>Dark Web (Web Escura):</strong> É uma pequena parte da Deep Web que exige softwares específicos (como o Tor) para ser acessada. É frequentemente associada a atividades ilegais (comércio de drogas, armas, etc.).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Deep Web</strong> NÃO é a mesma coisa que a <strong>Dark Web</strong>. A Deep Web é a maior parte da internet (conteúdo privado). A Dark Web é uma pequena fração, acessível apenas com ferramentas específicas (Tor), geralmente associada a ilegalidades.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Aspas (" "):</strong> Busca a frase exata.</li>
+                <li><strong>Menos (-):</strong> Exclui a palavra da busca.</li>
+                <li><strong>site:</strong> Busca apenas dentro de um site específico (ex: site:gov.br).</li>
+                <li><strong>filetype:</strong> Busca por tipo de arquivo (ex: filetype:pdf).</li>
+                <li><strong>DuckDuckGo:</strong> Focado em privacidade, não rastreia o usuário.</li>
+                <li><strong>Deep Web:</strong> Conteúdo não indexado (e-mails, intranets, bancos). Não é sinônimo de ilegalidade.</li>
+                <li><strong>Dark Web:</strong> Exige Tor, associada a conteúdo ilegal.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. No Google, qual operador é utilizado para buscar uma frase exata ou expressão literal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O sinal de menos (-) exclui palavras da busca.')">- (menos)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As aspas duplas (" ") buscam a frase exata, ou seja, a expressão literal.')">" " (aspas)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O asterisco (*) funciona como curinga, substituindo palavras.')">* (asterisco)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Se um usuário deseja buscar apenas arquivos no formato PDF sobre "concurso público", qual comando ele deve utilizar no Google?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O operador filetype:pdf busca apenas arquivos com a extensão .pdf.')">concurso público filetype:pdf</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O operador site: busca dentro de um site específico, não por tipo de arquivo.')">concurso público site:pdf</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O operador - exclui palavras, não busca por tipo de arquivo.')">concurso público -pdf</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a diferença entre a Deep Web e a Dark Web?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Deep Web é todo conteúdo não indexado pelos motores de busca (e-mails, intranets, bancos). A Dark Web é uma pequena parte da Deep Web que exige softwares específicos (como Tor) para ser acessada.')">A Deep Web é o conteúdo não indexado; a Dark Web exige softwares específicos (como Tor) para acesso.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Deep Web não é sinônimo de Dark Web. A Deep Web é muito maior e inclui conteúdo privado comum.')">A Deep Web é a mesma coisa que a Dark Web.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: a Deep Web é conteúdo privado não indexado, e a Dark Web é uma parte menor que exige ferramentas específicas.')">A Dark Web é o conteúdo não indexado; a Deep Web exige softwares específicos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é o principal diferencial do motor de busca DuckDuckGo?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O DuckDuckGo não é o mais utilizado do mundo; o Google é.')">Ser o motor de busca mais utilizado do mundo.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O DuckDuckGo é focado na privacidade, não rastreando as pesquisas do usuário e não criando perfis de navegação.')">Focar na privacidade, não rastreando as pesquisas dos usuários.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O DuckDuckGo é um motor de busca, não um navegador (como o Chrome ou Firefox).')">Ser um navegador de internet, e não um motor de busca.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. No Google, se o usuário digitar <strong>carro -usado</strong>, o que a busca fará?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O sinal de menos (-) antes de uma palavra exclui essa palavra dos resultados da busca. Portanto, a busca retornará resultados sobre "carro", mas excluirá os que contenham a palavra "usado".')">Buscará por "carro", mas excluirá os resultados que contenham a palavra "usado".</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O sinal de menos (-) exclui a palavra "usado", e não a busca por "carro".')">Buscará apenas por "usado", excluindo "carro".</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O sinal de menos (-) não soma termos; ele exclui.')">Buscará por "carro" e "usado" juntos, como se fosse uma soma.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: BUSCA E PESQUISA NA WEB -->

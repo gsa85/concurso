@@ -1,35 +1,355 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>por06 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>por06</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: EMPREGO DAS CLASSES DE PALAVRAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Classes de Palavras</h1>
+        <p>As 10 Classes Gramaticais – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#visao">Visão Geral</a>
+        <a href="#sub-adj">Substantivo e Adjetivo</a>
+        <a href="#pronom">Pronomes</a>
+        <a href="#verbos">Verbos</a>
+        <a href="#adv-conj">Advérbios e Conjunções</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: VISÃO GERAL -->
+    <div id="visao" class="secao">
+        <h2>1. As 10 Classes Gramaticais</h2>
+        <div class="card">
+            <p>As palavras da língua portuguesa são classificadas em 10 classes. Elas podem ser <strong>variáveis</strong> (mudam de forma) ou <strong>invariáveis</strong> (não mudam).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Classe</th>
+                        <th>Função Básica</th>
+                        <th>Varia?</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Substantivo</strong></td><td>Nomeia os seres</td><td>Sim</td><td>casa, João, amor</td></tr>
+                    <tr><td><strong>Artigo</strong></td><td>Determina o substantivo</td><td>Sim</td><td>o, a, um, uma</td></tr>
+                    <tr><td><strong>Adjetivo</strong></td><td>Caracteriza o substantivo</td><td>Sim</td><td>bonito, alto, feliz</td></tr>
+                    <tr><td><strong>Numeral</strong></td><td>Indica quantidade/ordem</td><td>Sim</td><td>um, dois, primeiro</td></tr>
+                    <tr><td><strong>Pronome</strong></td><td>Substitui/acompanha o nome</td><td>Sim</td><td>ele, meu, este, que</td></tr>
+                    <tr><td><strong>Verbo</strong></td><td>Indica ação, estado ou fenômeno</td><td>Sim</td><td>correr, ser, chover</td></tr>
+                    <tr><td><strong>Advérbio</strong></td><td>Modifica verbo, adjetivo ou advérbio</td><td>Não</td><td>muito, aqui, ontem</td></tr>
+                    <tr><td><strong>Preposição</strong></td><td>Liga termos</td><td>Não</td><td>de, em, para, com</td></tr>
+                    <tr><td><strong>Conjunção</strong></td><td>Liga orações/termos</td><td>Não</td><td>e, mas, porque, se</td></tr>
+                    <tr><td><strong>Interjeição</strong></td><td>Expressa emoção</td><td>Não</td><td>Ah!, Oba!, Ufa!</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: SUBSTANTIVO E ADJETIVO -->
+    <div id="sub-adj" class="secao">
+        <h2>2. Substantivo e Adjetivo</h2>
+        <div class="card">
+            <h3>Substantivo</h3>
+            <p>É a classe que dá nome aos seres, objetos, lugares, sentimentos, ações. Classifica-se em:</p>
+            <ul>
+                <li><strong>Comum:</strong> Nomeia seres de forma genérica. Ex: menino, cidade.</li>
+                <li><strong>Próprio:</strong> Nomeia um ser específico. Ex: Pedro, Curitiba.</li>
+                <li><strong>Concreto:</strong> Existe por si só (matéria). Ex: mesa, ar, fada.</li>
+                <li><strong>Abstrato:</strong> Depende de outro ser para existir (sentimentos, estados). Ex: amor, beleza, tristeza.</li>
+                <li><strong>Simples:</strong> Um só radical. Ex: flor.</li>
+                <li><strong>Composto:</strong> Mais de um radical. Ex: girassol, guarda-chuva.</li>
+                <li><strong>Primitivo:</strong> Não deriva de outra palavra. Ex: pedra, livro.</li>
+                <li><strong>Derivado:</strong> Deriva de outra palavra. Ex: pedreiro (de pedra), livraria (de livro).</li>
+                <li><strong>Coletivo:</strong> Nomeia um conjunto. Ex: cardume (peixes), matilha (cães).</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Adjetivo</h3>
+            <p>Caracteriza o substantivo, indicando qualidade, estado, aparência, origem.</p>
+            <p><strong>Locução Adjetiva:</strong> É a expressão formada por preposição + substantivo que equivale a um adjetivo. Ex: "de ouro" = áureo; "de mãe" = materno; "de leão" = leonino.</p>
+            <p><strong>Grau dos adjetivos:</strong></p>
+            <ul>
+                <li><strong>Comparativo:</strong> de igualdade (tão... quanto), de superioridade (mais... que), de inferioridade (menos... que).</li>
+                <li><strong>Superlativo:</strong> absoluto (muito bonito / boníssimo) ou relativo (o mais bonito de todos).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PRONOMES -->
+    <div id="pronom" class="secao">
+        <h2>3. Pronomes (Os Mais Cobrados)</h2>
+        <div class="card">
+            <p>O pronome substitui ou acompanha o substantivo. Os tipos mais cobrados em prova são:</p>
+
+            <h3>Pronomes Pessoais</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pessoa</th>
+                        <th>Retos (sujeito)</th>
+                        <th>Oblíquos (complemento)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1ª singular</td><td>eu</td><td>me, mim, comigo</td></tr>
+                    <tr><td>2ª singular</td><td>tu</td><td>te, ti, contigo</td></tr>
+                    <tr><td>3ª singular</td><td>ele/ela</td><td>o, a, lhe, se, si, consigo</td></tr>
+                    <tr><td>1ª plural</td><td>nós</td><td>nos, conosco</td></tr>
+                    <tr><td>2ª plural</td><td>vós</td><td>vos, convosco</td></tr>
+                    <tr><td>3ª plural</td><td>eles/elas</td><td>os, as, lhes, se, si, consigo</td></tr>
+                </tbody>
+            </table>
+            <p><strong>Regra de ouro:</strong> Depois de preposição, usamos os oblíquos tônicos (mim, ti, ele, nós, vós, eles). Ex: "Este livro é para <strong>mim</strong>" (correto), e não "para eu" (a não ser que o "eu" seja sujeito de verbo: "Este livro é para <strong>eu</strong> ler").</p>
+        </div>
+
+        <div class="card">
+            <h3>Pronomes Possessivos</h3>
+            <p>Indicam posse: meu, minha, teu, tua, seu, sua, nosso, nossa, vosso, vossa.</p>
+            <p><strong>Atenção:</strong> O pronome possessivo pode ter valor afetivo ou de respeito. Ex: "Meu filho chegou" (afetivo); "Sua Excelência" (respeito).</p>
+        </div>
+
+        <div class="card">
+            <h3>Pronomes Demonstrativos</h3>
+            <p>Indicam a posição do objeto no espaço/tempo:</p>
+            <ul>
+                <li><strong>Este/Esta/Isto:</strong> Perto do emissor (quem fala).</li>
+                <li><strong>Esse/Essa/Isso:</strong> Perto do receptor (com quem fala).</li>
+                <li><strong>Aquele/Aquela/Aquilo:</strong> Longe de ambos.</li>
+            </ul>
+            <p><strong>No texto:</strong> "Este" anuncia o que vai ser dito (catáfora); "Esse" retoma o que já foi dito (anáfora). Ex: "<strong>Este</strong> é o meu recado: estude muito." / "Estude muito. <strong>Esse</strong> é o recado."</p>
+        </div>
+
+        <div class="card">
+            <h3>Pronomes Relativos</h3>
+            <p>Retomam um termo anterior (antecedente). Os principais: que, o qual, a qual, cujo, cuja, onde, quem.</p>
+            <ul>
+                <li><strong>Que:</strong> Retoma coisas ou pessoas. Ex: "O livro <strong>que</strong> li é bom."</li>
+                <li><strong>Cujo/Cuja:</strong> Indica posse (não pode ser seguido de artigo). Ex: "O aluno <strong>cujo</strong> pai é médico passou."</li>
+                <li><strong>Onde:</strong> Só para lugar fixo. Ex: "A casa <strong>onde</strong> moro é grande."</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: VERBOS -->
+    <div id="verbos" class="secao">
+        <h2>4. Verbos (Tempos e Modos)</h2>
+        <div class="card">
+            <p>O verbo é a classe mais complexa. Ele varia em <strong>pessoa</strong> (1ª, 2ª, 3ª), <strong>número</strong> (singular, plural), <strong>tempo</strong> (presente, passado, futuro), <strong>modo</strong> (indicativo, subjuntivo, imperativo) e <strong>voz</strong> (ativa, passiva, reflexiva).</p>
+
+            <h3>Modos Verbais</h3>
+            <ul>
+                <li><strong>Indicativo:</strong> Expressa certeza, fato real. Ex: "Eu <strong>estudo</strong> todos os dias."</li>
+                <li><strong>Subjuntivo:</strong> Expressa dúvida, possibilidade, desejo. Ex: "Se eu <strong>estudasse</strong>, passaria."</li>
+                <li><strong>Imperativo:</strong> Expressa ordem, pedido, conselho. Ex: "<strong>Estude</strong> mais!"</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Principais Tempos do Indicativo (Os Mais Cobrados)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tempo</th>
+                        <th>Ideia</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Presente</strong></td><td>Ação habitual ou atual</td><td>Eu estudo.</td></tr>
+                    <tr><td><strong>Pretérito Perfeito</strong></td><td>Ação concluída no passado</td><td>Eu estudei ontem.</td></tr>
+                    <tr><td><strong>Pretérito Imperfeito</strong></td><td>Ação contínua/habitual no passado</td><td>Eu estudava todos os dias.</td></tr>
+                    <tr><td><strong>Pretérito Mais-que-perfeito</strong></td><td>Ação anterior a outra no passado</td><td>Eu estudara antes da prova.</td></tr>
+                    <tr><td><strong>Futuro do Presente</strong></td><td>Ação que vai acontecer</td><td>Eu estudarei amanhã.</td></tr>
+                    <tr><td><strong>Futuro do Pretérito</strong></td><td>Ação condicional/incerta</td><td>Eu estudaria se pudesse.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A diferença entre <strong>Pretérito Perfeito</strong> ("estudei" - ação pontual e concluída) e <strong>Pretérito Imperfeito</strong> ("estudava" - ação contínua/habitual) é cobradíssima. Leia o contexto para identificar qual usar!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: ADVÉRBIOS E CONJUNÇÕES -->
+    <div id="adv-conj" class="secao">
+        <h2>5. Advérbios, Preposições e Conjunções</h2>
+        <div class="card">
+            <h3>Advérbios</h3>
+            <p>Modificam verbo, adjetivo ou outro advérbio, indicando circunstância. São <strong>invariáveis</strong>.</p>
+            <ul>
+                <li><strong>Tempo:</strong> hoje, ontem, amanhã, sempre, nunca.</li>
+                <li><strong>Lugar:</strong> aqui, ali, perto, longe, acima.</li>
+                <li><strong>Modo:</strong> bem, mal, rapidamente (terminados em -mente).</li>
+                <li><strong>Intensidade:</strong> muito, pouco, bastante.</li>
+                <li><strong>Dúvida:</strong> talvez, provavelmente, possivelmente.</li>
+                <li><strong>Negação:</strong> não, nunca, jamais.</li>
+                <li><strong>Afirmação:</strong> sim, certamente, realmente.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Preposições</h3>
+            <p>Ligam termos, estabelecendo relação de dependência. Principais: de, a, do, da, em, no, na, para, por, com, sem, sob, sobre, entre.</p>
+        </div>
+
+        <div class="card">
+            <h3>Conjunções (Coordenativas e Subordinativas)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Conjunções</th>
+                        <th>Ideia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Aditivas</strong></td><td>e, nem, também</td><td>Adição</td></tr>
+                    <tr><td><strong>Adversativas</strong></td><td>mas, porém, contudo</td><td>Oposição</td></tr>
+                    <tr><td><strong>Alternativas</strong></td><td>ou, ora...ora</td><td>Alternância</td></tr>
+                    <tr><td><strong>Conclusivas</strong></td><td>logo, portanto, assim</td><td>Conclusão</td></tr>
+                    <tr><td><strong>Explicativas</strong></td><td>porque, pois, já que</td><td>Explicação</td></tr>
+                    <tr><td><strong>Causais</strong></td><td>porque, como, já que</td><td>Causa</td></tr>
+                    <tr><td><strong>Condicionais</strong></td><td>se, caso, desde que</td><td>Condição</td></tr>
+                    <tr><td><strong>Concessivas</strong></td><td>embora, ainda que, mesmo que</td><td>Concessão</td></tr>
+                    <tr><td><strong>Temporais</strong></td><td>quando, assim que, enquanto</td><td>Tempo</td></tr>
+                    <tr><td><strong>Finais</strong></td><td>para que, a fim de que</td><td>Finalidade</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Substantivo Abstrato vs. Concreto:</strong> "Amor" é abstrato (depende de alguém sentir). "Mesa" é concreto (existe por si). "Fada" é concreto (existe no imaginário).</li>
+                <li><strong>Pronomes "mim" vs. "eu":</strong> Depois de preposição, sem verbo, use "mim" (para mim). Se houver verbo, use "eu" (para eu fazer).</li>
+                <li><strong>Este vs. Esse:</strong> "Este" anuncia o que vai ser dito (catáfora). "Esse" retoma o que já foi dito (anáfora).</li>
+                <li><strong>Pretérito Perfeito vs. Imperfeito:</strong> Perfeito = ação concluída (estudei ontem). Imperfeito = ação contínua (estudava todos os dias).</li>
+                <li><strong>Conjunção "mas" vs. "mais":</strong> "Mas" = oposição (ideia contrária). "Mais" = quantidade (contrário de menos).</li>
+                <li><strong>Advérbio terminado em -mente:</strong> É invariável! "Ela falou rapidamente", e não "rapidamentes".</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Na frase "O menino comprou um livro", as palavras "menino" e "livro" pertencem a qual classe gramatical?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Menino" e "livro" são substantivos, pois nomeiam seres e objetos.')">Substantivo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Adjetivo caracteriza o substantivo (ex: menino alto).')">Adjetivo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Verbo indica ação, estado ou fenômeno (ex: comprou).')">Verbo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Na frase "Este é o meu recado: estude muito.", o pronome "Este" está sendo usado para:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Este" NÃO retoma o que já foi dito. Ele anuncia o que ainda será dito.')">Retomar o que já foi dito anteriormente.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Este" anuncia o que ainda será dito (catáfora). Já o pronome "esse" retoma o que já foi dito (anáfora).')">Anunciar o que ainda será dito (catáfora).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Este" é um pronome demonstrativo, não um pronome possessivo.')">Indicar posse sobre o substantivo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Na frase "Eu estudava todos os dias", o verbo "estudava" está em qual tempo verbal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O pretérito perfeito seria "estudei", indicando ação pontual e concluída.')">Pretérito Perfeito.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O verbo "estudava" indica ação contínua/habitual no passado, o que caracteriza o Pretérito Imperfeito.')">Pretérito Imperfeito.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O futuro do presente seria "estudarei".')">Futuro do Presente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Assinale a alternativa em que o uso do pronome está CORRETO:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O correto é "para mim", pois "mim" é pronome oblíquo usado após preposição.')">Este livro é para eu.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Após preposição, sem verbo, usamos o pronome oblíquo "mim". Se houvesse verbo, seria "para eu ler".')">Este livro é para mim.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O pronome correto é "mim" (após preposição, sem verbo).')">Este livro é para meu.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Na frase "Ele é muito inteligente", a palavra "muito" pertence a qual classe gramatical?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Muito" não é adjetivo, pois não caracteriza um substantivo. Aqui, ele modifica o adjetivo "inteligente".')">Adjetivo.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Muito" é um advérbio de intensidade, pois está modificando o adjetivo "inteligente".')">Advérbio.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Muito" não é pronome, pois não substitui nem acompanha o substantivo.')">Pronome.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: EMPREGO DAS CLASSES DE PALAVRAS -->

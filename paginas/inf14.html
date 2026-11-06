@@ -1,35 +1,219 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🤖 10. Inteligência Artificial Generativa (ChatGPT, Copilot, Gemini) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>🤖 10. Inteligência Artificial Generativa (ChatGPT, Copilot, Gemini)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf14</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: INTELIGÊNCIA ARTIFICIAL E FERRAMENTAS GENERATIVAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Inteligência Artificial</h1>
+        <p>Conceitos e Ferramentas Generativas (ChatGPT, Copilot, Gemini) – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">Conceitos de IA</a>
+        <a href="#ferramentas">Ferramentas Generativas</a>
+        <a href="#riscos">Riscos e Segurança</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS DE IA -->
+    <div id="conceitos" class="secao">
+        <h2>1. Conceitos Fundamentais de IA</h2>
+        <div class="card">
+            <p>Para entender as ferramentas, é preciso diferenciar três conceitos que são frequentemente confundidos:</p>
+            <ul>
+                <li><strong>Inteligência Artificial (IA):</strong> É o campo amplo da ciência da computação que busca criar máquinas capazes de simular a inteligência humana (raciocínio, aprendizado, tomada de decisão).</li>
+                <li><strong>Machine Learning (Aprendizado de Máquina):</strong> É um subcampo da IA. Em vez de serem programadas com regras fixas, as máquinas <strong>aprendem padrões a partir de grandes volumes de dados</strong>.</li>
+                <li><strong>IA Generativa:</strong> É um tipo específico de IA (geralmente baseada em Machine Learning) capaz de <strong>criar conteúdo novo</strong> (textos, imagens, vídeos, áudios, códigos) a partir de comandos do usuário (prompts).</li>
+            </ul>
+            <div class="box-formula">
+                IA (Conceito amplo) > Machine Learning (Aprende com dados) > IA Generativa (Cria conteúdo novo)
+            </div>
+        </div>
+        <div class="card">
+            <h3>Como funciona a IA Generativa?</h3>
+            <p>Ela é treinada com uma quantidade massiva de dados (textos, imagens) e aprende a prever a próxima palavra ou elemento mais provável em uma sequência. Ela não "pensa" como um humano, mas sim calcula probabilidades estatísticas para gerar uma resposta que faça sentido.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: FERRAMENTAS GENERATIVAS -->
+    <div id="ferramentas" class="secao">
+        <h2>2. As Principais Ferramentas Generativas</h2>
+        
+        <div class="card">
+            <h3>ChatGPT (OpenAI)</h3>
+            <p>É um <strong>chatbot</strong> (assistente conversacional) baseado em modelos de linguagem (GPT). É a ferramenta mais popular e versátil, sendo boa para uma ampla gama de tarefas: escrita, resumo, tradução, programação, análise de dados, etc.</p>
+            <p><strong>Característica:</strong> É uma ferramenta <strong>independente</strong>, acessada principalmente via web ou aplicativo próprio.</p>
+        </div>
+
+        <div class="card">
+            <h3>Microsoft Copilot</h3>
+            <p>É a IA generativa da Microsoft, integrada ao <strong>ecossistema Microsoft</strong>. Ela está presente no Windows 11, no navegador Edge, no mecanismo de busca Bing e, principalmente, nos aplicativos do <strong>Microsoft 365</strong> (Word, Excel, PowerPoint, Outlook, Teams).</p>
+            <p><strong>Característica:</strong> Seu grande diferencial é a <strong>integração profunda com as ferramentas de produtividade</strong> da Microsoft, auxiliando diretamente na edição de documentos, criação de planilhas e elaboração de apresentações.</p>
+        </div>
+
+        <div class="card">
+            <h3>Google Gemini</h3>
+            <p>É a IA generativa do Google, integrada ao <strong>ecossistema Google</strong>. Ela está presente na Busca Google, no Gmail, no Google Docs e em um aplicativo próprio.</p>
+            <p><strong>Característica:</strong> Seu ponto forte é a <strong>integração com os serviços do Google</strong> (Workspace, Drive, etc.) e a capacidade de realizar pesquisas na web em tempo real, trazendo informações atualizadas.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai associar cada ferramenta ao seu criador. Decore: <strong>ChatGPT = OpenAI</strong>; <strong>Copilot = Microsoft</strong>; <strong>Gemini = Google</strong>. Trocar essas associações é o erro mais comum.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: RISCOS E SEGURANÇA -->
+    <div id="riscos" class="secao">
+        <h2>3. Riscos e Cuidados no Uso de IA</h2>
+        <div class="card">
+            <p>O uso de ferramentas de IA generativa traz benefícios, mas também riscos importantes que são muito cobrados em provas:</p>
+            
+            <h3>Alucinações (Alucinations)</h3>
+            <p>É quando a IA <strong>gera uma informação incorreta ou absurda</strong>, mas a apresenta com muita confiança e naturalidade, como se fosse verdade. Isso acontece porque a IA busca padrões e probabilidades, não a "verdade factual".</p>
+            <p><strong>Por isso, toda informação gerada por IA deve ser verificada por um humano.</strong> As próprias ferramentas alertam sobre isso: o Copilot adverte que "o conteúdo gerado por IA pode estar incorreto"; o ChatGPT esclarece que "pode cometer erros"[reference:0].</p>
+
+            <h3>Segurança da Informação e Privacidade</h3>
+            <p>Ao inserir dados em ferramentas de IA (especialmente as gratuitas e públicas), você deve ter cuidado com:</p>
+            <ul>
+                <li><strong>Dados sigilosos:</strong> Nunca compartilhe informações confidenciais, senhas, dados de clientes ou segredos comerciais. Esses dados podem ser usados para treinar os modelos ou ficar expostos.</li>
+                <li><strong>Vazamento de informações:</strong> O uso indevido pode expor a organização e os usuários a riscos de segurança[reference:1].</li>
+            </ul>
+            <p>Boas práticas incluem: <strong>evitar compartilhar informações estratégicas ou sigilosas</strong> nessas ferramentas[reference:2].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> As ferramentas de IA <strong>NÃO funcionam offline</strong> (precisam de internet) e <strong>NÃO são totalmente independentes de dados externos</strong>. Elas dependem de seus servidores e de grandes bases de dados para funcionar. A banca pode afirmar o contrário[reference:3].
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Associação Criador-Ferramenta:</strong> ChatGPT = OpenAI; Copilot = Microsoft; Gemini = Google.</li>
+                <li><strong>Diferença de foco:</strong> Copilot é forte em <strong>produtividade (Office)</strong>; Gemini é forte em <strong>pesquisa e ecossistema Google</strong>; ChatGPT é mais <strong>versátil e independente</strong>.</li>
+                <li><strong>Alucinação:</strong> É o nome dado quando a IA gera uma informação <strong>incorreta</strong>, mas com aparência de verdade. É um risco inerente a todas as IAs generativas.</li>
+                <li><strong>Segurança:</strong> Nunca inserir <strong>dados sigilosos</strong> em ferramentas de IA públicas.</li>
+                <li><strong>Conceitos:</strong> IA é o campo amplo. Machine Learning é o aprendizado por dados. IA Generativa é a que <strong>cria conteúdo novo</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Relacione as ferramentas de IA generativa com suas respectivas empresas criadoras:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! ChatGPT (OpenAI), Copilot (Microsoft) e Gemini (Google). Essa é a associação correta.')">ChatGPT (OpenAI); Copilot (Microsoft); Gemini (Google).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa associação está incorreta. O Copilot é da Microsoft e o Gemini é do Google.')">ChatGPT (Google); Copilot (OpenAI); Gemini (Microsoft).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Copilot é da Microsoft e o Gemini é do Google. A associação está trocada.')">ChatGPT (Microsoft); Copilot (Google); Gemini (OpenAI).</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O fenômeno em que uma IA generativa produz uma informação incorreta ou absurda, mas a apresenta com muita confiança e naturalidade, é chamado de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Overfitting é um conceito de Machine Learning, não se refere à geração de informações falsas.')">Overfitting.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Isso é o que chamamos de "alucinação" da IA. A ferramenta gera uma resposta que parece plausível, mas é factualmente incorreta. Por isso, é essencial verificar as informações.')">Alucinação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Deep Learning é um tipo de Machine Learning, não o nome do fenômeno de informações incorretas.')">Deep Learning.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a principal característica que diferencia o Microsoft Copilot das demais ferramentas de IA generativa?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A integração com o ecossistema Google é uma característica do Gemini.')">Ser totalmente integrado ao ecossistema Google.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O grande diferencial do Copilot é a sua integração profunda com o ecossistema Microsoft, especialmente com os aplicativos do Office 365 (Word, Excel, PowerPoint, Outlook).')">Ser integrado ao ecossistema Microsoft (Windows, Edge, Office 365).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O ChatGPT é a ferramenta mais independente. O Copilot é focado na integração com a Microsoft.')">Ser uma ferramenta totalmente independente e sem integração com outros sistemas.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre a segurança no uso de ferramentas de IA generativa como o ChatGPT, o Copilot e o Gemini, qual é a prática recomendada?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A principal recomendação de segurança é nunca inserir informações sigilosas, confidenciais ou dados sensíveis de clientes nessas ferramentas, pois eles podem ser usados para treinar os modelos ou ficar expostos.')">Evitar compartilhar informações estratégicas, sigilosas ou dados sensíveis de clientes.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Inserir dados sigilosos é justamente o que se deve evitar.')">Inserir o máximo de dados possíveis para obter respostas mais precisas, mesmo que sejam confidenciais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As ferramentas de IA não são inerentemente seguras para dados sigilosos.')">As ferramentas de IA são totalmente seguras e criptografadas, podendo receber qualquer tipo de dado.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual é a diferença entre "Inteligência Artificial" e "IA Generativa"?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A IA Generativa é um tipo específico de IA, não o contrário.')">IA Generativa é o campo amplo de estudo, e a Inteligência Artificial é uma de suas subáreas.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Inteligência Artificial é o campo amplo da ciência da computação. A IA Generativa é um tipo específico de IA (geralmente baseada em Machine Learning) capaz de criar conteúdo novo (textos, imagens, etc.).')">A Inteligência Artificial é o campo amplo; a IA Generativa é um tipo específico de IA focada na criação de conteúdo novo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os dois termos não são sinônimos. A IA Generativa é um subcampo da IA.')">Os dois termos são sinônimos e podem ser usados de forma intercambiável.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: INTELIGÊNCIA ARTIFICIAL E FERRAMENTAS GENERATIVAS -->

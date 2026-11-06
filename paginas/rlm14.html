@@ -1,35 +1,221 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eventos dependentes e independentes — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Eventos dependentes e independentes</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm14</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: PROBABILIDADE - UNIÃO E INTERSEÇÃO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Probabilidade: União e Interseção</h1>
+        <p>A Regra da Adição e o Perigo da Dupla Contagem – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#uniao">A União (A ou B)</a>
+        <a href="#intersecao">A Interseção (A e B)</a>
+        <a href="#formula">A Fórmula Geral</a>
+        <a href="#exclusivos">Eventos Mutuamente Exclusivos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: UNIÃO -->
+    <div id="uniao" class="secao">
+        <h2>1. A União (A ou B)</h2>
+        <div class="card">
+            <p>A probabilidade da <strong>união</strong> de dois eventos, representada por <strong>P(A ∪ B)</strong>, é a probabilidade de ocorrer o evento A <strong>OU</strong> o evento B (ou ambos).</p>
+            <p>Na linguagem matemática, o "OU" é inclusivo: significa que acontecer A, acontecer B ou acontecer os dois ao mesmo tempo são resultados válidos.</p>
+            <p><strong>Exemplo prático:</strong> No lançamento de um dado, qual a probabilidade de sair um número par OU um número maior que 4?</p>
+            <ul>
+                <li>Evento A (par): {2, 4, 6} → P(A) = 3/6</li>
+                <li>Evento B (maior que 4): {5, 6} → P(B) = 2/6</li>
+                <li>Veja que o número 6 aparece nos dois eventos. Não podemos contá-lo duas vezes!</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: INTERSEÇÃO -->
+    <div id="intersecao" class="secao">
+        <h2>2. A Interseção (A e B)</h2>
+        <div class="card">
+            <p>A probabilidade da <strong>interseção</strong>, representada por <strong>P(A ∩ B)</strong>, é a probabilidade de ocorrer o evento A <strong>E</strong> o evento B ao mesmo tempo.</p>
+            <p>É o "pedaço" que pertence aos dois eventos simultaneamente. No exemplo anterior, a interseção é o número 6 (pois é par e maior que 4).</p>
+            <ul>
+                <li>Evento A ∩ B: {6} → P(A ∩ B) = 1/6</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FÓRMULA GERAL -->
+    <div id="formula" class="secao">
+        <h2>3. A Fórmula Geral da União</h2>
+        <div class="card">
+            <p>Para calcular a união de dois eventos, somamos as probabilidades individuais e <strong>subtraímos a interseção</strong>. Isso é necessário para não contar os elementos que aparecem nos dois eventos duas vezes.</p>
+            
+            <div class="box-formula">
+                P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+            </div>
+            
+            <p><strong>Resolvendo o exemplo do dado:</strong></p>
+            <ul>
+                <li>P(A ∪ B) = 3/6 + 2/6 - 1/6</li>
+                <li>P(A ∪ B) = 5/6 - 1/6</li>
+                <li><strong>P(A ∪ B) = 4/6 = 2/3</strong></li>
+            </ul>
+            <p>As alternativas corretas seriam: 4/6, 2/3 ou aproximadamente 66,6%.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai te dar P(A) e P(B) e perguntar a união. Se você apenas somar, vai errar, pois estará contando a interseção duas vezes. A palavra-chave é <strong>subtrair a interseção</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: EVENTOS MUTUAMENTE EXCLUSIVOS -->
+    <div id="exclusivos" class="secao">
+        <h2>4. Eventos Mutuamente Exclusivos</h2>
+        <div class="card">
+            <p>Dois eventos são <strong>mutuamente exclusivos</strong> (ou disjuntos) quando <strong>não podem ocorrer ao mesmo tempo</strong>. Ou seja, a interseção é vazia: <strong>P(A ∩ B) = 0</strong>.</p>
+            <p>Nesse caso, a fórmula da união se simplifica para a soma direta:</p>
+            
+            <div class="box-formula">
+                P(A ∪ B) = P(A) + P(B)
+            </div>
+            
+            <p><strong>Exemplo:</strong> No lançamento de um dado, qual a probabilidade de sair o número 1 OU o número 6?</p>
+            <ul>
+                <li>É impossível sair 1 e 6 ao mesmo tempo em um único lançamento.</li>
+                <li>P(1) = 1/6 e P(6) = 1/6.</li>
+                <li>P(1 ∪ 6) = 1/6 + 1/6 = 2/6 = 1/3.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Palavra "OU" (União):</strong> Sempre que a questão pedir "A ou B", use a fórmula com a subtração da interseção.</li>
+                <li><strong>Palavra "E" (Interseção):</strong> Sempre que a questão pedir "A e B", você deve multiplicar (se forem independentes) ou calcular a probabilidade condicional.</li>
+                <li><strong>Não esqueça de subtrair:</strong> A interseção é o elemento que está nos dois conjuntos. Se você não subtrair, estará contando-o duas vezes.</li>
+                <li><strong>Eventos Mutuamente Exclusivos:</strong> A interseção é zero. A fórmula fica P(A) + P(B).</li>
+                <li><strong>Leia o enunciado com calma:</strong> A banca vai dizer "retirar uma carta e depois outra" (E) ou "retirar uma carta ou outra" (OU). A palavra define o caminho.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. A probabilidade da união de dois eventos A e B é dada pela fórmula:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa é a fórmula da interseção (A e B).')">P(A ∩ B) = P(A) × P(B)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A fórmula da união é P(A ∪ B) = P(A) + P(B) - P(A ∩ B).')">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Faltou subtrair a interseção para não contar os elementos duas vezes.')">P(A ∪ B) = P(A) + P(B)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. No lançamento de um dado, qual é a probabilidade de sair um número par OU o número 5?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 4/6 seria se você estivesse somando os pares e o 5, mas a resposta correta é a união: 3/6 + 1/6 = 4/6 = 2/3.')">4/6</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Par = {2,4,6} → 3/6. Número 5 = {5} → 1/6. A interseção é zero (não existe par que seja 5). Logo, 3/6 + 1/6 = 4/6 = 2/3.')">2/3</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 5/6 seria a probabilidade de tirar qualquer número do dado, o que não é o caso.')">5/6</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Se P(A) = 0,4 e P(B) = 0,3, e os eventos A e B são mutuamente exclusivos, qual é o valor de P(A ∪ B)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Como são mutuamente exclusivos, a interseção é zero, então não há nada para subtrair.')">0,1</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Em eventos mutuamente exclusivos, P(A ∩ B) = 0. Logo, P(A ∪ B) = P(A) + P(B) = 0,4 + 0,3 = 0,7.')">0,7</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 0,12 seria a interseção se os eventos fossem independentes. Mas eles são exclusivos, logo a união é 0,7.')">0,12</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em uma urna, 5 bolas são azuis, 3 são vermelhas e 2 são azuis e vermelhas (possuem as duas cores). Se retirarmos uma bola, qual é a probabilidade de ela ser azul OU vermelha?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A conta correta é (5/10) + (3/10) - (2/10). O total de bolas é 10.')">8/10</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! P(Azul) = 5/10; P(Vermelha) = 3/10; P(Azul E Vermelha) = 2/10. Logo, P(A ∪ V) = 5/10 + 3/10 - 2/10 = 6/10 = 3/5.')">6/10 (ou 3/5)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você provavelmente esqueceu de subtrair as 2 bolas que têm as duas cores.')">10/10</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A interseção de dois eventos A e B (P(A ∩ B)) representa:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A união é representada por P(A ∪ B).')">A probabilidade de ocorrer A ou B.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A interseção (A e B) é a ocorrência simultânea dos dois eventos.')">A probabilidade de ocorrer A e B simultaneamente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A probabilidade de não ocorrer nenhum dos dois é o complementar da união.')">A probabilidade de não ocorrer A nem B.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: PROBABILIDADE - UNIÃO E INTERSEÇÃO -->

@@ -1,35 +1,249 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Segurança de Dados — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Segurança de Dados</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: SEGURANÇA DE DADOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Segurança de Dados</h1>
+        <p>Malwares, Golpes e Mecanismos de Proteção – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#pilares">Pilares da Segurança</a>
+        <a href="#malwares">Malwares (Vírus e outros)</a>
+        <a href="#phishing">Engenharia Social e Phishing</a>
+        <a href="#protecao">Mecanismos de Proteção</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: PILARES -->
+    <div id="pilares" class="secao">
+        <h2>1. Os 3 Pilares da Segurança da Informação (CID)</h2>
+        <div class="card">
+            <p>A segurança da informação baseia-se em três pilares fundamentais. A FAFIPA costuma cobrar a definição de cada um:</p>
+            <ul>
+                <li><strong>Confidencialidade:</strong> Garantir que a informação seja acessada apenas por pessoas autorizadas. (Ex: uso de senhas e criptografia).</li>
+                <li><strong>Integridade:</strong> Garantir que a informação não seja alterada de forma indevida. (Ex: a informação chegou exatamente como foi enviada).</li>
+                <li><strong>Disponibilidade:</strong> Garantir que a informação esteja sempre acessível quando o usuário autorizado precisar. (Ex: o sistema não pode ficar fora do ar).</li>
+            </ul>
+            <div class="box-formula">CID = Confidencialidade + Integridade + Disponibilidade</div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: MALWARES -->
+    <div id="malwares" class="secao">
+        <h2>2. Malwares (Softwares Maliciosos)</h2>
+        <div class="card">
+            <p>Malware é qualquer programa criado para causar danos ou roubar informações. Os principais são:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Característica</th>
+                        <th>Diferença Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vírus</strong></td>
+                        <td>Precisa de um arquivo hospedeiro (ex: um documento do Word) para se espalhar. Só age quando o usuário executa o arquivo infectado.</td>
+                        <td>Precisa de hospedeiro e ação do usuário.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Worm (Verme)</strong></td>
+                        <td>Não precisa de hospedeiro. Espalha-se automaticamente pela rede, infectando outros computadores sozinho.</td>
+                        <td>Não precisa de hospedeiro; autorreplicável.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trojan (Cavalo de Troia)</strong></td>
+                        <td>Parece um programa legítimo (ex: um jogo ou um instalador), mas, ao ser executado, instala uma porta dos fundos para invasores.</td>
+                        <td>Disfarçado de programa útil.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ransomware</strong></td>
+                        <td>Criptografa os arquivos do computador e exige um resgate (geralmente em bitcoins) para liberá-los.</td>
+                        <td>Sequestro de dados.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spyware / Keylogger</strong></td>
+                        <td>Espiona as atividades do usuário. O Keylogger captura tudo o que é digitado (senhas, números de cartão).</td>
+                        <td>Roubo de informações (sigilo).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A diferença entre <strong>Vírus</strong> e <strong>Worm</strong> é a campeã de provas. O vírus <strong>precisa de um hospedeiro</strong> (um arquivo) e da ação do usuário. O worm <strong>não precisa</strong>, ele se espalha sozinho pela rede.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PHISHING -->
+    <div id="phishing" class="secao">
+        <h2>3. Engenharia Social e Phishing</h2>
+        <div class="card">
+            <h3>O que é Phishing?</h3>
+            <p>É uma técnica de <strong>engenharia social</strong> (golpe) que tenta enganar o usuário para que ele forneça dados confidenciais (senhas, dados bancários) ou clique em links maliciosos.</p>
+            <p><strong>Como funciona?</strong> O criminoso se passa por uma empresa confiável (banco, loja, órgão público) por e-mail, SMS ou WhatsApp. Geralmente, a mensagem contém um link falso que imita um site verdadeiro.</p>
+            <h3>Como se proteger?</h3>
+            <ul>
+                <li>Nunca clique em links suspeitos recebidos por mensagem.</li>
+                <li>Desconfie de mensagens com erros de português ou urgência excessiva.</li>
+                <li>Sempre verifique o remetente e o endereço do site (URL).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Phishing <strong>não é um vírus</strong>! É um golpe (engenharia social). A banca vai tentar falar que o phishing é um malware, mas não é. Ele é o <strong>método de engano</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: MECANISMOS DE PROTEÇÃO -->
+    <div id="protecao" class="secao">
+        <h2>4. Mecanismos de Proteção</h2>
+        <div class="card">
+            <h3>Firewall (Parede de Fogo)</h3>
+            <p>É um software ou hardware que controla o tráfego de rede, permitindo ou bloqueando conexões com base em regras de segurança. É o "porteiro" da rede.</p>
+            <h3>Antivírus / Antimalware</h3>
+            <p>Programa que detecta e remove softwares maliciosos do computador.</p>
+            <h3>Backup (Cópia de Segurança)</h3>
+            <p>É a cópia dos dados para que possam ser recuperados em caso de perda, roubo ou ataque. A melhor defesa contra o Ransomware é ter um backup atualizado!</p>
+            <h3>Criptografia</h3>
+            <p>É a codificação de dados para que apenas quem tiver a "chave" correta consiga lê-los. É usada em transações bancárias na internet (cadeado no navegador).</p>
+            <h3>Autenticação de Dois Fatores (2FA)</h3>
+            <p>Além da senha, uma segunda forma de confirmar a identidade (ex: código enviado por SMS ou aplicativo).</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Vírus vs. Worm:</strong> Vírus = Precisa de hospedeiro. Worm = Não precisa de hospedeiro (autorreplicável).</li>
+                <li><strong>Phishing:</strong> É um golpe (engenharia social), não um vírus.</li>
+                <li><strong>Ransomware:</strong> É o malware que "sequestra" os dados (criptografa) e pede resgate.</li>
+                <li><strong>Firewall:</strong> Controla o tráfego de rede (bloqueia acessos não autorizados). Não é a mesma coisa que antivírus.</li>
+                <li><strong>Backup:</strong> É a principal forma de se recuperar de um ataque de Ransomware.</li>
+                <li><strong>Criptografia:</strong> Codifica os dados. O símbolo do "cadeado" no navegador indica que a conexão é criptografada.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é a principal diferença entre um vírus e um worm?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O vírus precisa de um arquivo hospedeiro para se espalhar, enquanto o worm não precisa, espalhando-se sozinho pela rede.')">O vírus precisa de um hospedeiro; o worm não precisa.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O vírus é o que precisa de hospedeiro, e não o worm.')">O worm precisa de um hospedeiro; o vírus não precisa.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ambos são malwares. A diferença está na necessidade de hospedeiro.')">O vírus é inofensivo; o worm é sempre destrutivo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Uma técnica que engana o usuário, fazendo-o acreditar que está acessando um site legítimo (como o de um banco), para roubar senhas, é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Ransomware sequestra os dados e pede resgate.')">Ransomware.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Phishing é uma técnica de engenharia social que usa de sites falsos e mensagens enganosas para roubar dados do usuário.')">Phishing.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Firewall é um mecanismo de defesa, não um golpe.')">Firewall.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. O malware que criptografa os arquivos do usuário e exige um pagamento de resgate para liberá-los é o:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Ransomware é um tipo de malware que "sequestra" os dados por meio de criptografia e pede resgate.')">Ransomware.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Spyware espiona as atividades do usuário, mas não criptografa os dados.')">Spyware.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Worm se espalha pela rede, mas não criptografa dados para pedir resgate.')">Worm.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é o dispositivo ou software que controla o tráfego de uma rede, bloqueando acessos não autorizados?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Antivírus detecta malwares, mas o Firewall controla o tráfego da rede.')">Antivírus.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Firewall é o "porteiro" da rede. Ele analisa o tráfego e decide o que pode entrar e sair, bloqueando acessos não autorizados.')">Firewall.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Backup é uma cópia de segurança, não controla tráfego de rede.')">Backup.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre os pilares da Segurança da Informação (CID), o pilar que garante que a informação estará disponível para quando o usuário autorizado precisar é o:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Confidencialidade garante que a informação não seja acessada por quem não tem permissão.')">Confidencialidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Integridade garante que a informação não foi alterada.')">Integridade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O pilar da Disponibilidade garante que a informação e os sistemas estejam acessíveis sempre que o usuário autorizado precisar.')">Disponibilidade.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SEGURANÇA DE DADOS -->

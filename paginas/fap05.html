@@ -1,35 +1,224 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Conceito — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Conceito</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>fap05</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: GESTÃO DE PESSOAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <div class="header-modulo">
+        <h1>Gestão de Pessoas</h1>
+        <p>Recrutamento, Seleção, Motivação e Avaliação – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+    <div class="nav-menu">
+        <a href="#conceito">Conceitos</a>
+        <a href="#recrutamento">Recrutamento e Seleção</a>
+        <a href="#treinamento">Treinamento e Desenvolvimento</a>
+        <a href="#avaliacao">Avaliação de Desempenho</a>
+        <a href="#motivacao">Motivação e Liderança</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+    
+    <div id="conceito" class="secao">
+        <h2>1. Conceitos de Gestão de Pessoas</h2>
+        <div class="card">
+            <p>A <strong>Gestão de Pessoas</strong> (ou Gestão de Recursos Humanos) é a área da Administração responsável por gerenciar o capital humano da organização. Ela evoluiu de um modelo burocrático (Departamento Pessoal) para um modelo <strong>estratégico</strong>, onde as pessoas são vistas como parceiras do negócio.</p>
+            
+            <h3>Evolução da Gestão de Pessoas:</h3>
+            <ul>
+                <li><strong>Departamento Pessoal (Burocrático):</strong> Foco em registros, folha de pagamento e cumprimento da legislação trabalhista.</li>
+                <li><strong>Gestão de Recursos Humanos (Intermediário):</strong> Foco em treinamento, recrutamento e manutenção de pessoal.</li>
+                <li><strong>Gestão de Pessoas (Estratégico):</strong> Foco no desenvolvimento do capital humano, alinhamento com a estratégia da organização, motivação e retenção de talentos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="recrutamento" class="secao">
+        <h2>2. Recrutamento e Seleção</h2>
+        <div class="card">
+            <h3>Recrutamento</h3>
+            <p>É o processo de <strong>atrair</strong> candidatos qualificados para preencher uma vaga. O recrutamento pode ser:</p>
+            <ul>
+                <li><strong>Interno:</strong> Busca candidatos dentro da própria organização (promoções, transferências). Vantagens: motiva os funcionários, menor custo, maior conhecimento da cultura. Desvantagem: pode gerar "endogenia" (falta de novas ideias).</li>
+                <li><strong>Externo:</strong> Busca candidatos no mercado (anúncios, sites, indicações). Vantagens: traz novas ideias e experiências. Desvantagem: custo maior e maior tempo de adaptação.</li>
+                <li><strong>Misto:</strong> Combina as duas abordagens (busca interna e externa simultaneamente).</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Seleção</h3>
+            <p>É o processo de <strong>escolher</strong>, entre os candidatos recrutados, aquele que melhor se adapta à vaga. As técnicas mais comuns são:</p>
+            <ul>
+                <li><strong>Entrevista:</strong> A mais utilizada. Pode ser estruturada (com roteiro) ou não estruturada.</li>
+                <li><strong>Testes de conhecimento:</strong> Avaliam o conhecimento técnico.</li>
+                <li><strong>Testes psicológicos:</strong> Avaliam características de personalidade e aptidões.</li>
+                <li><strong>Dinâmicas de grupo:</strong> Avaliam comportamento em grupo e habilidades interpessoais.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Recrutamento</strong> é o ato de <strong>ATRAIR</strong> (chamar candidatos). <strong>Seleção</strong> é o ato de <strong>ESCOLHER</strong> (filtrar o melhor candidato). A banca vai trocar os conceitos!
+        </div>
+    </div>
+
+    <div id="treinamento" class="secao">
+        <h2>3. Treinamento e Desenvolvimento</h2>
+        <div class="card">
+            <h3>Treinamento</h3>
+            <p>É um processo de <strong>curto prazo</strong> que visa capacitar o funcionário para executar <strong>tarefas específicas</strong> do cargo atual. Foco no "saber fazer" (habilidades técnicas). Ex: treinamento de um novo software, treinamento de atendimento ao público.</p>
+            
+            <h3>Desenvolvimento</h3>
+            <p>É um processo de <strong>longo prazo</strong> que visa preparar o funcionário para <strong>futuras responsabilidades</strong> e para o crescimento profissional. Foco no "saber ser" e "saber aprender" (competências comportamentais e estratégicas). Ex: programa de formação de líderes, pós-graduação.</p>
+            
+            <h3>Educação</h3>
+            <p>É o processo mais amplo, que engloba o treinamento e o desenvolvimento, visando a formação integral do indivíduo para a vida e para o trabalho.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Treinamento</strong> é para o <strong>cargo atual</strong> (curto prazo). <strong>Desenvolvimento</strong> é para <strong>cargos futuros</strong> (longo prazo). A banca vai inverter os prazos e os focos.
+        </div>
+    </div>
+
+    <div id="avaliacao" class="secao">
+        <h2>4. Avaliação de Desempenho</h2>
+        <div class="card">
+            <p>É o processo de <strong>medir e avaliar</strong> o desempenho do funcionário em relação ao cargo e aos objetivos da organização. No serviço público, o estágio probatório é uma forma de avaliação de desempenho para efetivação no cargo.</p>
+            
+            <h3>Principais Métodos de Avaliação:</h3>
+            <ul>
+                <li><strong>Escala Gráfica:</strong> Avalia o desempenho por meio de fatores (ex: assiduidade, produtividade) em uma escala (ex: ruim, regular, bom, ótimo).</li>
+                <li><strong>Escolha Forçada:</strong> O avaliador deve escolher entre frases que descrevem o comportamento do avaliado. Evita a subjetividade.</li>
+                <li><strong>Pesquisa de Campo:</strong> Envolve uma entrevista com o superior imediato para avaliar o desempenho.</li>
+                <li><strong>Incidentes Críticos:</strong> Foca em comportamentos extremos (positivos ou negativos) observados no avaliado.</li>
+                <li><strong>Avaliação 360º:</strong> É a mais completa. O funcionário é avaliado por todos ao seu redor: superiores, subordinados, colegas, clientes e por ele mesmo (autoavaliação).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="motivacao" class="secao">
+        <h2>5. Motivação e Liderança (Teorias)</h2>
+        <div class="card">
+            <h3>Teoria das Necessidades de Maslow (Pirâmide)</h3>
+            <p>Abraham Maslow organizou as necessidades humanas em uma pirâmide, onde a base deve ser satisfeita antes de subir para o próximo nível:</p>
+            <ol>
+                <li><strong>Fisiológicas:</strong> Fome, sede, sono (necessidades básicas).</li>
+                <li><strong>Segurança:</strong> Emprego, moradia, saúde.</li>
+                <li><strong>Sociais/Amor:</strong> Amizade, relacionamento, pertencimento ao grupo.</li>
+                <li><strong>Estima:</strong> Reconhecimento, status, prestígio.</li>
+                <li><strong>Autorrealização:</strong> Desenvolvimento pessoal máximo (o topo da pirâmide).</li>
+            </ol>
+        </div>
+        <div class="card">
+            <h3>Teoria dos Dois Fatores de Herzberg</h3>
+            <p>Frederick Herzberg dividiu os fatores que influenciam a motivação em dois grupos:</p>
+            <ul>
+                <li><strong>Fatores Higiênicos (Externos):</strong> Salário, condições de trabalho, políticas da empresa, relações interpessoais. Se estiverem ruins, causam <strong>insatisfação</strong>. Se estiverem bons, apenas evitam a insatisfação (não geram motivação).</li>
+                <li><strong>Fatores Motivacionais (Internos):</strong> Reconhecimento, crescimento, responsabilidade, realização. Estes são os verdadeiros responsáveis por gerar <strong>satisfação e motivação</strong>.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a Teoria dos Dois Fatores. <strong>Aumentar o salário</strong> (fator higiênico) não motiva o funcionário a longo prazo; apenas evita a insatisfação. A motivação vem de fatores internos (reconhecimento, crescimento).
+        </div>
+    </div>
+
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Recrutamento vs. Seleção:</strong> Recrutamento = Atrair (chamar). Seleção = Escolher (filtrar).</li>
+                <li><strong>Treinamento vs. Desenvolvimento:</strong> Treinamento = Cargo atual (curto prazo). Desenvolvimento = Cargos futuros (longo prazo).</li>
+                <li><strong>Avaliação 360º:</strong> É a mais completa, pois envolve todos os atores ao redor do avaliado.</li>
+                <li><strong>Maslow:</strong> A base da pirâmide são as necessidades fisiológicas. O topo é a autorrealização.</li>
+                <li><strong>Herzberg:</strong> Salário é fator higiênico (não motiva). Reconhecimento é fator motivacional (motiva).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. Qual é a diferença entre recrutamento e seleção de pessoal?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O recrutamento atrai candidatos (chama), e a seleção escolhe o melhor candidato (filtra) entre os atraídos.')">O recrutamento atrai candidatos, enquanto a seleção escolhe o candidato mais adequado para a vaga.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: o recrutamento atrai e a seleção escolhe.')">A seleção atrai candidatos, enquanto o recrutamento escolhe o candidato mais adequado.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Recrutamento e seleção são processos diferentes. O primeiro atrai, o segundo escolhe.')">Recrutamento e seleção são a mesma coisa e ocorrem simultaneamente.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. Segundo a Teoria das Necessidades de Maslow, qual é a ordem correta das necessidades, da base para o topo da pirâmide?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A ordem é: Fisiológicas (base) → Segurança → Sociais → Estima → Autorrealização (topo).')">Fisiológicas, Segurança, Sociais, Estima, Autorrealização.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A base é a necessidade fisiológica, e o topo é a autorrealização.')">Autorrealização, Estima, Sociais, Segurança, Fisiológicas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem correta é Fisiológicas, Segurança, Sociais, Estima e Autorrealização.')">Segurança, Fisiológicas, Estima, Sociais, Autorrealização.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. Na Teoria dos Dois Fatores de Herzberg, o salário e as condições de trabalho são considerados:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Salário e condições de trabalho são fatores higiênicos (externos). Eles evitam a insatisfação, mas não geram motivação duradoura.')">Fatores higiênicos (externos), que evitam a insatisfação, mas não geram motivação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os fatores motivacionais são internos (reconhecimento, crescimento). Salário é fator higiênico.')">Fatores motivacionais (internos), que geram satisfação e motivação duradoura.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Salário e condições de trabalho não são considerados fatores de autorrealização na Teoria de Herzberg.')">Fatores de autorrealização, que levam o funcionário ao topo da carreira.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>4. Qual é o método de avaliação de desempenho mais completo, que envolve a participação de superiores, subordinados, colegas, clientes e a autoavaliação?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A escala gráfica é um método mais simples e não envolve todos os atores.')">Escala Gráfica.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Avaliação 360º é a mais completa, pois o funcionário é avaliado por todos ao seu redor (superiores, subordinados, colegas, clientes e ele mesmo).')">Avaliação 360º.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A escolha forçada é um método que evita a subjetividade, mas não envolve todos os atores.')">Escolha Forçada.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>5. Sobre a diferença entre treinamento e desenvolvimento, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O treinamento é voltado para o cargo atual (curto prazo), enquanto o desenvolvimento prepara para cargos futuros (longo prazo).')">O treinamento é voltado para o cargo atual (curto prazo); o desenvolvimento prepara para funções futuras (longo prazo).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: o treinamento é para o cargo atual e o desenvolvimento para o futuro.')">O desenvolvimento é voltado para o cargo atual (curto prazo); o treinamento prepara para funções futuras (longo prazo).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os dois são processos diferentes: o treinamento foca no cargo atual e o desenvolvimento no futuro.')">Treinamento e desenvolvimento são sinônimos e podem ser usados de forma intercambiável.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: GESTÃO DE PESSOAS -->

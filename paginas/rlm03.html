@@ -1,35 +1,197 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teorema de Tales — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Teorema de Tales</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm03</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: TEOREMA DE TALES -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Teorema de Tales</h1>
+        <p>Geometria Plana e Proporcionalidade – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito e Fórmula</a>
+        <a href="#como-calcular">Como Calcular</a>
+        <a href="#tales-triangulos">Tales em Triângulos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO E FÓRMULA -->
+    <div id="conceito" class="secao">
+        <h2>1. O Conceito e a Fórmula</h2>
+        <div class="card">
+            <p>O Teorema de Tales é uma regra da geometria que diz que: <strong>um feixe de retas paralelas, cortadas por duas ou mais retas transversais, gera segmentos correspondentes proporcionais.</strong></p>
+            <p>Em português claro: se você tem linhas retas paralelas (que nunca se cruzam) e passar por cima delas duas linhas em qualquer inclinação (transversais), os pedaços que se formam guardam uma proporção entre si.</p>
+            
+            <div class="box-formula">
+                A / B = C / D
+            </div>
+            
+            <p>Onde <strong>A</strong> e <strong>B</strong> são os pedaços de uma transversal, e <strong>C</strong> e <strong>D</strong> são os pedaços correspondentes da outra transversal.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: COMO CALCULAR -->
+    <div id="como-calcular" class="secao">
+        <h2>2. Como Calcular (Passo a Passo)</h2>
+        <div class="card">
+            <p>Para resolver qualquer problema de Tales, você precisa de duas coisas:</p>
+            <ol>
+                <li><strong>Confirmar se as retas são paralelas</strong> (geralmente indicado por setinhas iguais nas retas).</li>
+                <li><strong>Montar a proporção</strong>, igualando a razão entre os segmentos de uma reta com a razão dos segmentos correspondentes da outra.</li>
+            </ol>
+            <p><strong>Exemplo prático:</strong> Uma reta transversal tem segmentos que medem <strong>4 cm</strong> e <strong>6 cm</strong>. A outra transversal tem segmentos <strong>x</strong> e <strong>9 cm</strong>. Qual o valor de x?</p>
+            <ul>
+                <li>Montando a proporção: 4 / 6 = x / 9</li>
+                <li>Multiplicando cruzado (regra de três): 6 × x = 4 × 9</li>
+                <li>6x = 36</li>
+                <li>x = 36 / 6</li>
+                <li><strong>x = 6 cm</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: TALES EM TRIÂNGULOS -->
+    <div id="tales-triangulos" class="secao">
+        <h2>3. Teorema de Tales em Triângulos</h2>
+        <div class="card">
+            <p>Existe uma aplicação muito comum do Teorema de Tales em triângulos. Quando uma reta é traçada <strong>paralela a um dos lados de um triângulo</strong>, ela divide os outros dois lados em segmentos proporcionais.</p>
+            <p>A proporção fica assim:</p>
+            <p><strong>Segmento de cima do lado 1 / Segmento de baixo do lado 1 = Segmento de cima do lado 2 / Segmento de baixo do lado 2</strong></p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai tentar fazer você cruzar os segmentos da <strong>mesma reta</strong>. Lembre-se: a proporção é sempre entre a <strong>reta 1</strong> e a <strong>reta 2</strong>. É o famoso "meio pelos extremos".
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>A regra do "P" (Paralelismo):</strong> Só existe Teorema de Tales se as retas horizontais (ou verticais) forem <strong>paralelas</strong>. Se a questão não avisar que são paralelas, não aplique a regra.</li>
+                <li><strong>Correspondência de segmentos:</strong> O maior segmento de uma reta proporcional ao maior segmento da outra. Se errar a correspondência, a conta sai errada.</li>
+                <li><strong>Não confunda com Bissetriz:</strong> O Teorema de Tales usa <strong>retas paralelas</strong>. O Teorema da Bissetriz Interna usa o lado oposto do ângulo, e a proporção é entre os lados que formam o ângulo. São coisas diferentes.</li>
+                <li><strong>Unidades de medida:</strong> A banca pode colocar uma reta em cm e outra em metros. Nesse caso, é preciso <strong>converter</strong> tudo para a mesma unidade antes de montar a regra de três.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Duas retas transversais cortam um feixe de retas paralelas. Na primeira transversal, os segmentos medem 3 cm e 5 cm. Na segunda, o segmento correspondente ao primeiro mede 6 cm. Qual é a medida do segmento correspondente ao segundo?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A proporção é 3/5 = 6/x. Multiplicando cruzado: 3x = 30, logo x = 10.')">5 cm</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 3/5 = 6/x → 3x = 30 → x = 10 cm.')">10 cm</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Cuidado com a correspondência. O 3 está para 6, assim como o 5 está para x.')">15 cm</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O Teorema de Tales só pode ser aplicado quando:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As transversais podem estar em qualquer inclinação.')">As retas transversais são perpendiculares entre si.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O teorema exige que as retas que estão sendo cortadas sejam paralelas entre si.')">As retas que são cortadas pelas transversais são paralelas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O ângulo não precisa ser de 90º, apenas as retas de corte precisam ser paralelas.')">As retas transversais formam ângulos de 90º com as paralelas.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Em um triângulo, uma reta é traçada paralelamente à base, dividindo os outros dois lados. O lado esquerdo ficou dividido em segmentos de 4 cm e 8 cm. O lado direito tem o segmento maior medindo 12 cm. Qual é o valor do segmento menor do lado direito?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Monte a proporção: 4/8 = x/12. Multiplicando: 8x = 48, logo x = 6.')">4 cm</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 4/8 = x/12 → 8x = 48 → x = 6 cm.')">6 cm</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Verifique a correspondência: o segmento de 4 está para 8, assim como x está para 12.')">8 cm</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é a principal diferença entre o Teorema de Tales e o Teorema da Bissetriz Interna?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Tales usa retas paralelas e transversais, enquanto a Bissetriz divide o lado oposto de um ângulo em partes proporcionais aos lados adjacentes.')">Tales usa retas paralelas e transversais, enquanto a Bissetriz divide o lado oposto de um ângulo em partes proporcionais aos lados adjacentes.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Tales não exige ângulo de 90º, e a Bissetriz não exige retas paralelas.')">Tales só funciona com ângulos de 90º, enquanto a Bissetriz funciona com qualquer ângulo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ambos usam proporção, mas em contextos geométricos diferentes.')">Não há diferença, ambos são a mesma coisa e são aplicados da mesma forma.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Em um mapa, duas avenidas paralelas são cortadas por duas ruas transversais. Na rua 1, os trechos medem 200 metros e 400 metros. Na rua 2, o trecho correspondente ao de 200 metros mede 50 metros. Qual é a medida do outro trecho da rua 2?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A proporção é 200/400 = 50/x. Logo 200x = 20000, x = 100.')">50 metros</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! 200/400 = 50/x → 200x = 20.000 → x = 100 metros.')">100 metros</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 200 metros seria se a rua 2 fosse do mesmo tamanho da rua 1, o que não é o caso.')">200 metros</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: TEOREMA DE TALES -->

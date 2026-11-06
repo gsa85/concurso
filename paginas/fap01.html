@@ -1,35 +1,199 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Conceito — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Conceito</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>fap01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: FUNDAMENTOS DA ADMINISTRAÇÃO PÚBLICA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+    <div class="header-modulo">
+        <h1>Fundamentos da Administração Pública</h1>
+        <p>Conceitos, Princípios e Organização – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+    <div class="nav-menu">
+        <a href="#conceito">Conceitos</a>
+        <a href="#principios">Princípios</a>
+        <a href="#organizacao">Organização</a>
+        <a href="#centralizacao">Centralização x Descentralização</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+    
+    <div id="conceito" class="secao">
+        <h2>1. Conceitos de Administração Pública</h2>
+        <div class="card">
+            <p>A Administração Pública pode ser analisada sob dois aspectos principais:</p>
+            <ul>
+                <li><strong>Sentido Subjetivo (Orgânico/Formal):</strong> Refere-se ao conjunto de <strong>órgãos, agentes e entidades</strong> que exercem a função administrativa. É "quem" faz.</li>
+                <li><strong>Sentido Objetivo (Material/Funcional):</strong> Refere-se à própria <strong>atividade administrativa</strong> (gestão de interesses públicos). É "o que" se faz.</li>
+            </ul>
+            <p><em>Resumindo: A Administração Pública é a máquina (órgãos) e a atividade (função) voltada para o interesse da coletividade.</em></p>
+        </div>
+    </div>
+
+    <div id="principios" class="secao">
+        <h2>2. Princípios da Administração Pública</h2>
+        <div class="card">
+            <h3>Princípios Expressos (Art. 37, CF/88) - LIMPE</h3>
+            <ul>
+                <li><strong>Legalidade:</strong> O administrador só pode fazer o que a lei autoriza ou prevê.</li>
+                <li><strong>Impessoalidade:</strong> A atuação não pode favorecer ou prejudicar pessoas específicas (sem favoritismos).</li>
+                <li><strong>Moralidade:</strong> A atuação deve seguir padrões éticos, honestidade e boa-fé.</li>
+                <li><strong>Publicidade:</strong> Os atos devem ser divulgados publicamente para garantir transparência e controle.</li>
+                <li><strong>Eficiência:</strong> (Incluído pela Emenda Constitucional 19/98) - Fazer o máximo com o mínimo de recursos, buscando resultados rápidos e de qualidade.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Princípios Implícitos (Doutrina)</h3>
+            <ul>
+                <li><strong>Supremacia do Interesse Público:</strong> Os interesses da coletividade prevalecem sobre os interesses privados.</li>
+                <li><strong>Indisponibilidade do Interesse Público:</strong> O administrador não é "dono" do interesse público; ele apenas zela por ele, não podendo abrir mão dele.</li>
+                <li><strong>Autotutela:</strong> O poder público pode rever seus próprios atos, anulando os ilegais (Súmula 473 do STF) e revogando os inconvenientes.</li>
+                <li><strong>Razoabilidade e Proporcionalidade:</strong> A atuação deve ser equilibrada e usar meios adequados para atingir os fins.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a <strong>Autotutela</strong> (o Estado corrige seus próprios atos) e a <strong>Tutela</strong> (controle da Administração Direta sobre a Indireta). São conceitos diferentes!
+        </div>
+    </div>
+
+    <div id="organizacao" class="secao">
+        <h2>3. Organização da Administração Pública</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Administração Direta</th>
+                    <th>Administração Indireta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>União, Estados, DF e Municípios.</td>
+                    <td>Autarquias, Fundações, Empresas Públicas e Sociedades de Economia Mista.</td>
+                </tr>
+                <tr>
+                    <td><strong>Não possui personalidade jurídica própria</strong> (os órgãos são partes da "máquina").</td>
+                    <td><strong>Possui personalidade jurídica própria</strong> (são entidades independentes).</td>
+                </tr>
+                <tr>
+                    <td>Vínculo de <strong>Subordinação Hierárquica</strong>.</td>
+                    <td>Vínculo de <strong>Tutela (Controle Finalístico)</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="centralizacao" class="secao">
+        <h2>4. Centralização x Descentralização e Concentração x Desconcentração</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Centralização:</strong> O Estado executa a atividade diretamente, por meio de seus órgãos (Administração Direta).</li>
+                <li><strong>Descentralização:</strong> O Estado repassa a execução para outra entidade (Administração Indireta ou particulares). Pode ocorrer por <strong>outorga</strong> (por lei, para a Adm. Indireta) ou <strong>delegação</strong> (por contrato, para particulares).</li>
+                <li><strong>Concentração:</strong> Agrupar atribuições em um único órgão (dentro da mesma pessoa jurídica).</li>
+                <li><strong>Desconcentração:</strong> Distribuir atribuições entre órgãos da mesma pessoa jurídica (ex: criar uma delegacia regional). <strong>Não há quebra de hierarquia</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>LIMPE:</strong> Os princípios expressos são Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência. A banca troca "Eficiência" por "Eficácia" ou "Economicidade".</li>
+                <li><strong>Diferença de Vínculo:</strong> Direta = Subordinação. Indireta = Tutela.</li>
+                <li><strong>Desconcentração vs. Descentralização:</strong> Desconcentração é dentro da mesma pessoa jurídica (criação de órgãos). Descentralização é para outra pessoa jurídica (criação de entidades).</li>
+                <li><strong>Autotutela:</strong> É o poder de anular atos ilegais e revogar atos inconvenientes.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. Quais são os princípios expressos da Administração Pública no caput do Art. 37 da Constituição Federal?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Razoabilidade e Proporcionalidade são princípios implícitos.')">Legalidade, Impessoalidade, Moralidade, Razoabilidade e Proporcionalidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os princípios expressos são: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (LIMPE).')">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Economicidade e Supremacia do Interesse Público não estão expressos no Art. 37.')">Legalidade, Economicidade, Moralidade, Publicidade e Eficácia.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. A Administração Indireta é composta por entidades que possuem personalidade jurídica própria. Qual é o vínculo que as une à Administração Direta?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A subordinação hierárquica existe na Administração Direta (entre o chefe e o subordinado).')">Subordinação hierárquica.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Administração Direta exerce o controle finalístico (tutela) sobre a Administração Indireta, e não subordinação hierárquica.')">Tutela (controle finalístico).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Não existe vínculo de emprego entre a Administração Direta e Indireta.')">Vínculo empregatício.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. A criação de uma Delegacia Regional de Polícia, dentro da mesma estrutura da Polícia Civil, é um exemplo de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Desconcentração ocorre quando há distribuição interna de atribuições dentro da mesma pessoa jurídica, sem criar nova entidade.')">Desconcentração.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Descentralização ocorre quando a atividade é transferida para outra pessoa jurídica (ex: criação de uma autarquia).')">Descentralização.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A descentralização por outorga envolve a criação de uma entidade da Administração Indireta.')">Descentralização por outorga.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>4. O princípio da Autotutela permite que a Administração Pública:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Autotutela é o poder de a Administração rever seus próprios atos, anulando os ilegais e revogando os inconvenientes (Súmula 473 do STF).')">Anule seus próprios atos ilegais e revogue os atos inconvenientes.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A autotutela é um poder da Administração sobre seus atos, não sobre os atos do Poder Judiciário.')">Anule os atos do Poder Judiciário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A autotutela não autoriza a Administração a deixar de cumprir decisões judiciais.')">Descumpra decisões judiciais que considere erradas.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>5. Sobre a diferença entre Administração Direta e Indireta, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Administração Direta é composta por órgãos públicos, que não têm personalidade jurídica própria. Já a Administração Indireta é composta por entidades com personalidade jurídica própria.')">A Administração Direta é composta por órgãos sem personalidade jurídica; a Indireta é composta por entidades com personalidade jurídica própria.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: a Administração Indireta é composta por entidades com personalidade jurídica própria.')">A Administração Direta é composta por entidades com personalidade jurídica; a Indireta por órgãos sem personalidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ambas possuem organização, mas a Direta é composta por órgãos e a Indireta por entidades.')">Ambas são compostas exclusivamente por órgãos públicos.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: FUNDAMENTOS DA ADMINISTRAÇÃO PÚBLICA -->

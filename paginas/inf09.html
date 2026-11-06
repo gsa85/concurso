@@ -1,35 +1,276 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Planilhas Eletrônicas: Excel 2016 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1> Planilhas Eletrônicas: Excel 2016</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf09</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: EXCEL 2016 -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Excel 2016</h1>
+        <p>Planilhas Eletrônicas: Fórmulas e Funções – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">Conceitos Básicos</a>
+        <a href="#referencias">Referências (Cifrão $)</a>
+        <a href="#operadores">Operadores</a>
+        <a href="#funcoes">Funções Essenciais</a>
+        <a href="#atalhos">Atalhos do Excel</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS BÁSICOS -->
+    <div id="conceitos" class="secao">
+        <h2>1. Conceitos Básicos do Excel</h2>
+        <div class="card">
+            <p>O Excel é um software do tipo <strong>planilha eletrônica</strong>, usado para organizar, calcular e analisar dados. Sua estrutura é formada por:</p>
+            <ul>
+                <li><strong>Pasta de Trabalho:</strong> É o arquivo do Excel (extensão .xlsx). Pode conter várias planilhas.</li>
+                <li><strong>Planilha:</strong> É a "folha" (aba) onde os dados são inseridos.</li>
+                <li><strong>Colunas:</strong> Identificadas por letras (A, B, C...).</li>
+                <li><strong>Linhas:</strong> Identificadas por números (1, 2, 3...).</li>
+                <li><strong>Célula:</strong> É o cruzamento de uma coluna com uma linha. Ex: A1 (coluna A, linha 1).</li>
+                <li><strong>Intervalo:</strong> É um conjunto de células. Ex: A1:A10 (da célula A1 até A10).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: REFERÊNCIAS -->
+    <div id="referencias" class="secao">
+        <h2>2. Referências de Células (A Pegadinha do Cifrão)</h2>
+        <div class="card">
+            <p>A FAFIPA adora testar o uso do cifrão ($) nas fórmulas. Ele serve para <strong>fixar</strong> uma célula, impedindo que ela seja alterada ao copiar a fórmula.</p>
+            
+            <h3>Tipos de Referência</h3>
+            <ul>
+                <li><strong>Relativa (sem cifrão):</strong> Ex: A1. Muda quando a fórmula é copiada.</li>
+                <li><strong>Absoluta (com cifrão nas duas partes):</strong> Ex: $A$1. Não muda quando a fórmula é copiada.</li>
+                <li><strong>Mista (cifrão em uma só parte):</strong> Ex: $A1 (fixa a coluna) ou A$1 (fixa a linha). Muda só a parte sem cifrão.</li>
+            </ul>
+
+            <div class="box-formula">
+                $A$1 = Absoluta (não muda nada)<br>
+                $A1 = Mista (fixa a coluna A)<br>
+                A$1 = Mista (fixa a linha 1)<br>
+                A1 = Relativa (muda tudo)
+            </div>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai te dar uma fórmula com <strong>$A$1</strong> e perguntar o que acontece ao arrastar para outra célula. A resposta é: <strong>a referência continua sendo $A$1</strong>. Se fosse A1 (sem cifrão), a referência mudaria.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: OPERADORES -->
+    <div id="operadores" class="secao">
+        <h2>3. Operadores Matemáticos no Excel</h2>
+        <div class="card">
+            <p>Toda fórmula no Excel começa com o sinal de igual (=).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Operação</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>+</strong></td><td>Adição</td><td>=A1+B1</td></tr>
+                    <tr><td><strong>-</strong></td><td>Subtração</td><td>=A1-B1</td></tr>
+                    <tr><td><strong>*</strong></td><td>Multiplicação</td><td>=A1*B1</td></tr>
+                    <tr><td><strong>/</strong></td><td>Divisão</td><td>=A1/B1</td></tr>
+                    <tr><td><strong>^</strong></td><td>Potenciação</td><td>=A1^2 (A1 ao quadrado)</td></tr>
+                    <tr><td><strong>%</strong></td><td>Porcentagem</td><td>=A1*10%</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: FUNÇÕES ESSENCIAIS -->
+    <div id="funcoes" class="secao">
+        <h2>4. Funções Essenciais (As Mais Cobradas)</h2>
+        <div class="card">
+            <p>As funções são fórmulas prontas que facilitam o cálculo. As mais cobradas pela FAFIPA são:</p>
+            
+            <h3>Funções Matemáticas e Estatísticas</h3>
+            <ul>
+                <li><strong>=SOMA(A1:A10):</strong> Soma todos os valores do intervalo.</li>
+                <li><strong>=MÉDIA(A1:A10):</strong> Calcula a média aritmética dos valores do intervalo.</li>
+                <li><strong>=MÁXIMO(A1:A10):</strong> Retorna o maior valor do intervalo.</li>
+                <li><strong>=MÍNIMO(A1:A10):</strong> Retorna o menor valor do intervalo.</li>
+                <li><strong>=CONT.NÚM(A1:A10):</strong> Conta quantas células têm números.</li>
+                <li><strong>=CONT.VALORES(A1:A10):</strong> Conta quantas células NÃO estão vazias (textos + números).</li>
+            </ul>
+
+            <h3>Função Condicional: SE</h3>
+            <p>A função <strong>=SE(teste; valor_se_verdadeiro; valor_se_falso)</strong> é a mais cobrada. Ela testa uma condição e retorna um valor se for verdadeira e outro se for falsa.</p>
+            <p><em>Exemplo: =SE(A1>=7; "Aprovado"; "Reprovado"). Se o valor de A1 for maior ou igual a 7, retorna "Aprovado". Caso contrário, "Reprovado".</em></p>
+
+            <h3>Função de Contagem Condicional: CONT.SE</h3>
+            <p><strong>=CONT.SE(intervalo; critério)</strong> conta quantas células do intervalo atendem ao critério.</p>
+            <p><em>Exemplo: =CONT.SE(A1:A10; ">7") conta quantas células têm valor maior que 7.</em></p>
+
+            <h3>Função de Busca: PROCV</h3>
+            <p><strong>=PROCV(valor_procurado; matriz_tabela; número_índice_coluna; [procurar_intervalo])</strong> procura um valor na primeira coluna de uma tabela e retorna um valor de outra coluna.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a diferença entre <strong>CONT.NÚM</strong> e <strong>CONT.VALORES</strong>. O CONT.NÚM conta apenas células com números. O CONT.VALORES conta qualquer célula que não esteja vazia (textos, números, datas). A banca vai trocar os dois.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: ATALHOS DO EXCEL -->
+    <div id="atalhos" class="secao">
+        <h2>5. Atalhos do Excel</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Atalho</th>
+                    <th>Função</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Ctrl + Shift + $</strong></td><td>Formata como moeda (R$)</td></tr>
+                <tr><td><strong>Ctrl + Shift + %</strong></td><td>Formata como porcentagem</td></tr>
+                <tr><td><strong>Ctrl + ;</strong></td><td>Insere a data atual</td></tr>
+                <tr><td><strong>Ctrl + Shift + ;</strong></td><td>Insere a hora atual</td></tr>
+                <tr><td><strong>Ctrl + Page Up / Page Down</strong></td><td>Alterna entre as planilhas (abas) da pasta de trabalho</td></tr>
+                <tr><td><strong>F2</strong></td><td>Edita a célula selecionada</td></tr>
+                <tr><td><strong>F4</strong></td><td>Alterna entre referência relativa e absoluta (adiciona/remove o cifrão $)</td></tr>
+                <tr><td><strong>Ctrl + Enter</strong></td><td>Preenche a célula e permanece nela</td></tr>
+                <tr><td><strong>Alt + =</strong></td><td>Insere a função SOMA automaticamente</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Cifrão ($):</strong> $A$1 = Absoluta (não muda). A$1 ou $A1 = Mista. A1 = Relativa.</li>
+                <li><strong>Toda fórmula começa com "=".</strong> Sem o sinal de igual, o Excel interpreta como texto.</li>
+                <li><strong>CONT.NÚM vs. CONT.VALORES:</strong> CONT.NÚM conta só números. CONT.VALORES conta qualquer célula não vazia.</li>
+                <li><strong>Função SE:</strong> Sintaxe: =SE(condição; verdadeiro; falso).</li>
+                <li><strong>F4:</strong> Alterna o cifrão (referência relativa/absoluta).</li>
+                <li><strong>Ctrl+Shift+$:</strong> Formata como moeda.</li>
+                <li><strong>MÁXIMO e MÍNIMO:</strong> Sempre em maiúsculas. A banca pode trocar por "MAX" (inglês) ou "MÁX".</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. No Excel, qual é a função da referência absoluta representada por $A$1?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A referência relativa é A1 (sem cifrão), que muda quando a fórmula é copiada.')">A referência muda quando a fórmula é copiada para outra célula.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A referência absoluta ($A$1) fixa a célula, ou seja, ela não muda quando a fórmula é copiada para outra célula.')">A referência permanece fixa quando a fórmula é copiada.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A referência $A$1 é fixa, não muda.')">A referência é excluída automaticamente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é a função correta para somar os valores do intervalo de A1 a A10 no Excel?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O correto é =SOMA(A1:A10). "SOMA" é a função em português.')">=SOMA(A1;A10)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A função =SOMA(A1:A10) soma todos os valores do intervalo de A1 até A10.')">=SOMA(A1:A10)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função correta é =SOMA(A1:A10), e não "ADICIONAR".')">=ADICIONAR(A1:A10)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A função =SE(A1>=7; "Aprovado"; "Reprovado") no Excel retorna "Aprovado" quando:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A função SE testa a condição. Se o valor de A1 for maior ou igual a 7, retorna "Aprovado". Caso contrário, "Reprovado".')">O valor de A1 for maior ou igual a 7.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Se A1 for menor que 7, retorna "Reprovado". Para ser "Aprovado", precisa ser >= 7.')">O valor de A1 for menor que 7.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A condição é A1>=7, ou seja, maior ou igual a 7.')">O valor de A1 for exatamente 7.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é a principal diferença entre as funções CONT.NÚM e CONT.VALORES no Excel?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! CONT.NÚM conta apenas células que contêm números. CONT.VALORES conta qualquer célula que não esteja vazia (textos, números, datas).')">CONT.NÚM conta apenas números; CONT.VALORES conta qualquer célula não vazia.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: CONT.NÚM conta apenas números e CONT.VALORES conta qualquer célula não vazia.')">CONT.VALORES conta apenas números; CONT.NÚM conta qualquer célula não vazia.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As duas funções são diferentes: uma conta só números e a outra conta qualquer valor não vazio.')">As duas funções fazem a mesma coisa.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual atalho é utilizado no Excel para alternar uma referência de célula entre relativa e absoluta (adicionar/remover o cifrão $)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! F2 é para editar a célula.')">F2</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A tecla F4 alterna entre referência relativa e absoluta, adicionando ou removendo o cifrão $ da célula.')">F4</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! F5 é para "Ir para" (Go To) no Excel.')">F5</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: EXCEL 2016 -->

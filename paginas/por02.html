@@ -1,35 +1,253 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>por02 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>por02</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: COMUNICAÇÃO, LINGUAGEM E VARIAÇÕES LINGUÍSTICAS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Comunicação e Linguagem</h1>
+        <p>Funções da Linguagem e Variações Linguísticas – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#elementos">Elementos da Comunicação</a>
+        <a href="#funcoes">Funções da Linguagem</a>
+        <a href="#variacoes">Variações Linguísticas</a>
+        <a href="#preconceito">Preconceito Linguístico</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: ELEMENTOS DA COMUNICAÇÃO -->
+    <div id="elementos" class="secao">
+        <h2>1. Os Elementos da Comunicação</h2>
+        <div class="card">
+            <p>Para que a comunicação aconteça, são necessários seis elementos básicos:</p>
+            <ul>
+                <li><strong>Emissor (Locutor):</strong> Quem fala, escreve ou emite a mensagem.</li>
+                <li><strong>Receptor (Interlocutor):</strong> Quem recebe a mensagem.</li>
+                <li><strong>Mensagem:</strong> O conteúdo transmitido (o texto, a fala, a imagem).</li>
+                <li><strong>Código:</strong> A língua (português, inglês) ou a linguagem usada (sinais, libras).</li>
+                <li><strong>Canal (Contato):</strong> O meio pelo qual a mensagem é transmitida (ar/voz, papel, internet).</li>
+                <li><strong>Contexto (Referente):</strong> A situação, o assunto ou o objeto da mensagem.</li>
+            </ul>
+            
+            <h3>Tipos de Linguagem</h3>
+            <ul>
+                <li><strong>Verbal:</strong> Uso de palavras (oral ou escrita).</li>
+                <li><strong>Não-verbal:</strong> Uso de gestos, placas, cores, imagens, expressões faciais.</li>
+                <li><strong>Mista:</strong> A união da verbal com a não-verbal (ex: uma charge com texto e desenho).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: FUNÇÕES DA LINGUAGEM -->
+    <div id="funcoes" class="secao">
+        <h2>2. As Funções da Linguagem</h2>
+        <div class="card">
+            <p>Cada função da linguagem está ligada a um dos elementos da comunicação. A FAFIPA adora dar um texto (uma propaganda, uma poesia) e pedir a função predominante.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Função</th>
+                        <th>Foco em...</th>
+                        <th>Características e Exemplos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Referencial (Denotativa)</strong></td>
+                        <td>Contexto (Informação)</td>
+                        <td>Linguagem objetiva, direta, sem emoções. Ex: notícias, textos científicos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emotiva (Expressiva)</strong></td>
+                        <td>Emissor</td>
+                        <td>Marcada pela 1ª pessoa (eu), exclamações, sentimentos. Ex: diários, poesias líricas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apelativa (Conativa)</strong></td>
+                        <td>Receptor</td>
+                        <td>Busca convencer ou influenciar. Verbos no imperativo (compre, faça), 2ª ou 3ª pessoa. Ex: propagandas, discursos políticos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poética</strong></td>
+                        <td>Mensagem</td>
+                        <td>Preocupação com a estética, sonoridade, rimas, figuras de linguagem. Ex: poemas, letras de música.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fática</strong></td>
+                        <td>Canal</td>
+                        <td>Testar o canal ou manter a conversa. Ex: "Alô?", "Tudo bem?", "Entendeu?".</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Metalinguística</strong></td>
+                        <td>Código</td>
+                        <td>A linguagem explicando a si mesma. Ex: um dicionário, um filme sobre cinema, uma poesia que fala sobre fazer poesia.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Uma propaganda é o exemplo clássico de função <strong>Apelativa</strong> (quer que você compre). Já um dicionário é o exemplo clássico de <strong>Metalinguística</strong> (o código explicando o próprio código).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: VARIAÇÕES LINGUÍSTICAS -->
+    <div id="variacoes" class="secao">
+        <h2>3. Variações Linguísticas</h2>
+        <div class="card">
+            <p>A língua não é imutável. Ela varia conforme o tempo, o espaço, o grupo social e a situação de comunicação. Não existe o "português certo" e o "português errado", mas sim o <strong>adequado</strong> e o <strong>inadequado</strong> para cada contexto.</p>
+            
+            <h3>Tipos de Variação</h3>
+            <ul>
+                <li><strong>Histórica (ou Diacrônica):</strong> Mudança da língua ao longo do tempo. Ex: "vossa mercê" virou "você" e depois "cê".</li>
+                <li><strong>Geográfica (ou Diatópica):</strong> Os regionalismos e dialetos. Ex: "mandioca" (SP) vs. "macaxeira" (PE) vs. "aipim" (RJ).</li>
+                <li><strong>Social (ou Diastrática):</strong> Variação conforme o grupo social (gírias, jargões). Ex: gírias de surfistas, jargões jurídicos.</li>
+                <li><strong>Situacional (ou Diafásica):</strong> A linguagem formal vs. informal. Ex: falar com o chefe (formal) e falar com os amigos (informal).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: PRECONCEITO LINGUÍSTICO -->
+    <div id="preconceito" class="secao">
+        <h2>4. Preconceito Linguístico</h2>
+        <div class="card">
+            <p>O preconceito linguístico é o julgamento negativo que se faz da forma de falar de outra pessoa, geralmente associada a classes sociais mais baixas ou regiões específicas.</p>
+            <p>Do ponto de vista científico (da Linguística), <strong>todas as variações são válidas</strong> e possuem regras próprias. O que existe é uma norma-padrão (a forma ensinada na escola e usada em documentos oficiais), que deve ser dominada, mas não é a única forma correta de se comunicar.</p>
+            <p><em>Exemplo: Falar "nós vai" é uma variação da língua portuguesa, muito comum na fala informal. Chamar isso de "erro" ou "burrice" é preconceito linguístico.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Propaganda = Apelativa:</strong> Se tiver verbos no imperativo (compre, ligue, faça) ou tentar convencer, é função apelativa.</li>
+                <li><strong>Notícia = Referencial:</strong> Texto objetivo, sem opinião, com dados, é referencial.</li>
+                <li><strong>Dicionário/Poema que fala de poema = Metalinguística:</strong> A linguagem falando de si mesma.</li>
+                <li><strong>Variação não é erro:</strong> A banca vai tentar te convencer de que a forma coloquial ("nós vai") está errada. Ela está inadequada para a norma culta, mas é uma variação válida da língua.</li>
+                <li><strong>Mista:</strong> Se aparecer uma imagem (não-verbal) com um texto (verbal), é linguagem mista.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é a função da linguagem predominante em uma propaganda que diz "Compre agora e leve dois"?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função referencial é usada para informar, sem tentar convencer.')">Função Referencial.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A propaganda busca convencer o receptor a fazer algo, usando verbos no imperativo (Compre, leve). Essa é a função Apelativa (ou Conativa).')">Função Apelativa (Conativa).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função poética foca na estética da mensagem, e não no convencimento do receptor.')">Função Poética.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Um dicionário de língua portuguesa é um exemplo clássico de qual função da linguagem?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O dicionário usa a linguagem para explicar a própria linguagem (o código), o que caracteriza a função Metalinguística.')">Função Metalinguística.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função fática serve para testar o canal de comunicação (ex: "Alô?", "Entendeu?").')">Função Fática.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função emotiva expressa sentimentos do emissor (1ª pessoa), o que não é o caso de um dicionário.')">Função Emotiva.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A diferença entre "mandioca" (usado em SP) e "macaxeira" (usado em PE) é um exemplo de qual tipo de variação linguística?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A variação histórica ocorre ao longo do tempo.')">Variação Histórica.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A variação geográfica (ou diatópica) é aquela que ocorre de acordo com a região onde o falante está.')">Variação Geográfica.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A variação social está ligada a grupos sociais (gírias, jargões), não à localização.')">Variação Social.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. O que é o preconceito linguístico?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O preconceito linguístico é justamente o julgamento negativo da fala do outro.')">O estudo científico das variações linguísticas de uma comunidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! É o julgamento negativo da forma de falar do outro, geralmente associado a questões de classe social ou região, desconsiderando que a língua é variável.')">O julgamento negativo da forma de falar de outra pessoa, sem considerar o contexto e as variações da língua.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O preconceito linguístico não é a correção de erros ortográficos, mas sim a discriminação pela forma de falar.')">A correção de erros gramaticais em textos formais.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A função da linguagem que tem como foco o próprio emissor, expressando seus sentimentos e emoções, é a:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A função Emotiva (ou Expressiva) está centrada no emissor, com uso de 1ª pessoa, exclamações e subjetividade.')">Função Emotiva (Expressiva).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função Referencial está centrada no contexto/informação.')">Função Referencial.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A função Apelativa está centrada no receptor.')">Função Apelativa.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: COMUNICAÇÃO E LINGUAGEM -->

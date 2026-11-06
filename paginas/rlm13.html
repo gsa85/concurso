@@ -1,35 +1,224 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rlm13 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>rlm13</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm13</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: EVENTOS DEPENDENTES E INDEPENDENTES -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Eventos Dependentes e Independentes</h1>
+        <p>Probabilidade Condicional e Multiplicação de Eventos – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#independentes">Eventos Independentes</a>
+        <a href="#dependentes">Eventos Dependentes</a>
+        <a href="#diferenca">Com vs. Sem Reposição</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: EVENTOS INDEPENDENTES -->
+    <div id="independentes" class="secao">
+        <h2>1. Eventos Independentes</h2>
+        <div class="card">
+            <p>Dois eventos são <strong>independentes</strong> quando a ocorrência de um <strong>não afeta</strong> a probabilidade de o outro acontecer.</p>
+            
+            <h3>A Regra da Multiplicação (E)</h3>
+            <p>Quando queremos a probabilidade de dois eventos independentes acontecerem <strong>ao mesmo tempo</strong> (ou em sequência, sem interferência), multiplicamos as probabilidades individuais.</p>
+            
+            <div class="box-formula">
+                P(A e B) = P(A) × P(B)
+            </div>
+            
+            <p><em>Exemplo: Lançar uma moeda e um dado. Qual a probabilidade de tirar "Cara" e "6"?</em></p>
+            <ul>
+                <li>Probabilidade de Cara: 1/2</li>
+                <li>Probabilidade de 6: 1/6</li>
+                <li>Probabilidade de ambos: 1/2 × 1/6 = <strong>1/12</strong></li>
+            </ul>
+            <p><em>Perceba que o resultado da moeda não muda em nada o resultado do dado.</em></p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: EVENTOS DEPENDENTES -->
+    <div id="dependentes" class="secao">
+        <h2>2. Eventos Dependentes</h2>
+        <div class="card">
+            <p>Dois eventos são <strong>dependentes</strong> quando a ocorrência de um <strong>altera</strong> a probabilidade de o outro acontecer. Isso geralmente ocorre em experimentos <strong>sem reposição</strong>.</p>
+            
+            <h3>A Regra da Multiplicação (E) com Dependência</h3>
+            <p>Neste caso, a probabilidade do segundo evento é calculada <strong>considerando que o primeiro já aconteceu</strong>. Isso é chamado de probabilidade condicional.</p>
+            
+            <div class="box-formula">
+                P(A e B) = P(A) × P(B|A)
+            </div>
+            
+            <p><em>Exemplo: Uma urna tem 3 bolas vermelhas e 2 azuis (total 5). Retiramos uma bola, não devolvemos, e retiramos outra. Qual a probabilidade de tirar duas vermelhas?</em></p>
+            <ul>
+                <li>Probabilidade da 1ª vermelha: 3/5</li>
+                <li>Como a bola não foi devolvida, agora temos 2 vermelhas em 4 bolas no total.</li>
+                <li>Probabilidade da 2ª vermelha: 2/4</li>
+                <li>Probabilidade de ambas: 3/5 × 2/4 = 6/20 = <strong>3/10</strong></li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A palavra-chave para eventos dependentes é <strong>"sem reposição"</strong> ou <strong>"sem devolver"</strong>. Quando a banca diz isso, o total de elementos do espaço amostral diminui na segunda retirada, e você precisa recalcular a fração.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: DIFERENÇA CRUCIAL -->
+    <div id="diferenca" class="secao">
+        <h2>3. Com vs. Sem Reposição (A Diferença Crucial)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Retirada</th>
+                    <th>Tipo de Evento</th>
+                    <th>Como Calcular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Com Reposição</strong></td>
+                    <td>Independente</td>
+                    <td>Probabilidades não se alteram. Multiplicamos as frações originais.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sem Reposição</strong></td>
+                    <td>Dependente</td>
+                    <td>A primeira fração é normal. A segunda fração tem o numerador e o denominador reduzidos.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>A palavra "E" (Multiplicação):</strong> Se a questão pede a probabilidade de acontecer o evento A <strong>E</strong> o evento B, você multiplica as probabilidades. Isso vale para eventos independentes e dependentes.</li>
+                <li><strong>A palavra "OU" (Soma):</strong> Se a questão pede A <strong>OU</strong> B (e eles não podem acontecer juntos), você soma as probabilidades. A banca troca o "E" pelo "OU" para confundir.</li>
+                <li><strong>Sempre volte ao enunciado:</strong> Se a banca falar em "retirar uma carta e depois outra", verifique se há a expressão <strong>com reposição</strong> (independente) ou <strong>sem reposição</strong> (dependente).</li>
+                <li><strong>Na dúvida, desenhe a árvore de probabilidades:</strong> Se a questão for muito longa, desenhar os galhos ajuda a visualizar se o total de possibilidades mudou ou não.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Dois eventos são considerados independentes quando:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Se a ocorrência de um altera a probabilidade do outro, eles são DEPENDENTES.')">A ocorrência de um altera a probabilidade de o outro acontecer.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Eventos independentes são aqueles em que a ocorrência de um não afeta a probabilidade do outro.')">A ocorrência de um não afeta a probabilidade de o outro acontecer.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Eventos impossíveis não são independentes, são apenas impossíveis.')">A probabilidade de ambos é sempre zero.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Lançamos duas moedas honestas. Qual é a probabilidade de tirar "Cara" nas duas?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você somou as probabilidades (1/2 + 1/2 = 1). Para o evento "E", nós multiplicamos.')">1 (100%)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os lançamentos são independentes. Probabilidade = 1/2 (cara na 1ª) × 1/2 (cara na 2ª) = 1/4 (25%).')">1/4 (25%)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 1/2 seria a probabilidade de tirar cara em apenas uma moeda.')">1/2 (50%)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Uma urna contém 4 bolas brancas e 6 pretas. Retiramos uma bola, <strong>sem reposição</strong>, e depois retiramos outra. Qual é a probabilidade de tirar duas bolas brancas?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você usou a mesma probabilidade para as duas (4/10 × 4/10), o que só seria correto se houvesse reposição.')">16/100 (16%)</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Como não há reposição, a segunda fração muda: 1ª bola branca = 4/10. 2ª bola branca = 3/9 (pois uma já saiu). Logo, 4/10 × 3/9 = 12/90 = 2/15.')">2/15 (aproximadamente 13,3%)</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A primeira fração é 4/10, mas a segunda seria 3/9, e não 3/10.')">12/100 (12%)</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em um baralho de 52 cartas, retiramos uma carta, <strong>com reposição</strong>, e depois retiramos outra. Qual é a probabilidade de tirar um Ás e depois um Rei?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A probabilidade de tirar um Ás é 4/52. Como há reposição, a probabilidade de tirar um Rei continua sendo 4/52.')">1/169</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Como há reposição, os eventos são independentes. A probabilidade de Ás é 4/52 e de Rei é 4/52. Logo, (4/52) × (4/52) = 16/2704 = 1/169.')">1/169</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você pode ter esquecido de multiplicar as probabilidades ou usado a fórmula de eventos dependentes (sem reposição).')">1/663</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre a regra da multiplicação, é correto afirmar que ela é utilizada quando queremos calcular a probabilidade de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Para eventos mutuamente exclusivos (A ou B), usamos a soma.')">Acontecer o evento A OU o evento B.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A multiplicação (P(A) × P(B)) é usada para eventos que ocorrem em sequência (evento A E evento B).')">Acontecer o evento A E o evento B, em sequência.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A multiplicação não calcula a diferença entre probabilidades.')">Acontecer apenas um dos eventos, excluindo o outro.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: EVENTOS DEPENDENTES E INDEPENDENTES -->

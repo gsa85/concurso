@@ -1,35 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>egra de três simples e composta — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>egra de três simples e composta</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>rlm17</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: REGRA DE TRÊS SIMPLES E COMPOSTA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Regra de Três</h1>
+        <p>Simples e Composta – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#simples">Regra de Três Simples</a>
+        <a href="#composta">Regra de Três Composta</a>
+        <a href="#metodo">O Método Prático</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: REGRA DE TRÊS SIMPLES -->
+    <div id="simples" class="secao">
+        <h2>1. Regra de Três Simples</h2>
+        <div class="card">
+            <p>É usada quando temos <strong>apenas duas grandezas</strong> proporcionais. O objetivo é descobrir um valor desconhecido (x) a partir de três valores conhecidos.</p>
+            
+            <h3>Direta</h3>
+            <p>Se uma grandeza aumenta, a outra também aumenta (ou ambas diminuem juntas).</p>
+            <p><em>Exemplo: Se 1 kg de carne custa R$ 30, quanto custam 3 kg?</em></p>
+            <ul>
+                <li>1 kg → R$ 30</li>
+                <li>3 kg → x</li>
+                <li>Multiplica em cruz: 1x = 3 × 30 → x = 90.</li>
+            </ul>
+
+            <h3>Inversa</h3>
+            <p>Se uma grandeza aumenta, a outra diminui (e vice-versa).</p>
+            <p><em>Exemplo: Se 2 pedreiros constroem um muro em 6 dias, quanto tempo levam 4 pedreiros?</em></p>
+            <ul>
+                <li>2 pedreiros → 6 dias</li>
+                <li>4 pedreiros → x</li>
+                <li>Como mais pedreiros = menos dias, multiplica na horizontal (ou inverte a fração): 4x = 2 × 6 → 4x = 12 → x = 3 dias.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: REGRA DE TRÊS COMPOSTA -->
+    <div id="composta" class="secao">
+        <h2>2. Regra de Três Composta</h2>
+        <div class="card">
+            <p>É usada quando temos <strong>três ou mais grandezas</strong> proporcionais. O segredo aqui é analisar cada grandeza separadamente em relação à grandeza onde está o "x".</p>
+            
+            <p><strong>Passo a passo:</strong></p>
+            <ol>
+                <li>Monte uma tabela com as grandezas.</li>
+                <li>Coloque o "x" na grandeza que você quer descobrir.</li>
+                <li>Pergunte para cada outra grandeza: "Se eu aumentar essa, o x aumenta ou diminui?"</li>
+                <li>Se aumentar junto, é direta. Se diminuir, é inversa.</li>
+                <li>Monte a proporção, lembrando de <strong>inverter as frações inversas</strong>.</li>
+            </ol>
+
+            <p><em>Exemplo:</em> 4 máquinas produzem 800 peças em 5 dias. Quantas peças 6 máquinas produzirão em 10 dias?</p>
+            <ul>
+                <li><strong>Relação máquinas x peças:</strong> Mais máquinas produzem mais peças (Direta).</li>
+                <li><strong>Relação dias x peças:</strong> Mais dias produzem mais peças (Direta).</li>
+                <li>Como ambas são diretas, basta multiplicar em cruz: (4 × 5) / 800 = (6 × 10) / x.</li>
+                <li>20 / 800 = 60 / x → 20x = 48.000 → x = 2.400 peças.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O maior erro na composta é não inverter as frações quando a grandeza é inversa. Lembre-se: se for inversa, o denominador vai para cima e o numerador para baixo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: O MÉTODO PRÁTICO -->
+    <div id="metodo" class="secao">
+        <h2>3. O Método Prático (Processo x Produto)</h2>
+        <div class="card">
+            <p>Para agilizar na prova, use a regra do "Processo x Produto":</p>
+            <ul>
+                <li><strong>Processo:</strong> São os dados que "trabalham" (máquinas, operários, dias, horas).</li>
+                <li><strong>Produto:</strong> É o resultado (peças produzidas, metros construídos, litros).</li>
+            </ul>
+            <p>Se a questão pedir o <strong>produto</strong>, multiplica-se o processo (máquinas × dias) e iguala-se com o outro lado.</p>
+            <p>Se a questão pedir uma grandeza do <strong>processo</strong> (ex: quantos dias), você multiplica o produto pelos outros processos e iguala com o processo do x.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Unidades diferentes:</strong> Se a questão der 2 horas e 30 minutos, converta tudo para minutos antes de aplicar a regra. Se der 500 gramas e 2 kg, converta para gramas.</li>
+                <li><strong>Inversa na Composta:</strong> Na composta, as grandezas podem ter naturezas diferentes (uma direta e outra inversa). Analise uma por uma.</li>
+                <li><strong>Grandeza que não muda:</strong> Às vezes a banca coloca uma grandeza que é constante (ex: a qualidade do material). Ela não entra no cálculo.</li>
+                <li><strong>Pergunte sempre:</strong> "Se eu aumento isso, o resultado aumenta ou diminui?"</li>
+                <li><strong>Multiplicação em Cruz:</strong> Na simples inversa, você pode multiplicar na horizontal (A × B = C × D) ou inverter a fração. Ambos os métodos dão o mesmo resultado.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Um carro percorre 200 km com 20 litros de gasolina. Quantos litros ele gastará para percorrer 500 km?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A conta é 200/500 = 20/x. Multiplicando em cruz: 200x = 10.000 → x = 50.')">40 litros</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Grandezas diretamente proporcionais. 200/500 = 20/x → 200x = 10.000 → x = 50 litros.')">50 litros</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 100 litros seria o dobro do necessário. A regra de três resulta em 50.')">100 litros</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Se 5 máquinas produzem 1.000 peças em 4 dias, quantas peças 10 máquinas produzirão em 8 dias?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Dobrando as máquinas e dobrando os dias, a produção quadruplica. O correto é 4.000 peças.')">2.000 peças</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Máquinas e peças são diretamente proporcionais. Dias e peças também. Logo: (5×4)/1000 = (10×8)/x. 20/1000 = 80/x → 20x = 80.000 → x = 4.000.')">4.000 peças</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 8.000 peças seria se a relação fosse inversa, mas mais máquinas e mais dias geram mais peças.')">8.000 peças</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Uma equipe de 12 operários constrói um muro em 30 dias. Se a equipe fosse reduzida para 6 operários, quantos dias levariam para construir o mesmo muro?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Você multiplicou em cruz. Como operários e dias são inversamente proporcionais, o tempo dobra.')">15 dias</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Menos operários = mais dias (inversa). 12/6 = x/30 → 6x = 360 → x = 60 dias.')">60 dias</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 30 dias seria se a equipe não tivesse sido reduzida. Com menos operários, leva mais tempo.')">30 dias</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em uma regra de três composta, temos as grandezas A (inversa com x), B (direta com x) e C (direta com x). Como montamos a proporção?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Se a grandeza é inversa, a fração deve ser invertida.')">Multiplicamos todas as grandezas diretamente, sem inverter nenhuma.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A grandeza A, por ser inversa, tem sua fração invertida. As grandezas B e C mantêm a ordem original.')">Invertemos a fração da grandeza A e mantemos as frações de B e C.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Inverter B e C estaria errado, pois elas são diretamente proporcionais.')">Invertemos as frações de B e C, e mantemos a de A.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Se 2/3 de uma obra foram feitos em 10 dias, quantos dias serão necessários para terminar a obra (ou seja, fazer o 1/3 restante)?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A relação é direta. Se 2/3 levam 10 dias, 1/3 levará a metade (5 dias).')">10 dias</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A relação entre a parte da obra e os dias é direta. (2/3)/10 = (1/3)/x → 2x/3 = 10/3 → 2x = 10 → x = 5 dias.')">5 dias</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 15 dias seria para fazer 1/3, mas a obra toda é 3/3.')">20 dias</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: REGRA DE TRÊS SIMPLES E COMPOSTA -->

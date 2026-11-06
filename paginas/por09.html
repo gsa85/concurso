@@ -1,35 +1,236 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>por09 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>por09</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>por09</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: CONCORDÂNCIAS NOMINAL E VERBAL -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Concordâncias Nominal e Verbal</h1>
+        <p>Regras, Casos Especiais e Pegadinhas – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#verbal">Concordância Verbal</a>
+        <a href="#nominal">Concordância Nominal</a>
+        <a href="#especiais">Casos Especiais</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCORDÂNCIA VERBAL -->
+    <div id="verbal" class="secao">
+        <h2>1. Concordância Verbal (O Verbo e o Sujeito)</h2>
+        <div class="card">
+            <p>A regra geral é que o verbo deve concordar com o sujeito em <strong>número</strong> (singular/plural) e <strong>pessoa</strong> (1ª, 2ª, 3ª).</p>
+            
+            <h3>Casos Especiais (Onde a FAFIPA ataca)</h3>
+            <ul>
+                <li><strong>Verbo "Haver" (sentido de existir):</strong> É impessoal, fica sempre no <strong>singular</strong>.
+                    <br><em>Correto: "Havia muitos alunos." / Errado: "Haviam muitos alunos."</em>
+                </li>
+                <li><strong>Verbo "Fazer" (indicando tempo):</strong> Também é impessoal, fica no <strong>singular</strong>.
+                    <br><em>Correto: "Faz cinco anos que ele saiu." / Errado: "Fazem cinco anos..."</em>
+                </li>
+                <li><strong>Verbo "Ser" (indicando horas/datas):</strong> Concorda com o número de horas/datas.
+                    <br><em>Correto: "É uma hora." / "São duas horas." / "Hoje é 15 de março."</em>
+                </li>
+                <li><strong>Expressões partitivas (A maioria de, Grande parte de):</strong> O verbo pode concordar com o partitivo (singular) ou com o especificador (plural).
+                    <br><em>Correto: "A maioria dos alunos foi aprovada" OU "A maioria dos alunos foram aprovados".</em>
+                </li>
+                <li><strong>Partícula "SE":</strong>
+                    <br>Se for <strong>Apassivadora</strong> (verbo transitivo direto): O verbo concorda com o sujeito.
+                    <br><em>Correto: "Vendem-se casas." (Casas são vendidas).</em>
+                    <br>Se for <strong>Índice de Indeterminação</strong> (verbo transitivo indireto): O verbo fica no singular.
+                    <br><em>Correto: "Precisa-se de empregados."</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CONCORDÂNCIA NOMINAL -->
+    <div id="nominal" class="secao">
+        <h2>2. Concordância Nominal (O Adjetivo e o Substantivo)</h2>
+        <div class="card">
+            <p>A regra geral é que o adjetivo, artigo, numeral e pronome adjetivo concordam com o substantivo em <strong>gênero</strong> (masculino/feminino) e <strong>número</strong> (singular/plural).</p>
+            
+            <h3>Palavras que mais confundem</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Palavra</th>
+                        <th>Regra</th>
+                        <th>Exemplo Correto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Anexo</strong></td><td>Varia (concorda com o substantivo)</td><td>"As fotos estão <strong>anexas</strong>."</td></tr>
+                    <tr><td><strong>Quite</strong></td><td>Varia</td><td>"Eles estão <strong>quites</strong> com o pagamento."</td></tr>
+                    <tr><td><strong>Mesmo / Próprio</strong></td><td>Variam</td><td>"Elas <strong>mesmas</strong> fizeram."</td></tr>
+                    <tr><td><strong>Menos</strong></td><td>Invariável (sempre no singular)</td><td>"Havia <strong>menos</strong> pessoas."</td></tr>
+                    <tr><td><strong>Alerta</strong></td><td>Invariável (é advérbio)</td><td>"Os soldados estão <strong>alerta</strong>."</td></tr>
+                    <tr><td><strong>Pseudo</strong></td><td>Invariável</td><td>"São <strong>pseudo</strong>-intelectuais."</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> "Anexo" é o campeão de erros. Se a palavra for um adjetivo, ela varia (anexo, anexa, anexos, anexas). Mas se for a expressão "em anexo", ela não varia (porque "anexo" é um substantivo). <br>Ex: "As fotos estão <strong>anexas</strong>" (correto). "As fotos estão <strong>em anexo</strong>" (correto).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: CASOS ESPECIAIS (É PROIBIDO, É NECESSÁRIO) -->
+    <div id="especiais" class="secao">
+        <h2>3. Expressões com "É" (Proibido, Necessário, Bom, Permitido)</h2>
+        <div class="card">
+            <p>A concordância dessas expressões depende da presença de <strong>artigo</strong>.</p>
+            <ul>
+                <li><strong>SEM artigo:</strong> A expressão fica <strong>invariável</strong> (no singular).</li>
+                <li><strong>COM artigo:</strong> A expressão <strong>concorda</strong> com o substantivo (vai para o feminino/plural).</li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sem Artigo (Invariável)</th>
+                        <th>Com Artigo (Variável)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>"Cerveja é <strong>bom</strong>."</td><td>"A cerveja é <strong>boa</strong>."</td></tr>
+                    <tr><td>"É <strong>proibido</strong> entrada."</td><td>"É <strong>proibida</strong> a entrada."</td></tr>
+                    <tr><td>"É <strong>necessário</strong> paciência."</td><td>"É <strong>necessária</strong> a paciência."</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Haver (existir):</strong> Sempre singular. Se a frase for "Haviam muitos candidatos", está errada. O correto é "Havia".</li>
+                <li><strong>Fazer (tempo):</strong> Sempre singular. "Fazem 10 anos" está errado. O correto é "Faz 10 anos".</li>
+                <li><strong>Anexo:</strong> Como adjetivo, varia. "Seguem anexos os documentos" (errado: anexo). O correto é "Seguem anexos os documentos".</li>
+                <li><strong>Menos:</strong> Nunca vai para o plural. "Menas" não existe, e "menos" é invariável.</li>
+                <li><strong>É proibido / É necessário:</strong> Sem artigo, fica no singular. Com artigo, flexiona. "É proibido entrada" (correto). "É proibida a entrada" (correto).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Assinale a alternativa em que a concordância verbal está CORRETA:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O verbo "haver" no sentido de "existir" é impessoal e fica no singular. O correto é "Havia muitos candidatos".')">Haviam muitos candidatos na sala.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O verbo "haver" (existir) é impessoal. Portanto, fica sempre na 3ª pessoa do singular: "Havia muitos candidatos".')">Havia muitos candidatos na sala.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O verbo "haver" não vai para o plural nesse sentido.')">Houveram muitos candidatos na sala.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Assinale a alternativa em que a concordância nominal está CORRETA:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Anexo" é adjetivo e deve concordar com o substantivo. O correto é "anexas" (feminino plural).')">As fotos estão anexo ao processo.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O adjetivo "anexo" deve concordar em gênero e número com o substantivo "fotos" (feminino plural). Logo, "anexas".')">As fotos estão anexas ao processo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O correto é "anexas", pois é um adjetivo que concorda com o substantivo.')">As fotos estão em anexas ao processo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Complete a frase: "É _____ paciência com crianças."</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Como não há artigo antes do substantivo "paciência", a expressão "é necessário" fica invariável (no singular).')">necessário</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Como não há artigo antes de "paciência", a expressão não varia. O correto é "necessário".')">necessária</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A forma correta é "necessário" (invariável).')">necessárias</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Assinale a alternativa em que o uso do verbo "fazer" está CORRETO:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O verbo "fazer" indicando tempo é impessoal e fica no singular.')">Fazem dois anos que ele partiu.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O verbo "fazer" indicando tempo decorrido é impessoal e fica no singular.')">Faz dois anos que ele partiu.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O verbo "fazer" indicando tempo é impessoal, fica no singular.')">Fazem dois anos que ele partiu.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Assinale a alternativa em que a concordância está CORRETA:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O verbo "existir" é pessoal e concorda com o sujeito "problemas" (plural).')">Existem muitos problemas a serem resolvidos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O verbo "existir" não é impessoal (diferente de "haver"). Ele concorda com o sujeito. O correto é "Existem".')">Existe muitos problemas a serem resolvidos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A concordância correta é "Existem" (plural).')">Haviam muitos problemas a serem resolvidos.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: CONCORDÂNCIAS NOMINAL E VERBAL -->

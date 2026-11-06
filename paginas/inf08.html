@@ -1,35 +1,270 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Processador de Texto: Word 2016 — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Processador de Texto: Word 2016</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>inf08</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: WORD 2016 -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Word 2016</h1>
+        <p>Processador de Texto – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#abas">Abas do Word</a>
+        <a href="#formatacao">Formatação de Fonte</a>
+        <a href="#paragrafo">Formatação de Parágrafo</a>
+        <a href="#mala-direta">Mala Direta</a>
+        <a href="#atalhos">Atalhos do Word</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: ABAS -->
+    <div id="abas" class="secao">
+        <h2>1. As Abas do Word 2016</h2>
+        <div class="card">
+            <p>A FAFIPA adora perguntar em qual aba fica cada ferramenta. Decore as principais:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aba</th>
+                        <th>Principais Ferramentas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Página Inicial</strong></td><td>Fonte (negrito, itálico, tamanho), Parágrafo (alinhamento, marcadores), Estilos, Área de Transferência (copiar/colar).</td></tr>
+                    <tr><td><strong>Inserir</strong></td><td>Tabelas, Imagens, Formas, Cabeçalho e Rodapé, Número de Página, Links, Símbolos.</td></tr>
+                    <tr><td><strong>Design</strong></td><td>Temas, Cores, Fontes, Marca d'água, Cor da Página, Bordas da Página.</td></tr>
+                    <tr><td><strong>Layout</strong></td><td>Margens, Orientação (Retrato/Paisagem), Tamanho do Papel, Colunas, Quebras.</td></tr>
+                    <tr><td><strong>Referências</strong></td><td>Sumário (Índice), Notas de Rodapé, Citações, Legendas.</td></tr>
+                    <tr><td><strong>Correspondências</strong></td><td><strong>Mala Direta</strong>, Envelopes, Etiquetas.</td></tr>
+                    <tr><td><strong>Revisão</strong></td><td>Ortografia e Gramática, Contar Palavras, Controlar Alterações, Comentários.</td></tr>
+                    <tr><td><strong>Exibir</strong></td><td>Modos de Exibição (Layout de Impressão, Leitura), Régua, Zoom.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: FORMATAÇÃO DE FONTE -->
+    <div id="formatacao" class="secao">
+        <h2>2. Formatação de Fonte (Aba Página Inicial)</h2>
+        <div class="card">
+            <p>As principais ferramentas de formatação de texto ficam na aba <strong>Página Inicial</strong>:</p>
+            <ul>
+                <li><strong>Negrito (N):</strong> Destaca o texto em negrito. Atalho: <strong>Ctrl + N</strong>.</li>
+                <li><strong>Itálico (I):</strong> Deixa o texto em itálico. Atalho: <strong>Ctrl + I</strong>.</li>
+                <li><strong>Sublinhado (S):</strong> Sublinha o texto. Atalho: <strong>Ctrl + S</strong> (no Word, Ctrl+S é sublinhar; salvar é Ctrl+B).</li>
+                <li><strong>Tamanho da Fonte:</strong> Altera o tamanho do texto. Atalho: <strong>Ctrl + Shift + P</strong>.</li>
+                <li><strong>Aumentar/Diminuir Fonte:</strong> <strong>Ctrl + Shift + ></strong> (aumenta) e <strong>Ctrl + Shift + <</strong> (diminui).</li>
+                <li><strong>Cor da Fonte:</strong> Altera a cor do texto.</li>
+                <li><strong>Maiúsculas e Minúsculas:</strong> Altera a capitalização do texto (tudo maiúsculo, tudo minúsculo, etc.). Atalho: <strong>Shift + F3</strong>.</li>
+                <li><strong>Limpar Formatação:</strong> Remove toda a formatação do texto selecionado, deixando-o no padrão.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> No Word, o atalho <strong>Ctrl+S</strong> é para <strong>Sublinhar</strong>, e não para Salvar! O atalho para Salvar no Word é <strong>Ctrl+B</strong> (de "Baixar" ou do inglês "Save" que não é usado). Já no Windows, Ctrl+S é Salvar. A banca vai tentar confundir!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FORMATAÇÃO DE PARÁGRAFO -->
+    <div id="paragrafo" class="secao">
+        <h2>3. Formatação de Parágrafo (Aba Página Inicial)</h2>
+        <div class="card">
+            <p>As ferramentas de parágrafo também ficam na aba <strong>Página Inicial</strong>:</p>
+            <ul>
+                <li><strong>Alinhamento:</strong>
+                    <ul>
+                        <li><strong>Esquerda:</strong> Texto alinhado à margem esquerda. Atalho: <strong>Ctrl + Q</strong>.</li>
+                        <li><strong>Centralizado:</strong> Texto no centro. Atalho: <strong>Ctrl + E</strong>.</li>
+                        <li><strong>Direita:</strong> Texto alinhado à margem direita. Atalho: <strong>Ctrl + G</strong>.</li>
+                        <li><strong>Justificado:</strong> Texto alinhado às duas margens. Atalho: <strong>Ctrl + J</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Espaçamento entre Linhas:</strong> Define o espaço entre as linhas do texto.</li>
+                <li><strong>Marcadores e Numeração:</strong> Cria listas com marcadores (bolinhas) ou numeradas.</li>
+                <li><strong>Recuo:</strong> Aumenta ou diminui o recuo do parágrafo em relação à margem.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: MALA DIRETA -->
+    <div id="mala-direta" class="secao">
+        <h2>4. Mala Direta (Aba Correspondências)</h2>
+        <div class="card">
+            <p>A Mala Direta é uma das ferramentas mais cobradas da FAFIPA. Ela serve para <strong>criar um documento modelo</strong> e <strong>combinar com uma lista de dados</strong> (como uma planilha do Excel) para gerar vários documentos personalizados.</p>
+            
+            <h3>Exemplo prático:</h3>
+            <p>Imagine que você quer enviar uma carta para 100 clientes, mas cada carta precisa ter o nome e o endereço de cada um. Em vez de digitar 100 cartas, você faz:</p>
+            <ol>
+                <li>Cria o texto base (o modelo da carta).</li>
+                <li>Conecta uma lista de dados (ex: uma planilha do Excel com nomes e endereços).</li>
+                <li>Insere os "campos de mesclagem" (nome, endereço) no texto.</li>
+                <li>O Word gera automaticamente as 100 cartas personalizadas.</li>
+            </ol>
+
+            <h3>Onde fica?</h3>
+            <p>A ferramenta Mala Direta fica na aba <strong>Correspondências</strong>.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A Mala Direta não fica na aba "Inserir" nem na "Revisão". Ela fica na aba <strong>Correspondências</strong>. A banca vai tentar trocar a aba!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: ATALHOS DO WORD -->
+    <div id="atalhos" class="secao">
+        <h2>5. Atalhos Específicos do Word</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Atalho</th>
+                    <th>Função no Word</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Ctrl + N</strong></td><td>Negrito</td></tr>
+                <tr><td><strong>Ctrl + I</strong></td><td>Itálico</td></tr>
+                <tr><td><strong>Ctrl + S</strong></td><td>Sublinhado</td></tr>
+                <tr><td><strong>Ctrl + B</strong></td><td>Salvar (no Word, é o "Baixar/Salvar")</td></tr>
+                <tr><td><strong>Ctrl + Shift + P</strong></td><td>Tamanho da Fonte</td></tr>
+                <tr><td><strong>Shift + F3</strong></td><td>Alternar Maiúsculas/Minúsculas</td></tr>
+                <tr><td><strong>F12</strong></td><td>Salvar Como</td></tr>
+                <tr><td><strong>Ctrl + Enter</strong></td><td>Quebra de Página</td></tr>
+                <tr><td><strong>Ctrl + Q / E / G / J</strong></td><td>Alinhamento (Esquerda, Centralizado, Direita, Justificado)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Mala Direta:</strong> Fica na aba <strong>Correspondências</strong>. Serve para personalizar documentos em massa.</li>
+                <li><strong>Ctrl+S no Word:</strong> É <strong>Sublinhar</strong> (não Salvar). Salvar é <strong>Ctrl+B</strong>.</li>
+                <li><strong>Ctrl+Shift+P:</strong> Altera o <strong>tamanho da fonte</strong>.</li>
+                <li><strong>Shift+F3:</strong> Alterna Maiúsculas/Minúsculas.</li>
+                <li><strong>Alinhamento Justificado:</strong> Atalho <strong>Ctrl+J</strong>.</li>
+                <li><strong>F12:</strong> Abre a janela <strong>Salvar Como</strong>.</li>
+                <li><strong>Quebra de Página:</strong> Atalho <strong>Ctrl+Enter</strong>.</li>
+                <li><strong>Contar Palavras:</strong> Fica na aba <strong>Revisão</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. A ferramenta Mala Direta, utilizada para criar documentos personalizados em massa (como cartas com nomes de clientes), fica em qual aba do Word 2016?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A aba Inserir é usada para tabelas, imagens, cabeçalhos, etc.')">Inserir.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Mala Direta fica na aba Correspondências, que agrupa as ferramentas de mala direta, envelopes e etiquetas.')">Correspondências.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A aba Revisão é usada para ortografia, contar palavras e controlar alterações.')">Revisão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. No Word 2016, qual é o atalho para SALVAR um documento?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! No Word, Ctrl+S é para Sublinhar. Para Salvar, o atalho é Ctrl+B.')">Ctrl + S</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! No Word, Ctrl+B é o atalho para Salvar. O Ctrl+S é para Sublinhar.')">Ctrl + B</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ctrl+P é para Imprimir no Word.')">Ctrl + P</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual atalho é utilizado para alternar entre Maiúsculas e Minúsculas no Word?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O atalho Shift+F3 alterna entre maiúsculas, minúsculas e a capitalização inicial.')">Shift + F3</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ctrl+F3 é usado para cortar e mover texto no Word.')">Ctrl + F3</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Alt+F3 cria um bloco de construção.')">Alt + F3</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Para alterar o tamanho do papel (ex: A4 para A3) ou a orientação da página (Retrato para Paisagem), qual aba deve ser utilizada?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A aba Design cuida de temas, cores e marca d\'água.')">Design.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As configurações de margens, orientação e tamanho do papel ficam na aba Layout.')">Layout.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A aba Exibir cuida de modos de exibição, régua e zoom.')">Exibir.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual é a função da ferramenta "Controlar Alterações" (aba Revisão) no Word 2016?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Controlar Alterações registra todas as modificações feitas no documento (inserções, exclusões, formatações), permitindo que revisores vejam e aprovem ou rejeitem as mudanças.')">Registrar as modificações feitas no documento para posterior revisão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Essa é a função do corretor ortográfico.')">Corrigir automaticamente os erros de português.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O controle de alterações não faz backup do documento.')">Criar uma cópia de segurança do documento.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: WORD 2016 -->
