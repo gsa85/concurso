@@ -1,35 +1,260 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2. Bens Públicos — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>2. Bens Públicos</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: BENS PÚBLICOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Bens Públicos</h1>
+        <p>Conceito, Classificação e Regime Jurídico – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito</a>
+        <a href="#classificacao">Classificação</a>
+        <a href="#regime">Regime Jurídico</a>
+        <a href="#uso">Uso por Particulares</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito de Bens Públicos</h2>
+        <div class="card">
+            <p>Os <strong>bens públicos</strong> são todos os bens, de qualquer natureza, pertencentes às pessoas jurídicas de direito público (União, Estados, Distrito Federal, Municípios, autarquias e fundações públicas).</p>
+            <p>O Código Civil (Art. 98) define: "São públicos os bens do domínio nacional pertencentes às pessoas jurídicas de direito público interno; todos os outros são particulares, seja qual for a pessoa a que pertencerem."</p>
+            <p><strong>Atenção:</strong> Empresas públicas e sociedades de economia mista (direito privado) têm seus bens considerados <strong>privados</strong>, mas sujeitos a algumas regras públicas quando afetados a serviços públicos.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CLASSIFICAÇÃO -->
+    <div id="classificacao" class="secao">
+        <h2>2. Classificação dos Bens Públicos (Art. 99, CC)</h2>
+        <div class="card">
+            <p>Os bens públicos são classificados em três categorias, de acordo com a sua destinação:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Definição</th>
+                        <th>Exemplos</th>
+                        <th>Podem ser alienados?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bens de Uso Comum do Povo</strong></td>
+                        <td>Destinados à utilização geral pela coletividade, sem necessidade de autorização.</td>
+                        <td>Ruas, praças, mares, praias, estradas, rios.</td>
+                        <td><strong>Não</strong> (enquanto mantiverem essa destinação).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bens de Uso Especial</strong></td>
+                        <td>Destinados ao serviço ou estabelecimento da Administração Pública.</td>
+                        <td>Edifícios públicos (escolas, hospitais), veículos oficiais, computadores.</td>
+                        <td><strong>Não</strong> (enquanto mantiverem essa destinação).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bens Dominicais (ou Dominiais)</strong></td>
+                        <td>Bens que pertencem ao patrimônio público, mas não têm destinação pública específica.</td>
+                        <td>Terras devolutas, terrenos da marinha, bens móveis inservíveis.</td>
+                        <td><strong>Sim</strong>, desde que desafetados e com autorização legal.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que os bens de <strong>uso comum</strong> e de <strong>uso especial</strong> podem ser alienados. <strong>Errado!</strong> Eles são <strong>inalienáveis</strong> enquanto mantiverem essa destinação. Apenas os bens <strong>dominicais</strong> podem ser alienados (vendidos), desde que haja desafetação (mudança de destinação).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: REGIME JURÍDICO -->
+    <div id="regime" class="secao">
+        <h2>3. Regime Jurídico dos Bens Públicos</h2>
+        <div class="card">
+            <p>Os bens públicos possuem um regime jurídico especial, que lhes confere proteção contra a usucapião, penhora e oneração. As principais características são:</p>
+            <ul>
+                <li><strong>Inalienabilidade:</strong> Os bens de uso comum e especial não podem ser vendidos. Os bens dominicais podem, desde que desafetados e com autorização legal.</li>
+                <li><strong>Imprescritibilidade:</strong> Os bens públicos <strong>não podem ser adquiridos por usucapião</strong>, independentemente do tempo de ocupação (Súmula 340 do STF).</li>
+                <li><strong>Impenhorabilidade:</strong> Os bens públicos <strong>não podem ser penhorados</strong> como garantia de pagamento de dívidas. A execução contra a Fazenda Pública segue o rito dos precatórios.</li>
+                <li><strong>Não Onerabilidade:</strong> Os bens públicos <strong>não podem ser dados em garantia</strong> (ex: hipoteca, penhor).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Imprescritibilidade</strong> é um dos atributos mais cobrados. Ela significa que ninguém pode tomar um bem público por usucapião, mesmo que ocupe o local por décadas. A banca vai dizer que após 15 ou 20 anos a pessoa pode usucapir o bem público. <strong>Falso!</strong>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: USO POR PARTICULARES -->
+    <div id="uso" class="secao">
+        <h2>4. Uso de Bem Público por Particulares</h2>
+        <div class="card">
+            <p>A Administração pode permitir que particulares utilizem bens públicos, por meio de três instrumentos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instrumento</th>
+                        <th>Natureza</th>
+                        <th>Prazo</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Autorização de Uso</strong></td>
+                        <td>Ato unilateral, discricionário e precário (a Administração pode revogar a qualquer tempo).</td>
+                        <td>Geralmente curto prazo ou eventual.</td>
+                        <td>Fechamento de rua para uma festa, uso de praça para um evento.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Permissão de Uso</strong></td>
+                        <td>Ato unilateral, discricionário e precário, mas com <strong>interesse do particular</strong>.</td>
+                        <td>Prazo determinado (conforme a lei).</td>
+                        <td>Banca de jornal, barraca de lanches em calçada.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Concessão de Uso</strong></td>
+                        <td><strong>Contrato administrativo</strong> (bilateral).</td>
+                        <td>Prazo determinado.</td>
+                        <td>Exploração de área para pedágio, restaurante em parque público.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Autorização</strong> e <strong>Permissão</strong> são atos <strong>unilaterais</strong> (não há contrato). A <strong>Concessão</strong> é um <strong>contrato</strong> (bilateral). A banca vai tentar dizer que a permissão é um contrato, mas ela é apenas um ato administrativo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Classificação:</strong> Uso Comum (ruas, praças) - Uso Especial (edifícios públicos) - Dominical (terras devolutas).</li>
+                <li><strong>Inalienabilidade:</strong> Bens de uso comum e especial não podem ser vendidos. Apenas os dominicais podem, se desafetados.</li>
+                <li><strong>Imprescritibilidade:</strong> Bens públicos não podem ser adquiridos por usucapião.</li>
+                <li><strong>Impenhorabilidade:</strong> Bens públicos não podem ser penhorados.</li>
+                <li><strong>Autorização vs. Permissão vs. Concessão:</strong> Autorização (ato unilateral, curto prazo), Permissão (ato unilateral, prazo determinado), Concessão (contrato, prazo determinado).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Segundo o Código Civil, os bens públicos de uso comum do povo e os de uso especial são:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os bens de uso comum e de uso especial são inalienáveis enquanto mantiverem a sua destinação pública.')">Inalienáveis, enquanto conservarem a sua qualificação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os bens de uso comum e especial não podem ser alienados enquanto mantiverem essa destinação.')">Alienáveis, desde que autorizado por lei.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Apenas os bens dominicais são alienáveis, desde que desafetados.')">Sempre alienáveis, independentemente de autorização legal.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O atributo que impede que um particular adquira um bem público por meio de usucapião, mesmo que o ocupe por muitos anos, é a:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A impenhorabilidade impede a penhora do bem para pagamento de dívidas.')">Impenhorabilidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Imprescritibilidade impede a aquisição de bens públicos por usucapião, independentemente do tempo de ocupação (Súmula 340 do STF).')">Imprescritibilidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A não onerabilidade impede que o bem seja dado em garantia (ex: hipoteca).')">Não onerabilidade.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é o instrumento utilizado pela Administração para permitir que um particular explore uma banca de jornal em uma calçada pública, sendo um ato unilateral, discricionário e precário?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A concessão é um contrato administrativo, não um ato unilateral.')">Concessão de uso.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Permissão de Uso é o ato unilateral, discricionário e precário que permite ao particular utilizar um bem público para seu interesse (ex: banca de jornal).')">Permissão de uso.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A autorização de uso é para situações de curto prazo e interesse predominantemente público (ex: fechamento de rua para festa).')">Autorização de uso.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Os bens públicos que não possuem destinação pública específica, como as terras devolutas e os bens móveis inservíveis, são classificados como:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os bens dominicais (ou dominiais) são aqueles que pertencem ao patrimônio público, mas não têm uma destinação pública específica. Podem ser alienados se desafetados.')">Bens dominicais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os bens de uso comum são aqueles destinados à utilização geral pela coletividade (ruas, praças).')">Bens de uso comum do povo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os bens de uso especial são destinados ao serviço ou estabelecimento da Administração (edifícios públicos).')">Bens de uso especial.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre a impenhorabilidade dos bens públicos, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os bens públicos não podem ser penhorados para garantir o pagamento de dívidas. A execução contra a Fazenda Pública segue o rito dos precatórios.')">Os bens públicos não podem ser penhorados; a execução contra a Fazenda Pública se dá por precatórios.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os bens públicos não podem ser penhorados, justamente por causa da impenhorabilidade.')">Os bens públicos podem ser penhorados, desde que autorizado pelo prefeito.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A impenhorabilidade se aplica a todos os bens públicos, independentemente da destinação.')">Apenas os bens dominicais são impenhoráveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: BENS PÚBLICOS -->

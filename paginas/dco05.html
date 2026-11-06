@@ -1,35 +1,246 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interpretação Constitucional — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Interpretação Constitucional</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dco05</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: INTERPRETAÇÃO CONSTITUCIONAL -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Interpretação Constitucional</h1>
+        <p>Métodos, Princípios e Técnicas – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito</a>
+        <a href="#metodos">Métodos Clássicos</a>
+        <a href="#principios">Princípios de Interpretação</a>
+        <a href="#tecnicas">Técnicas do STF</a>
+        <a href="#limites">Limites e Mutação</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito de Interpretação Constitucional</h2>
+        <div class="card">
+            <p>A interpretação constitucional é o processo de atribuir significado e alcance às normas da Constituição. Ela busca resolver conflitos, preencher lacunas e adaptar o texto às necessidades da sociedade, sem, contudo, desvirtuar o seu sentido fundamental.</p>
+            <p><strong>Particularidades da interpretação constitucional:</strong></p>
+            <ul>
+                <li>A Constituição é um documento <strong>político-jurídico</strong>, com normas de diferentes graus de abstração.</li>
+                <li>Ela é a <strong>norma fundamental</strong> do ordenamento, condicionando a interpretação das demais leis.</li>
+                <li>Há uma <strong>presunção de constitucionalidade</strong> das leis, e o intérprete deve buscar manter a lei em vigor se houver interpretação possível.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: MÉTODOS CLÁSSICOS -->
+    <div id="metodos" class="secao">
+        <h2>2. Métodos Clássicos de Interpretação</h2>
+        <div class="card">
+            <p>São os métodos tradicionais, também utilizados na interpretação das leis, mas aplicados à Constituição:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>O que busca?</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Gramatical (Literal)</strong></td>
+                        <td>Analisa o significado das palavras e a sintaxe do texto.</td>
+                        <td>Interpretar "casa" no Art. 5º, XI, como residência.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Histórico</strong></td>
+                        <td>Investiga as origens, o contexto e as intenções do constituinte.</td>
+                        <td>Analisar os debates da Assembleia Constituinte de 1987-88.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sistemático</strong></td>
+                        <td>Analisa a norma em conjunto com o restante da Constituição, harmonizando os dispositivos.</td>
+                        <td>Interpretar o Art. 5º em conjunto com os direitos sociais.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teleológico</strong></td>
+                        <td>Busca a finalidade, o objetivo da norma, o bem jurídico protegido.</td>
+                        <td>Interpretar o direito à saúde para garantir o acesso universal.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: PRINCÍPIOS DE INTERPRETAÇÃO -->
+    <div id="principios" class="secao">
+        <h2>3. Princípios de Interpretação Constitucional (Canotilho)</h2>
+        <div class="card">
+            <p>Os princípios de interpretação constitucional são ferramentas que orientam o intérprete na busca do sentido da norma. Os mais cobrados são:</p>
+            <ul>
+                <li><strong>Princípio da Supremacia da Constituição:</strong> A Constituição está no topo da hierarquia; todas as leis devem a ela se conformar.</li>
+                <li><strong>Princípio da Presunção de Constitucionalidade:</strong> As leis presumem-se constitucionais até que o STF declare o contrário. O ônus da prova é de quem alega a inconstitucionalidade.</li>
+                <li><strong>Princípio da Interpretação Conforme a Constituição:</strong> Quando uma lei admite mais de uma interpretação, deve-se escolher aquela que a torne compatível com a Constituição. <strong>Não se admite interpretação que contrarie o texto legal.</strong></li>
+                <li><strong>Princípio da Unidade da Constituição:</strong> A Constituição deve ser interpretada como um todo harmônico, sem contradições entre suas normas.</li>
+                <li><strong>Princípio da Concordância Prática (Harmonização):</strong> Em caso de conflito entre direitos fundamentais, o intérprete deve buscar uma solução que harmonize os interesses, sem sacrificar totalmente um deles.</li>
+                <li><strong>Princípio da Proporcionalidade:</strong> Exige que as medidas restritivas de direitos sejam adequadas, necessárias e proporcionais em sentido estrito.</li>
+                <li><strong>Princípio da Efetividade (Máxima Otimização):</strong> As normas constitucionais devem ser interpretadas de forma a garantir a maior efetividade possível dos direitos fundamentais.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Interpretação Conforme a Constituição</strong> NÃO permite que o intérprete contrarie o texto da lei. Se a lei for manifestamente inconstitucional, ela deve ser declarada inconstitucional, e não reinterpretada. A banca vai dizer que o intérprete pode "corrigir" a lei.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: TÉCNICAS DO STF -->
+    <div id="tecnicas" class="secao">
+        <h2>4. Técnicas de Decisão do STF (Declaração de Inconstitucionalidade)</h2>
+        <div class="card">
+            <p>O STF utiliza técnicas especiais para evitar a nulidade total de uma lei, preservando o ordenamento. As mais cobradas são:</p>
+            <ul>
+                <li><strong>Declaração de Inconstitucionalidade sem Redução de Texto:</strong> O STF declara a inconstitucionalidade de uma parte da norma, mas sem alterar o texto (retira apenas a interpretação inconstitucional).</li>
+                <li><strong>Interpretação Conforme a Constituição:</strong> O STF mantém a lei em vigor, mas atribui a ela a interpretação que a compatibilize com a CF.</li>
+                <li><strong>Declaração de Inconstitucionalidade Parcial:</strong> Apenas uma parte da lei é declarada inconstitucional.</li>
+                <li><strong>Modulação dos Efeitos da Decisão:</strong> O STF pode limitar os efeitos da declaração de inconstitucionalidade, atribuindo-lhes eficácia <em>ex nunc</em> (a partir de então) ou em outro momento, por razões de segurança jurídica ou de excepcional interesse social.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Modulação dos Efeitos</strong> é uma exceção. A regra é que a declaração de inconstitucionalidade tenha efeitos <strong>ex tunc</strong> (retroativos). A modulação (efeitos <em>ex nunc</em>) só é possível por razões de segurança jurídica ou excepcional interesse social, e exige quórum de <strong>2/3 dos membros do STF</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: LIMITES E MUTAÇÃO -->
+    <div id="limites" class="secao">
+        <h2>5. Limites da Interpretação e Mutação Constitucional</h2>
+        <div class="card">
+            <p>A interpretação constitucional tem limites, pois não pode desvirtuar o texto. Se o intérprete ultrapassa esses limites, ocorre a <strong>mutuação constitucional inconstitucional</strong>.</p>
+            <ul>
+                <li><strong>Mutuação Constitucional:</strong> Alteração do <strong>sentido</strong> da Constituição sem alteração do texto. É feita pela interpretação (especialmente pelo STF).</li>
+                <li><strong>Reforma Constitucional:</strong> Alteração do <strong>texto</strong> da Constituição por Emenda. É formal e solene.</li>
+                <li><strong>Limites da Mutuação:</strong> A mutação não pode abolir cláusulas pétreas nem contrariar o texto expresso.</li>
+                <li><strong>Mutuação Inconstitucional:</strong> Ocorre quando a interpretação do STF altera o sentido da norma de forma a contrariar o próprio texto ou as cláusulas pétreas. É considerada inválida.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Métodos Clássicos:</strong> Gramatical (palavras), Histórico (contexto), Sistemático (todo), Teleológico (finalidade).</li>
+                <li><strong>Interpretação Conforme:</strong> Busca a interpretação que compatibilize a lei com a CF, sem alterar o texto.</li>
+                <li><strong>Presunção de Constitucionalidade:</strong> As leis presumem-se constitucionais até declaração em contrário do STF.</li>
+                <li><strong>Modulação dos Efeitos:</strong> Exige quórum de <strong>2/3 do STF</strong> e só ocorre por razões de segurança jurídica ou excepcional interesse social.</li>
+                <li><strong>Mutuação Constitucional:</strong> Altera o sentido, não o texto. Não pode abolir cláusulas pétreas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. O método de interpretação constitucional que busca a finalidade da norma, o bem jurídico por ela protegido, é o:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O método teleológico busca a finalidade, o objetivo da norma, o bem jurídico protegido pelo constituinte.')">Método Teleológico.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O método gramatical analisa o significado das palavras e a sintaxe.')">Método Gramatical.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O método sistemático analisa a norma em conjunto com o restante da Constituição.')">Método Sistemático.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre o princípio da Interpretação Conforme a Constituição, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A interpretação conforme busca a interpretação que compatibilize a lei com a Constituição, sem alterar o texto legal. Se a lei for manifestamente inconstitucional, deve ser declarada inconstitucional.')">O intérprete deve buscar a interpretação que torne a lei compatível com a Constituição, sem alterar seu texto.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A interpretação conforme não autoriza o intérprete a contrariar o texto da lei.')">O intérprete pode contrariar o texto da lei para adequá-lo à Constituição.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A interpretação conforme não se aplica a leis já declaradas inconstitucionais.')">A interpretação conforme só se aplica a leis já declaradas inconstitucionais pelo STF.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. A modulação dos efeitos da declaração de inconstitucionalidade, que permite ao STF atribuir eficácia <em>ex nunc</em> à decisão, exige qual quórum?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A modulação dos efeitos exige o voto de 2/3 dos membros do STF (art. 27 da Lei 9.868/99), por razões de segurança jurídica ou excepcional interesse social.')">2/3 dos membros do STF.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O quórum é de 2/3, não de maioria absoluta.')">Maioria absoluta do STF.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O quórum é de 2/3, não de maioria simples.')">Maioria simples do STF.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A alteração do sentido da Constituição, sem modificação do seu texto, promovida pela interpretação dos tribunais, é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A mutação constitucional é a alteração do sentido da norma pela interpretação, sem modificação do texto. Não pode abolir cláusulas pétreas.')">Mutuação constitucional.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A reforma constitucional altera o texto por meio de emendas.')">Reforma constitucional.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A revisão constitucional foi um processo específico previsto no ADCT, já esgotado.')">Revisão constitucional.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre a presunção de constitucionalidade das leis, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As leis presumem-se constitucionais até que o STF declare o contrário. O ônus da prova é de quem alega a inconstitucionalidade.')">As leis presumem-se constitucionais até que o STF declare o contrário, cabendo o ônus da prova a quem alega a inconstitucionalidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A presunção é de constitucionalidade, não de inconstitucionalidade.')">As leis presumem-se inconstitucionais até que o STF declare o contrário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A presunção de constitucionalidade não é absoluta, pois pode ser afastada pelo STF.')">A presunção de constitucionalidade é absoluta, não podendo ser afastada pelo STF.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: INTERPRETAÇÃO CONSTITUCIONAL -->

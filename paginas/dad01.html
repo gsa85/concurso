@@ -1,35 +1,237 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Atos Administrativos — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Atos Administrativos</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ATOS ADMINISTRATIVOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Atos Administrativos</h1>
+        <p>Elementos, Atributos e Extinção – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito</a>
+        <a href="#elementos">Elementos (Requisitos)</a>
+        <a href="#atributos">Atributos (P.A.T.I.)</a>
+        <a href="#extincao">Extinção do Ato</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito de Ato Administrativo</h2>
+        <div class="card">
+            <p>O <strong>ato administrativo</strong> é toda manifestação unilateral de vontade da Administração Pública que, agindo nessa qualidade, tenha por fim imediato adquirir, resguardar, transferir, modificar, extinguir e declarar direitos, ou impor obrigações aos administrados ou a si própria.</p>
+            <p><strong>Características principais:</strong></p>
+            <ul>
+                <li>É uma manifestação <strong>unilateral</strong> (não precisa da concordância do administrado).</li>
+                <li>É praticado no exercício da <strong>função administrativa</strong>.</li>
+                <li>Produz <strong>efeitos jurídicos imediatos</strong>.</li>
+                <li>Está sujeito ao regime de <strong>direito público</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: ELEMENTOS -->
+    <div id="elementos" class="secao">
+        <h2>2. Elementos (Requisitos) do Ato Administrativo</h2>
+        <div class="card">
+            <p>São os componentes essenciais para a validade do ato. A FAFIPA adora cobrar os <strong>cinco elementos</strong> (mnemônico: <strong>CO-FI-FO-MO-OB</strong>)[reference:1]:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>O que é?</th>
+                        <th>Observação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Competência</strong></td><td>Poder legal do agente para praticar o ato.</td><td>É sempre vinculado (não pode ser renunciado).</td></tr>
+                    <tr><td><strong>Finalidade</strong></td><td>O objetivo público que o ato deve alcançar.</td><td>É sempre vinculado (interesse público).</td></tr>
+                    <tr><td><strong>Forma</strong></td><td>O modo como o ato é exteriorizado.</td><td>Em regra, é vinculado (forma escrita).</td></tr>
+                    <tr><td><strong>Motivo</strong></td><td>Os fatos e fundamentos que justificam o ato.</td><td>Pode ser vinculado ou discricionário.</td></tr>
+                    <tr><td><strong>Objeto</strong></td><td>O conteúdo, o efeito jurídico do ato.</td><td>Pode ser vinculado ou discricionário.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a diferença entre <strong>Motivo</strong> e <strong>Objeto</strong>. O <strong>Motivo</strong> é o "porquê" (fatos e fundamentos). O <strong>Objeto</strong> é o "o quê" (o efeito jurídico, a obrigação imposta). A banca vai trocar os conceitos.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ATRIBUTOS -->
+    <div id="atributos" class="secao">
+        <h2>3. Atributos do Ato Administrativo (P.A.T.I.)</h2>
+        <div class="card">
+            <p>São as características que conferem à Administração vantagens na execução de seus atos. O mnemônico é <strong>P.A.T.I.</strong>[reference:2]:</p>
+            <ul>
+                <li><strong>Presunção de Legitimidade e Veracidade:</strong> Os atos administrativos presumem-se verdadeiros e legais, até que se prove o contrário. O ônus da prova cabe ao administrado.</li>
+                <li><strong>Autoexecutoriedade:</strong> A Administração pode executar seus próprios atos sem precisar de autorização judicial prévia (ex: apreensão de mercadorias, interdição de estabelecimento).</li>
+                <li><strong>Tipicidade:</strong> O ato deve corresponder a uma figura típica prevista em lei.</li>
+                <li><strong>Imperatividade (Coercibilidade):</strong> O ato impõe obrigações ao administrado independentemente de sua concordância (ex: multa de trânsito).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Autoexecutoriedade</strong> não está presente em todos os atos administrativos. Ela só existe quando a lei expressamente autoriza ou em situações de urgência. A banca vai dizer que todo ato administrativo é autoexecutável.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: EXTINÇÃO -->
+    <div id="extincao" class="secao">
+        <h2>4. Extinção do Ato Administrativo</h2>
+        <div class="card">
+            <p>O ato administrativo pode ser extinto por diversas formas. As mais cobradas são[reference:3]:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Forma de Extinção</th>
+                        <th>O que acontece?</th>
+                        <th>Fundamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Anulação</strong></td><td>A Administração retira um ato <strong>ilegal</strong>.</td><td>Efeitos retroativos (ex tunc).</td></tr>
+                    <tr><td><strong>Revogação</strong></td><td>A Administração retira um ato <strong>válido</strong>, mas por motivo de <strong>conveniência e oportunidade</strong> (interesse público).</td><td>Efeitos prospectivos (ex nunc).</td></tr>
+                    <tr><td><strong>Cassação</strong></td><td>Retirada do ato porque o <strong>destinatário descumpriu</strong> as condições impostas.</td><td>Ex: cassação de licença de motorista por excesso de pontos.</td></tr>
+                    <tr><td><strong>Caducidade</strong></td><td>Retirada do ato porque uma <strong>nova lei</strong> tornou a situação incompatível.</td><td>Ex: nova lei de zoneamento que proíbe atividade antes permitida.</td></tr>
+                    <tr><td><strong>Contraposição</strong></td><td>Retirada do ato porque o destinatário <strong>não cumpriu</strong> uma obrigação imposta por outro ato.</td><td>Ex: interdição de estabelecimento por falta de alvará.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Anulação</strong> tem efeitos <strong>retroativos</strong> (ex tunc), pois o ato era ilegal desde o início. A <strong>Revogação</strong> tem efeitos <strong>prospectivos</strong> (ex nunc), pois o ato era válido e só deixou de ser conveniente.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Elementos (CO-FI-FO-MO-OB):</strong> Competência, Finalidade, Forma, Motivo e Objeto.</li>
+                <li><strong>Atributos (P.A.T.I.):</strong> Presunção de Legitimidade, Autoexecutoriedade, Tipicidade e Imperatividade.</li>
+                <li><strong>Anulação vs. Revogação:</strong> Anulação = ato ilegal (efeito retroativo). Revogação = ato válido, mas inconveniente (efeito prospectivo).</li>
+                <li><strong>Cassacão vs. Caducidade:</strong> Cassação = descumprimento pelo destinatário. Caducidade = nova lei incompatível.</li>
+                <li><strong>Autoexecutoriedade:</strong> Não está em todos os atos, apenas quando a lei autoriza ou em urgência.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Quais são os cinco elementos (requisitos) do ato administrativo?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os cinco elementos são: Competência, Finalidade, Forma, Motivo e Objeto (CO-FI-FO-MO-OB).')">Competência, Finalidade, Forma, Motivo e Objeto.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Presunção de legitimidade e autoexecutoriedade são atributos, não elementos.')">Competência, Presunção de Legitimidade, Forma, Motivo e Objeto.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A tipicidade e a imperatividade são atributos, não elementos do ato administrativo.')">Competência, Tipicidade, Forma, Motivo e Imperatividade.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O atributo do ato administrativo que permite à Administração executá-lo sem necessidade de autorização judicial prévia é a:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A presunção de legitimidade é a presunção de que o ato está de acordo com a lei, mas não permite a execução direta.')">Presunção de legitimidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Autoexecutoriedade permite que a Administração execute seus próprios atos sem precisar de ordem judicial prévia (ex: interdição de estabelecimento, apreensão de mercadorias).')">Autoexecutoriedade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A tipicidade é a correspondência do ato a uma figura típica prevista em lei.')">Tipicidade.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Quando a Administração retira um ato administrativo por considerá-lo ilegal, estamos diante de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Anulação é a retirada do ato por ilegalidade. Seus efeitos são retroativos (ex tunc), pois o ato era inválido desde o início.')">Anulação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Revogação é a retirada de um ato válido por conveniência e oportunidade, com efeitos prospectivos (ex nunc).')">Revogação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Cassação é a retirada do ato porque o destinatário descumpriu as condições impostas.')">Cassação.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A extinção do ato administrativo em razão de o destinatário ter descumprido as condições impostas para sua manutenção é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Caducidade ocorre quando uma nova lei torna a situação incompatível com o ato.')">Caducidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Cassação é a extinção do ato porque o destinatário descumpriu as condições que permitiam sua manutenção (ex: cassação de licença de motorista por excesso de pontos).')">Cassação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Contraposição ocorre quando o destinatário não cumpre uma obrigação imposta por outro ato.')">Contraposição.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre os atributos do ato administrativo, é correto afirmar que a <strong>Presunção de Legitimidade</strong>:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Presunção de Legitimidade faz com que o ato administrativo seja considerado válido e verdadeiro até que se prove o contrário. O ônus da prova é do administrado.')">Faz com que o ato seja considerado válido e verdadeiro até que se prove o contrário, cabendo ao administrado o ônus da prova.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Presunção de Legitimidade não é absoluta; ela é relativa (juris tantum), podendo ser afastada por prova em contrário.')">É absoluta, não admitindo prova em contrário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Presunção de Legitimidade não permite a execução direta do ato; isso é uma característica da autoexecutoriedade.')">Permite que a Administração execute o ato sem necessidade de autorização judicial.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ATOS ADMINISTRATIVOS -->

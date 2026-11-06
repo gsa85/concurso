@@ -1,35 +1,307 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2. Direitos e Garantias Fundamentais (CF, Título II) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>2. Direitos e Garantias Fundamentais (CF, Título II)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dco02</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: DIREITOS E GARANTIAS FUNDAMENTAIS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Direitos e Garantias Fundamentais</h1>
+        <p>CF/88 – Artigos 5º a 17 – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Direitos vs. Garantias</a>
+        <a href="#individuais">Direitos Individuais (Art. 5º)</a>
+        <a href="#remdios">Remédios Constitucionais</a>
+        <a href="#sociais">Direitos Sociais</a>
+        <a href="#nacionalidade">Nacionalidade e Políticos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: DIREITOS VS. GARANTIAS -->
+    <div id="conceito" class="secao">
+        <h2>1. Direitos vs. Garantias Fundamentais</h2>
+        <div class="card">
+            <p>Embora sejam tratados juntos, os conceitos são distintos:</p>
+            <ul>
+                <li><strong>Direitos:</strong> São as <strong>normas de conteúdo</strong>, que declaram o que é permitido ou devido ao indivíduo. São os bens e vantagens (ex: direito à vida, à liberdade, à propriedade).</li>
+                <li><strong>Garantias:</strong> São as <strong>normas de proteção</strong>, os instrumentos que asseguram o exercício dos direitos. São os meios (ex: habeas corpus, mandado de segurança).</li>
+            </ul>
+            <div class="box-formula">
+                Direito = O BEM (ex: liberdade de locomoção)<br>
+                Garantia = O MEIO de proteger o bem (ex: habeas corpus)
+            </div>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li><strong>Universalidade:</strong> Valem para todos (brasileiros e estrangeiros residentes no país).</li>
+                <li><strong>Relatividade:</strong> Não são absolutos; podem sofrer restrições (ex: sigilo telefônico pode ser quebrado por ordem judicial).</li>
+                <li><strong>Imprescritibilidade:</strong> Não se perdem pelo desuso.</li>
+                <li><strong>Irrenunciabilidade:</strong> Não podem ser renunciados.</li>
+                <li><strong>Inalienabilidade:</strong> Não podem ser vendidos ou transferidos.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Os direitos fundamentais <strong>não são absolutos</strong>. A banca vai dizer que o direito à vida é absoluto, mas nem ele é, pois a Constituição prevê a pena de morte em caso de guerra declarada (Art. 5º, XLVII, "a"). A regra é a relatividade.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: DIREITOS INDIVIDUAIS -->
+    <div id="individuais" class="secao">
+        <h2>2. Direitos Individuais e Coletivos (Art. 5º)</h2>
+        <div class="card">
+            <p>O Art. 5º é o artigo mais extenso e mais cobrado em provas. Ele garante a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade. Os incisos mais cobrados são:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Inciso</th>
+                        <th>Direito / Garantia</th>
+                        <th>Pegadinha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>XI – Casa</strong></td>
+                        <td>A casa é asilo inviolável. Ninguém pode entrar sem consentimento do morador, salvo:</td>
+                        <td><strong>Flagrante delito, desastre ou socorro:</strong> a qualquer hora. <strong>Determinação judicial:</strong> somente durante o dia.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XII – Sigilo</strong></td>
+                        <td>Sigilo das comunicações telefônicas e telemáticas.</td>
+                        <td>A quebra só é permitida por <strong>ordem judicial</strong>, para investigação criminal ou instrução penal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XXXV – Acesso à Justiça</strong></td>
+                        <td>A lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito.</td>
+                        <td>Princípio da <strong>inafastabilidade da jurisdição</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LXVIII a LXXIII</strong></td>
+                        <td>Remédios constitucionais (ver seção abaixo).</td>
+                        <td>Confundir os remédios e suas finalidades.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: REMÉDIOS CONSTITUCIONAIS -->
+    <div id="remdios" class="secao">
+        <h2>3. Remédios Constitucionais</h2>
+        <div class="card">
+            <p>São as garantias constitucionais que protegem direitos específicos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Remédio</th>
+                        <th>Protege qual direito?</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Habeas Corpus (HC)</strong></td>
+                        <td>Liberdade de locomoção.</td>
+                        <td>Gratuito. Pode ser preventivo (salvo-conduto) ou repressivo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Habeas Data (HD)</strong></td>
+                        <td>Conhecimento ou retificação de informações pessoais em registros públicos.</td>
+                        <td>Gratuito. Apenas para dados do próprio impetrante.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mandado de Segurança (MS)</strong></td>
+                        <td>Direito líquido e certo não amparado por HC ou HD.</td>
+                        <td>Prazo de <strong>120 dias</strong> para impetrar.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mandado de Injunção (MI)</strong></td>
+                        <td>Falta de norma regulamentadora que inviabilize o exercício de direitos.</td>
+                        <td>Para suprir a omissão do legislador.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ação Popular (AP)</strong></td>
+                        <td>Anular ato lesivo ao patrimônio público, à moralidade, ao meio ambiente.</td>
+                        <td>Qualquer <strong>cidadão</strong> (eleitor) pode propor. Gratuita, salvo má-fé.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O <strong>Mandado de Segurança</strong> tem prazo de <strong>120 dias</strong> para ser impetrado. Já o <strong>Habeas Corpus</strong> e o <strong>Habeas Data</strong> podem ser impetrados a qualquer tempo (não há prazo). A banca vai trocar os prazos ou dizer que o HC tem prazo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: DIREITOS SOCIAIS -->
+    <div id="sociais" class="secao">
+        <h2>4. Direitos Sociais (Art. 6º)</h2>
+        <div class="card">
+            <p>São direitos que exigem uma prestação do Estado para garantir condições mínimas de vida digna. O Art. 6º elenca:</p>
+            <div class="box-formula">
+                Educação, Saúde, Alimentação, Trabalho, Moradia, Transporte, Lazer, Segurança, Previdência Social, Proteção à Maternidade e à Infância, Assistência aos Desamparados.
+            </div>
+            <p><strong>Importante:</strong> O rol do Art. 6º é <strong>exemplificativo</strong> (não taxativo), podendo ser ampliado por emenda constitucional (ex: inclusão do transporte pela EC 90/2015).</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O <strong>transporte</strong> foi incluído como direito social pela <strong>Emenda Constitucional 90/2015</strong>. A banca vai dizer que o rol é taxativo, mas ele é <strong>exemplificativo</strong> (numerus apertus).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: NACIONALIDADE E DIREITOS POLÍTICOS -->
+    <div id="nacionalidade" class="secao">
+        <h2>5. Nacionalidade e Direitos Políticos (Arts. 12 a 16)</h2>
+        <div class="card">
+            <h3>Nacionalidade (Art. 12)</h3>
+            <ul>
+                <li><strong>Brasileiros natos:</strong> Nascidos no Brasil (regra do jus soli), salvo se os pais forem estrangeiros a serviço de seu país. Também são natos os nascidos no exterior de pai ou mãe brasileira a serviço do Brasil, ou que venham a residir no Brasil e optem pela nacionalidade.</li>
+                <li><strong>Cargos privativos de nato:</strong> Presidente, Vice-Presidente, Presidente da Câmara, Presidente do Senado, Ministro do STF, carreira diplomática, oficial das Forças Armadas e Ministro da Defesa.</li>
+                <li><strong>Brasileiros naturalizados:</strong> Aqueles que adquirem a nacionalidade por processo legal (ex: estrangeiros residentes há mais de 15 anos ininterruptos, sem condenação penal).</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Direitos Políticos (Art. 14 a 16)</h3>
+            <ul>
+                <li><strong>Voto:</strong> Direto e secreto. Obrigatório para maiores de 18 anos; <strong>facultativo</strong> para analfabetos, maiores de 70 anos e maiores de 16 e menores de 18.</li>
+                <li><strong>Plebescito:</strong> Consulta prévia ao povo sobre uma decisão política.</li>
+                <li><strong>Referendo:</strong> Consulta posterior ao povo para ratificar ou rejeitar uma decisão.</li>
+                <li><strong>Iniciativa popular:</strong> O povo pode apresentar projetos de lei (ex: 1% do eleitorado nacional).</li>
+                <li><strong>Inelegibilidades:</strong> Impedem a candidatura (ex: parentes do chefe do Executivo até o 2º grau, analfabetos, inalistáveis).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Plebescito</strong> = consulta <strong>ANTES</strong> da decisão. <strong>Referendo</strong> = consulta <strong>DEPOIS</strong> da decisão. A banca vai trocar os conceitos!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Direitos vs. Garantias:</strong> Direito = bem (vida). Garantia = meio de proteção (HC).</li>
+                <li><strong>Casa como asilo inviolável:</strong> Entrada com ordem judicial = <strong>apenas durante o dia</strong>. Flagrante, desastre ou socorro = a qualquer hora.</li>
+                <li><strong>Remédios:</strong> HC (liberdade), HD (informação), MS (direito líquido e certo, prazo de 120 dias), MI (omissão), AP (qualquer cidadão).</li>
+                <li><strong>Direitos Sociais:</strong> O rol do Art. 6º é <strong>exemplificativo</strong>. O transporte foi incluído pela EC 90/2015.</li>
+                <li><strong>Plebescito vs. Referendo:</strong> Plebescito = antes. Referendo = depois.</li>
+                <li><strong>Voto:</strong> Obrigatório para 18+; facultativo para 16-18, 70+ e analfabetos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Sobre a inviolabilidade da casa (Art. 5º, XI), é correto afirmar que a entrada com determinação judicial só pode ocorrer:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O texto constitucional exige que a entrada com ordem judicial ocorra somente durante o dia. À noite, apenas em caso de flagrante delito, desastre ou para prestar socorro.')">Durante o dia.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem judicial não pode ser cumprida à noite, apenas durante o dia.')">A qualquer hora, desde que haja ordem judicial.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A determinação judicial não é a única forma; flagrante, desastre ou socorro permitem entrada a qualquer hora.')">Apenas em caso de flagrante delito.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é o remédio constitucional adequado para proteger o direito de locomoção do indivíduo?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Habeas Data protege o direito à informação e retificação de dados pessoais.')">Habeas Data.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Habeas Corpus (HC) é o remédio constitucional que protege a liberdade de locomoção, sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação nesse direito.')">Habeas Corpus.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Mandado de Segurança protege direito líquido e certo não amparado por HC ou HD.')">Mandado de Segurança.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. O prazo para a impetração do Mandado de Segurança é de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O prazo para impetrar o Mandado de Segurança é de 120 dias, contados da ciência do ato ilegal ou abuso de poder.')">120 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo de 60 dias não é o previsto para o MS.')">60 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Mandado de Segurança tem prazo de 120 dias, não de 30.')">30 dias.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre o direito social do transporte no Art. 6º da CF/88, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O transporte foi incluído como direito social pela Emenda Constitucional 90/2015, e o rol do Art. 6º é exemplificativo (pode ser ampliado).')">Foi incluído pela EC 90/2015 e integra o rol exemplificativo de direitos sociais.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O transporte é um direito social, sim, e foi incluído pela EC 90/2015.')">Não é um direito social previsto na Constituição.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O rol do Art. 6º é exemplificativo, e o transporte está previsto expressamente desde a EC 90/2015.')">É um direito social previsto desde a promulgação da Constituição de 1988.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A consulta prévia ao povo sobre uma decisão política a ser tomada é denominada:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O plebiscito é a consulta prévia ao povo sobre uma decisão política. Já o referendo é a consulta posterior, para ratificar ou rejeitar uma decisão já tomada.')">Plebiscito.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O referendo é a consulta posterior à decisão.')">Referendo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A iniciativa popular é o direito de o povo apresentar projetos de lei, não uma consulta.')">Iniciativa popular.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: DIREITOS E GARANTIAS FUNDAMENTAIS -->

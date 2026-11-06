@@ -1,35 +1,256 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3. Serviços Públicos — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>3. Serviços Públicos</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad03</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: SERVIÇOS PÚBLICOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Serviços Públicos</h1>
+        <p>Conceito, Princípios, Formas e Extinção – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito</a>
+        <a href="#principios">Princípios</a>
+        <a href="#formas">Formas de Prestação</a>
+        <a href="#extincao">Extinção da Concessão</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito de Serviço Público</h2>
+        <div class="card">
+            <p>O <strong>serviço público</strong> é toda atividade material que a Administração Pública presta diretamente à coletividade, ou delega a terceiros, para satisfazer necessidades essenciais ou de interesse público, sob o regime de direito público.</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>É uma atividade material (não é lei, não é ato administrativo).</li>
+                <li>Visa satisfazer necessidades coletivas (interesse público).</li>
+                <li>É prestado sob regime de direito público (com prerrogativas e sujeições).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PRINCÍPIOS -->
+    <div id="principios" class="secao">
+        <h2>2. Princípios dos Serviços Públicos</h2>
+        <div class="card">
+            <p>São os princípios que regem a prestação dos serviços públicos. A FAFIPA adora cobrar as definições:</p>
+            <ul>
+                <li><strong>Continuidade:</strong> O serviço público não pode ser interrompido de forma injustificada. É o princípio mais importante! (Exceção: situações de emergência, inadimplência do usuário, razões técnicas).</li>
+                <li><strong>Generalidade (ou Igualdade):</strong> O serviço deve ser prestado a todos, sem discriminação.</li>
+                <li><strong>Modicidade:</strong> As tarifas cobradas devem ser justas e acessíveis à população.</li>
+                <li><strong>Mutabilidade (ou Atualidade):</strong> O serviço deve se adaptar às novas necessidades da sociedade e às inovações tecnológicas.</li>
+                <li><strong>Regularidade:</strong> O serviço deve ser prestado de forma contínua e eficiente.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O princípio da <strong>Continuidade</strong> NÃO é absoluto. O serviço pode ser interrompido em caso de <strong>emergência</strong> ou <strong>inadimplência do usuário</strong> (após aviso prévio). A banca vai dizer que a interrupção é sempre proibida.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FORMAS DE PRESTAÇÃO -->
+    <div id="formas" class="secao">
+        <h2>3. Formas de Prestação (Concessão vs. Permissão)</h2>
+        <div class="card">
+            <p>Os serviços públicos podem ser prestados de duas formas principais:</p>
+            <ul>
+                <li><strong>Direta:</strong> Pela própria Administração Pública (centralizada ou descentralizada).</li>
+                <li><strong>Indireta:</strong> Delegada a terceiros (concessionárias ou permissionárias).</li>
+            </ul>
+            <p>Quando delegados, a Lei 8.987/95 estabelece duas formas:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Concessão</th>
+                        <th>Permissão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Natureza</strong></td>
+                        <td><strong>Contrato administrativo</strong> (bilateral).</td>
+                        <td><strong>Ato unilateral</strong> (mas pode ser formalizado por contrato).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prazo</strong></td>
+                        <td>Determinado e geralmente longo.</td>
+                        <td>Determinado e geralmente curto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Licitação</strong></td>
+                        <td>Obrigatória (concorrência).</td>
+                        <td>Obrigatória (mas pode ser dispensada em alguns casos).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precariedade</strong></td>
+                        <td>Não é precária (o contrato deve ser respeitado).</td>
+                        <td>É precária (pode ser revogada a qualquer tempo, sem indenização).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Concessão</strong> é sempre um <strong>contrato</strong> e <strong>não é precária</strong>. A <strong>Permissão</strong> é um <strong>ato unilateral</strong> e é <strong>precária</strong> (pode ser revogada a qualquer tempo). A banca vai dizer que a permissão é um contrato e que a concessão é precária.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: EXTINÇÃO DA CONCESSÃO -->
+    <div id="extincao" class="secao">
+        <h2>4. Formas de Extinção da Concessão</h2>
+        <div class="card">
+            <p>A concessão pode ser extinta por diversas formas. As mais cobradas são:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Forma</th>
+                        <th>O que acontece?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Encampação</strong></td><td>O Poder Público retoma o serviço por motivo de <strong>interesse público</strong>. Exige lei autorizativa e indenização prévia.</td></tr>
+                    <tr><td><strong>Caducidade</strong></td><td>A concessão é extinta porque a concessionária <strong>descumpriu</strong> suas obrigações contratuais. Não há indenização.</td></tr>
+                    <tr><td><strong>Rescisão</strong></td><td>Extinção por <strong>acordo entre as partes</strong> ou por descumprimento de obrigações pela Administração.</td></tr>
+                    <tr><td><strong>Anulação</strong></td><td>Extinção porque o contrato era <strong>ilegal</strong> desde o início.</td></tr>
+                    <tr><td><strong>Reversão</strong></td><td>Extinção natural pelo <strong>término do prazo</strong> do contrato. Os bens reversíveis passam para o Poder Público.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Encampação</strong> = Interesse Público (com indenização). <strong>Caducidade</strong> = Descumprimento pela concessionária (sem indenização). A banca vai trocar os dois conceitos!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Continuidade:</strong> O serviço não pode ser interrompido, exceto em emergência ou inadimplência do usuário.</li>
+                <li><strong>Concessão vs. Permissão:</strong> Concessão = Contrato (não precário). Permissão = Ato unilateral (precário).</li>
+                <li><strong>Encampação vs. Caducidade:</strong> Encampação = Interesse público (com indenização). Caducidade = Descumprimento (sem indenização).</li>
+                <li><strong>Reversão:</strong> É a extinção natural pelo fim do prazo, com os bens voltando ao Poder Público.</li>
+                <li><strong>Tarifa vs. Taxa:</strong> A tarifa é cobrada pela concessionária/permissionária (regime contratual). A taxa é cobrada pela Administração (regime legal).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é o princípio dos serviços públicos que determina que o serviço não pode ser interrompido de forma injustificada?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O princípio da Continuidade determina que o serviço público deve ser prestado de forma contínua, não podendo ser interrompido injustificadamente.')">Continuidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O princípio da Generalidade determina que o serviço deve ser prestado a todos, sem discriminação.')">Generalidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O princípio da Modicidade determina que as tarifas devem ser acessíveis.')">Modicidade.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a diferença entre concessão e permissão de serviço público, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A concessão é sempre um contrato administrativo (não precário). A permissão é um ato unilateral e precário (pode ser revogada a qualquer tempo).')">A concessão é um contrato administrativo e não é precária; a permissão é um ato unilateral e precário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: a concessão é contrato e a permissão é ato unilateral.')">A permissão é um contrato administrativo e não é precária; a concessão é um ato unilateral e precário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A concessão não é precária, e a permissão é precária.')">Ambas são contratos administrativos e têm a mesma natureza jurídica.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Quando o Poder Público retoma a concessão por motivo de interesse público, com lei autorizativa e indenização prévia, ocorre a:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Caducidade ocorre quando a concessionária descumpre suas obrigações, sem direito a indenização.')">Caducidade.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Encampação é a retomada do serviço por interesse público, exigindo lei autorizativa e indenização prévia.')">Encampação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Reversão é a extinção natural pelo término do prazo do contrato.')">Reversão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A extinção da concessão que ocorre pelo término do prazo contratual, com a transferência dos bens reversíveis ao Poder Público, é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Reversão é a extinção natural da concessão pelo término do prazo, com os bens voltando ao Poder Público.')">Reversão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Anulação ocorre quando o contrato é ilegal desde o início.')">Anulação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Rescisão ocorre por acordo entre as partes ou por descumprimento de obrigações pela Administração.')">Rescisão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre o princípio da Continuidade do serviço público, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O princípio da continuidade não é absoluto. O serviço pode ser interrompido em casos de emergência, inadimplência do usuário (após aviso prévio) ou razões técnicas.')">Não é absoluto, podendo o serviço ser interrompido em casos de emergência ou inadimplência do usuário.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O princípio da continuidade não é absoluto, pois existem exceções legais.')">É absoluto, não admitindo qualquer exceção à interrupção do serviço.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A interrupção por inadimplência é permitida após aviso prévio ao usuário.')">Permite a interrupção do serviço por qualquer motivo, desde que o usuário seja avisado.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SERVIÇOS PÚBLICOS -->

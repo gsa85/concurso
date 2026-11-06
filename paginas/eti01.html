@@ -1,35 +1,239 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>📌 Ética, Integridade, Transparência e Conflitos de Interesses — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>📌 Ética, Integridade, Transparência e Conflitos de Interesses</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>eti01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ÉTICA, INTEGRIDADE, TRANSPARÊNCIA E CONFLITOS DE INTERESSES -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Ética e Integridade</h1>
+        <p>Conceitos, Transparência e Conflitos de Interesses – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#etica-moral">Ética vs. Moral</a>
+        <a href="#principios">Princípios Éticos no Serviço Público</a>
+        <a href="#integridade">Integridade e Transparência</a>
+        <a href="#conflito">Conflito de Interesses</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: ÉTICA VS. MORAL -->
+    <div id="etica-moral" class="secao">
+        <h2>1. Ética vs. Moral</h2>
+        <div class="card">
+            <p>Embora sejam usadas como sinônimos no dia a dia, na filosofia e no serviço público elas têm significados distintos:</p>
+            <ul>
+                <li><strong>Moral:</strong> É o conjunto de <strong>regras, costumes e valores</strong> de um grupo social. É a prática, o comportamento vivido. Varia conforme a cultura e a época.</li>
+                <li><strong>Ética:</strong> É a <strong>reflexão filosófica sobre a moral</strong>. É a ciência que estuda o que é certo e errado, o dever e a virtude. É a teoria que fundamenta a moral.</li>
+            </ul>
+            <div class="box-formula">
+                Moral = A PRÁTICA (o que se faz)<br>
+                Ética = A REFLEXÃO (o que se pensa sobre o que se faz)
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: PRINCÍPIOS ÉTICOS NO SERVIÇO PÚBLICO -->
+    <div id="principios" class="secao">
+        <h2>2. Princípios Éticos no Serviço Público (Decreto 1.171/94)</h2>
+        <div class="card">
+            <p>O Decreto 1.171/94 aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal. A FAFIPA costuma cobrar as <strong>vedações</strong> e os <strong>deveres</strong> do servidor:</p>
+            
+            <h3>Deveres do Servidor (Art. 2º)</h3>
+            <ul>
+                <li>Exercer com zelo e dedicação as atribuições do cargo.</li>
+                <li>Ser leal às instituições a que servir.</li>
+                <li>Observar as normas legais e regulamentares.</li>
+                <li>Cumprir as ordens superiores, exceto quando manifestamente ilegais.</li>
+                <li>Atender com presteza ao público em geral.</li>
+                <li>Levar ao conhecimento da autoridade superior as irregularidades de que tiver ciência.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Vedações ao Servidor (Art. 3º)</h3>
+            <ul>
+                <li>Usar o cargo para obter favorecimento para si ou para outrem.</li>
+                <li>Retirar da repartição pública, sem autorização, documentos ou objetos.</li>
+                <li>Fazer uso de informações privilegiadas obtidas no âmbito interno em benefício próprio ou de terceiros.</li>
+                <li>Apresentar-se embriagado no serviço ou fora dele, quando em serviço.</li>
+                <li>Tratar com urbanidade os colegas e os usuários.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O servidor tem o dever de <strong>cumprir ordens superiores</strong>, <strong>EXCETO</strong> quando forem manifestamente ilegais. Se a ordem for ilegal, o servidor tem o <strong>dever de representar</strong> contra ela. A banca vai dizer que o servidor deve sempre obedecer.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: INTEGRIDADE E TRANSPARÊNCIA -->
+    <div id="integridade" class="secao">
+        <h2>3. Integridade e Transparência</h2>
+        <div class="card">
+            <h3>Integridade</h3>
+            <p>A integridade no serviço público vai além de não ser corrupto. Envolve a <strong>coerência entre o discurso e a prática</strong>, a honestidade, a transparência e a responsabilidade. O servidor íntegro é aquele que age com retidão, mesmo quando ninguém está vendo.</p>
+            
+            <h3>Transparência</h3>
+            <p>A transparência é um dos pilares da Administração Pública (princípio da Publicidade). Ela pode ser:</p>
+            <ul>
+                <li><strong>Ativa:</strong> A Administração divulga informações de interesse público de forma proativa, independentemente de solicitação (ex: portais da transparência).</li>
+                <li><strong>Passiva:</strong> A Administração presta informações quando solicitada pelo cidadão (ex: pedidos via Lei de Acesso à Informação).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: CONFLITO DE INTERESSES -->
+    <div id="conflito" class="secao">
+        <h2>4. Conflito de Interesses (Lei 12.813/2013)</h2>
+        <div class="card">
+            <p>A Lei 12.813/2013 dispõe sobre o conflito de interesses no exercício de cargo ou emprego no âmbito do Poder Executivo Federal.</p>
+            
+            <h3>O que é Conflito de Interesses?</h3>
+            <p>É a situação gerada pelo confronto entre <strong>interesses públicos e privados</strong>, que possa comprometer o interesse coletivo ou influenciar, de maneira imprópria, o desempenho da função pública.</p>
+            
+            <h3>Exemplos de Conflito de Interesses (Art. 5º)</h3>
+            <ul>
+                <li>Divulgar ou fazer uso de informação privilegiada em benefício próprio ou de terceiros.</li>
+                <li>Exercer atividade que implique a prestação de serviços a empresa que tenha interesse em decisão do órgão onde trabalha.</li>
+                <li>Receber presente de quem tenha interesse em decisão do órgão (com exceção de brindes de pequeno valor).</li>
+                <li>Prestar serviços a pessoa física ou jurídica que tenha interesse em decisão do órgão.</li>
+            </ul>
+            
+            <h3>Como evitar?</h3>
+            <p>O servidor deve <strong>declarar o conflito de interesses</strong> à autoridade competente, que decidirá sobre a melhor forma de evitar ou mitigar a situação.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que o servidor pode receber <strong>presentes de qualquer valor</strong> de empresas que contratam com o órgão. <strong>Errado!</strong> O servidor só pode receber <strong>brindes de pequeno valor</strong> (aqueles que não têm valor comercial significativo). Presentes de alto valor são considerados conflito de interesses.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Ética vs. Moral:</strong> Moral é a prática (costumes). Ética é a reflexão (teoria).</li>
+                <li><strong>Ordens ilegais:</strong> O servidor NÃO deve cumpri-las. Ele tem o dever de representar contra elas.</li>
+                <li><strong>Informação privilegiada:</strong> É vedado usar informações obtidas no cargo para benefício próprio ou de terceiros.</li>
+                <li><strong>Conflito de interesses:</strong> Ocorre quando o interesse privado se sobrepõe ao público. O servidor deve declarar o conflito.</li>
+                <li><strong>Presentes:</strong> Só brindes de pequeno valor são permitidos. Presentes de alto valor são vedados.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Qual é a principal diferença entre Ética e Moral?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Moral é a prática, o conjunto de costumes e regras de um grupo. A Ética é a reflexão filosófica sobre essa moral, ou seja, a teoria.')">A Moral é a prática (costumes e regras), enquanto a Ética é a reflexão filosófica sobre essa prática.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! É o contrário: a Moral é a prática e a Ética é a reflexão.')">A Ética é a prática (costumes e regras), enquanto a Moral é a reflexão filosófica sobre essa prática.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Ética e Moral são conceitos distintos. A Moral é a prática e a Ética é a reflexão teórica.')">Ética e Moral são conceitos idênticos e não possuem diferenças.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. De acordo com o Código de Ética do Servidor Público (Decreto 1.171/94), o servidor deve cumprir as ordens superiores, EXCETO quando:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O servidor tem o dever de cumprir as ordens superiores, exceto quando forem manifestamente ilegais. Nesse caso, ele deve representar contra elas.')">A ordem for manifestamente ilegal.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O servidor deve cumprir as ordens, mesmo que não concorde com elas, desde que sejam legais.')">O servidor discordar politicamente da ordem.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem deve ser cumprida, independentemente de o servidor gostar ou não do superior.')">O servidor não gostar do superior hierárquico.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Sobre o conflito de interesses (Lei 12.813/2013), é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O conflito de interesses ocorre quando há confronto entre interesses públicos e privados, e o servidor deve declarar essa situação à autoridade competente.')">Ocorre quando há confronto entre interesses públicos e privados, e o servidor deve declarar a situação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O conflito de interesses é justamente o confronto entre os interesses públicos e privados.')">Ocorre apenas quando o servidor é corrupto e recebe propina.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O conflito de interesses pode ocorrer mesmo sem dolo, apenas pela situação de confronto entre interesses.')">Não se aplica a servidores que ocupam cargos de confiança.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em relação ao recebimento de presentes por servidores públicos, a Lei de Conflito de Interesses estabelece que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O servidor pode receber brindes de pequeno valor (que não tenham valor comercial significativo), mas presentes de alto valor são vedados quando o doador tem interesse em decisão do órgão.')">É permitido receber brindes de pequeno valor, mas presentes de alto valor são vedados.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Presentes de alto valor são vedados quando o doador tem interesse em decisão do órgão.')">É permitido receber presentes de qualquer valor, desde que sejam declarados.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O servidor não pode receber presentes de alto valor de pessoas ou empresas que tenham interesse em decisão do órgão.')">É vedado receber qualquer tipo de presente, inclusive brindes de pequeno valor.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A transparência na Administração Pública pode ocorrer de duas formas. Quando a Administração divulga informações de interesse público de forma proativa, independentemente de solicitação (ex: portais da transparência), isso é chamado de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A transparência ativa é quando a Administração divulga informações de forma proativa, sem precisar que o cidadão solicite.')">Transparência ativa.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A transparência passiva é quando a Administração presta informações mediante solicitação do cidadão.')">Transparência passiva.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A transparência reativa não é um termo usado na doutrina. O correto é transparência ativa (proativa) e passiva (sob demanda).')">Transparência reativa.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ÉTICA, INTEGRIDADE, TRANSPARÊNCIA E CONFLITOS DE INTERESSES -->

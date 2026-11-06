@@ -1,35 +1,247 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comunicação no Atendimento ao Público — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Comunicação no Atendimento ao Público</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>eti04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: COMUNICAÇÃO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Comunicação</h1>
+        <p>Conceitos, Tipos, Fluxos e Barreiras – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceitos e Elementos</a>
+        <a href="#tipos">Tipos de Comunicação</a>
+        <a href="#fluxos">Fluxos de Comunicação</a>
+        <a href="#barreiras">Barreiras à Comunicação</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS E ELEMENTOS -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceitos e Elementos da Comunicação</h2>
+        <div class="card">
+            <p>A <strong>comunicação</strong> é o processo de transmissão e compreensão de uma mensagem entre um emissor e um receptor, por meio de um canal. É a base de todas as relações humanas e organizacionais.</p>
+            
+            <h3>Elementos da Comunicação:</h3>
+            <ul>
+                <li><strong>Emissor (ou Locutor):</strong> Quem emite a mensagem.</li>
+                <li><strong>Receptor (ou Interlocutor):</strong> Quem recebe a mensagem.</li>
+                <li><strong>Mensagem:</strong> O conteúdo transmitido.</li>
+                <li><strong>Canal:</strong> O meio pelo qual a mensagem é transmitida (e-mail, telefone, papel, ar/voz).</li>
+                <li><strong>Código:</strong> A linguagem utilizada (português, libras, sinais).</li>
+                <li><strong>Contexto:</strong> A situação ou o assunto da mensagem.</li>
+                <li><strong>Feedback (Retorno):</strong> A resposta do receptor ao emissor, confirmando que a mensagem foi compreendida.</li>
+            </ul>
+            <div class="box-formula">
+                Emissor → Mensagem → Canal → Receptor → Feedback
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: TIPOS DE COMUNICAÇÃO -->
+    <div id="tipos" class="secao">
+        <h2>2. Tipos de Comunicação</h2>
+        <div class="card">
+            <h3>Comunicação Verbal e Não Verbal</h3>
+            <ul>
+                <li><strong>Verbal:</strong> Uso de palavras (oral ou escrita).</li>
+                <li><strong>Não Verbal:</strong> Gestos, expressões faciais, tom de voz, postura, aparência.</li>
+            </ul>
+
+            <h3>Comunicação Formal e Informal</h3>
+            <ul>
+                <li><strong>Formal:</strong> Ocorre pelos canais oficiais da organização (memorandos, ofícios, e-mails institucionais, ordens de serviço). Segue a hierarquia.</li>
+                <li><strong>Informal:</strong> Ocorre de forma espontânea, fora dos canais oficiais. É o famoso "rádio-peão" ou "rádio-corredor". Pode ser rápida, mas tem menor confiabilidade.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FLUXOS DE COMUNICAÇÃO -->
+    <div id="fluxos" class="secao">
+        <h2>3. Fluxos de Comunicação na Organização</h2>
+        <div class="card">
+            <p>Nas organizações, a comunicação pode fluir em diferentes direções. A FAFIPA adora cobrar essa classificação:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fluxo</th>
+                        <th>Direção</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Descendente (Vertical)</strong></td>
+                        <td>De cima para baixo (Chefia → Subordinado)</td>
+                        <td>Ordens, diretrizes, manuais de procedimento, feedback do chefe.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ascendente (Vertical)</strong></td>
+                        <td>De baixo para cima (Subordinado → Chefia)</td>
+                        <td>Relatórios, sugestões, reclamações, feedback do subordinado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Horizontal (Lateral)</strong></td>
+                        <td>Mesmo nível hierárquico</td>
+                        <td>Comunicação entre colegas de trabalho do mesmo setor ou de setores diferentes no mesmo nível.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagonal (Transversal)</strong></td>
+                        <td>Níveis e setores diferentes</td>
+                        <td>Comunicação entre um gerente de vendas e um supervisor de TI (níveis e áreas diferentes).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A comunicação <strong>Ascendente</strong> é a que flui do <strong>subordinado para o chefe</strong> (ex: um funcionário enviando um relatório). Já a <strong>Descendente</strong> é do <strong>chefe para o subordinado</strong> (ex: o chefe dando uma ordem). A banca vai trocar os nomes!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: BARREIRAS À COMUNICAÇÃO -->
+    <div id="barreiras" class="secao">
+        <h2>4. Barreiras à Comunicação</h2>
+        <div class="card">
+            <p>As barreiras são obstáculos que dificultam ou impedem que a mensagem seja compreendida corretamente. As principais são:</p>
+            <ul>
+                <li><strong>Barreiras Físicas:</strong> Ruídos, distância, problemas no canal (ex: telefone com sinal ruim, internet caindo).</li>
+                <li><strong>Barreiras Semânticas:</strong> Dificuldades com o significado das palavras (ex: uso de jargões técnicos, gírias, palavras ambíguas).</li>
+                <li><strong>Barreiras Psicológicas:</strong> Emoções, preconceitos, estresse, falta de atenção, desconfiança entre as partes.</li>
+                <li><strong>Barreiras Administrativas (Burocráticas):</strong> Excesso de níveis hierárquicos, normas rígidas, processos lentos que distorcem a mensagem.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Fluxos:</strong> Ascendente = de baixo para cima (subordinado → chefe). Descendente = de cima para baixo (chefe → subordinado).</li>
+                <li><strong>Comunicação Informal:</strong> É o "rádio-peão" (boatos, conversas de corredor). É rápida, mas não confiável.</li>
+                <li><strong>Feedback:</strong> É essencial para confirmar se a mensagem foi compreendida. Sem feedback, a comunicação é incompleta.</li>
+                <li><strong>Barreira Semântica:</strong> Dificuldade com o significado das palavras (jargões, ambiguidade).</li>
+                <li><strong>Barreira Física:</strong> Ruído no canal (ex: barulho, falha na internet).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Quando um subordinado envia um relatório de atividades para o seu superior hierárquico, qual fluxo de comunicação está sendo utilizado?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação descendente flui do chefe para o subordinado.')">Descendente.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A comunicação Ascendente flui do subordinado para o chefe (de baixo para cima). Ex: relatórios, sugestões e reclamações.')">Ascendente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação horizontal ocorre entre colegas do mesmo nível hierárquico.')">Horizontal.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. O "rádio-peão" ou "rádio-corredor", que são as conversas informais e boatos que circulam na organização, é um exemplo de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O rádio-peão é a comunicação informal, que ocorre fora dos canais oficiais. É rápida, mas tem baixa confiabilidade.')">Comunicação informal.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação formal ocorre pelos canais oficiais (memorandos, ofícios).')">Comunicação formal.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação não verbal envolve gestos e expressões, não boatos.')">Comunicação não verbal.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Um gerente de vendas precisa se comunicar com um supervisor de TI (de outro departamento e de nível hierárquico diferente). Esse tipo de comunicação é classificado como:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação horizontal ocorre entre pessoas do mesmo nível hierárquico.')">Comunicação horizontal.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A comunicação Diagonal (ou Transversal) ocorre entre pessoas de níveis hierárquicos e setores diferentes.')">Comunicação diagonal (transversal).</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A comunicação ascendente flui do subordinado para o chefe.')">Comunicação ascendente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. O uso excessivo de jargões técnicos e palavras ambíguas que dificultam a compreensão da mensagem é um exemplo de qual barreira à comunicação?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A barreira física é o ruído no canal (ex: barulho, falha de internet).')">Barreira física.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Barreira Semântica está relacionada ao significado das palavras (jargões, ambiguidade, gírias).')">Barreira semântica.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A barreira psicológica envolve emoções, preconceitos e estresse.')">Barreira psicológica.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. No processo de comunicação, o elemento que confirma ao emissor que a mensagem foi compreendida pelo receptor é chamado de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O canal é o meio pelo qual a mensagem é transmitida.')">Canal.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O código é a linguagem utilizada (português, libras).')">Código.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Feedback (retorno) é a resposta do receptor ao emissor, confirmando que a mensagem foi compreendida. Sem feedback, a comunicação é incompleta.')">Feedback.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: COMUNICAÇÃO -->

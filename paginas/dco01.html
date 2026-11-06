@@ -1,35 +1,224 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Princípios Fundamentais (CF, arts. 1º a 4º) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Princípios Fundamentais (CF, arts. 1º a 4º)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dco01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: PRINCÍPIOS FUNDAMENTAIS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Princípios Fundamentais</h1>
+        <p>CF/88 – Artigos 1º a 4º – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#fundamentos">Fundamentos (Art. 1º)</a>
+        <a href="#separacao">Separação dos Poderes (Art. 2º)</a>
+        <a href="#objetivos">Objetivos (Art. 3º)</a>
+        <a href="#relacoes">Relações Internacionais (Art. 4º)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: FUNDAMENTOS -->
+    <div id="fundamentos" class="secao">
+        <h2>1. Fundamentos da República (Art. 1º)</h2>
+        <div class="card">
+            <p>A República Federativa do Brasil constitui-se em Estado Democrático de Direito e tem como fundamentos (mnemônico: <strong>SO-CI-DI-VA-PLU</strong>):</p>
+            <ul>
+                <li><strong>So</strong>berania;</li>
+                <li><strong>Ci</strong>dadania;</li>
+                <li><strong>Di</strong>gnidade da pessoa humana;</li>
+                <li><strong>Va</strong>lores sociais do trabalho e da livre iniciativa;</li>
+                <li><strong>Plu</strong>ralismo político.</li>
+            </ul>
+            <p><strong>Parágrafo único:</strong> Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente (democracia representativa e participativa).</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: SEPARAÇÃO DOS PODERES -->
+    <div id="separacao" class="secao">
+        <h2>2. Separação dos Poderes (Art. 2º)</h2>
+        <div class="card">
+            <p>São Poderes da União, <strong>independentes e harmônicos entre si</strong>:</p>
+            <ul>
+                <li>O <strong>Legislativo</strong>;</li>
+                <li>O <strong>Executivo</strong>;</li>
+                <li>O <strong>Judiciário</strong>.</li>
+            </ul>
+            <p><strong>Importante:</strong> A separação dos Poderes é uma <strong>cláusula pétrea</strong> (Art. 60, § 4º, III), ou seja, não pode ser abolida por Emenda Constitucional.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Art. 2º fala que os Poderes são <strong>independentes e harmônicos</strong>. A banca vai dizer que são "independentes e soberanos" ou "subordinados entre si". <strong>Errado!</strong> A soberania é da República Federativa do Brasil, não dos Poderes.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: OBJETIVOS -->
+    <div id="objetivos" class="secao">
+        <h2>3. Objetivos Fundamentais (Art. 3º)</h2>
+        <div class="card">
+            <p>Constituem objetivos fundamentais da República Federativa do Brasil (mnemônico: <strong>CON-GA-ERRA-PRO</strong>):</p>
+            <ul>
+                <li><strong>Con</strong>struir uma sociedade livre, justa e solidária;</li>
+                <li><strong>Ga</strong>rantir o desenvolvimento nacional;</li>
+                <li><strong>Erra</strong>dicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;</li>
+                <li><strong>Pro</strong>mover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Não confunda <strong>Fundamentos</strong> (Art. 1º) com <strong>Objetivos</strong> (Art. 3º). Os objetivos são sempre verbos no infinitivo (construir, garantir, erradicar, promover). A banca vai trocar os dois!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: RELAÇÕES INTERNACIONAIS -->
+    <div id="relacoes" class="secao">
+        <h2>4. Princípios das Relações Internacionais (Art. 4º)</h2>
+        <div class="card">
+            <p>A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:</p>
+            <ul>
+                <li><strong>Independência nacional;</strong></li>
+                <li><strong>Prevalência dos direitos humanos;</strong></li>
+                <li><strong>Autodeterminação dos povos;</strong></li>
+                <li><strong>Não-intervenção;</strong></li>
+                <li><strong>Igualdade entre os Estados;</strong></li>
+                <li><strong>Defesa da paz;</strong></li>
+                <li><strong>Solução pacífica dos conflitos;</strong></li>
+                <li><strong>Repúdio ao terrorismo e ao racismo;</strong></li>
+                <li><strong>Cooperação entre os povos para o progresso da humanidade;</strong></li>
+                <li><strong>Concessão de asilo político.</strong></li>
+            </ul>
+            <p><strong>Parágrafo único:</strong> A República Federativa do Brasil buscará a <strong>integração econômica, política, social e cultural</strong> dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Brasil busca a integração dos povos da <strong>América Latina</strong>, e não da América do Sul ou do Mercosul especificamente. A banca vai trocar o termo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Fundamentos vs. Objetivos:</strong> Fundamentos = SO-CI-DI-VA-PLU (substantivos). Objetivos = CON-GA-ERRA-PRO (verbos no infinitivo).</li>
+                <li><strong>Separação dos Poderes:</strong> São independentes e harmônicos (não soberanos). É cláusula pétrea.</li>
+                <li><strong>Relações Internacionais:</strong> O Brasil busca integração da América Latina (não apenas Mercosul).</li>
+                <li><strong>Todo poder emana do povo:</strong> Democracia representativa (eleições) e participativa (plebiscito, referendo, iniciativa popular).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Assinale a alternativa que apresenta um OBJETIVO fundamental da República Federativa do Brasil (Art. 3º):</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Pluralismo político" é um fundamento (Art. 1º), não um objetivo.')">Pluralismo político.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Construir uma sociedade livre, justa e solidária" é um dos objetivos fundamentais da República (Art. 3º, I).')">Construir uma sociedade livre, justa e solidária.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! "Dignidade da pessoa humana" é um fundamento (Art. 1º, III).')">Dignidade da pessoa humana.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a separação dos Poderes (Art. 2º da CF/88), é correto afirmar que os Poderes da União são:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 2º estabelece que são Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.')">Independentes e harmônicos entre si.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os Poderes não são soberanos; a soberania é da República Federativa do Brasil.')">Soberanos e independentes entre si.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os Poderes são independentes, não subordinados.')">Subordinados hierarquicamente entre si.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é o princípio que rege o Brasil nas suas relações internacionais e que significa a não interferência nos assuntos internos de outros países?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A autodeterminação dos povos é o direito de um povo decidir seu próprio destino.')">Autodeterminação dos povos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O princípio da Não-intervenção (Art. 4º, IV) estabelece que o Brasil não interfere nos assuntos internos de outros Estados.')">Não-intervenção.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A concessão de asilo político é outro princípio das relações internacionais.')">Concessão de asilo político.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. O parágrafo único do Art. 4º da CF/88 estabelece que o Brasil buscará a integração econômica, política, social e cultural dos povos da:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O texto constitucional fala expressamente em integração dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações.')">América Latina.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O texto fala em América Latina, não apenas Mercosul.')">Mercosul.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O texto fala em América Latina, não em América do Sul.')">América do Sul.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre os fundamentos da República Federativa do Brasil (Art. 1º), é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soberania é um dos fundamentos, mas não o único.')">A soberania é o único fundamento previsto na Constituição.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 1º prevê cinco fundamentos: soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa, e pluralismo político (SO-CI-DI-VA-PLU).')">São cinco fundamentos, incluindo soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa, e pluralismo político.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os fundamentos estão no Art. 1º, e não no Art. 4º.')">Os fundamentos da República estão previstos no Art. 4º, que trata das relações internacionais.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: PRINCÍPIOS FUNDAMENTAIS -->

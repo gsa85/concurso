@@ -1,35 +1,258 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>6. Administração Pública na Constituição Federal (art. 37) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>6. Administração Pública na Constituição Federal (art. 37)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dco06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: ADMINISTRAÇÃO PÚBLICA NA CF/88 -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Administração Pública na CF/88</h1>
+        <p>Artigos 37 a 41 – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#principios">Princípios (LIMPE)</a>
+        <a href="#concurso">Concurso Público</a>
+        <a href="#acumulacao">Acumulação de Cargos</a>
+        <a href="#estabilidade">Estabilidade e Perda do Cargo</a>
+        <a href="#remuneracao">Teto Remuneratório</a>
+        <a href="#nepotismo">Nepotismo (SV 13)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: PRINCÍPIOS -->
+    <div id="principios" class="secao">
+        <h2>1. Princípios da Administração Pública (Art. 37, caput)</h2>
+        <div class="card">
+            <p>A Administração Pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de (mnemônico: <strong>LIMPE</strong>):</p>
+            <ul>
+                <li><strong>L</strong>egalidade;</li>
+                <li><strong>I</strong>mpessoalidade;</li>
+                <li><strong>M</strong>oralidade;</li>
+                <li><strong>P</strong>ublicidade;</li>
+                <li><strong>E</strong>ficiência (incluído pela EC 19/98).</li>
+            </ul>
+            <p><strong>Importante:</strong> A <strong>Eficiência</strong> foi incluída pela Emenda Constitucional 19/98 (Reforma Administrativa). Antes, o caput falava apenas em Legalidade, Impessoalidade, Moralidade e Publicidade.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai dizer que o princípio da <strong>Eficiência</strong> estava previsto desde a promulgação da CF/88. <strong>Errado!</strong> Ele foi incluído pela EC 19/98. Outra pegadinha é trocar "Eficiência" por "Eficácia" ou "Economicidade" — esses não estão no caput do Art. 37.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CONCURSO PÚBLICO -->
+    <div id="concurso" class="secao">
+        <h2>2. Concurso Público (Art. 37, II e III)</h2>
+        <div class="card">
+            <p>A investidura em cargo ou emprego público depende de aprovação prévia em <strong>concurso público</strong> de provas ou de provas e títulos, ressalvadas as nomeações para <strong>cargo em comissão</strong> declarado em lei de livre nomeação e exoneração.</p>
+            <p><strong>Prazo de validade do concurso:</strong></p>
+            <div class="box-formula">
+                Até 2 (dois) anos, prorrogável UMA VEZ, por igual período.
+            </div>
+            <p><strong>Direito à nomeação:</strong> O candidato aprovado dentro do número de vagas previsto no edital tem direito subjetivo à nomeação. O candidato aprovado fora das vagas tem mera expectativa de direito.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ACUMULAÇÃO DE CARGOS -->
+    <div id="acumulacao" class="secao">
+        <h2>3. Acumulação de Cargos (Art. 37, XVI)</h2>
+        <div class="card">
+            <p>É <strong>vedada</strong> a acumulação remunerada de cargos públicos, exceto quando houver <strong>compatibilidade de horários</strong> e nas seguintes hipóteses:</p>
+            <ul>
+                <li><strong>a)</strong> A de <strong>dois cargos de professor</strong>;</li>
+                <li><strong>b)</strong> A de <strong>um cargo de professor</strong> com outro <strong>técnico ou científico</strong>;</li>
+                <li><strong>c)</strong> A de <strong>dois cargos ou empregos privativos de profissionais de saúde</strong>, com profissões regulamentadas.</li>
+            </ul>
+            <p><strong>Extensão da vedação:</strong> A proibição de acumular estende-se a <strong>empregos e funções</strong> e abrange autarquias, fundações, empresas públicas, sociedades de economia mista, suas subsidiárias e sociedades controladas, direta ou indiretamente, pelo Poder Público.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> As exceções são <strong>apenas</strong> as três previstas nas alíneas "a", "b" e "c". A banca vai tentar incluir "vereador" ou "magistério e advocacia" como exceções. A acumulação de magistério com advocacia é possível, mas é uma regra específica da magistratura, não uma exceção geral do art. 37.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: ESTABILIDADE E PERDA DO CARGO -->
+    <div id="estabilidade" class="secao">
+        <h2>4. Estabilidade e Perda do Cargo (Art. 41)</h2>
+        <div class="card">
+            <p>São <strong>estáveis</strong> após <strong>3 (três) anos</strong> de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.</p>
+            <p><strong>O servidor estável só perderá o cargo em virtude de:</strong></p>
+            <ul>
+                <li><strong>I -</strong> sentença judicial transitada em julgado;</li>
+                <li><strong>II -</strong> processo administrativo em que lhe seja assegurada <strong>ampla defesa</strong>;</li>
+                <li><strong>III -</strong> procedimento de <strong>avaliação periódica de desempenho</strong>, na forma de lei complementar, assegurada ampla defesa.</li>
+            </ul>
+            <p><strong>Excesso de quadros (Art. 41, §3º):</strong> Se houver extinção do cargo ou excesso de quadros, o servidor estável ficará em <strong>disponibilidade</strong>, com remuneração proporcional ao tempo de serviço, até seu adequado aproveitamento em outro cargo.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O prazo de estabilidade é de <strong>3 anos</strong> (não 2). As hipóteses de perda do cargo são <strong>taxativas</strong> (sentença judicial, PAD e avaliação de desempenho). A banca vai tentar incluir "interesse público" ou "decisão do prefeito" como hipóteses.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: TETO REMUNERATÓRIO -->
+    <div id="remuneracao" class="secao">
+        <h2>5. Teto Remuneratório (Art. 37, XI)</h2>
+        <div class="card">
+            <p>A remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional, bem como os proventos de aposentadoria, <strong>não poderão exceder o subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal (STF)</strong>.</p>
+            <p><strong>Exceções (subtetos):</strong></p>
+            <ul>
+                <li><strong>Municípios:</strong> O teto é o subsídio do <strong>Prefeito</strong>.</li>
+                <li><strong>Estados:</strong> O teto é o subsídio do <strong>Governador</strong>.</li>
+                <li><strong>Poder Legislativo:</strong> O teto é o subsídio dos <strong>Deputados Estaduais</strong> (no caso dos Estados).</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Em âmbito <strong>municipal</strong>, o teto é o subsídio do <strong>Prefeito</strong>, não o do Ministro do STF. A banca vai trocar os tetos dos entes federativos.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: NEPOTISMO -->
+    <div id="nepotismo" class="secao">
+        <h2>6. Nepotismo (Súmula Vinculante 13)</h2>
+        <div class="card">
+            <p>A Súmula Vinculante 13 do STF veda a prática de nepotismo na Administração Pública. Ela estabelece que a nomeação de <strong>cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau</strong>, inclusive, para o exercício de:</p>
+            <ul>
+                <li>Cargo em comissão;</li>
+                <li>Função de confiança;</li>
+                <li>Função gratificada;</li>
+                <li>Ou, ainda, de <strong>serviço público</strong> em geral,</li>
+            </ul>
+            <p>no âmbito de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, <strong>viola a Constituição Federal</strong>.</p>
+            <p><strong>Exceção:</strong> A nomeação de <strong>Ministros de Estado</strong> e de <strong>Secretários Municipais e Estaduais</strong> é considerada <strong>cargo político</strong>, não se aplicando a vedação do nepotismo (entendimento do STF).</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O grau de parentesco vedado é até o <strong>terceiro grau</strong> (pais, filhos, avós, netos, irmãos, tios, sobrinhos, cônjuges e companheiros). A banca vai tentar reduzir para segundo grau ou ampliar para quarto grau. A exceção para cargos políticos (Ministros e Secretários) também é cobrada.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>LIMPE:</strong> Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência. A Eficiência foi incluída pela <strong>EC 19/98</strong>.</li>
+                <li><strong>Concurso Público:</strong> Validade de até <strong>2 anos</strong>, prorrogável uma vez por igual período.</li>
+                <li><strong>Acumulação:</strong> Apenas três exceções: dois cargos de professor, professor + técnico/científico, dois cargos de saúde.</li>
+                <li><strong>Estabilidade:</strong> Adquirida após <strong>3 anos</strong> de efetivo exercício.</li>
+                <li><strong>Perda do Cargo:</strong> Apenas por sentença judicial transitada em julgado, PAD com ampla defesa ou avaliação periódica de desempenho.</li>
+                <li><strong>Teto Municipal:</strong> O teto é o subsídio do <strong>Prefeito</strong>.</li>
+                <li><strong>Nepotismo:</strong> Vedado até o <strong>3º grau</strong>. Exceção para cargos políticos (Ministros e Secretários).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 8: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>8. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Sobre o prazo de validade do concurso público (Art. 37, III), é correto afirmar que será de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O concurso público tem validade de até 2 anos, prorrogável uma única vez, por igual período.')">Até 2 anos, prorrogável uma vez por igual período.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 2 anos, não de 1 ano improrrogável.')">1 ano, improrrogável.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A prorrogação é permitida uma única vez por igual período.')">Até 2 anos, prorrogável sucessivamente.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Qual é o prazo de efetivo exercício para que o servidor nomeado para cargo de provimento efetivo adquira estabilidade (Art. 41)?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O servidor adquire estabilidade após 3 (três) anos de efetivo exercício.')">3 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 3 anos, não de 2.')">2 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 3 anos, não de 5.')">5 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Sobre a acumulação de cargos públicos, assinale a alternativa que NÃO é uma exceção prevista na Constituição:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A acumulação de um cargo de professor com um cargo de advogado não está prevista como exceção no Art. 37, XVI. As exceções são: dois cargos de professor, professor + técnico/científico, dois cargos de saúde.')">A de um cargo de professor com outro de advogado.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A acumulação de dois cargos de professor é uma exceção prevista na alínea "a".')">A de dois cargos de professor.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A acumulação de um cargo de professor com outro técnico ou científico é uma exceção prevista na alínea "b".')">A de um cargo de professor com outro técnico ou científico.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Em âmbito municipal, o teto remuneratório dos servidores públicos (Art. 37, XI) corresponde ao subsídio:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Em âmbito municipal, o teto é o subsídio do Prefeito. Para os Estados, é o subsídio do Governador. Para a União, é o subsídio dos Ministros do STF.')">Do Prefeito.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O subsídio do Governador é o teto para os servidores estaduais.')">Do Governador.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O subsídio dos Ministros do STF é o teto para os servidores federais.')">Dos Ministros do STF.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Segundo a Súmula Vinculante 13, a nomeação de parentes para cargos em comissão é vedada até qual grau de parentesco?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A vedação do nepotismo abrange cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o 3º grau.')">Até o 3º grau.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A vedação vai até o 3º grau, não apenas o 2º.')">Até o 2º grau.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A vedação vai até o 3º grau, não até o 4º.')">Até o 4º grau.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: ADMINISTRAÇÃO PÚBLICA NA CF/88 -->

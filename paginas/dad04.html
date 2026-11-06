@@ -1,35 +1,288 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>4. Lei Federal nº 14.133/2021 (Nova Lei de Licitações e Contratos) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>4. Lei Federal nº 14.133/2021 (Nova Lei de Licitações e Contratos)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI 14.133/2021 - LICITAÇÕES E CONTRATOS -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Lei 14.133/2021</h1>
+        <p>Licitações e Contratos Administrativos – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito e Princípios</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#criterios">Critérios de Julgamento</a>
+        <a href="#direta">Contratação Direta (Dispensa e Inexigibilidade)</a>
+        <a href="#fases">Fases da Licitação</a>
+        <a href="#contratos">Contratos Administrativos</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO E PRINCÍPIOS -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito e Princípios</h2>
+        <div class="card">
+            <p>A <strong>Lei 14.133/2021</strong> (Nova Lei de Licitações e Contratos – NLLC) substituiu a Lei 8.666/93, a Lei do Pregão (10.520/2002) e o RDC (12.462/2011). Ela disciplina o processo licitatório e a contratação de obras, serviços, compras e alienações pela Administração Pública.</p>
+            <p><strong>Objetivos principais (Art. 11):</strong></p>
+            <ul>
+                <li>Assegurar a seleção da proposta apta a gerar o <strong>resultado de contratação mais vantajoso</strong> para a Administração.</li>
+                <li>Assegurar tratamento <strong>isonômico</strong> entre os licitantes.</li>
+                <li>Evitar contratações com <strong>sobrepreço</strong> ou com preços manifestamente inexequíveis.</li>
+                <li>Incentivar a <strong>inovação</strong> e o desenvolvimento nacional sustentável.</li>
+            </ul>
+            <p><strong>Princípios (Art. 5º):</strong> Além dos princípios clássicos (Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência), a lei inclui expressamente: <strong>Interesse Público, Probidade Administrativa, Isonomia, Impessoalidade, Economicidade, Desenvolvimento Nacional Sustentável, Transparência, Planejamento, Segregação de Funções e Motivação</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: MODALIDADES -->
+    <div id="modalidades" class="secao">
+        <h2>2. Modalidades de Licitação (Art. 28)</h2>
+        <div class="card">
+            <p>A Lei 14.133/2021 prevê <strong>cinco modalidades</strong>. As modalidades antigas (Convite e Tomada de Preços) <strong>não existem mais</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Objeto / Finalidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Pregão</strong></td><td>Obrigatório para aquisição de <strong>bens e serviços comuns</strong> (cujos padrões de desempenho podem ser objetivamente definidos no edital).</td></tr>
+                    <tr><td><strong>Concorrência</strong></td><td>Para contratações de <strong>maior vulto</strong>: obras e serviços especiais de engenharia, serviços especiais, bens especiais, concessões e permissões de serviço público.</td></tr>
+                    <tr><td><strong>Concurso</strong></td><td>Para escolha de <strong>trabalho técnico, científico ou artístico</strong> (ex: projeto arquitetônico), mediante prêmio ou remuneração.</td></tr>
+                    <tr><td><strong>Leilão</strong></td><td>Para <strong>alienação</strong> de bens móveis ou imóveis (venda de bens públicos).</td></tr>
+                    <tr><td><strong>Diálogo Competitivo</strong></td><td><strong>Novidade da lei.</strong> Para contratações de <strong>inovação tecnológica ou técnica</strong> ou de <strong>soluções complexas</strong> que não podem ser definidas previamente pela Administração. Há diálogo com licitantes pré-selecionados.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai tentar cobrar as modalidades extintas (<strong>Convite</strong> e <strong>Tomada de Preços</strong>). Elas <strong>não existem mais</strong> na Lei 14.133/2021. Outra pegadinha é o <strong>Diálogo Competitivo</strong>: é uma modalidade nova, para soluções complexas ou inovadoras.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: CRITÉRIOS DE JULGAMENTO -->
+    <div id="criterios" class="secao">
+        <h2>3. Critérios de Julgamento (Art. 33)</h2>
+        <div class="card">
+            <p>São os parâmetros utilizados para escolher a proposta mais vantajosa. A lei prevê:</p>
+            <ul>
+                <li><strong>Menor Preço:</strong> O menor dispêndio para a Administração, atendidos os parâmetros mínimos de qualidade.</li>
+                <li><strong>Maior Desconto:</strong> O maior desconto sobre o preço de referência (ex: serviços de manutenção).</li>
+                <li><strong>Melhor Técnica ou Conteúdo Artístico:</strong> Para trabalhos técnicos, científicos ou artísticos (ex: concurso).</li>
+                <li><strong>Técnica e Preço:</strong> Combina avaliação técnica com a proposta de preço.</li>
+                <li><strong>Maior Lance:</strong> Utilizado no leilão (para alienação de bens).</li>
+                <li><strong>Maior Retorno Econômico:</strong> Para contratos de eficiência (o licitante se remunera pela economia gerada).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: CONTRATAÇÃO DIRETA -->
+    <div id="direta" class="secao">
+        <h2>4. Contratação Direta: Dispensa vs. Inexigibilidade</h2>
+        <div class="card">
+            <p>A regra é licitar. A contratação direta é a exceção. A FAFIPA adora cobrar a diferença conceitual:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instituto</th>
+                        <th>Conceito</th>
+                        <th>Exemplos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dispensa</strong> (Art. 75)</td>
+                        <td>A licitação é <strong>possível</strong>, mas a lei <strong>autoriza</strong> a não realização.</td>
+                        <td>Pequeno valor (R$ 62.725,59 para compras/serviços comuns; R$ 125.451,15 para obras), emergência/calamidade, remanescente de obra, contratação de associação de portadores de deficiência.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inexigibilidade</strong> (Art. 74)</td>
+                        <td>A licitação é <strong>inviável</strong> devido à impossibilidade de competição.</td>
+                        <td>Fornecedor exclusivo (com atestado de exclusividade), artista consagrado, serviços técnicos especializados de natureza singular (ex: consultoria de alta complexidade).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Dispensa</strong> = Competição possível, mas a lei autoriza a contratação direta. <strong>Inexigibilidade</strong> = Competição <strong>inviável</strong>. Mesmo na dispensa por emergência, é obrigatório comprovar a <strong>compatibilidade dos preços</strong> com os praticados no mercado (FAFIPA 2025).
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: FASES DA LICITAÇÃO -->
+    <div id="fases" class="secao">
+        <h2>5. Fases do Processo Licitatório (Art. 17)</h2>
+        <div class="card">
+            <p>O processo segue uma sequência de fases. As mais cobradas são:</p>
+            <ol>
+                <li><strong>Preparatória:</strong> Planejamento, elaboração do Estudo Técnico Preliminar (ETP) e do Termo de Referência/Projeto Básico.</li>
+                <li><strong>Divulgação do Edital:</strong> Publicação do aviso de licitação.</li>
+                <li><strong>Apresentação de Propostas e Lances:</strong> Fase competitiva.</li>
+                <li><strong>Julgamento:</strong> Avaliação das propostas conforme o critério escolhido.</li>
+                <li><strong>Habilitação:</strong> Verificação da documentação dos licitantes (jurídica, técnica, fiscal, etc.).</li>
+                <li><strong>Recursal:</strong> Fase para recursos.</li>
+                <li><strong>Homologação:</strong> Ato da autoridade competente que confirma o resultado e adjudica o objeto.</li>
+            </ol>
+            <p><strong>Inversão de fases:</strong> A lei permite que a fase de <strong>julgamento</strong> ocorra antes da <strong>habilitação</strong>, como regra geral, para maior eficiência. A habilitação pode ser deixada para depois, verificando-se apenas o vencedor.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: CONTRATOS ADMINISTRATIVOS -->
+    <div id="contratos" class="secao">
+        <h2>6. Contratos Administrativos: Duração</h2>
+        <div class="card">
+            <p>A lei trouxe prazos mais elásticos para a duração dos contratos. Os mais cobrados são:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Contrato</th>
+                        <th>Prazo Máximo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Serviços e fornecimentos <strong>contínuos</strong></td><td>Até <strong>5 anos</strong> (prorrogável até 10 anos).</td></tr>
+                    <tr><td>Serviços não contínuos ou compras</td><td>Até <strong>1 ano</strong> (prorrogável por mais 1 ano).</td></tr>
+                    <tr><td>Contratos que gerem <strong>receita</strong> para a Administração</td><td>Até <strong>10 anos</strong>.</td></tr>
+                    <tr><td>Contratos de <strong>eficiência</strong></td><td>Até <strong>10 anos</strong>.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A banca vai trocar os prazos. Lembre-se: a regra geral para serviços contínuos é de <strong>5 anos</strong> (prorrogável por mais 5, totalizando 10). Para serviços não contínuos, o prazo é de <strong>1 ano</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Modalidades:</strong> São 5: Pregão, Concorrência, Concurso, Leilão e Diálogo Competitivo. Convite e Tomada de Preços não existem mais.</li>
+                <li><strong>Dispensa vs. Inexigibilidade:</strong> Dispensa = competição possível, mas a lei autoriza. Inexigibilidade = competição inviável.</li>
+                <li><strong>Pregão:</strong> Obrigatório para bens e serviços <strong>comuns</strong>.</li>
+                <li><strong>Diálogo Competitivo:</strong> Modalidade nova, para soluções complexas ou inovadoras.</li>
+                <li><strong>Fases:</strong> A regra é que o <strong>julgamento</strong> venha antes da <strong>habilitação</strong>.</li>
+                <li><strong>Prazos de contrato:</strong> Serviços contínuos: 5 anos (prorrogável). Serviços não contínuos: 1 ano.</li>
+                <li><strong>Preço em dispensa emergencial:</strong> Mesmo na emergência, é preciso comprovar a compatibilidade dos preços com o mercado.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 8: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>8. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 14.133/2021, quais são as modalidades de licitação previstas?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As cinco modalidades são: pregão, concorrência, concurso, leilão e diálogo competitivo. As modalidades convite e tomada de preços não existem mais.')">Pregão, concorrência, concurso, leilão e diálogo competitivo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Convite e tomada de preços não são mais previstos na Lei 14.133/2021.')">Pregão, concorrência, convite, tomada de preços e leilão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O diálogo competitivo é uma modalidade prevista na lei nova, assim como o concurso.')">Pregão, concorrência, concurso, leilão e dispensa.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. A contratação de um artista consagrado pela crítica ou pela opinião pública, para um evento oficial, é hipótese de:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! Na dispensa, a competição é possível, mas a lei autoriza a contratação direta. No caso de artista consagrado, a competição é inviável.')">Dispensa de licitação.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A contratação de artista consagrado é hipótese de Inexigibilidade de licitação (Art. 74), pois a competição é inviável.')">Inexigibilidade de licitação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A licitação é inviável nesse caso, por isso é inexigível, e não dispensável.')">Licitação na modalidade concurso.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. (FAFIPA 2025 – Adaptada) Sobre a dispensa de licitação por emergência, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Mesmo na dispensa emergencial, a Administração deve comprovar que os preços contratados são compatíveis com os praticados no mercado, para evitar superfaturamento.')">É possível, mas exige a comprovação da compatibilidade dos preços com o mercado.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A emergência não dispensa a comprovação da compatibilidade de preços.')">Dispensa qualquer comprovação de preço, pois a urgência prevalece.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A dispensa emergencial é permitida, desde que comprovada a urgência e a compatibilidade de preços.')">É vedada em qualquer hipótese pela Lei 14.133/2021.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Qual é a modalidade de licitação destinada à alienação de bens móveis ou imóveis pela Administração Pública?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Leilão é a modalidade utilizada para a venda (alienação) de bens públicos.')">Leilão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O concurso é para escolha de trabalho técnico, científico ou artístico.')">Concurso.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O pregão é para bens e serviços comuns.')">Pregão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre a duração dos contratos administrativos na Lei 14.133/2021, assinale a alternativa correta:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Os contratos de serviços e fornecimentos contínuos podem ter prazo de até 5 anos, prorrogável por mais 5, totalizando até 10 anos.')">Os contratos de serviços contínuos podem ter prazo de até 5 anos, prorrogável por igual período.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo para serviços contínuos é de até 5 anos, e não de 12 meses improrrogáveis.')">Todos os contratos têm prazo máximo de 12 meses, improrrogáveis.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo para serviços contínuos é de até 5 anos, e não de 10 anos improrrogáveis.')">Os contratos de serviços contínuos têm prazo máximo de 10 anos, sem possibilidade de prorrogação.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI 14.133/2021 - LICITAÇÕES E CONTRATOS -->

@@ -1,35 +1,289 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>. Responsabilidade dos Agentes Públicos e Improbidade Administrativa (CF/88 e Lei 8.429/1992) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>. Responsabilidade dos Agentes Públicos e Improbidade Administrativa (CF/88 e Lei 8.429/1992)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad07</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: RESPONSABILIDADE DOS AGENTES PÚBLICOS E IMPROBIDADE -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Responsabilidade e Improbidade</h1>
+        <p>Agentes Públicos, CF/88 e Lei 8.429/1992 – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#responsabilidade">Responsabilidade do Estado e do Agente</a>
+        <a href="#improbidade">Improbidade Administrativa</a>
+        <a href="#atos">Atos Tipificados (Arts. 9º a 11)</a>
+        <a href="#sancoes">Sanções</a>
+        <a href="#prescricao">Prescrição e ANPC</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: RESPONSABILIDADE DO ESTADO E DO AGENTE -->
+    <div id="responsabilidade" class="secao">
+        <h2>1. Responsabilidade do Estado e do Agente Público</h2>
+        <div class="card">
+            <p>A Constituição Federal (Art. 37, §6º) estabelece duas esferas de responsabilidade distintas, que não se confundem:</p>
+            <div class="box-formula">
+                Estado → Responsabilidade Objetiva (independe de dolo/culpa)<br>
+                Agente Público → Responsabilidade Subjetiva (dolo ou erro grosseiro)
+            </div>
+
+            <h3>Responsabilidade Civil do Estado (Objetiva)</h3>
+            <p>As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. A responsabilidade é <strong>objetiva</strong>, baseada na <strong>teoria do risco administrativo</strong>: basta a comprovação do dano e do nexo causal, independentemente de dolo ou culpa do agente. O Estado tem o <strong>direito de regresso</strong> contra o agente responsável, mas isso será tratado na esfera seguinte.
+
+            <h3>Responsabilidade do Agente Público (Subjetiva)</h3>
+            <p>A responsabilidade pessoal do agente perante o Estado (ou perante o particular, em casos específicos) é <strong>subjetiva</strong>. Conforme o Art. 28 da LINDB (Lei 13.655/2018), o agente responderá pessoalmente por suas decisões ou opiniões técnicas em caso de <strong>dolo ou erro grosseiro</strong>.
+            <ul>
+                <li><strong>Dolo:</strong> Vontade livre e consciente de alcançar o resultado ilícito ou de assumir o risco de produzi-lo.</li>
+                <li><strong>Erro grosseiro:</strong> Erro de magnitude excepcional, decorrente de imprudência, negligência ou imperícia graves. A <strong>mera culpa leve</strong> não gera responsabilidade pessoal do agente.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A responsabilidade do <strong>Estado</strong> é <strong>objetiva</strong> (não precisa provar dolo ou culpa do agente). A responsabilidade <strong>pessoal do agente</strong> é <strong>subjetiva</strong> e só surge com <strong>dolo ou erro grosseiro</strong>. A banca vai trocar as duas esferas ou dizer que o agente responde por culpa leve.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: IMPROBIDADE ADMINISTRATIVA -->
+    <div id="improbidade" class="secao">
+        <h2>2. Improbidade Administrativa (Lei 8.429/1992)</h2>
+        <div class="card">
+            <p>A Lei de Improbidade Administrativa (LIA) tutela a probidade na Administração Pública. Após a reforma promovida pela <strong>Lei 14.230/2021</strong>, o regime tornou-se mais rigoroso e garantista, com três mudanças estruturais:</p>
+            <ul>
+                <li><strong>Exigência de dolo específico:</strong> Não existe mais improbidade culposa. Todos os atos ímprobos exigem <strong>dolo</strong>, consistente na vontade livre e consciente de alcançar o resultado ilícito[reference:1]. O STF e o STJ consolidaram que é necessário o dolo específico, não bastando o dolo genérico.</li>
+                <li><strong>Taxatividade dos tipos:</strong> O rol de atos de improbidade é <strong>fechado (numerus clausus)</strong>. A antiga cláusula aberta do art. 11 foi substituída por um rol taxativo.</li>
+                <li><strong>Lesividade relevante:</strong> Para os atos do art. 11 (violação a princípios), a lei exige a comprovação de <strong>dano ou lesividade relevante</strong> ao bem jurídico tutelado, não bastando a mera irregularidade formal.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: ATOS TIPIFICADOS -->
+    <div id="atos" class="secao">
+        <h2>3. Atos Tipificados (Arts. 9º, 10 e 11)</h2>
+        <div class="card">
+            <p>A lei prevê três categorias de atos de improbidade, todas exigindo <strong>dolo</strong>:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artigo</th>
+                        <th>Categoria</th>
+                        <th>Ideia Central</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Art. 9º</strong></td>
+                        <td>Enriquecimento Ilícito</td>
+                        <td>Auferir vantagem patrimonial indevida em razão do cargo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Art. 10</strong></td>
+                        <td>Dano ao Erário</td>
+                        <td>Ação ou omissão dolosa que cause perda patrimonial, desvio, apropriação ou dilapidação dos bens públicos. Exige <strong>dano efetivo</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Art. 11</strong></td>
+                        <td>Violência a Princípios</td>
+                        <td>Rol <strong>taxativo</strong> de condutas que atentam contra os princípios da Administração Pública, com exigência de <strong>lesividade relevante</strong>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O rol do <strong>Art. 11</strong> é <strong>taxativo</strong>. Se a banca apresentar uma conduta genérica que “atenta contra a moralidade”, mas não estiver expressamente prevista nos incisos do art. 11, <strong>não configura improbidade</strong>. O rol é fechado.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: SANÇÕES -->
+    <div id="sancoes" class="secao">
+        <h2>4. Sanções (Art. 12)</h2>
+        <div class="card">
+            <p>As sanções são aplicadas de forma isolada ou cumulativa, conforme a gravidade do fato. A reforma de 2021 alterou significativamente os prazos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artigo</th>
+                        <th>Suspensão dos Direitos Políticos</th>
+                        <th>Multa Civil</th>
+                        <th>Proibição de Contratar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Art. 9º</strong></td>
+                        <td>Até <strong>14 anos</strong></td>
+                        <td>Equivalente ao valor do acréscimo patrimonial</td>
+                        <td>Até <strong>14 anos</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Art. 10</strong></td>
+                        <td>Até <strong>12 anos</strong></td>
+                        <td>Equivalente ao valor do dano</td>
+                        <td>Até <strong>12 anos</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Art. 11</strong></td>
+                        <td>Sanções mais brandas (advertência, multa, proibição de contratar por até 4 anos)</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Observação:</strong> O <strong>ressarcimento integral do dano</strong> não é mais classificado como “sanção” pela reforma, mas sim como um <strong>efeito civil acessório</strong> da condenação, conforme o caput do art. 12[reference:3].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> No caso de <strong>enriquecimento ilícito (Art. 9º)</strong>, o prazo máximo de suspensão dos direitos políticos passou a ser de <strong>14 anos</strong> (antes era de 8). A banca vai tentar manter o prazo antigo.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: PRESCRIÇÃO E ANPC -->
+    <div id="prescricao" class="secao">
+        <h2>5. Prescrição e Acordo de Não Persecução Civil (ANPC)</h2>
+        <div class="card">
+            <h3>Prescrição (Art. 23)</h3>
+            <p>A ação para aplicação das sanções da LIA prescreve em <strong>8 (oito) anos</strong>, contados a partir da ocorrência do fato ou, em caso de infração permanente, do dia em que cessou a permanência[reference:4].</p>
+            <p><strong>Prescrição intercorrente:</strong> A lei prevê que, se o processo ficar parado por mais de <strong>4 anos</strong> sem movimentação relevante, ocorre a prescrição intercorrente (dispositivo com constitucionalidade ainda em discussão, mas com previsão legal expressa).</p>
+            <p><strong>Irretroatividade:</strong> O STF fixou o entendimento (Tema 1.199) de que o novo regime prescricional é <strong>irretroativo</strong>, aplicando-se apenas a fatos ocorridos após a publicação da Lei 14.230/2021 (26/10/2021).</p>
+        </div>
+        <div class="card">
+            <h3>Acordo de Não Persecução Civil (ANPC) – Art. 17-B</h3>
+            <p>A reforma introduziu expressamente o ANPC, permitindo que o <strong>Ministério Público</strong> celebre acordo com o investigado, observados os requisitos legais. O acordo pode ser firmado até mesmo na fase de execução da sentença e não afasta a obrigação de ressarcimento do dano[reference:5].</p>
+            <p><strong>Ponto de atenção:</strong> A celebração do ANPC é <strong>faculdade do Ministério Público</strong>, e sua ausência não gera nulidade processual. A lei não previu expressamente a suspensão da prescrição durante o cumprimento do acordo, o que gera debates doutrinários[reference:7].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A prescrição geral é de <strong>8 anos</strong>. A prescrição intercorrente é de <strong>4 anos</strong>. Não confunda os prazos. Além disso, as novas regras de prescrição <strong>não retroagem</strong> para fatos anteriores à reforma.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Estado x Agente:</strong> Estado responde objetivamente (risco administrativo). Agente responde subjetivamente (dolo ou erro grosseiro).</li>
+                <li><strong>Dolo específico:</strong> A improbidade exige dolo (vontade livre e consciente), não existe mais improbidade culposa.</li>
+                <li><strong>Art. 11 é taxativo:</strong> O rol de violação a princípios é fechado, não admite interpretação extensiva.</li>
+                <li><strong>Sanções do Art. 9º:</strong> Suspensão dos direitos políticos de até <strong>14 anos</strong> (não 8).</li>
+                <li><strong>Prescrição:</strong> <strong>8 anos</strong> (regra geral), <strong>4 anos</strong> (intercorrente), sem retroatividade.</li>
+                <li><strong>ANPC:</strong> É uma faculdade do MP, pode ser celebrado até na execução e não afasta o ressarcimento.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. Sobre a responsabilidade civil do Estado por danos causados por seus agentes a terceiros, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O art. 37, §6º da CF/88 estabelece a responsabilidade objetiva do Estado, baseada na teoria do risco administrativo, independentemente de dolo ou culpa do agente.')">É objetiva, independentemente de dolo ou culpa do agente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A responsabilidade do Estado é objetiva, não subjetiva.')">É subjetiva, exigindo a comprovação de dolo ou culpa do agente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A responsabilidade do Estado é objetiva, mas o direito de regresso contra o agente exige dolo ou erro grosseiro.')">É objetiva, mas o direito de regresso contra o agente independe de dolo ou culpa.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Após as alterações da Lei 14.230/2021, a configuração de ato de improbidade administrativa exige:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A reforma passou a exigir dolo específico (vontade livre e consciente de alcançar o resultado ilícito) para todos os atos de improbidade, eliminando a modalidade culposa.')">Dolo específico, não se admitindo mais a improbidade culposa.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A improbidade culposa foi eliminada pela Lei 14.230/2021.')">Culpa grave ou dolo, indistintamente.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O dolo genérico não é suficiente; a lei exige dolo específico.')">Apenas dolo genérico, sem necessidade de intenção específica.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é o prazo máximo de suspensão dos direitos políticos na hipótese de ato de improbidade que importe em enriquecimento ilícito (Art. 9º), após a Lei 14.230/2021?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo de 8 anos era o limite anterior à reforma.')">8 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A reforma majorou o prazo máximo para 14 anos no caso de enriquecimento ilícito (Art. 12, I).')">14 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo de 10 anos não corresponde ao limite legal para o art. 9º.')">10 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Sobre o prazo prescricional da ação de improbidade administrativa, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O art. 23 fixou o prazo geral de 8 anos, contados da ocorrência do fato ou, em caso de infração permanente, do dia em que cessou.')">É de 8 anos, contados da ocorrência do fato ou do dia em que cessou a permanência.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 8 anos, não de 5.')">É de 5 anos, contados do trânsito em julgado da sentença.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 8 anos, não de 10.')">É de 10 anos, contados da posse no cargo.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre o Acordo de Não Persecução Civil (ANPC), introduzido pela Lei 14.230/2021, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O ANPC é uma faculdade do Ministério Público, pode ser celebrado até na fase de execução da sentença e não afasta a obrigação de ressarcimento do dano.')">É uma faculdade do Ministério Público e não afasta a obrigação de ressarcimento do dano.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A celebração do ANPC é facultativa, não obrigatória.')">É obrigatório sempre que o investigado confessar o ato de improbidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O ANPC não afasta o dever de ressarcir o dano.')">Uma vez celebrado, extingue automaticamente a obrigação de ressarcir o erário.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: RESPONSABILIDADE DOS AGENTES PÚBLICOS E IMPROBIDADE -->

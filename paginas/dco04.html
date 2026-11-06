@@ -1,35 +1,265 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Normas Constitucionais e Hierarquia das Normas — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Normas Constitucionais e Hierarquia das Normas</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dco04</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: NORMAS CONSTITUCIONAIS E HIERARQUIA -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Normas Constitucionais e Hierarquia</h1>
+        <p>Classificação, Aplicabilidade e Pirâmide Normativa – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#aplicabilidade">Classificação (Aplicabilidade)</a>
+        <a href="#conteudo">Classificação (Conteúdo)</a>
+        <a href="#hierarquia">Hierarquia das Normas</a>
+        <a href="#tratados">Tratados Internacionais</a>
+        <a href="#tempo">Normas no Tempo (Repristinação)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CLASSIFICAÇÃO QUANTO À APLICABILIDADE -->
+    <div id="aplicabilidade" class="secao">
+        <h2>1. Classificação das Normas Constitucionais (Aplicabilidade)</h2>
+        <div class="card">
+            <p>Esta é a classificação mais cobrada em provas, desenvolvida por José Afonso da Silva. As normas constitucionais são divididas em três categorias:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Norma</th>
+                        <th>Característica</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Eficácia Plena</strong></td>
+                        <td>Produzem todos os seus efeitos <strong>imediatamente</strong>, sem necessidade de lei regulamentadora. Não admitem restrição.</td>
+                        <td>Art. 5º, III (ninguém será submetido a tortura); Art. 14, §2º (voto obrigatório).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Eficácia Contida (Restringível)</strong></td>
+                        <td>Produzem efeitos imediatos, mas podem ter seu alcance <strong>restringido por lei</strong> posterior.</td>
+                        <td>Art. 5º, XIII (liberdade de profissão, "atendidas as qualificações profissionais que a lei estabelecer").</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Eficácia Limitada</strong></td>
+                        <td>Não produzem todos os seus efeitos imediatamente. Dependem de <strong>lei regulamentadora</strong> para serem aplicadas.</td>
+                        <td>Art. 7º, XI (direito à participação nos lucros, "nos termos da lei").</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A norma de eficácia <strong>contida</strong> já produz efeitos imediatos, mas pode ser restringida por lei. A norma de eficácia <strong>limitada</strong> NÃO produz todos os efeitos imediatamente, pois depende de lei para ser aplicada. A banca vai trocar os conceitos!
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: CLASSIFICAÇÃO QUANTO AO CONTEÚDO -->
+    <div id="conteudo" class="secao">
+        <h2>2. Classificação quanto ao Conteúdo</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Normas Materialmente Constitucionais:</strong> Tratam de matérias tipicamente constitucionais (direitos fundamentais, organização do Estado, organização dos Poderes).</li>
+                <li><strong>Normas Formalmente Constitucionais:</strong> Estão no texto da Constituição, independentemente do conteúdo. Ex: Art. 242, §2º (ensino da história do Brasil).</li>
+                <li><strong>Normas Material e Formalmente Constitucionais:</strong> São as que estão na Constituição e tratam de matéria constitucional (a maioria).</li>
+                <li><strong>Normas apenas Formalmente Constitucionais:</strong> Estão no texto constitucional, mas não tratam de matéria constitucional.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: HIERARQUIA DAS NORMAS -->
+    <div id="hierarquia" class="secao">
+        <h2>3. Hierarquia das Normas (Pirâmide de Kelsen)</h2>
+        <div class="card">
+            <p>O ordenamento jurídico brasileiro é estruturado em uma pirâmide hierárquica, onde as normas inferiores devem obediência às superiores. Do topo para a base:</p>
+            <div class="box-formula">
+                1. Constituição Federal (e Emendas Constitucionais)<br>
+                2. Tratados Internacionais de Direitos Humanos (aprovados com quórum de emenda)<br>
+                3. Leis Complementares, Leis Ordinárias, Leis Delegadas, Medidas Provisórias, Decretos Legislativos e Resoluções<br>
+                4. Normas Infralegais (Decretos, Portarias, Instruções Normativas)
+            </div>
+            <p><strong>Observações:</strong></p>
+            <ul>
+                <li><strong>Emendas Constitucionais:</strong> Têm a mesma hierarquia da Constituição, mas não podem abolir as cláusulas pétreas.</li>
+                <li><strong>Leis Complementares e Ordinárias:</strong> Têm a mesma hierarquia entre si (não há hierarquia entre elas). A diferença está no <strong>processo legislativo</strong> (a complementar exige maioria absoluta) e na <strong>matéria</strong> (a complementar trata de matérias reservadas pela Constituição).</li>
+                <li><strong>Medidas Provisórias:</strong> Têm força de lei ordinária, mas são editadas pelo Presidente da República em casos de urgência.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> <strong>Lei Complementar e Lei Ordinária têm a mesma hierarquia</strong>. A diferença é apenas de processo legislativo e de matéria. A banca vai dizer que a Lei Complementar é hierarquicamente superior à Lei Ordinária. <strong>Errado!</strong>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: TRATADOS INTERNACIONAIS -->
+    <div id="tratados" class="secao">
+        <h2>4. Tratados Internacionais e sua Posição Hierárquica</h2>
+        <div class="card">
+            <p>Os tratados internacionais podem ter diferentes posições hierárquicas, dependendo do seu conteúdo e do quórum de aprovação:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Tratado</th>
+                        <th>Quórum de Aprovação</th>
+                        <th>Posição Hierárquica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tratados de Direitos Humanos</strong></td>
+                        <td>Aprovados em cada Casa do Congresso, em <strong>dois turnos</strong>, por <strong>3/5 dos votos</strong> dos respectivos membros.</td>
+                        <td>Equivalem a <strong>Emendas Constitucionais</strong> (Art. 5º, §3º).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tratados de Direitos Humanos não aprovados pelo quórum qualificado</strong></td>
+                        <td>Aprovados por maioria simples.</td>
+                        <td>Têm status <strong>supralegal</strong> (acima das leis, abaixo da Constituição).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tratados Comuns (comerciais, tributários, etc.)</strong></td>
+                        <td>Aprovados por maioria simples.</td>
+                        <td>Têm status de <strong>Lei Ordinária</strong>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Os tratados de direitos humanos aprovados pelo quórum de <strong>3/5 em dois turnos</strong> têm status de <strong>Emenda Constitucional</strong>. Os demais tratados de direitos humanos têm status <strong>supralegal</strong> (acima das leis, abaixo da CF). A banca vai trocar esses status.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: NORMAS NO TEMPO -->
+    <div id="tempo" class="secao">
+        <h2>5. Normas Constitucionais no Tempo (Repristinação e Recepção)</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Recepção:</strong> A nova Constituição <strong>recepciona</strong> as normas infraconstitucionais anteriores que sejam materialmente compatíveis com ela. As normas incompatíveis são <strong>revogadas</strong> (não recepcionadas).</li>
+                <li><strong>Repristinação:</strong> É o retorno de uma norma revogada ao ordenamento jurídico. No Brasil, a repristinação <strong>não é automática</strong>, dependendo de previsão expressa na lei que revogar a norma revogadora.</li>
+                <li><strong>Desconstitucionalização:</strong> Uma norma constitucional perde seu status constitucional, passando a ser norma infraconstitucional.</li>
+                <li><strong>Mutuação Constitucional:</strong> Alteração do sentido da Constituição sem alteração do texto.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Normas de Eficácia:</strong> Plena (produz efeitos imediatos), Contida (pode ser restringida por lei), Limitada (depende de lei regulamentadora).</li>
+                <li><strong>Hierarquia:</strong> Lei Complementar e Lei Ordinária têm a <strong>mesma hierarquia</strong>.</li>
+                <li><strong>Tratados de Direitos Humanos:</strong> Com quórum de 3/5 em dois turnos = status de <strong>Emenda Constitucional</strong>. Sem esse quórum = status <strong>supralegal</strong>.</li>
+                <li><strong>Recepção:</strong> A nova Constituição recepciona normas anteriores compatíveis.</li>
+                <li><strong>Repristinação:</strong> Não é automática no Brasil (depende de lei).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>7. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. As normas constitucionais de eficácia CONTIDA são aquelas que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! As normas de eficácia contida produzem efeitos imediatos, mas podem ter seu alcance restringido por lei posterior.')">Produzem efeitos imediatos, mas podem ser restringidas por lei.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As normas de eficácia limitada dependem de lei regulamentadora para produzir todos os seus efeitos.')">Não produzem efeitos imediatos, dependendo de lei regulamentadora.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! As normas de eficácia plena produzem todos os seus efeitos imediatamente, sem restrição.')">Produzem todos os efeitos imediatamente, sem qualquer restrição.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a hierarquia entre Lei Complementar e Lei Ordinária, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Não há hierarquia entre Lei Complementar e Lei Ordinária. A diferença está no processo legislativo (a complementar exige maioria absoluta) e na matéria (a complementar trata de matérias reservadas pela CF).')">Não há hierarquia entre elas, pois a diferença está no processo legislativo e na matéria.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Lei Complementar não é hierarquicamente superior à Lei Ordinária.')">A Lei Complementar é hierarquicamente superior à Lei Ordinária.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Lei Ordinária não é hierarquicamente superior à Lei Complementar.')">A Lei Ordinária é hierarquicamente superior à Lei Complementar.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Os tratados internacionais de direitos humanos aprovados pelo quórum de 3/5 dos votos, em dois turnos, em cada Casa do Congresso Nacional, têm status de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! Conforme o Art. 5º, §3º, os tratados de direitos humanos aprovados por 3/5 dos votos, em dois turnos, equivalem a Emendas Constitucionais.')">Emenda Constitucional.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O status de lei ordinária é para tratados comuns, não para os de direitos humanos com quórum qualificado.')">Lei Ordinária.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O status supralegal é para os tratados de direitos humanos que não foram aprovados pelo quórum qualificado.')">Norma supralegal.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A recepção de normas infraconstitucionais pela nova Constituição ocorre quando:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A recepção ocorre quando a nova Constituição aceita as normas anteriores que sejam materialmente compatíveis com ela. As incompatíveis são revogadas.')">A nova Constituição aceita normas anteriores materialmente compatíveis com ela.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A recepção só ocorre se houver compatibilidade material com a nova Constituição.')">A nova Constituição aceita todas as normas anteriores, independentemente de compatibilidade.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A recepção é o contrário: a nova Constituição recebe as normas anteriores compatíveis.')">A norma anterior é revogada pela nova Constituição.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. A repristinação de uma norma revogada, no ordenamento jurídico brasileiro:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A repristinação não é automática no Brasil. Depende de previsão expressa na lei que revogar a norma revogadora (art. 2º, §3º da LINDB).')">Não é automática, dependendo de previsão expressa na lei.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A repristinação não é automática; depende de previsão legal expressa.')">É automática, sempre que uma norma revogadora for revogada.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A repristinação não é vedada; ela pode ocorrer, mas não de forma automática.')">É vedada em qualquer hipótese pelo ordenamento brasileiro.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: NORMAS CONSTITUCIONAIS E HIERARQUIA -->

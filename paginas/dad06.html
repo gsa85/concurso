@@ -1,35 +1,294 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>6. Lei Municipal nº 1.656/1958 (Processo Administrativo Disciplinar em Curitiba) — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>6. Lei Municipal nº 1.656/1958 (Processo Administrativo Disciplinar em Curitiba)</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>dad06</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI 1.656/1958 - PROCESSO ADMINISTRATIVO DISCIPLINAR -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Lei 1.656/1958</h1>
+        <p>Processo Administrativo Disciplinar – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito e Abrangência</a>
+        <a href="#sindicancia">Sindicância vs. PAD</a>
+        <a href="#fases">Fases do PAD</a>
+        <a href="#penalidades">Penalidades Disciplinares</a>
+        <a href="#prescricao">Prescrição</a>
+        <a href="#tad">Termo de Ajustamento Disciplinar (TAD)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITO E ABRANGÊNCIA -->
+    <div id="conceito" class="secao">
+        <h2>1. Conceito e Abrangência</h2>
+        <div class="card">
+            <p>O <strong>Processo Administrativo Disciplinar (PAD)</strong> é o instrumento legal utilizado pela Administração Pública para apurar infrações funcionais e aplicar as penalidades cabíveis aos servidores públicos municipais de Curitiba.</p>
+            <p><strong>Abrangência:</strong></p>
+            <ul>
+                <li>Aplica-se aos <strong>funcionários públicos municipais</strong> de Curitiba (estatutários).</li>
+                <li>O Estatuto prevê a possibilidade de <strong>sindicância</strong> e de <strong>inquérito administrativo</strong> (PAD) para apurar as responsabilidades.</li>
+                <li>O processo pode ser <strong>revisto</strong> a qualquer tempo, nos termos dos arts. 252 e seguintes da Lei 1.656/1958[reference:0].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: SINDICÂNCIA VS. PAD -->
+    <div id="sindicancia" class="secao">
+        <h2>2. Sindicância vs. Processo Administrativo Disciplinar (PAD)</h2>
+        <div class="card">
+            <p>É importante não confundir os dois institutos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Sindicância</th>
+                        <th>PAD (Inquérito Administrativo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Natureza</strong></td>
+                        <td>Procedimento <strong>inquisitorial</strong> (não exige contraditório e ampla defesa nesta fase)[reference:1].</td>
+                        <td>Procedimento <strong>contraditório</strong> (assegura ampla defesa).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Finalidade</strong></td>
+                        <td>Apurar fatos e indícios de irregularidade. Pode resultar em arquivamento ou instauração de PAD.</td>
+                        <td>Apurar a infração e aplicar a penalidade.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Complexidade</strong></td>
+                        <td>Mais simples e rápida.</td>
+                        <td>Mais complexo e formal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prazos</strong></td>
+                        <td>Os prazos da sindicância correspondem à <strong>metade</strong> dos prazos do processo disciplinar ordinário, arredondando-se para mais quando resultar em fração[reference:2].</td>
+                        <td>Prazo legal para conclusão (ver seção de prazos).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A <strong>Sindicância</strong> é um procedimento <strong>inquisitorial</strong>, ou seja, <strong>não</strong> exige a observância do contraditório e da ampla defesa nesta fase[reference:3]. O contraditório é assegurado no PAD. A banca vai dizer que a sindicância já garante ampla defesa.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: FASES DO PAD -->
+    <div id="fases" class="secao">
+        <h2>3. Fases do Processo Administrativo Disciplinar</h2>
+        <div class="card">
+            <p>O PAD segue uma sequência de atos, que pode ser resumida em:</p>
+            <ol>
+                <li><strong>Instauração:</strong> Publicação do ato que constitui a comissão processante (designação dos membros)[reference:4].</li>
+                <li><strong>Inquérito Administrativo (Instrução):</strong> Fase de coleta de provas, oitiva de testemunhas, interrogatório do acusado e juntada de documentos[reference:5].</li>
+                <li><strong>Defesa:</strong> O acusado apresenta sua defesa escrita, podendo produzir provas e arrolar testemunhas.</li>
+                <li><strong>Relatório:</strong> A comissão processante elabora um relatório final, concluindo pela inocência ou pela responsabilidade do servidor[reference:6].</li>
+                <li><strong>Julgamento:</strong> A autoridade competente profere a decisão, aplicando ou não a penalidade.</li>
+                <li><strong>Recurso:</strong> Cabe recurso da decisão que aplicar penalidade[reference:7].</li>
+            </ol>
+            <p><strong>Prazo para conclusão:</strong> O prazo para a conclusão do processo disciplinar é de <strong>60 (sessenta) dias</strong>, contados da data de publicação do ato que constituir a comissão, admitida a sua prorrogação por <strong>igual prazo</strong> (mais 60 dias), quando as circunstâncias o exigirem[reference:8].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O prazo de <strong>60 dias</strong> para a conclusão do PAD é <strong>prorrogável por mais 60</strong>. A banca vai dizer que o prazo é de 30, 90 ou 120 dias, ou que é improrrogável. A prorrogação é permitida “quando as circunstâncias o exigirem”[reference:9].
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: PENALIDADES DISCIPLINARES -->
+    <div id="penalidades" class="secao">
+        <h2>4. Penalidades Disciplinares</h2>
+        <div class="card">
+            <p>A Lei 1.656/1958 prevê as seguintes penalidades (Art. 147 e seguintes):</p>
+            <ul>
+                <li><strong>Advertência:</strong> Aplicada por escrito, para faltas leves.</li>
+                <li><strong>Suspensão:</strong> Aplicada em caso de reincidência ou violação de deveres. <strong>Não poderá ultrapassar 60 (sessenta) dias</strong>[reference:10]. Quando houver conveniência para o serviço, a suspensão pode ser convertida em <strong>multa</strong> na base de 50% por dia de vencimento[reference:11].</li>
+                <li><strong>Demissão:</strong> Aplicada para faltas graves (ex: abandono de cargo, improbidade administrativa, incontinência pública)[reference:12].</li>
+                <li><strong>Cassação de aposentadoria e disponibilidade:</strong> Para casos específicos previstos em lei.</li>
+                <li><strong>Destituição de função gratificada:</strong> Para quem ocupa função de confiança.</li>
+            </ul>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A pena de <strong>suspensão</strong> tem um limite máximo de <strong>60 dias</strong>. A banca pode tentar trocar por 90 dias (que é o limite da lei federal 8.112/90). Além disso, a suspensão pode ser convertida em <strong>multa de 50%</strong> por dia.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: PRESCRIÇÃO -->
+    <div id="prescricao" class="secao">
+        <h2>5. Prescrição da Ação Disciplinar</h2>
+        <div class="card">
+            <p>A prescrição é a perda do direito de a Administração punir o servidor pelo decurso do tempo. Os prazos prescricionais são:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Penalidade</th>
+                        <th>Prazo Prescricional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Demissão</strong> (e cassação de aposentadoria/disponibilidade)</td>
+                        <td><strong>5 (cinco) anos</strong>[reference:13]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Suspensão</strong> (mais de 30 dias)</td>
+                        <td><strong>2 (dois) anos</strong>[reference:14]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advertência</strong> / Suspensão de até 30 dias</td>
+                        <td>O prazo é menor, variando conforme a lei local (geralmente 6 meses a 1 ano, conforme decretos regulamentadores)[reference:15].</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Interrupção da prescrição:</strong> A abertura de sindicância ou a instauração de processo disciplinar <strong>interrompe a prescrição</strong> até a decisão final proferida por autoridade competente[reference:16].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> A prescrição para faltas puníveis com <strong>demissão</strong> é de <strong>5 anos</strong>. Para faltas puníveis com <strong>suspensão</strong>, é de <strong>2 anos</strong>. A banca vai trocar os prazos ou dizer que a sindicância <strong>não</strong> interrompe a prescrição. Ela <strong>interrompe</strong>.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: TAD -->
+    <div id="tad" class="secao">
+        <h2>6. Termo de Ajustamento Disciplinar (TAD)</h2>
+        <div class="card">
+            <p>O TAD é um instrumento consensual previsto na legislação municipal (Decretos regulamentadores) que permite ao servidor, que cometeu uma infração de menor potencial ofensivo, assumir o compromisso de ajustar sua conduta, evitando a instauração de PAD ou a aplicação de penalidade mais grave.</p>
+            <ul>
+                <li>O servidor tem o prazo de <strong>5 (cinco) dias</strong> para manifestar-se quanto à aceitação do TAD[reference:17].</li>
+                <li>O silêncio do servidor é considerado <strong>não aceitação</strong>, prosseguindo-se com a sindicância ou PAD[reference:18].</li>
+                <li>O cumprimento do TAD pode levar à <strong>extinção da punibilidade</strong> ou à conversão da pena.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 7: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Sindicância vs. PAD:</strong> A sindicância é <strong>inquisitorial</strong> (sem contraditório). O PAD é <strong>contraditório</strong> (com ampla defesa).</li>
+                <li><strong>Prazos do PAD:</strong> <strong>60 dias</strong> para conclusão, prorrogável por mais <strong>60</strong>.</li>
+                <li><strong>Pena de Suspensão:</strong> Limite máximo de <strong>60 dias</strong>.</li>
+                <li><strong>Prescrição:</strong> <strong>5 anos</strong> para demissão; <strong>2 anos</strong> para suspensão.</li>
+                <li><strong>Interrupção da prescrição:</strong> A instauração de sindicância ou PAD <strong>interrompe</strong> a prescrição.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 8: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>8. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 1.656/1958, qual é o prazo para a conclusão do processo administrativo disciplinar (PAD), contado da publicação do ato que constitui a comissão?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 60 dias, não 30.')">30 dias, improrrogáveis.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O prazo é de 60 dias, admitida a prorrogação por igual prazo (mais 60 dias), quando as circunstâncias o exigirem.')">60 dias, prorrogáveis por mais 60 dias.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de 60 dias, não 90.')">90 dias, improrrogáveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Sobre a sindicância administrativa, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A sindicância é um procedimento inquisitorial, que não exige a observância do contraditório e da ampla defesa nesta fase, precedendo o possível processo administrativo disciplinar.')">Tem natureza inquisitorial, dispensando o contraditório e a ampla defesa nesta fase.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A sindicância é inquisitorial, portanto, não garante ampla defesa. O contraditório é assegurado no PAD.')">Garante o contraditório e a ampla defesa, assim como o PAD.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A sindicância é um procedimento mais simples e rápido, com prazos reduzidos pela metade.')">Tem os mesmos prazos do processo disciplinar ordinário.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Qual é a penalidade disciplinar que, segundo a Lei 1.656/1958, não poderá ultrapassar o limite de 60 (sessenta) dias?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A pena de suspensão não poderá ultrapassar 60 dias. Quando houver conveniência para o serviço, poderá ser convertida em multa na base de 50% por dia de vencimento.')">Suspensão.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A advertência é uma pena mais branda e não tem prazo de duração.')">Advertência.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A demissão é a pena máxima, mas não se aplica o limite de 60 dias.')">Demissão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A ação disciplinar para apurar falta punível com demissão prescreve em:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo de 2 anos é para faltas puníveis com suspensão.')">2 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A prescrição para faltas puníveis com demissão é de 5 (cinco) anos.')">5 anos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo de 10 anos não está previsto para a demissão.')">10 anos.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Sobre a interrupção da prescrição da ação disciplinar, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A abertura de sindicância ou a instauração de processo disciplinar interrompe a prescrição até a decisão final proferida por autoridade competente.')">A abertura de sindicância ou a instauração de processo disciplinar interrompe a prescrição até a decisão final.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A sindicância e o PAD interrompem a prescrição, não a suspendem.')">Apenas o processo disciplinar interrompe a prescrição, mas a sindicância não.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A prescrição não corre solta durante o processo; ela é interrompida.')">A prescrição continua correndo normalmente durante a sindicância e o PAD.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI 1.656/1958 - PROCESSO ADMINISTRATIVO DISCIPLINAR -->

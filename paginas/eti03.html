@@ -1,35 +1,242 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lei Federal nº 13.460/2017 – Direitos do Usuário de Serviços Públicos — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>Lei Federal nº 13.460/2017 – Direitos do Usuário de Serviços Públicos</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>eti03</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: LEI 13.460/2017 - DIREITOS DO USUÁRIO -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Botão Voltar */
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        
+        /* Box de Fórmula / Destaque */
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- BOTÃO DE VOLTAR -->
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Lei 13.460/2017</h1>
+        <p>Direitos do Usuário de Serviços Públicos – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceitos">Conceitos e Direitos</a>
+        <a href="#manifestacoes">Manifestações</a>
+        <a href="#carta">Carta de Serviços</a>
+        <a href="#ouvidoria">Ouvidoria e Conselho</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <!-- SEÇÃO 1: CONCEITOS E DIREITOS -->
+    <div id="conceitos" class="secao">
+        <h2>1. Conceitos e Direitos Básicos do Usuário</h2>
+        <div class="card">
+            <h3>Conceitos (Art. 2º)</h3>
+            <ul>
+                <li><strong>Usuário:</strong> Pessoa física ou jurídica que se beneficia ou utiliza, efetiva ou potencialmente, de serviço público.</li>
+                <li><strong>Serviço Público:</strong> Atividade administrativa ou de prestação direta ou indireta de bens ou serviços à população, exercida por órgão ou entidade da administração pública.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Direitos Básicos do Usuário (Art. 6º)</h3>
+            <p>A FAFIPA adora cobrar os direitos previstos neste artigo. São eles:</p>
+            <ul>
+                <li>Participação no acompanhamento da prestação e na avaliação dos serviços.</li>
+                <li>Obtenção de informações precisas e de fácil acesso.</li>
+                <li>Justa causa para a recusa de atendimento (o serviço não pode ser negado sem motivo).</li>
+                <li>Informação sobre horários, formas de acesso e tempo de espera.</li>
+                <li>Atendimento sem qualquer tipo de discriminação.</li>
+                <li><strong>Ter a manifestação (reclamação, denúncia, sugestão ou elogio) respondida</strong> de forma individualizada.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 2: MANIFESTAÇÕES -->
+    <div id="manifestacoes" class="secao">
+        <h2>2. Tipos de Manifestações e Prazos</h2>
+        <div class="card">
+            <p>As manifestações são as formas pelas quais o usuário se comunica com a Administração. Elas se dividem em quatro tipos (Art. 2º, incisos):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Manifestação</th>
+                        <th>Definição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Reclamação</strong></td><td>Insatisfação do usuário em relação à prestação de serviço público ou à conduta de agente público.</td></tr>
+                    <tr><td><strong>Denúncia</strong></td><td>Indicação de irregularidade ou ilegalidade na prestação do serviço ou na conduta de agente público.</td></tr>
+                    <tr><td><strong>Sugestão</strong></td><td>Proposição de ideia ou formulação de proposta para o aprimoramento dos serviços.</td></tr>
+                    <tr><td><strong>Elogio</strong></td><td>Reconhecimento ou satisfação com o serviço prestado ou com a conduta de agente público.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3>Prazos de Resposta (Art. 16)</h3>
+            <p>A Administração tem o prazo de <strong>30 (trinta) dias</strong>, contados a partir do recebimento da manifestação, para lhe dar uma resposta conclusiva.</p>
+            <p>Esse prazo pode ser <strong>prorrogado por mais 30 (trinta) dias</strong>, mediante <strong>justificativa expressa</strong> e ciência do interessado.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Cuidado com a confusão de prazos! A Lei 13.460/2017 prevê <strong>30 dias + 30 dias</strong> (prorrogáveis). A Lei de Acesso à Informação (12.527/2011) prevê <strong>20 dias + 10 dias</strong>. A banca pode trocar os prazos das duas leis.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 3: CARTA DE SERVIÇOS -->
+    <div id="carta" class="secao">
+        <h2>3. Carta de Serviços ao Usuário (Art. 7º)</h2>
+        <div class="card">
+            <p>A Carta de Serviços ao Usuário é um documento <strong>obrigatório</strong> para os órgãos e entidades do Poder Executivo (federal, estadual e municipal). Ela deve informar:</p>
+            <ul>
+                <li>Os <strong>serviços oferecidos</strong>.</li>
+                <li>As <strong>formas de acesso</strong> a esses serviços.</li>
+                <li>Os <strong>prazos</strong> para a realização do serviço.</li>
+                <li>As <strong>etapas</strong> de atendimento.</li>
+                <li>Os <strong>compromissos de qualidade</strong> e as formas de avaliação.</li>
+            </ul>
+            <p><strong>Objetivo:</strong> Dar transparência e garantir que o usuário saiba exatamente o que esperar do serviço público.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 4: OUVIDORIA E CONSELHO DE USUÁRIOS -->
+    <div id="ouvidoria" class="secao">
+        <h2>4. Ouvidoria e Conselho de Usuários</h2>
+        <div class="card">
+            <h3>Ouvidoria (Art. 13)</h3>
+            <p>É a unidade responsável por <strong>receber, analisar e responder</strong> as manifestações dos usuários. Ela também tem a função de:</p>
+            <ul>
+                <li>Promover a participação do usuário no acompanhamento da prestação dos serviços.</li>
+                <li>Mediar conflitos entre o usuário e o órgão público.</li>
+                <li>Produzir relatórios com propostas de melhoria.</li>
+            </ul>
+
+            <h3>Conselho de Usuários (Art. 18)</h3>
+            <p>É um órgão <strong>consultivo</strong> e de <strong>natureza permanente</strong>, composto por representantes dos usuários e da sociedade civil.</p>
+            <p><strong>Função:</strong> Acompanhar a prestação dos serviços, participar da avaliação e propor melhorias. O Conselho <strong>não tem poder deliberativo</strong> (não decide), ele apenas aconselha e opina.</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> O Conselho de Usuários é um órgão <strong>consultivo</strong> (opina, avalia, sugere), e <strong>não deliberativo</strong> (não decide). A banca vai dizer que o Conselho tem poder de decisão.
+        </div>
+    </div>
+
+    <!-- SEÇÃO 5: DICAS DE OURO -->
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>Prazos (30+30):</strong> A resposta à manifestação deve ser dada em 30 dias, prorrogáveis por mais 30 (mediante justificativa).</li>
+                <li><strong>Tipos de Manifestação:</strong> Reclamação (insatisfação), Denúncia (irregularidade), Sugestão (ideia) e Elogio (reconhecimento).</li>
+                <li><strong>Carta de Serviços:</strong> É obrigatória e deve informar serviços, prazos, formas de acesso e compromissos de qualidade.</li>
+                <li><strong>Conselho de Usuários:</strong> É um órgão <strong>consultivo</strong> (não deliberativo).</li>
+                <li><strong>Ouvidoria:</strong> Recebe, analisa e responde manifestações, além de mediar conflitos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SEÇÃO 6: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>6. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+
+            <div class="pergunta">
+                <p>1. De acordo com a Lei 13.460/2017, qual é o prazo para a Administração responder a uma manifestação de usuário, e qual é a possibilidade de prorrogação?</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 20 dias + 10 dias é o prazo da Lei de Acesso à Informação (12.527/2011).')">20 dias, prorrogáveis por mais 10.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Lei 13.460/2017 estabelece o prazo de 30 dias, prorrogáveis por mais 30 dias, mediante justificativa.')">30 dias, prorrogáveis por mais 30, mediante justificativa.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! 15 dias improrrogáveis não é o prazo previsto na lei.')">15 dias, improrrogáveis.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>2. A manifestação do usuário que expressa insatisfação com o serviço prestado ou com a conduta de um agente público é chamada de:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Reclamação é a manifestação que expressa insatisfação com o serviço ou com a conduta do agente público.')">Reclamação.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Denúncia indica irregularidade ou ilegalidade, não é apenas uma insatisfação.')">Denúncia.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Sugestão é uma proposição de ideia para melhorar o serviço.')">Sugestão.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Sobre o Conselho de Usuários, previsto na Lei 13.460/2017, é correto afirmar que:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Conselho de Usuários é um órgão consultivo e de natureza permanente, que avalia e propõe melhorias, mas não tem poder deliberativo (não decide).')">É um órgão consultivo e permanente, que avalia os serviços e propõe melhorias, sem poder deliberativo.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Conselho é consultivo, não deliberativo. Ele não decide sobre a prestação do serviço.')">É um órgão deliberativo, com poder de decisão sobre a prestação do serviço.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O Conselho de Usuários é um órgão permanente, não temporário.')">É um órgão temporário, criado apenas em situações de crise.</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>4. A Carta de Serviços ao Usuário, prevista na Lei 13.460/2017, tem como objetivo principal:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Carta de Serviços não estabelece os salários dos servidores.')">Definir os salários dos servidores públicos.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Carta de Serviços tem o objetivo de informar o usuário sobre os serviços prestados, as formas de acesso, os prazos, as etapas de atendimento e os compromissos de qualidade.')">Informar o usuário sobre os serviços prestados, prazos e formas de acesso, garantindo transparência.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Carta de Serviços não substitui a lei orçamentária.')">Substituir a Lei Orçamentária Anual (LOA).</button>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Qual é a principal função da Ouvidoria no âmbito da Lei 13.460/2017?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! A Ouvidoria é a unidade responsável por receber, analisar e responder as manifestações dos usuários, além de mediar conflitos e promover a participação.')">Receber, analisar e responder as manifestações dos usuários, promovendo a participação e a mediação de conflitos.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Ouvidoria não aplica multas ou penalidades aos usuários.')">Aplicar multas e penalidades aos usuários que fizerem reclamações infundadas.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! A Ouvidoria não tem a função de julgar processos judiciais.')">Julgar os processos judiciais que envolvem a Administração Pública.</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: LEI 13.460/2017 - DIREITOS DO USUÁRIO -->
