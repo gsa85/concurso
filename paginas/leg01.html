@@ -1,97 +1,326 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legislação de Curitiba - FAFIPA</title>
+<!-- INÍCIO DO MÓDULO DE ESTUDOS -->
+<div class="guia-curitiba">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f7f6; }
-        header { background-color: #004b87; color: white; padding: 2rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; margin-top: 10px; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h2 { color: #004b87; border-bottom: 2px solid #004b87; padding-bottom: 5px; }
-        h3 { color: #e67e22; }
-        .card { background: #eef2f5; padding: 15px; border-left: 5px solid #004b87; margin-bottom: 15px; border-radius: 4px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #004b87; color: white; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        .quiz-container { background: #fdfbf7; border: 2px dashed #e67e22; padding: 20px; border-radius: 8px; margin-top: 30px; }
-        .btn { background-color: #004b87; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; font-weight: bold; margin-top: 10px;}
-        .btn:hover { background-color: #00365f; }
-        .result { margin-top: 15px; font-weight: bold; }
-        footer { text-align: center; padding: 20px; margin-top: 40px; color: #777; font-size: 0.9rem; }
+        /* CSS Escopado - Não afeta o resto do seu site */
+        .guia-curitiba {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .guia-curitiba * { box-sizing: border-box; }
+        
+        /* Header */
+        .guia-curitiba .header-modulo {
+            background: linear-gradient(135deg, #004b87, #0066b3);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+
+        /* Menu de Navegação */
+        .guia-curitiba .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .guia-curitiba .nav-menu a {
+            text-decoration: none;
+            background: white;
+            color: #004b87;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+
+        /* Seções e Cards */
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 {
+            color: #004b87;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        
+        .guia-curitiba .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            border-left: 5px solid #004b87;
+        }
+
+        /* Tabelas */
+        .guia-curitiba table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .guia-curitiba th, .guia-curitiba td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+
+        /* Listas e Destaques */
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        
+        .guia-curitiba .alerta-fafipa {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #ffeeba;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* Quiz Interativo */
+        .guia-curitiba .quiz-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-top: 5px solid #e67e22;
+        }
+        .guia-curitiba .pergunta { margin-bottom: 25px; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: left;
+            transition: 0.2s;
+        }
+        .guia-curitiba .btn-opcao:hover { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        
+        .guia-curitiba .feedback {
+            display: none;
+            padding: 10px;
+            border-radius: 5px;
+            background: #e9ecef;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; }
+            .guia-curitiba .header-modulo h1 { font-size: 1.8rem; }
+        }
     </style>
-</head>
-<body>
 
-    <header>
+    <!-- HEADER DO MÓDULO -->
+    <div class="header-modulo">
         <h1>Legislação de Curitiba</h1>
-        <p>Guia de Estudos Rápido para a FAFIPA (LOM e Lei 7.671/91)</p>
-    </header>
+        <p>Guia Rápido e Interativo para a FAFIPA (LOM e Lei 7.671/91)</p>
+    </div>
 
-    <div class="container">
-        <h2>1. A Lógica Principal</h2>
+    <!-- NAVEGAÇÃO RÁPIDA -->
+    <div class="nav-menu">
+        <a href="#logica">Lógica Principal</a>
+        <a href="#lom">Lei Orgânica (LOM)</a>
+        <a href="#cargos">Cargos e Salários</a>
+        <a href="#secretarias">Secretarias</a>
+        <a href="#indireta">Adm. Indireta</a>
+        <a href="#quiz">Teste seus Conhecimentos</a>
+    </div>
+
+    <!-- SEÇÃO: LÓGICA -->
+    <div id="logica" class="secao">
+        <h2>A Lógica Principal (Como não se perder)</h2>
         <div class="card">
-            <p><strong>Lei Orgânica (LOM):</strong> Dita as regras gerais, princípios e a estrutura do município (Direta vs Indireta).</p>
-            <p><strong>Lei 7.671/91:</strong> Dita o "manual de instruções", criando as secretarias específicas, seus cargos, salários e competências.</p>
-        </div>
-
-        <h2>2. Estrutura e Princípios (LOM)</h2>
-        <ul>
-            <li><strong>Administração Direta:</strong> Secretarias Municipais (Vínculo de Subordinação).</li>
-            <li><strong>Administração Indireta:</strong> Autarquias, Fundações, Sociedades de Economia Mista (Vínculo de Tutela).</li>
-            <li><strong>Princípios (Art. 80):</strong> Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência e <strong>Razoabilidade</strong>.</li>
-            <li><strong>Nepotismo:</strong> Vedado até o 3º grau. Não pode assumir até 180 dias após o fim do vínculo.</li>
-        </ul>
-
-        <h2>3. Cargos e Salários (Lei 7.671/91)</h2>
-        <table>
-            <tr>
-                <th>Símbolo</th>
-                <th>Cargo/Função</th>
-                <th>Proporção Salarial</th>
-            </tr>
-            <tr><td>S-1</td><td>Secretário Municipal / Procurador</td><td>1.50</td></tr>
-            <tr><td>S-2 / C-2</td><td>Superintendente / Diretor</td><td>1.25</td></tr>
-            <tr><td>C-3</td><td>Chefe de Equipe de Apoio Técnico</td><td>0.70</td></tr>
-            <tr><td>C-4</td><td>Chefe de Gabinete</td><td>0.45</td></tr>
-        </table>
-
-        <h2>4. Competências das Secretarias (Decore as Palavras-Chave)</h2>
-        <ul>
-            <li><strong>Secretaria da Criança:</strong> 0 a 16 anos. Creches (0 a 6).</li>
-            <li><strong>Secretaria do Meio Ambiente:</strong> Fauna, flora, limpeza urbana, lixo, cemitérios e funerários.</li>
-            <li><strong>Secretaria do Urbanismo:</strong> Uso do solo, código de obras, emplacamento de ruas, poluição visual.</li>
-            <li><strong>Secretaria de Obras Públicas:</strong> Pavimentação, drenagem, iluminação pública, sinalização de trânsito.</li>
-        </ul>
-
-        <h2>5. Entidades da Administração Indireta</h2>
-        <ul>
-            <li><strong>URBS:</strong> Transporte público e táxi.</li>
-            <li><strong>CIC:</strong> Desenvolvimento industrial.</li>
-            <li><strong>COHAB:</strong> Regularização fundiária.</li>
-            <li><strong>IMAP:</strong> Instituto Municipal de Administração Pública (Conselho com 5 membros; Diretoria com 3).</li>
-            <li><strong>FREI:</strong> Fundação de Ação Social (Foco em baixa renda e capacitação).</li>
-        </ul>
-
-        <!-- MINI QUIZ -->
-        <div class="quiz-container">
-            <h3>Teste seus Conhecimentos (Mini-Quiz FAFIPA)</h3>
-            <p>1. Qual Secretaria é responsável pela administração de cemitérios?</p>
-            <button class="btn" onclick="alert('Errado! É a Secretaria do MEIO AMBIENTE (Art. 25).')">Obras Públicas</button>
-            <button class="btn" onclick="alert('Correto! Art. 25 da Lei 7.671/91.')">Meio Ambiente</button>
-            
-            <p style="margin-top: 15px;">2. A Secretaria da Criança atende qual faixa etária?</p>
-            <button class="btn" onclick="alert('Correto! O texto da lei diz 0 a 16 anos (Art. 24).')">0 a 16 anos</button>
-            <button class="btn" onclick="alert('Errado! A lei diz 0 a 16 anos, e não até 18.')">0 a 18 anos</button>
+            <p><strong>Lei Orgânica (LOM):</strong> É a "Constituição" do município. Dita os princípios (Art. 80), a estrutura básica e o nepotismo.</p>
+            <p><strong>Lei 7.671/1991:</strong> É o "Manual de Instruções". Diz quais são as Secretarias, seus cargos (S-1, C-2) e o que cada uma faz (Art. 24 a 27).</p>
+            <p><strong>Dica de Ouro:</strong> A FAFIPA cobra a literalidade (o que está escrito exatamente na lei). Decore as palavras-chave!</p>
         </div>
     </div>
 
-    <footer>
-        Material de apoio criado para estudos focados na banca FAFIPA. Baseado na LOM e Lei 7.671/1991.
-    </footer>
+    <!-- SEÇÃO: LOM -->
+    <div id="lom" class="secao">
+        <h2>Lei Orgânica do Município (LOM)</h2>
+        <div class="card">
+            <h3>Estrutura e Vínculos (Art. 77 e 78)</h3>
+            <ul>
+                <li><strong>Administração Direta:</strong> Secretarias Municipais. Vínculo de <strong>Subordinação Hierárquica</strong>.</li>
+                <li><strong>Administração Indireta:</strong> Autarquias, Fundações, Soc. de Economia Mista, Corporativa e Fundações Estatais de direito privado. Vínculo de <strong>Tutela</strong>.</li>
+            </ul>
+            <h3>Princípios (Art. 80)</h3>
+            <p>Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência e <strong>Razoabilidade</strong> (A FAFIPA adora cobrar a Razoabilidade, que não está explícita na CF).</p>
+            <h3>Nepotismo (Art. 80, XX e Art. 78, PU)</h3>
+            <p>Vedada a nomeação de parentes até o <strong>3º grau</strong>. A vedação continua por <strong>180 dias</strong> após o fim do vínculo do agente público (Emenda 22/2023).</p>
+            <h3>Atos Administrativos (Art. 85 e 86)</h3>
+            <p>Devem ser <strong>obrigatoriamente motivados</strong> e publicados no órgão oficial para ter eficácia.</p>
+        </div>
+    </div>
 
-</body>
-</html>
+    <!-- SEÇÃO: CARGOS -->
+    <div id="cargos" class="secao">
+        <h2>Cargos, Níveis e Salários (Lei 7.671/91)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Símbolo</th>
+                    <th>Nível / Cargo</th>
+                    <th>Proporção Salarial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>S-1</strong></td><td>Direção Superior (Secretário / Procurador)</td><td>1.50</td></tr>
+                <tr><td><strong>S-2 / C-2</strong></td><td>Superintendente / Diretor</td><td>1.25</td></tr>
+                <tr><td><strong>C-3</strong></td><td>Chefe de Equipe de Apoio Técnico</td><td>0.70</td></tr>
+                <tr><td><strong>C-4</strong></td><td>Chefe de Gabinete</td><td>0.45</td></tr>
+            </tbody>
+        </table>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> FG-6 recebe a diferença entre o cargo C-2 e o seu cargo de carreira. O FG-5 recebe a diferença entre o C-3 e o seu cargo de carreira.
+        </div>
+    </div>
+
+    <!-- SEÇÃO: SECRETARIAS -->
+    <div id="secretarias" class="secao">
+        <h2>As Secretarias e suas Competências (Art. 24 a 27)</h2>
+        <div class="card">
+            <h3>Secretaria da Criança (Art. 24)</h3>
+            <p>Atendimento de crianças e adolescentes de <strong>0 a 16 anos</strong> (creches de 0 a 6 anos). Medidas de proteção contra violência.</p>
+        </div>
+        <div class="card">
+            <h3>Secretaria do Meio Ambiente (Art. 25)</h3>
+            <p>Fauna, flora, áreas verdes. Limpeza urbana, coleta de lixo, reciclagem. Parques e praças. <strong>Cemitérios e serviços funerários</strong>.</p>
+        </div>
+        <div class="card">
+            <h3>Secretaria do Urbanismo (Art. 26)</h3>
+            <p>Uso e parcelamento do solo, código de obras. Emplacamento de logradouros. Repressão a construções clandestinas. Poluição visual e sonora.</p>
+        </div>
+        <div class="card">
+            <h3>Secretaria de Obras Públicas (Art. 27)</h3>
+            <p>Pavimentação, drenagem, calçamento. Iluminação pública. Sinalização e apoio ao <strong>trânsito</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SEÇÃO: INDIRETA -->
+    <div id="indireta" class="secao">
+        <h2>Entidades da Administração Indireta (Art. 36 a 41)</h2>
+        <ul>
+            <li><strong>URBS:</strong> Transporte público, táxis e tarifas.</li>
+            <li><strong>CIC:</strong> Desenvolvimento da Cidade Industrial, fomento e empregos.</li>
+            <li><strong>COHAB-CT:</strong> Regularização fundiária.</li>
+            <li><strong>IPPUC:</strong> Planejamento urbano e orçamentos.</li>
+            <li><strong>IPMC:</strong> Previdência (Presidente exige 10 anos de contribuição, Diretores 5 anos).</li>
+            <li><strong>FCC:</strong> Fundação Cultural (inclui projetos para a 3ª idade).</li>
+            <li><strong>FREI:</strong> Fundação de Ação Social (Baixa renda e capacitação).</li>
+            <li><strong>IMAP:</strong> Instituto Municipal de Administração Pública (Conselho com 5 membros; Diretoria com 3: Presidente, Superintendente e Dir. Financeiro).</li>
+        </ul>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Sistemas Auxiliares (Art. 30 a 32):</strong> São 4 (Finanças, Administração, RH e Jurídico). A Procuradoria e as Secretarias "Meio" são as organizações-base. Um mesmo Núcleo pode atender a mais de uma Secretaria ao mesmo tempo!
+        </div>
+    </div>
+
+    <!-- SEÇÃO: QUIZ -->
+    <div id="quiz" class="secao">
+        <h2>Teste seus Conhecimentos</h2>
+        <div class="quiz-container">
+            
+            <!-- Pergunta 1 -->
+            <div class="pergunta" id="q1">
+                <p>1. Qual Secretaria é responsável pela administração de cemitérios e serviços funerários?</p>
+                <button class="btn-opcao" onclick="responder('q1', this, false, 'Errado! A competência para administrar cemitérios é da Secretaria do MEIO AMBIENTE (Art. 25).')">Secretaria de Obras Públicas</button>
+                <button class="btn-opcao" onclick="responder('q1', this, true, 'Correto! Art. 25 da Lei 7.671/91.')">Secretaria do Meio Ambiente</button>
+                <div class="feedback"></div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta" id="q2">
+                <p>2. A Secretaria da Criança atende qual faixa etária, segundo a lei?</p>
+                <button class="btn-opcao" onclick="responder('q2', this, false, 'Errado! A lei define expressamente de 0 a 16 anos no Art. 24.')">0 a 18 anos</button>
+                <button class="btn-opcao" onclick="responder('q2', this, true, 'Correto! O texto da lei diz 0 a 16 anos (Art. 24).')">0 a 16 anos</button>
+                <div class="feedback"></div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta" id="q3">
+                <p>3. De acordo com a Lei 7.671/91, qual o valor proporcional do símbolo S-1?</p>
+                <button class="btn-opcao" onclick="responder('q3', this, true, 'Correto! S-1 (Secretário/Procurador) tem proporção 1.50 (Art. 10).')">1.50</button>
+                <button class="btn-opcao" onclick="responder('q3', this, false, 'Errado! 1.25 é a proporção dos cargos S-2 e C-2.')">1.25</button>
+                <button class="btn-opcao" onclick="responder('q3', this, false, 'Errado! 0.45 é a proporção do C-4.')">0.45</button>
+                <div class="feedback"></div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta" id="q4">
+                <p>4. Qual princípio foi expressamente adicionado à Administração Pública na Lei Orgânica de Curitiba (Art. 80), mas não está no caput do Art. 37 da CF?</p>
+                <button class="btn-opcao" onclick="responder('q4', this, false, 'Errado! A eficiência está na CF.')">Eficiência</button>
+                <button class="btn-opcao" onclick="responder('q4', this, true, 'Correto! A LOM de Curitiba adiciona expressamente o princípio da Razoabilidade.')">Razoabilidade</button>
+                <div class="feedback"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPT DO QUIZ -->
+    <script>
+        function responder(idPergunta, btnClicado, isCorreto, mensagem) {
+            // Pega todos os botões da pergunta específica
+            const pergunta = document.getElementById(idPergunta);
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+
+            // Desabilita todos os botões após o clique
+            botoes.forEach(btn => {
+                btn.disabled = true;
+                btn.style.cursor = 'default';
+            });
+
+            // Aplica a cor correta
+            if (isCorreto) {
+                btnClicado.classList.add('correto');
+            } else {
+                btnClicado.classList.add('errado');
+                // Encontra a resposta correta para pintar de verde
+                botoes.forEach(btn => {
+                    if (btn !== btnClicado) {
+                        btn.classList.add('correto');
+                    }
+                });
+            }
+
+            // Mostra a explicação
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO DE ESTUDOS -->
