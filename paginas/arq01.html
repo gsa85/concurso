@@ -1,35 +1,193 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Gestão da Informação e Sistemas Organizacionais — Estudo Extra</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root { --bg:#f1f5f9; --card:#ffffff; --texto:#1e293b; --suave:#64748b; --primaria:#2563eb; --borda:#e2e8f0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--texto); padding: 20px; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .btn-voltar { display: inline-block; background: white; border: 1px solid var(--borda); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--suave); margin-bottom: 20px; text-decoration: none; transition: 0.2s; }
-    .btn-voltar:hover { background: var(--primaria); color: white; border-color: var(--primaria); }
-    .card { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    h1 { color: var(--primaria); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid var(--borda); padding-bottom: 15px; }
-    .sandbox { margin-top: 20px; padding: 20px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; text-align: center; color: var(--suave); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a href="javascript:history.back()" class="btn-voltar">⬅️ Voltar ao Resumo</a>
-    <div class="card">
-      <h1>1. Gestão da Informação e Sistemas Organizacionais</h1>
-      
-      <!-- 👇 AQUI VOCÊ COLOCA SEUS FLASHCARDS, IMAGENS E QUIZES -->
-      <div class="sandbox">
-        <p>Página de estudo personalizada criada para <b>arq01</b>.</p>
-        <p>Abra este arquivo no VS Code e apague esta caixa para adicionar seu conteúdo!</p>
-      </div>
-      
+<!-- INÍCIO DO MÓDULO: SISTEMAS DE INFORMAÇÃO ORGANIZACIONAL -->
+<div class="guia-curitiba">
+    <style>
+        .guia-curitiba { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; padding: 20px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
+        .guia-curitiba * { box-sizing: border-box; }
+        .guia-curitiba .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #f8f9fa; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: 0.3s; font-size: 0.95rem; }
+        .guia-curitiba .btn-voltar:hover { background-color: #004b87; color: white; }
+        .guia-curitiba .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .guia-curitiba .header-modulo h1 { margin: 0; font-size: 2.2rem; }
+        .guia-curitiba .header-modulo p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .guia-curitiba .nav-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .guia-curitiba .nav-menu a { text-decoration: none; background: white; color: #004b87; padding: 10px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .guia-curitiba .nav-menu a:hover { background: #004b87; color: white; }
+        .guia-curitiba .secao { margin-bottom: 40px; scroll-margin-top: 20px; }
+        .guia-curitiba h2 { color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.5rem; margin-bottom: 20px; }
+        .guia-curitiba h3 { color: #e67e22; margin-top: 0; }
+        .guia-curitiba .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; border-left: 5px solid #004b87; }
+        .guia-curitiba .card-dicas { background: #fffdf5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px dashed #f1c40f; margin-bottom: 15px; }
+        .guia-curitiba .card-dicas h3 { color: #d35400; display: flex; align-items: center; gap: 10px; margin-top: 0; }
+        .guia-curitiba .box-formula { background: #e8f4f8; border: 2px solid #004b87; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: bold; color: #004b87; margin: 20px 0; }
+        .guia-curitiba table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .guia-curitiba th, .guia-curitiba td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        .guia-curitiba th { background-color: #004b87; color: white; font-weight: 600; }
+        .guia-curitiba tr:hover { background-color: #f1f5f9; }
+        .guia-curitiba ul { padding-left: 20px; }
+        .guia-curitiba li { margin-bottom: 8px; }
+        .guia-curitiba strong { color: #d35400; }
+        .guia-curitiba .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; border-left: 5px solid #ffeeba; margin-top: 15px; font-size: 0.95rem; }
+        .guia-curitiba .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; }
+        .guia-curitiba .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .guia-curitiba .pergunta:last-child { border-bottom: none; }
+        .guia-curitiba .pergunta p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+        .guia-curitiba .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 1rem; text-align: left; transition: 0.2s; }
+        .guia-curitiba .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .guia-curitiba .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .guia-curitiba .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .guia-curitiba .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+        @media (max-width: 768px) { .guia-curitiba th, .guia-curitiba td { padding: 8px; font-size: 0.9rem; } .guia-curitiba .header-modulo h1 { font-size: 1.8rem; } }
+    </style>
+
+    <a href="javascript:if (document.referrer) { window.location.href = document.referrer; } else { window.close(); }" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Sistemas de Informação Organizacional</h1>
+        <p>Conceitos, Níveis e Tipos de Sistemas – Foco FAFIPA</p>
     </div>
-  </div>
-</body>
-</html>
+
+    <div class="nav-menu">
+        <a href="#conceito">Conceito</a>
+        <a href="#niveis">Níveis Organizacionais</a>
+        <a href="#tipos">Tipos de Sistemas (SPT, SIG, SAD, SAE)</a>
+        <a href="#integrados">Sistemas Integrados (ERP, CRM, SCM)</a>
+        <a href="#dicas">Dicas de Ouro</a>
+        <a href="#quiz">Questões FAFIPA</a>
+    </div>
+
+    <div id="conceito" class="secao">
+        <h2>1. Conceito de Sistema de Informação (SI)</h2>
+        <div class="card">
+            <p>Um <strong>Sistema de Informação (SI)</strong> é um conjunto de componentes inter-relacionados que coletam, processam, armazenam e distribuem informações para apoiar a tomada de decisão, a coordenação e o controle em uma organização[reference:0].</p>
+            <p><strong>Funções básicas de um SI:</strong></p>
+            <ul>
+                <li><strong>Entrada:</strong> Captura de dados brutos (internos ou externos).</li>
+                <li><strong>Processamento:</strong> Conversão dos dados em informações significativas.</li>
+                <li><strong>Saída:</strong> Distribuição da informação processada aos usuários.</li>
+                <li><strong>Feedback:</strong> Retorno para corrigir ou ajustar o sistema.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="niveis" class="secao">
+        <h2>2. Níveis Organizacionais e os Sistemas</h2>
+        <div class="card">
+            <p>As organizações dividem-se em níveis, e cada nível exige um tipo de sistema de informação:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nível</th>
+                        <th>Quem atua?</th>
+                        <th>Tipo de Sistema Predominante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Operacional</strong></td>
+                        <td>Operadores, atendentes, caixas.</td>
+                        <td>SPT (Sistemas de Processamento de Transações).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gerencial (Tático)</strong></td>
+                        <td>Gerentes, coordenadores.</td>
+                        <td>SIG (Sistemas de Informação Gerencial) e SAD (Sistemas de Apoio à Decisão).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estratégico</strong></td>
+                        <td>Diretores, executivos seniores.</td>
+                        <td>SAE (Sistemas de Apoio ao Executivo).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="tipos" class="secao">
+        <h2>3. Tipos de Sistemas por Grupo de Usuários</h2>
+        <div class="card">
+            <h3>SPT – Sistemas de Processamento de Transações</h3>
+            <p>Registram as <strong>transações rotineiras</strong> da organização (vendas, folha de pagamento, controle de estoque). São críticos para o funcionamento diário. Respondem a perguntas rotineiras e produzem relatórios simples[reference:1].</p>
+            
+            <h3>SIG – Sistemas de Informação Gerencial</h3>
+            <p>Fornecem informações <strong>integradas e sumarizadas</strong> para os gerentes monitorarem o desempenho da organização. Produzem relatórios fixos (vendas mensais, anuais) e apoiam o planejamento e o controle[reference:2].</p>
+
+            <h3>SAD – Sistemas de Apoio à Decisão</h3>
+            <p>Apoiam a tomada de decisão em situações <strong>semi-estruturadas ou não estruturadas</strong>. Permitem análises “se-então”, simulações e pesquisa de históricos de decisão. Ajudam a comparar alternativas[reference:3].</p>
+
+            <h3>SAE – Sistemas de Apoio ao Executivo</h3>
+            <p>Voltados para o <strong>alto escalão</strong>. Oferecem painéis (dashboards) com visão geral do desempenho da empresa, permitindo que o executivo focalize rapidamente detalhes de problemas e volte à visão geral[reference:4].</p>
+        </div>
+        <div class="alerta-fafipa">
+            <strong>⚠️ Pegadinha FAFIPA:</strong> Não confunda <strong>SIG</strong> (relatórios fixos, informações sumarizadas) com <strong>SAD</strong> (análises flexíveis, simulações, problemas não estruturados). O SIG é para monitorar; o SAD é para decidir em situações complexas.
+        </div>
+    </div>
+
+    <div id="integrados" class="secao">
+        <h2>4. Sistemas Integrados (Aplicativos Organizacionais)</h2>
+        <div class="card">
+            <p>São sistemas que automatizam processos que abrangem várias funções empresariais e níveis organizacionais[reference:5]. Os principais são:</p>
+            <ul>
+                <li><strong>ERP (Sistemas Integrados de Gestão):</strong> Integram todos os departamentos (financeiro, RH, produção, vendas) em uma única base de dados.</li>
+                <li><strong>CRM (Gestão do Relacionamento com o Cliente):</strong> Gerenciam o contato com clientes, vendas e pós-venda.</li>
+                <li><strong>SCM (Gestão da Cadeia de Suprimentos):</strong> Coordenam o fluxo de materiais e informações com fornecedores e distribuidores.</li>
+                <li><strong>Sistemas de Gestão do Conhecimento:</strong> Capturam, armazenam e distribuem o conhecimento organizacional.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="dicas" class="secao">
+        <h2>💡 Dicas de Ouro para a Prova</h2>
+        <div class="card-dicas">
+            <h3>⚠️ O que a FAFIPA adora cobrar:</h3>
+            <ul>
+                <li><strong>SPT:</strong> Nível operacional, transações rotineiras, relatórios simples.</li>
+                <li><strong>SIG:</strong> Nível gerencial, informações sumarizadas, relatórios fixos.</li>
+                <li><strong>SAD:</strong> Apoio à decisão, análises “se-então”, problemas não estruturados.</li>
+                <li><strong>SAE:</strong> Alto escalão, dashboards, visão geral da empresa.</li>
+                <li><strong>ERP:</strong> Integra todos os departamentos em uma única base.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quiz" class="secao">
+        <h2>5. Teste seus Conhecimentos (FAFIPA)</h2>
+        <div class="quiz-container">
+            <div class="pergunta">
+                <p>1. Qual sistema é responsável por registrar as transações rotineiras da organização, como vendas e folha de pagamento?</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O SPT (Sistema de Processamento de Transações) registra as transações rotineiras e é crítico para o funcionamento diário.')">SPT.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SIG fornece informações sumarizadas para gerentes, não registra transações rotineiras.')">SIG.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SAD apoia decisões complexas, não transações rotineiras.')">SAD.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>2. O sistema que produz relatórios fixos, como vendas mensais ou anuais, e ajuda os gerentes a monitorar o negócio é o:</p>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SPT lida com transações do dia a dia, não com relatórios gerenciais sumarizados.')">SPT.</button>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O SIG (Sistema de Informação Gerencial) fornece informações integradas e sumarizadas, produzindo relatórios fixos para monitoramento.')">SIG.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SAE é voltado para executivos seniores, com dashboards, não relatórios fixos.')">SAE.</button>
+                <div class="feedback"></div>
+            </div>
+            <div class="pergunta">
+                <p>3. O sistema que permite análises do tipo “se-então” e apoia decisões em situações não estruturadas é o:</p>
+                <button class="btn-opcao" onclick="responder(this, true, 'Correto! O SAD (Sistema de Apoio à Decisão) permite simulações e análises de alternativas para problemas semi ou não estruturados.')">SAD.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SIG produz relatórios fixos, não análises flexíveis.')">SIG.</button>
+                <button class="btn-opcao" onclick="responder(this, false, 'Errado! O SPT registra transações, não apoia decisões complexas.')">SPT.</button>
+                <div class="feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function responder(btnClicado, isCorreto, mensagem) {
+            const pergunta = btnClicado.closest('.pergunta');
+            const botoes = pergunta.querySelectorAll('.btn-opcao');
+            const feedback = pergunta.querySelector('.feedback');
+            botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+            if (isCorreto) { btnClicado.classList.add('correto'); } else {
+                btnClicado.classList.add('errado');
+                botoes.forEach(btn => { if (btn.getAttribute('onclick').includes('true')) { btn.classList.add('correto'); } });
+            }
+            feedback.style.display = 'block';
+            feedback.innerHTML = mensagem;
+        }
+    </script>
+</div>
+<!-- FIM DO MÓDULO: SISTEMAS DE INFORMAÇÃO ORGANIZACIONAL -->
