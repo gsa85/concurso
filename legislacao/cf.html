@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constituição Federal de 1988 - Legislação</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f0f2f5; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        /* Header */
+        .header-modulo { background: linear-gradient(135deg, #004b87, #0066b3); color: white; padding: 30px 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; }
+        .header-modulo h1 { font-size: 2.2rem; margin-bottom: 5px; }
+        .header-modulo p { font-size: 1.1rem; opacity: 0.9; }
+
+        /* Menu de Títulos */
+        .nav-titulos { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .nav-titulos a { text-decoration: none; background: white; color: #004b87; padding: 12px 20px; border-radius: 25px; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.3s; border: 2px solid transparent; }
+        .nav-titulos a:hover { background: #004b87; color: white; border-color: #004b87; }
+
+        /* Accordion (details/summary) */
+        details { background: white; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; }
+        summary { padding: 18px 25px; font-size: 1.3rem; font-weight: bold; color: #004b87; cursor: pointer; background: #f8f9fa; border-left: 6px solid #004b87; list-style: none; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        summary:hover { background: #eef2f7; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '▼'; font-size: 0.9rem; color: #004b87; transition: transform 0.3s; }
+        details[open] summary::after { transform: rotate(180deg); }
+        details[open] summary { background: #e8f0f8; border-bottom: 2px solid #004b87; }
+
+        /* Conteúdo dos Artigos */
+        .conteudo { padding: 20px 25px 25px; }
+        .card { background: #fdfdfd; padding: 18px 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #e67e22; box-shadow: 0 2px 5px rgba(0,0,0,0.04); }
+        .card h3 { color: #e67e22; font-size: 1.1rem; margin-bottom: 10px; }
+        .card h4 { color: #004b87; font-size: 1rem; margin: 12px 0 6px; }
+        .card p { margin: 8px 0; font-size: 0.95rem; }
+        .card ul { padding-left: 20px; margin: 8px 0; }
+        .card li { margin-bottom: 6px; font-size: 0.95rem; }
+        .card strong { color: #d35400; }
+        .card em { color: #666; font-size: 0.9rem; }
+
+        /* Alertas */
+        .alerta-fafipa { background: #fff3cd; color: #856404; padding: 15px 20px; border-radius: 8px; border-left: 5px solid #f1c40f; margin: 15px 0; font-size: 0.95rem; }
+        .alerta-fafipa strong { color: #d35400; }
+
+        /* Quiz */
+        .quiz-container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-top: 5px solid #e67e22; margin-top: 20px; }
+        .pergunta { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .pergunta:last-child { border-bottom: none; }
+        .pergunta p { font-weight: bold; font-size: 1rem; margin-bottom: 10px; }
+        .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; background: #f8f9fa; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 0.95rem; text-align: left; transition: 0.2s; }
+        .btn-opcao:hover:not(:disabled) { background: #e2e8f0; border-color: #004b87; }
+        .btn-opcao.correto { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .btn-opcao.errado { background: #f8d7da; border-color: #dc3545; color: #721c24; text-decoration: line-through; }
+        .feedback { display: none; padding: 10px; border-radius: 5px; background: #e9ecef; font-size: 0.9rem; margin-top: 10px; }
+
+        /* Botão Voltar */
+        .btn-voltar { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: white; color: #004b87; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid #004b87; transition: all 0.3s; font-size: 0.95rem; }
+        .btn-voltar:hover { background: #004b87; color: white; }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .header-modulo h1 { font-size: 1.6rem; }
+            .nav-titulos a { padding: 8px 14px; font-size: 0.85rem; }
+            summary { padding: 14px 18px; font-size: 1.1rem; }
+            .conteudo { padding: 15px; }
+            .card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="../paginas/leg04.html" class="btn-voltar">⬅️ Voltar ao Resumo</a>
+
+    <div class="header-modulo">
+        <h1>Constituição Federal de 1988</h1>
+        <p>Título I (arts. 1º a 4º) · Título II (arts. 5º a 17) · Título III (arts. 18, 19, 29, 30, 37 a 41) · Título IV (arts. 44 a 75)</p>
+    </div>
+
+    <div class="nav-titulos">
+        <a href="#titulo1">Título I</a>
+        <a href="#titulo2">Título II</a>
+        <a href="#titulo3">Título III</a>
+        <a href="#titulo4">Título IV</a>
+        <a href="#quiz">Quiz FAFIPA</a>
+    </div>
+
+    <!-- ================= TÍTULO I ================= -->
+    <details id="titulo1" open>
+        <summary>📘 Título I – Dos Princípios Fundamentais (Arts. 1º a 4º)</summary>
+        <div class="conteudo">
+
+            <div class="card">
+                <h3>Art. 1º – Fundamentos da República</h3>
+                <p>A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:</p>
+                <ul>
+                    <li><strong>I - a soberania;</strong></li>
+                    <li><strong>II - a cidadania;</strong></li>
+                    <li><strong>III - a dignidade da pessoa humana;</strong></li>
+                    <li><strong>IV - os valores sociais do trabalho e da livre iniciativa;</strong></li>
+                    <li><strong>V - o pluralismo político.</strong></li>
+                </ul>
+                <p><strong>Parágrafo único.</strong> Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 2º – Separação dos Poderes</h3>
+                <p>São Poderes da União, <strong>independentes e harmônicos entre si</strong>, o Legislativo, o Executivo e o Judiciário.</p>
+                <p><em>Importante: A separação dos Poderes é cláusula pétrea (Art. 60, §4º, III).</em></p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 3º – Objetivos Fundamentais</h3>
+                <p>Constituem objetivos fundamentais da República Federativa do Brasil:</p>
+                <ul>
+                    <li><strong>I - construir</strong> uma sociedade livre, justa e solidária;</li>
+                    <li><strong>II - garantir</strong> o desenvolvimento nacional;</li>
+                    <li><strong>III - erradicar</strong> a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;</li>
+                    <li><strong>IV - promover</strong> o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 4º – Princípios das Relações Internacionais</h3>
+                <p>A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:</p>
+                <ul>
+                    <li><strong>I - independência nacional;</strong></li>
+                    <li><strong>II - prevalência dos direitos humanos;</strong></li>
+                    <li><strong>III - autodeterminação dos povos;</strong></li>
+                    <li><strong>IV - não-intervenção;</strong></li>
+                    <li><strong>V - igualdade entre os Estados;</strong></li>
+                    <li><strong>VI - defesa da paz;</strong></li>
+                    <li><strong>VII - solução pacífica dos conflitos;</strong></li>
+                    <li><strong>VIII - repúdio ao terrorismo e ao racismo;</strong></li>
+                    <li><strong>IX - cooperação entre os povos para o progresso da humanidade;</strong></li>
+                    <li><strong>X - concessão de asilo político.</strong></li>
+                </ul>
+                <p><strong>Parágrafo único.</strong> A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da <strong>América Latina</strong>, visando à formação de uma comunidade latino-americana de nações.</p>
+            </div>
+
+            <div class="alerta-fafipa">
+                <strong>⚠️ Pegadinha FAFIPA:</strong> Fundamentos (Art. 1º) são substantivos (soberania, cidadania...). Objetivos (Art. 3º) são verbos no infinitivo (construir, garantir, erradicar, promover). O Art. 2º fala que os Poderes são <strong>independentes e harmônicos</strong> (não soberanos). O Art. 4º busca integração da <strong>América Latina</strong>.
+            </div>
+
+        </div>
+    </details>
+
+    <!-- ================= TÍTULO II ================= -->
+    <details id="titulo2">
+        <summary>📗 Título II – Dos Direitos e Garantias Fundamentais (Arts. 5º a 17)</summary>
+        <div class="conteudo">
+
+            <div class="card">
+                <h3>Art. 5º – Direitos e Garantias Individuais e Coletivos</h3>
+                <p>Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.</p>
+                <h4>Incisos mais cobrados:</h4>
+                <ul>
+                    <li><strong>III -</strong> ninguém será submetido a tortura nem a tratamento desumano ou degradante;</li>
+                    <li><strong>IV -</strong> é livre a manifestação do pensamento, sendo vedado o anonimato;</li>
+                    <li><strong>IX -</strong> é livre a expressão da atividade intelectual, artística, científica e de comunicação, independentemente de censura ou licença;</li>
+                    <li><strong>X -</strong> são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas;</li>
+                    <li><strong>XI -</strong> a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, <strong>durante o dia</strong>, por determinação judicial;</li>
+                    <li><strong>XII -</strong> é inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, no último caso, por ordem judicial, para fins de investigação criminal ou instrução penal;</li>
+                    <li><strong>XIII -</strong> é livre o exercício de qualquer trabalho, ofício ou profissão, atendidas as qualificações profissionais que a lei estabelecer;</li>
+                    <li><strong>XV -</strong> é livre a locomoção no território nacional em tempo de paz;</li>
+                    <li><strong>XVI -</strong> todos podem reunir-se pacificamente, sem armas, em locais abertos ao público, independentemente de autorização, desde que não frustrem outra reunião anteriormente convocada para o mesmo local;</li>
+                    <li><strong>XVII -</strong> é plena a liberdade de associação para fins lícitos, vedada a de caráter paramilitar;</li>
+                    <li><strong>XXII -</strong> é garantido o direito de propriedade;</li>
+                    <li><strong>XXIII -</strong> a propriedade atenderá a sua função social;</li>
+                    <li><strong>XXXV -</strong> a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito;</li>
+                    <li><strong>XXXVI -</strong> a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a coisa julgada;</li>
+                    <li><strong>XXXIX -</strong> não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal;</li>
+                    <li><strong>XL -</strong> a lei penal não retroagirá, salvo para beneficiar o réu;</li>
+                    <li><strong>XLII -</strong> a prática do racismo constitui crime inafiançável e imprescritível;</li>
+                    <li><strong>XLIII -</strong> a lei considerará crimes inafiançáveis e insuscetíveis de graça ou anistia a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins, o terrorismo e os definidos como crimes hediondos;</li>
+                    <li><strong>XLVII -</strong> não haverá penas: a) de morte, salvo em caso de guerra declarada; b) de caráter perpétuo; c) de trabalhos forçados; d) de banimento; e) cruéis;</li>
+                    <li><strong>LIII -</strong> ninguém será processado nem sentenciado senão pela autoridade competente;</li>
+                    <li><strong>LIV -</strong> ninguém será privado da liberdade ou de seus bens sem o devido processo legal;</li>
+                    <li><strong>LV -</strong> aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa;</li>
+                    <li><strong>LVI -</strong> são inadmissíveis, no processo, as provas obtidas por meios ilícitos;</li>
+                    <li><strong>LVII -</strong> ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória;</li>
+                    <li><strong>LXVIII -</strong> conceder-se-á <strong>habeas corpus</strong> sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção;</li>
+                    <li><strong>LXIX -</strong> conceder-se-á <strong>mandado de segurança</strong> para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data;</li>
+                    <li><strong>LXXI -</strong> conceder-se-á <strong>mandado de injunção</strong> sempre que a falta de norma regulamentadora torne inviável o exercício dos direitos e liberdades constitucionais;</li>
+                    <li><strong>LXXII -</strong> conceder-se-á <strong>habeas data</strong> para assegurar o conhecimento de informações relativas à pessoa do impetrante e para a retificação de dados;</li>
+                    <li><strong>LXXIII -</strong> qualquer cidadão é parte legítima para propor <strong>ação popular</strong> que vise a anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural;</li>
+                    <li><strong>LXXVIII -</strong> a todos, no âmbito judicial e administrativo, são assegurados a razoável duração do processo e os meios que garantam a celeridade de sua tramitação;</li>
+                    <li><strong>§ 1º -</strong> As normas definidoras dos direitos e garantias fundamentais têm aplicação imediata;</li>
+                    <li><strong>§ 2º -</strong> Os direitos e garantias expressos nesta Constituição não excluem outros decorrentes do regime e dos princípios por ela adotados, ou dos tratados internacionais em que a República Federativa do Brasil seja parte;</li>
+                    <li><strong>§ 3º -</strong> Os tratados e convenções internacionais sobre direitos humanos aprovados em dois turnos, por três quintos dos votos, serão equivalentes às emendas constitucionais.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 6º – Direitos Sociais</h3>
+                <p>São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados.</p>
+                <p><em>O transporte foi incluído pela EC 90/2015.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 7º – Direitos dos Trabalhadores</h3>
+                <p>São direitos dos trabalhadores urbanos e rurais, entre outros: 13º salário, férias com 1/3 a mais, FGTS, aviso prévio proporcional, licença-maternidade de 120 dias, licença-paternidade, adicional noturno, proteção contra despedida arbitrária, seguro-desemprego, etc.</p>
+                <p><strong>Destaque:</strong> proibição de trabalho noturno, perigoso ou insalubre a menores de 18 anos e de qualquer trabalho a menores de 16 anos, salvo na condição de aprendiz, a partir de 14 anos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 8º – Liberdade Sindical</h3>
+                <p>É livre a associação profissional ou sindical, observado que a lei não pode exigir autorização do Estado para fundação de sindicato, é vedada a criação de mais de uma organização sindical na mesma base territorial, e ninguém é obrigado a filiar-se ou manter-se filiado a sindicato.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 9º – Direito de Greve</h3>
+                <p>É assegurado o direito de greve, competindo aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses que devam por meio dele defender.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 10 – Participação dos Trabalhadores</h3>
+                <p>É assegurada a participação dos trabalhadores e empregadores nos colegiados dos órgãos públicos em que seus interesses profissionais ou previdenciários sejam objeto de discussão e deliberação.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 11 – Representação dos Empregados</h3>
+                <p>Nas empresas de mais de duzentos empregados, é assegurada a eleição de um representante destes com a finalidade exclusiva de promover-lhes o entendimento direto com os empregadores.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 12 – Nacionalidade</h3>
+                <p><strong>São brasileiros natos:</strong></p>
+                <ul>
+                    <li><strong>a)</strong> os nascidos no Brasil, ainda que de pais estrangeiros, desde que estes não estejam a serviço de seu país;</li>
+                    <li><strong>b)</strong> os nascidos no estrangeiro, de pai ou mãe brasileira, desde que qualquer deles esteja a serviço do Brasil;</li>
+                    <li><strong>c)</strong> os nascidos no estrangeiro de pai ou mãe brasileira, desde que sejam registrados em repartição brasileira competente ou venham a residir no Brasil e optem, em qualquer tempo, pela nacionalidade brasileira.</li>
+                </ul>
+                <p><strong>São brasileiros naturalizados:</strong></p>
+                <ul>
+                    <li><strong>a)</strong> os que, na forma da lei, adquiram a nacionalidade brasileira, exigidas aos originários de países de língua portuguesa apenas residência por um ano ininterrupto e idoneidade moral;</li>
+                    <li><strong>b)</strong> os estrangeiros de qualquer nacionalidade, residentes no Brasil há mais de quinze anos ininterruptos e sem condenação penal.</li>
+                </ul>
+                <h4>Cargos privativos de brasileiro nato (Art. 12, §3º):</h4>
+                <ul>
+                    <li>Presidente e Vice-Presidente da República;</li>
+                    <li>Presidente da Câmara dos Deputados;</li>
+                    <li>Presidente do Senado Federal;</li>
+                    <li>Ministro do Supremo Tribunal Federal;</li>
+                    <li>carreira diplomática;</li>
+                    <li>oficial das Forças Armadas;</li>
+                    <li>Ministro de Estado da Defesa.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 13 – Língua Portuguesa</h3>
+                <p>A língua portuguesa é o idioma oficial da República Federativa do Brasil. São símbolos da República a bandeira, o hino, as armas e o selo nacionais.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 14 – Soberania Popular e Direitos Políticos</h3>
+                <p>A soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, e, nos termos da lei, mediante:</p>
+                <ul>
+                    <li><strong>I - plebiscito;</strong></li>
+                    <li><strong>II - referendo;</strong></li>
+                    <li><strong>III - iniciativa popular.</strong></li>
+                </ul>
+                <p><strong>§ 1º</strong> O alistamento eleitoral e o voto são:</p>
+                <ul>
+                    <li><strong>I - obrigatórios</strong> para os maiores de dezoito anos;</li>
+                    <li><strong>II - facultativos</strong> para: a) os analfabetos; b) os maiores de setenta anos; c) os maiores de dezesseis e menores de dezoito anos.</li>
+                </ul>
+                <p><strong>§ 2º</strong> Não podem alistar-se como eleitores os estrangeiros e, durante o período do serviço militar obrigatório, os conscritos.</p>
+                <p><strong>§ 3º</strong> São condições de elegibilidade: nacionalidade brasileira, pleno exercício dos direitos políticos, alistamento eleitoral, domicílio eleitoral na circunscrição, filiação partidária e idade mínima (35 anos para Presidente/Senador; 30 para Governador; 21 para Deputado/Prefeito; 18 para Vereador).</p>
+                <p><strong>§ 4º</strong> São inelegíveis os inalistáveis e os analfabetos.</p>
+                <p><strong>§ 5º</strong> O Presidente, os Governadores e os Prefeitos poderão ser reeleitos para um único período subsequente.</p>
+                <p><strong>§ 7º</strong> São inelegíveis, no território de jurisdição do titular, o cônjuge e os parentes consanguíneos ou afins, até o segundo grau ou por adoção, do Presidente, de Governador, do Distrito Federal, de Prefeito ou de quem os haja substituído dentro dos seis meses anteriores ao pleito, salvo se já titular de mandato eletivo e candidato à reeleição.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 15 – Perda e Suspensão dos Direitos Políticos</h3>
+                <p>É vedada a cassação de direitos políticos, cuja perda ou suspensão só se dará nos casos de:</p>
+                <ul>
+                    <li><strong>I -</strong> cancelamento da naturalização por sentença transitada em julgado;</li>
+                    <li><strong>II -</strong> incapacidade civil absoluta;</li>
+                    <li><strong>III -</strong> condenação criminal transitada em julgado, enquanto durarem seus efeitos;</li>
+                    <li><strong>IV -</strong> recusa de cumprir obrigação a todos imposta ou prestação alternativa;</li>
+                    <li><strong>V -</strong> improbidade administrativa.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 16 – Anualidade Eleitoral</h3>
+                <p>A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se aplicando à eleição que ocorra até um ano da data de sua vigência.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 17 – Partidos Políticos</h3>
+                <p>É livre a criação, fusão, incorporação e extinção de partidos políticos, resguardados a soberania nacional, o regime democrático, o pluripartidarismo, os direitos fundamentais da pessoa humana e observados os seguintes preceitos:</p>
+                <ul>
+                    <li><strong>I -</strong> caráter nacional;</li>
+                    <li><strong>II -</strong> proibição de recebimento de recursos financeiros de entidade ou governo estrangeiros ou de subordinação a estes;</li>
+                    <li><strong>III -</strong> prestação de contas à Justiça Eleitoral;</li>
+                    <li><strong>IV -</strong> funcionamento parlamentar de acordo com a lei.</li>
+                </ul>
+                <p><strong>§ 1º</strong> É assegurada aos partidos políticos autonomia para definir sua estrutura interna, vedada a celebração de coligações nas eleições proporcionais.</p>
+                <p><strong>§ 2º</strong> Os partidos políticos, após adquirirem personalidade jurídica, registrarão seus estatutos no Tribunal Superior Eleitoral.</p>
+                <p><strong>§ 3º</strong> Somente terão direito a recursos do fundo partidário e acesso gratuito ao rádio e à televisão os partidos que obtiverem, nas eleições para a Câmara dos Deputados, no mínimo, 3% dos votos válidos, distribuídos em pelo menos um terço das unidades da Federação, com um mínimo de 2% dos votos válidos em cada uma delas; ou tiverem elegido pelo menos quinze Deputados Federais distribuídos em pelo menos um terço das unidades da Federação.</p>
+            </div>
+
+            <div class="alerta-fafipa">
+                <strong>⚠️ Pegadinha FAFIPA:</strong> No Art. 5º, XI, a entrada com <strong>ordem judicial</strong> só pode ocorrer <strong>durante o dia</strong>. À noite, apenas flagrante, desastre ou socorro. No Art. 12, os cargos privativos de nato são 7. No Art. 14, o voto é obrigatório para maiores de 18 e facultativo para analfabetos, maiores de 70 e entre 16 e 18.
+            </div>
+
+        </div>
+    </details>
+
+    <!-- ================= TÍTULO III ================= -->
+    <details id="titulo3">
+        <summary>📙 Título III – Da Organização do Estado (Arts. 18, 19, 29, 30, 37 a 41)</summary>
+        <div class="conteudo">
+
+            <div class="card">
+                <h3>Art. 18 – Organização Político-Administrativa</h3>
+                <p>A organização político-administrativa da República Federativa do Brasil compreende a <strong>União, os Estados, o Distrito Federal e os Municípios</strong>, todos autônomos, nos termos desta Constituição.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 19 – Vedações</h3>
+                <p>É vedado à União, aos Estados, ao Distrito Federal e aos Municípios:</p>
+                <ul>
+                    <li><strong>I -</strong> estabelecer cultos religiosos ou igrejas, subvencioná-los, embaraçar-lhes o funcionamento ou manter com eles ou seus representantes relações de dependência ou aliança, ressalvada, na forma da lei, a colaboração de interesse público;</li>
+                    <li><strong>II -</strong> recusar fé aos documentos públicos;</li>
+                    <li><strong>III -</strong> criar distinções entre brasileiros ou preferências entre si.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 29 – Municípios (Lei Orgânica)</h3>
+                <p>O Município reger-se-á por <strong>Lei Orgânica</strong>, votada em dois turnos, com interstício mínimo de <strong>dez dias</strong>, e aprovada por <strong>dois terços</strong> dos membros da Câmara Municipal, que a promulgará.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 30 – Competência dos Municípios</h3>
+                <p>Compete aos Municípios:</p>
+                <ul>
+                    <li><strong>I -</strong> legislar sobre assuntos de <strong>interesse local</strong>;</li>
+                    <li><strong>II -</strong> <strong>suplementar</strong> a legislação federal e estadual no que couber;</li>
+                    <li><strong>III -</strong> instituir e arrecadar os tributos de sua competência, bem como aplicar suas rendas;</li>
+                    <li><strong>IV -</strong> criar, organizar e suprimir distritos, observada a legislação estadual;</li>
+                    <li><strong>V -</strong> organizar e prestar, diretamente ou sob regime de concessão ou permissão, os serviços públicos de interesse local, incluído o de <strong>transporte coletivo</strong>, que tem caráter essencial;</li>
+                    <li><strong>VI -</strong> manter, com a cooperação técnica e financeira da União e do Estado, programas de <strong>educação infantil e de ensino fundamental</strong>;</li>
+                    <li><strong>VII -</strong> prestar, com a cooperação técnica e financeira da União e do Estado, serviços de atendimento à <strong>saúde</strong> da população;</li>
+                    <li><strong>VIII -</strong> promover, no que couber, o adequado <strong>ordenamento territorial</strong>, mediante planejamento e controle do uso, do parcelamento e da ocupação do solo urbano;</li>
+                    <li><strong>IX -</strong> promover a proteção do <strong>patrimônio histórico-cultural local</strong>, observada a legislação e a ação fiscalizadora federal e estadual.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 37 – Administração Pública (LIMPE)</h3>
+                <p>A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de <strong>Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência</strong> (LIMPE).</p>
+                <h4>Incisos mais cobrados:</h4>
+                <ul>
+                    <li><strong>II -</strong> a investidura em cargo ou emprego público depende de aprovação prévia em <strong>concurso público</strong> de provas ou de provas e títulos, ressalvadas as nomeações para cargo em comissão de livre nomeação e exoneração;</li>
+                    <li><strong>III -</strong> o prazo de validade do concurso público será de até <strong>dois anos</strong>, prorrogável <strong>uma vez</strong>, por igual período;</li>
+                    <li><strong>V -</strong> as funções de confiança serão exercidas <strong>exclusivamente por servidores ocupantes de cargo efetivo</strong>; os cargos em comissão destinam-se apenas às atribuições de direção, chefia e assessoramento;</li>
+                    <li><strong>XVI -</strong> é vedada a acumulação remunerada de cargos públicos, exceto quando houver compatibilidade de horários: a) dois cargos de professor; b) um cargo de professor com outro técnico ou científico; c) dois cargos ou empregos privativos de profissionais de saúde;</li>
+                    <li><strong>XIX -</strong> somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 39 – Servidores Públicos</h3>
+                <p>A União, os Estados, o Distrito Federal e os Municípios instituirão conselho de política de administração e remuneração de pessoal, integrado por servidores designados pelos respectivos Poderes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 40 – Previdência dos Servidores</h3>
+                <p>Aos servidores titulares de cargos efetivos da União, dos Estados, do Distrito Federal e dos Municípios, incluídas suas autarquias e fundações, é assegurado regime de previdência de caráter contributivo e solidário.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 41 – Estabilidade</h3>
+                <p>São <strong>estáveis</strong> após <strong>três anos</strong> de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.</p>
+                <p><strong>§ 1º</strong> O servidor público estável só perderá o cargo:</p>
+                <ul>
+                    <li><strong>I -</strong> em virtude de sentença judicial transitada em julgado;</li>
+                    <li><strong>II -</strong> mediante processo administrativo em que lhe seja assegurada ampla defesa;</li>
+                    <li><strong>III -</strong> mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.</li>
+                </ul>
+                <p><strong>§ 3º</strong> Extinto o cargo ou declarada a sua desnecessidade, o servidor estável ficará em disponibilidade, com remuneração proporcional ao tempo de serviço, até seu adequado aproveitamento em outro cargo.</p>
+            </div>
+
+            <div class="alerta-fafipa">
+                <strong>⚠️ Pegadinha FAFIPA:</strong> A Lei Orgânica municipal é aprovada por <strong>dois terços</strong> dos membros da Câmara, em <strong>dois turnos</strong>, com interstício mínimo de <strong>dez dias</strong>. O prazo de validade do concurso é de <strong>até dois anos</strong>, prorrogável uma vez por igual período. A estabilidade é adquirida após <strong>três anos</strong> de efetivo exercício. O teto municipal é o subsídio do <strong>Prefeito</strong>.
+            </div>
+
+        </div>
+    </details>
+
+    <!-- ================= TÍTULO IV ================= -->
+    <details id="titulo4">
+        <summary>📕 Título IV – Da Organização dos Poderes (Arts. 44 a 75)</summary>
+        <div class="conteudo">
+
+            <div class="card">
+                <h3>Art. 44 – Congresso Nacional</h3>
+                <p>O Poder Legislativo é exercido pelo <strong>Congresso Nacional</strong>, que se compõe da <strong>Câmara dos Deputados</strong> e do <strong>Senado Federal</strong>.</p>
+                <p><strong>Parágrafo único.</strong> Cada legislatura terá a duração de <strong>quatro anos</strong>.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 45 – Câmara dos Deputados</h3>
+                <p>A Câmara dos Deputados compõe-se de representantes do povo, eleitos, pelo sistema <strong>proporcional</strong>, em cada Estado, em cada Território e no Distrito Federal.</p>
+                <p><strong>§ 1º</strong> O número total de Deputados, bem como a representação por Estado e pelo Distrito Federal, será estabelecido por lei complementar, proporcionalmente à população, procedendo-se aos ajustes necessários, no ano anterior às eleições, para que nenhuma daquelas unidades da Federação tenha menos de <strong>oito</strong> ou mais de <strong>setenta</strong> Deputados.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 46 – Senado Federal</h3>
+                <p>O Senado Federal compõe-se de representantes dos Estados e do Distrito Federal, eleitos segundo o princípio <strong>majoritário</strong>.</p>
+                <p><strong>§ 1º</strong> Cada Estado e o Distrito Federal elegerão <strong>três Senadores</strong>, com mandato de <strong>oito anos</strong>.</p>
+                <p><strong>§ 2º</strong> A representação de cada Estado e do Distrito Federal será renovada de quatro em quatro anos, alternadamente, por um e dois terços.</p>
+                <p><strong>§ 3º</strong> Cada Senador será eleito com dois suplentes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 47 – Mesas do Congresso</h3>
+                <p>Salvo disposição constitucional em contrário, as deliberações de cada Casa e de suas Comissões serão tomadas por <strong>maioria dos votos</strong>, presente a maioria absoluta de seus membros.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 48 – Atribuições do Congresso Nacional (com sanção)</h3>
+                <p>Cabe ao Congresso Nacional, com sanção do Presidente da República, não exigida esta para o especificado nos arts. 49, 51 e 52, dispor sobre todas as matérias de competência da União, especialmente sobre:</p>
+                <ul>
+                    <li>sistema tributário, arrecadação e distribuição de rendas;</li>
+                    <li>plano plurianual, diretrizes orçamentárias, orçamento anual, operações de crédito, dívida pública e emissões de curso forçado;</li>
+                    <li>fixação e modificação do efetivo das Forças Armadas;</li>
+                    <li>planos e programas nacionais, regionais e setoriais de desenvolvimento;</li>
+                    <li>limites do território nacional, espaço aéreo e marítimo e bens do domínio da União;</li>
+                    <li>incorporação, subdivisão ou desmembramento de áreas de Territórios ou Estados;</li>
+                    <li>transferência temporária da sede do Governo Federal;</li>
+                    <li>concessão de anistia;</li>
+                    <li>organização administrativa, judiciária, do Ministério Público e da Defensoria Pública da União e dos Territórios;</li>
+                    <li>criação, transformação e extinção de cargos, empregos e funções públicas;</li>
+                    <li>criação, estruturação e atribuições dos Ministérios e órgãos da administração pública.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 49 – Competência Exclusiva do Congresso Nacional (sem sanção)</h3>
+                <p>É da competência exclusiva do Congresso Nacional:</p>
+                <ul>
+                    <li><strong>I -</strong> resolver definitivamente sobre tratados, acordos ou atos internacionais que acarretem encargos ou compromissos gravosos ao patrimônio nacional;</li>
+                    <li><strong>II -</strong> autorizar o Presidente da República a declarar guerra, a celebrar a paz, a permitir que forças estrangeiras transitem pelo território nacional ou nele permaneçam temporariamente;</li>
+                    <li><strong>III -</strong> autorizar o Presidente e o Vice-Presidente da República a se ausentarem do País, quando a ausência exceder a quinze dias;</li>
+                    <li><strong>IV -</strong> aprovar o estado de defesa e a intervenção federal, autorizar o estado de sítio, ou suspender qualquer uma dessas medidas;</li>
+                    <li><strong>V -</strong> sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa;</li>
+                    <li><strong>VI -</strong> mudar temporariamente sua sede;</li>
+                    <li><strong>VII -</strong> fixar idêntico subsídio para os Deputados Federais e os Senadores;</li>
+                    <li><strong>VIII -</strong> fixar os subsídios do Presidente e do Vice-Presidente da República e dos Ministros de Estado;</li>
+                    <li><strong>IX -</strong> julgar anualmente as contas prestadas pelo Presidente da República e apreciar os relatórios sobre a execução dos planos de governo;</li>
+                    <li><strong>X -</strong> fiscalizar e controlar, diretamente, ou por qualquer de suas Casas, os atos do Poder Executivo, incluídos os da administração indireta;</li>
+                    <li><strong>XI -</strong> zelar pela preservação de sua competência legislativa em face da atribuição normativa dos outros Poderes;</li>
+                    <li><strong>XII -</strong> apreciar os atos de concessão e renovação de concessão de emissoras de rádio e televisão;</li>
+                    <li><strong>XIII -</strong> escolher dois terços dos membros do Tribunal de Contas da União;</li>
+                    <li><strong>XIV -</strong> aprovar iniciativas do Poder Executivo referentes a atividades nucleares;</li>
+                    <li><strong>XV -</strong> autorizar referendo e convocar plebiscito;</li>
+                    <li><strong>XVI -</strong> autorizar, em terras indígenas, a exploração e o aproveitamento de recursos hídricos e a pesquisa e lavra de riquezas minerais;</li>
+                    <li><strong>XVII -</strong> aprovar, previamente, a alienação ou concessão de terras públicas com área superior a dois mil e quinhentos hectares.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 51 – Competência Privativa da Câmara dos Deputados</h3>
+                <p>É de competência privativa da Câmara dos Deputados:</p>
+                <ul>
+                    <li><strong>I -</strong> autorizar, por dois terços de seus membros, a instauração de processo contra o Presidente e o Vice-Presidente da República e os Ministros de Estado;</li>
+                    <li><strong>II -</strong> proceder à tomada de contas do Presidente da República, quando não apresentadas ao Congresso Nacional dentro de sessenta dias após a abertura da sessão legislativa;</li>
+                    <li><strong>III -</strong> elaborar seu regimento interno;</li>
+                    <li><strong>IV -</strong> dispor sobre sua organização, funcionamento, polícia, criação, transformação ou extinção dos cargos, empregos e funções de seus serviços;</li>
+                    <li><strong>V -</strong> eleger membros do Conselho da República.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 52 – Competência Privativa do Senado Federal</h3>
+                <p>Compete privativamente ao Senado Federal:</p>
+                <ul>
+                    <li><strong>I -</strong> processar e julgar o Presidente e o Vice-Presidente da República nos crimes de responsabilidade, bem como os Ministros de Estado e os Comandantes da Marinha, do Exército e da Aeronáutica nos crimes da mesma natureza conexos com aqueles;</li>
+                    <li><strong>II -</strong> processar e julgar os Ministros do Supremo Tribunal Federal, os membros do Conselho Nacional de Justiça e do Conselho Nacional do Ministério Público, o Procurador-Geral da República e o Advogado-Geral da União nos crimes de responsabilidade;</li>
+                    <li><strong>III -</strong> aprovar previamente, por voto secreto, após arguição pública, a escolha de: a) Magistrados, nos casos estabelecidos nesta Constituição; b) Ministros do Tribunal de Contas da União indicados pelo Presidente da República; c) Governador de Território; d) presidente e diretores do banco central; e) Procurador-Geral da República; f) titulares de outros cargos que a lei determinar;</li>
+                    <li><strong>IV -</strong> aprovar previamente, por voto secreto, após arguição em sessão secreta, a escolha dos chefes de missão diplomática de caráter permanente;</li>
+                    <li><strong>V -</strong> autorizar operações externas de natureza financeira, de interesse da União, dos Estados, do Distrito Federal, dos Territórios e dos Municípios;</li>
+                    <li><strong>VI -</strong> fixar, por proposta do Presidente da República, limites globais para o montante da dívida consolidada da União, dos Estados, do Distrito Federal e dos Municípios;</li>
+                    <li><strong>VII -</strong> dispor sobre limites globais e condições para as operações de crédito externo e interno da União, dos Estados, do Distrito Federal e dos Municípios, de suas autarquias e demais entidades controladas pelo Poder Público federal;</li>
+                    <li><strong>VIII -</strong> dispor sobre limites e condições para a concessão de garantia da União em operações de crédito externo e interno;</li>
+                    <li><strong>IX -</strong> estabelecer limites globais e condições para o montante da dívida mobiliária dos Estados, do Distrito Federal e dos Municípios;</li>
+                    <li><strong>X -</strong> suspender a execução, no todo ou em parte, de lei declarada inconstitucional por decisão definitiva do Supremo Tribunal Federal;</li>
+                    <li><strong>XI -</strong> aprovar a exoneração de ofício do Procurador-Geral da República antes do término de seu mandato;</li>
+                    <li><strong>XII -</strong> elaborar seu regimento interno;</li>
+                    <li><strong>XIII -</strong> dispor sobre sua organização, funcionamento, polícia, criação, transformação ou extinção dos cargos, empregos e funções de seus serviços;</li>
+                    <li><strong>XIV -</strong> eleger membros do Conselho da República.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 53 – Imunidades dos Deputados e Senadores</h3>
+                <p><strong>Imunidade material (caput):</strong> Os Deputados e Senadores são invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos.</p>
+                <p><strong>Imunidade formal (§§ 2º a 5º):</strong> Desde a expedição do diploma, os membros do Congresso Nacional não poderão ser presos, salvo em flagrante de crime inafiançável. A Casa respectiva poderá, pelo voto da maioria de seus membros, sustar o andamento da ação penal contra o parlamentar.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 54 – Vedações aos Deputados e Senadores</h3>
+                <p>Os Deputados e Senadores não poderão:</p>
+                <ul>
+                    <li><strong>I -</strong> desde a expedição do diploma: a) firmar ou manter contrato com pessoa jurídica de direito público, autarquia, empresa pública, sociedade de economia mista ou empresa concessionária de serviço público, salvo quando o contrato obedecer a cláusulas uniformes; b) aceitar ou exercer cargo, função ou emprego remunerado, inclusive os de que sejam demissíveis "ad nutum", nas entidades constantes da alínea anterior;</li>
+                    <li><strong>II -</strong> desde a posse: a) ser proprietários, controladores ou diretores de empresa que goze de favor decorrente de contrato com pessoa jurídica de direito público, ou nela exercer função remunerada; b) ocupar cargo ou função de que sejam demissíveis "ad nutum", nas entidades referidas no inciso I, "a"; c) patrocinar causa em que seja interessada qualquer das entidades a que se refere o inciso I, "a"; d) ser titulares de mais de um cargo ou mandato público eletivo.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 55 – Perda do Mandato</h3>
+                <p>Perderá o mandato o Deputado ou Senador:</p>
+                <ul>
+                    <li><strong>I -</strong> que infringir qualquer das proibições estabelecidas no artigo anterior;</li>
+                    <li><strong>II -</strong> cujo procedimento for declarado incompatível com o decoro parlamentar;</li>
+                    <li><strong>III -</strong> que deixar de comparecer, em cada sessão legislativa, à terça parte das sessões ordinárias da Casa a que pertencer, salvo licença ou missão por esta autorizada;</li>
+                    <li><strong>IV -</strong> que perder ou tiver suspensos os direitos políticos;</li>
+                    <li><strong>V -</strong> quando o decretar a Justiça Eleitoral, nos casos previstos nesta Constituição;</li>
+                    <li><strong>VI -</strong> que sofrer condenação criminal em sentença transitada em julgado.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 56 – Não Perda do Mandato</h3>
+                <p>Não perderá o mandato o Deputado ou Senador:</p>
+                <ul>
+                    <li><strong>I -</strong> investido no cargo de Ministro de Estado, Governador de Território, Secretário de Estado, do Distrito Federal, de Território, de Prefeitura de Capital ou chefe de missão diplomática temporária;</li>
+                    <li><strong>II -</strong> licenciado pela respectiva Casa por motivo de doença, ou para tratar, sem remuneração, de interesse particular, desde que, neste caso, o afastamento não ultrapasse cento e vinte dias por sessão legislativa.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 59 – Processo Legislativo</h3>
+                <p>O processo legislativo compreende a elaboração de:</p>
+                <ul>
+                    <li><strong>I - emendas à Constituição;</strong></li>
+                    <li><strong>II - leis complementares;</strong></li>
+                    <li><strong>III - leis ordinárias;</strong></li>
+                    <li><strong>IV - leis delegadas;</strong></li>
+                    <li><strong>V - medidas provisórias;</strong></li>
+                    <li><strong>VI - decretos legislativos;</strong></li>
+                    <li><strong>VII - resoluções.</strong></li>
+                </ul>
+                <p><strong>Parágrafo único.</strong> Lei complementar disporá sobre a elaboração, redação, alteração e consolidação das leis.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 60 – Emendas à Constituição</h3>
+                <p>A Constituição poderá ser emendada mediante proposta:</p>
+                <ul>
+                    <li><strong>I -</strong> de um terço, no mínimo, dos membros da Câmara dos Deputados ou do Senado Federal;</li>
+                    <li><strong>II -</strong> do Presidente da República;</li>
+                    <li><strong>III -</strong> de mais da metade das Assembleias Legislativas das unidades da Federação, manifestando-se, cada uma delas, pela maioria relativa de seus membros.</li>
+                </ul>
+                <p><strong>§ 2º</strong> A proposta será discutida e votada em cada Casa do Congresso Nacional, em dois turnos, considerando-se aprovada se obtiver, em ambos, três quintos dos votos dos respectivos membros.</p>
+                <p><strong>§ 4º</strong> Não será objeto de deliberação a proposta de emenda tendente a abolir:</p>
+                <ul>
+                    <li><strong>I - a forma federativa de Estado;</strong></li>
+                    <li><strong>II - o voto direto, secreto, universal e periódico;</strong></li>
+                    <li><strong>III - a separação dos Poderes;</strong></li>
+                    <li><strong>IV - os direitos e garantias individuais.</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 61 – Iniciativa das Leis</h3>
+                <p>A iniciativa das leis complementares e ordinárias cabe a qualquer membro ou Comissão da Câmara dos Deputados, do Senado Federal ou do Congresso Nacional, ao Presidente da República, ao Supremo Tribunal Federal, aos Tribunais Superiores, ao Procurador-Geral da República e aos cidadãos, na forma e nos casos previstos nesta Constituição.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 62 – Medidas Provisórias</h3>
+                <p>Em caso de relevância e urgência, o Presidente da República poderá adotar medidas provisórias, com força de lei, devendo submetê-las de imediato ao Congresso Nacional.</p>
+                <p><strong>§ 3º</strong> As medidas provisórias, ressalvado o disposto nos §§ 11 e 12, perderão eficácia, desde a edição, se não forem convertidas em lei no prazo de sessenta dias, prorrogável, nos termos do § 7º, uma vez por igual período, devendo o Congresso Nacional disciplinar, por decreto legislativo, as relações jurídicas delas decorrentes.</p>
+                <p><strong>§ 11.</strong> Não se admitirá medida provisória que trate de matéria: a) relativa a nacionalidade, cidadania, direitos políticos, partidos políticos e direito eleitoral; b) direito penal, processual penal e processual civil; c) organização do Poder Judiciário e do Ministério Público, a carreira e a garantia de seus membros; d) planos plurianuais, diretrizes orçamentárias, orçamento e créditos adicionais e suplementares, ressalvado o previsto no art. 167, § 3º; e) que vise a detenção ou sequestro de bens, de poupança popular ou qualquer outro ativo financeiro; f) reservada a lei complementar; g) já disciplinada em projeto de lei aprovado pelo Congresso Nacional e pendente de sanção ou veto do Presidente da República.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 63 – Emendas aos Projetos</h3>
+                <p>Não será admitido aumento da despesa prevista:</p>
+                <ul>
+                    <li><strong>I -</strong> nos projetos de iniciativa exclusiva do Presidente da República, ressalvado o disposto no art. 166, §§ 3º e 4º;</li>
+                    <li><strong>II -</strong> nos projetos sobre organização dos serviços administrativos da Câmara dos Deputados, do Senado Federal, dos Tribunais Federais e do Ministério Público.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Art. 64 – Sanção e Veto</h3>
+                <p>A discussão e votação dos projetos de lei de iniciativa do Presidente da República, do Supremo Tribunal Federal e dos Tribunais Superiores terão início na Câmara dos Deputados.</p>
+                <p><strong>§ 1º</strong> O Presidente da República poderá induzir a sanção do projeto de lei, total ou parcialmente, no prazo de quinze dias úteis, contados da data do recebimento, e comunicará, dentro de quarenta e oito horas, ao Presidente do Senado Federal os motivos do veto.</p>
+                <p><strong>§ 2º</strong> O veto parcial somente abrangerá texto integral de artigo, de parágrafo, de inciso ou de alínea.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 65 – Rejeição do Veto</h3>
+                <p>O projeto de lei aprovado por uma Casa será revisto pela outra, em um só turno de discussão e votação, e enviado à sanção ou à promulgação, se a Casa revisora o aprovar, ou arquivado, se o rejeitar.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 66 – Promulgação e Publicação</h3>
+                <p>A Casa na qual tenha sido concluída a votação enviará o projeto de lei ao Presidente da República, que, aquiescendo, o sancionará.</p>
+                <p><strong>§ 1º</strong> Se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público, vetá-lo-á total ou parcialmente, no prazo de quinze dias úteis, contados da data do recebimento, e comunicará, dentro de quarenta e oito horas, ao Presidente do Senado Federal os motivos do veto.</p>
+                <p><strong>§ 5º</strong> Se o veto não for mantido, será o projeto enviado, para promulgação, ao Presidente da República.</p>
+                <p><strong>§ 7º</strong> Se a lei não for promulgada dentro de quarenta e oito horas pelo Presidente da República, nos casos dos §§ 3º e 5º, o Presidente do Senado a promulgará, e, se este não o fizer em igual prazo, caberá ao Vice-Presidente do Senado fazê-lo.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 67 – Reapreciação de Projeto Rejeitado</h3>
+                <p>A matéria constante de projeto de lei rejeitado somente poderá constituir objeto de novo projeto, na mesma sessão legislativa, mediante proposta da maioria absoluta dos membros de qualquer das Casas do Congresso Nacional.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 68 – Leis Delegadas</h3>
+                <p>As leis delegadas serão elaboradas pelo Presidente da República, que deverá solicitar a delegação ao Congresso Nacional.</p>
+                <p><strong>§ 1º</strong> Não serão objeto de delegação os atos de competência exclusiva do Congresso Nacional, os de competência privativa da Câmara dos Deputados ou do Senado Federal, a matéria reservada a lei complementar, nem a legislação sobre: a) organização do Poder Judiciário e do Ministério Público, a carreira e a garantia de seus membros; b) nacionalidade, cidadania, direitos individuais, políticos e eleitorais; c) planos plurianuais, diretrizes orçamentárias e orçamentos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 69 – Decretos Legislativos e Resoluções</h3>
+                <p>As leis complementares serão aprovadas por maioria absoluta dos membros da Câmara dos Deputados e do Senado Federal.</p>
+                <p><em>Os demais parágrafos e incisos tratam do processo legislativo em geral.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 70 – Fiscalização e Controle</h3>
+                <p>A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta, quanto à legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas, será exercida pelo <strong>Congresso Nacional</strong>, mediante <strong>controle externo</strong>, e pelo <strong>sistema de controle interno</strong> de cada Poder.</p>
+                <p><strong>Parágrafo único.</strong> Prestará contas qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiros, bens e valores públicos ou pelos quais a União responda, ou que, em nome desta, assuma obrigações de natureza pecuniária.</p>
+            </div>
+
+            <div class="card">
+                <h3>Art. 71 – Tribunal de Contas da União (TCU)</h3>
+                <p>O controle externo, a cargo do Congresso Nacional, será exercido com o auxílio do <strong>Tribunal de Contas da União</strong>, ao qual compete:</p>
+                <ul>
+                    <li><strong>I -</strong> apreciar as contas prestadas anualmente pelo Presidente da República, mediante parecer prévio que deverá ser elaborado em sessenta dias a contar de seu recebimento;</li>
+                    <li><strong>II -</strong> julgar as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos da administração direta e indireta, incluídas as fundações e sociedades instituídas e mantidas pelo Poder Público federal, e as contas daqueles que derem causa a perda, extravio ou outra irregularidade de que resulte prejuízo ao erário público;</li>
+                    <li><strong>III -</strong> apreciar, para fins de registro, a legalidade dos atos de admissão de pessoal, a qualquer título, na administração direta e indireta, incluídas as fundações instituídas e mantidas pelo Poder Público, excetuadas as nomeações para cargo de provimento em comissão, bem como a das concessões de aposentadorias, reformas e pensões, ressalvadas as melhorias posteriores que não alterem o fundamento legal do ato concessório;</li>
+                    <li><strong>IV -</strong> realizar, por iniciativa própria, da Câmara dos Deputados, do Senado Federal, de Comissão técnica ou de inquérito, inspeções e auditorias de natureza contábil, financeira, orçamentária, operacional e patrimonial, nas unidades administrativas dos Poderes Legislativo, Executivo e Judiciário, e demais entidades referidas no inciso II;</li>
+                    <li><strong>V -</strong> fiscalizar as contas nacionais das empresas supranacionais de cujo capital social a União participe, de forma direta ou indireta, nos termos do tratado constitutivo;</li>
+                    <li><strong>VI -</strong> fiscalizar a aplicação de quaisquer recursos repassados pela União mediante convênio, acordo, ajuste ou outros instrumentos congêneres, a Estado, ao Distrito Federal ou a Município;</li>
+                    <li><strong>VII -</strong> prestar as informações solicitadas pelo Congresso Nacional, por qualquer de suas Casas, ou por qualquer das respectivas Comissões, sobre a fiscalização contábil, financeira, orçamentária, operacional e patrimonial e sobre resultados de auditorias e inspeções realizadas;</li>
+                    <li><strong>VIII -</strong> aplicar aos responsáveis, em caso de ilegalidade de despesa ou irregularidade de contas, as sanções previstas em lei, que estabelecerá, entre outras cominações, multa proporcional ao dano causado ao erário;</li>
+                    <li><strong>IX -</strong> assinar prazo para que o órgão ou entidade adote as providências necessárias ao exato cumprimento da lei, se verificada ilegalidade;</li>
+                    <li><strong>X -</strong> sustar, se não atendido, a execução do ato impugnado, comunicando a decisão à Câmara dos Deputados e ao Senado Federal;</li>
+                    <li><strong>XI -</strong> representar ao Poder competente sobre irregularidades ou abusos apurados.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Arts. 72 a 75 – Disposições sobre o TCU</h3>
+                <p><strong>Art. 72.</strong> A Comissão mista permanente de que trata o art. 166, § 1º, diante de indícios de despesas não autorizadas, ainda que sob a forma de investimentos não programados ou de subsídios não aprovados, poderá solicitar à autoridade governamental responsável que, no prazo de cinco dias, preste os esclarecimentos necessários.</p>
+                <p><strong>Art. 73.</strong> O Tribunal de Contas da União, integrado por <strong>nove Ministros</strong>, tem sede no Distrito Federal, quadro próprio de pessoal e jurisdição em todo o território nacional.</p>
+                <p><strong>§ 1º</strong> Os Ministros do Tribunal de Contas da União serão nomeados dentre brasileiros que satisfaçam os seguintes requisitos: I - mais de trinta e cinco e menos de sessenta e cinco anos de idade; II - idoneidade moral e reputação ilibada; III - notórios conhecimentos jurídicos, contábeis, econômicos e financeiros ou de administração pública; IV - mais de dez anos de exercício de função ou de efetiva atividade profissional que exija os conhecimentos mencionados no inciso anterior.</p>
+                <p><strong>§ 2º</strong> Os Ministros do Tribunal de Contas da União serão escolhidos: I - um terço pelo Presidente da República, com aprovação do Senado Federal, sendo dois alternadamente dentre auditores e membros do Ministério Público junto ao Tribunal, indicados em lista tríplice pelo Tribunal, segundo os critérios de antiguidade e merecimento; II - dois terços pelo Congresso Nacional.</p>
+                <p><strong>Art. 74.</strong> Os Poderes Legislativo, Executivo e Judiciário manterão, de forma integrada, sistema de controle interno com a finalidade de: I - avaliar o cumprimento das metas previstas no plano plurianual, a execução dos programas de governo e dos orçamentos da União; II - comprovar a legalidade e avaliar os resultados, quanto à eficácia e eficiência, da gestão orçamentária, financeira e patrimonial nos órgãos e entidades da administração federal, bem como da aplicação de recursos públicos por entidades de direito privado; III - exercer o controle das operações de crédito, avais e garantias, bem como dos direitos e haveres da União; IV - apoiar o controle externo no exercício de sua missão institucional.</p>
+                <p><strong>Art. 75.</strong> As normas estabelecidas nesta seção aplicam-se, no que couber, à organização, ao funcionamento e à fiscalização dos Tribunais de Contas dos Estados e do Distrito Federal, bem como dos Tribunais e Conselhos de Contas dos Municípios.</p>
+            </div>
+
+            <div class="alerta-fafipa">
+                <strong>⚠️ Pegadinha FAFIPA:</strong> O Senado Federal é composto por <strong>três Senadores por Estado</strong>, com mandato de <strong>oito anos</strong>, e a renovação é de <strong>quatro em quatro anos</strong> (alternando 1/3 e 2/3). O TCU é integrado por <strong>nove Ministros</strong>. A Câmara dos Deputados tem mínimo de <strong>8</strong> e máximo de <strong>70</strong> Deputados por Estado. As cláusulas pétreas são: forma federativa, voto direto/secreto/universal/periódico, separação dos Poderes e direitos e garantias individuais.
+            </div>
+
+        </div>
+    </details>
+
+    <!-- ================= QUIZ ================= -->
+    <div id="quiz" class="quiz-container">
+        <h2 style="color: #004b87; border-bottom: 3px solid #e67e22; padding-bottom: 8px; margin-bottom: 20px;">Questões FAFIPA</h2>
+
+        <div class="pergunta">
+            <p>1. São fundamentos da República Federativa do Brasil, EXCETO:</p>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A soberania é um dos fundamentos (Art. 1º, I).')">A soberania.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A cidadania é um dos fundamentos (Art. 1º, II).')">A cidadania.</button>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! "Construir uma sociedade livre, justa e solidária" é um OBJETIVO fundamental (Art. 3º, I), e não um fundamento.')">Construir uma sociedade livre, justa e solidária.</button>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="pergunta">
+            <p>2. Sobre a separação dos Poderes (Art. 2º), é correto afirmar que os Poderes da União são:</p>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! O Art. 2º estabelece que são Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.')">Independentes e harmônicos entre si.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os Poderes não são soberanos; a soberania é da República Federativa do Brasil.')">Soberanos e independentes entre si.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! Os Poderes são independentes, não subordinados.')">Subordinados hierarquicamente entre si.</button>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="pergunta">
+            <p>3. De acordo com o Art. 5º, XI, é permitido penetrar na casa sem consentimento do morador, durante o dia, em caso de:</p>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A determinação judicial só pode ser cumprida durante o dia. À noite, apenas flagrante, desastre ou socorro.')">Determinação judicial, a qualquer hora.</button>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 5º, XI: durante o dia, por determinação judicial; ou, a qualquer hora, em caso de flagrante delito, desastre ou para prestar socorro.')">Flagrante delito, desastre ou para prestar socorro.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A ordem judicial, durante o dia, é uma das exceções, mas não a única.')">Apenas por ordem judicial.</button>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="pergunta">
+            <p>4. Sobre o prazo de validade do concurso público, é correto afirmar que será de:</p>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 37, III: até dois anos, prorrogável uma vez, por igual período.')">Até dois anos, prorrogável uma vez, por igual período.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de até dois anos, e não um ano.')">Até um ano, improrrogável.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A prorrogação é permitida uma única vez, por igual período.')">Até dois anos, prorrogável sucessivamente.</button>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="pergunta">
+            <p>5. Sobre a estabilidade do servidor público, de acordo com o Art. 41 da CF/88, é correto afirmar que:</p>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! O prazo é de três anos de efetivo exercício.')">O servidor adquire estabilidade após dois anos de efetivo exercício.</button>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 41: são estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.')">O servidor adquire estabilidade após três anos de efetivo exercício.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! A estabilidade é adquirida após três anos, não cinco.')">O servidor adquire estabilidade após cinco anos de efetivo exercício.</button>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="pergunta">
+            <p>6. O Poder Legislativo é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputados e do Senado Federal. Sobre o Senado Federal, é correto afirmar que cada Estado elegerá:</p>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! São três Senadores por Estado, com mandato de oito anos.')">Dois Senadores, com mandato de quatro anos.</button>
+            <button class="btn-opcao" onclick="responder(this, true, 'Correto! Art. 46, § 1º: cada Estado e o Distrito Federal elegerão três Senadores, com mandato de oito anos.')">Três Senadores, com mandato de oito anos.</button>
+            <button class="btn-opcao" onclick="responder(this, false, 'Errado! São três Senadores, e não quatro, e o mandato é de oito anos.')">Quatro Senadores, com mandato de oito anos.</button>
+            <div class="feedback"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function responder(btnClicado, isCorreto, mensagem) {
+        const pergunta = btnClicado.closest('.pergunta');
+        const botoes = pergunta.querySelectorAll('.btn-opcao');
+        const feedback = pergunta.querySelector('.feedback');
+        botoes.forEach(btn => { btn.disabled = true; btn.style.cursor = 'default'; });
+        if (isCorreto) {
+            btnClicado.classList.add('correto');
+        } else {
+            btnClicado.classList.add('errado');
+            botoes.forEach(btn => {
+                if (btn.getAttribute('onclick').includes('true')) {
+                    btn.classList.add('correto');
+                }
+            });
+        }
+        feedback.style.display = 'block';
+        feedback.innerHTML = mensagem;
+    }
+</script>
+
+</body>
+</html>
